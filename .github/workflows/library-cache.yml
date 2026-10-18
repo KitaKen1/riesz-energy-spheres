@@ -1,0 +1,43 @@
+name: Build sphere proof dependencies
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: riesz-library-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  library:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 lean/comparator/check-inputs.py --receipt-dir library-receipt
+      - id: digest
+        run: python3 lean/comparator/library-digest.py
+      - run: bash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 8 4
+      - run: lake exe cache get
+        working-directory: lean
+      - uses: actions/cache/restore@v4
+        with:
+          path: lean/.lake/build
+          key: riesz-core-${{ steps.digest.outputs.library_digest }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: riesz-core-${{ steps.digest.outputs.library_digest }}-
+      - run: bash comparator/build-library.sh
+        working-directory: lean
+      - if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: lean/.lake/build
+          key: riesz-core-${{ steps.digest.outputs.library_digest }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: library-${{ github.run_id }}-${{ github.run_attempt }}
+          path: library-receipt/
+          retention-days: 90

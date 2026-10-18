@@ -1,0 +1,13 @@
+﻿2026-10-17T09:23:08.4029767Z ##[group]Run test "$FC_CHALLENGE" = success
+2026-10-17T09:23:08.4030811Z [36;1mtest "$FC_CHALLENGE" = success[0m
+2026-10-17T09:23:08.4031699Z [36;1mtest "$READY" = true[0m
+2026-10-17T09:23:08.4032905Z [36;1mtest "$COMPARE" = success[0m
+2026-10-17T09:23:08.4033677Z [36;1mtest "$REPLAY" = success[0m
+2026-10-17T09:23:08.5098733Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-17T09:23:08.5100178Z env:
+2026-10-17T09:23:08.5100964Z   FC_CHALLENGE: success
+2026-10-17T09:23:08.5101698Z   READY: 
+2026-10-17T09:23:08.5102614Z   COMPARE: skipped
+2026-10-17T09:23:08.5103371Z   REPLAY: skipped
+2026-10-17T09:23:08.5104029Z ##[endgroup]
+2026-10-17T09:23:08.5439676Z ##[error]Process completed with exit code 1.

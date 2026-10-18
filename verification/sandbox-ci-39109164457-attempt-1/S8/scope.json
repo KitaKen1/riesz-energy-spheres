@@ -1,0 +1,14 @@
+{
+  "kind": "DIAGNOSIS_WITH_PREVIOUS_RUN_PRODUCTS",
+  "cold_start_certification": false,
+  "tested_commit": "a656684e3fe5a7660cf356cc3e6438cf7b1accc0",
+  "source_run": "39083278047",
+  "source_attempt": 1,
+  "diagnostic_run": "39109164457",
+  "target_sha256": "24c8bbfab4701aa7445ee2090e11f5b26e3a24bb1bb0ad278a3a03818ee95b57",
+  "selected_targets": [
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight"
+  ]
+}

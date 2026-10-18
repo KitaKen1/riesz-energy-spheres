@@ -1,0 +1,51 @@
+E8Leach snapshot: the E8 kernel inequality and the Gaussian certificates (vendored subset)
+
+Source:   the sibling project `../E8Leach` of the same owner (library `E8Leech`), not a public
+          repository.  Copied locally on 2026-10-13 15:09 JST with the owner's permission ("コピーしていいよ",
+          2026-10-13); nothing was downloaded and the source project was not changed.
+State of the source at that time (its own records): item R5 "E8 kernel sign on the whole regular
+          locus" complete on 2026-10-13 (`E8Leech.ckmrvEightHatKernel_pos`, `E8Leech.e8KernelNonneg`,
+          `E8Leech.e8_analyticUnitCostInput`, standard axioms only), recorded from incremental
+          compilations with Lean 4.33.1 and Mathlib 0df444a360eaa60ab8c11dca51a86af692955474; its
+          clean rebuild and independent checks were still open.
+
+Contents:
+  lean/E8Leech/        303 modules, the import closure of `E8Leech.E8KernelPositivity`
+  lean/SpherePacking/  67 modules of that closure: the E8Leach port of Sphere-Packing-Lean
+                       (https://github.com/math-inc/Sphere-Packing-Lean, Apache-2.0; see
+                       upstream/SpherePacking-PORTING.txt and upstream/licenses/)
+                       total 5820628 bytes in 370 files
+  upstream/            lakefile.toml, lean-toolchain, lake-manifest.json and THIRD_PARTY.txt of the
+                       source project, its porting notes and licence copies
+  MANIFEST.sha256      SHA-256 of every file AS COPIED (the original text)
+  ORDER.tsv            the modules in dependency order
+  PATCHES.txt          every change made here after the copy, file by file (absent or empty:
+                       no change)
+
+This project builds the files with Lean 4.34.1 and Mathlib d13f23b723b8a846827a245b89c10fc7d3f11612.
+Files changed for that toolchain, or to avoid declaring names that the Riesz library already
+declares, are listed in PATCHES.txt; all other files are identical to the manifest.
+
+Used results: `E8Leech.e8KernelNonneg` and the certificate family `E8Leech.e8CertFamily`
+(`GaussianSchwartzCertificate e8Set α f` for `α > 0`, `α ≠ π`).
+
+Extension of 2026-10-14 09:27 JST (leech)
+  Added the modules of the import closure of `E8Leech.LeechSlackProfile`,
+  `E8Leech.LeechKernelInequalitiesProof` and `E8Leech.LeechFourierIdentityProof` that were not
+  vendored yet: 244 files (244 `E8Leech.*`, 0 `SpherePacking.*`), 17098542 bytes, copied
+  locally from the same sibling project; the files vendored before were unchanged there.
+  State of the source at that time (its own records, 2026-10-14 09:16): the Leech kernel
+  inequalities (6.4)(1)-(3) (`E8Leech.leechKernelInequalities`) and the Fourier identities
+  (`E8Leech.leechFourierIdentities`) recorded as proved with standard axioms, from incremental
+  compilations with Lean 4.33.1; clean rebuild and independent checks open.
+  Used results: `E8Leech.leechCertFamily_cert` (certificates for `alpha > 0`, `alpha != pi`).
+  ORDER-leech.tsv lists the modules of that closure in dependency order.
+
+FC coefficient bridge (2026-10-17)
+  Riesz/FCLeechMinimum24.lean specializes the existing
+  SpherePacking/Dim24/LeechLattice/Norm.lean norm-spectrum proof from the same
+  local E8Leach port. The source is covered by the retained Sphere-Packing-Lean
+  Apache-2.0 attribution and licences. Imports, the namespace, matrix names and
+  lattice aliases were adapted to the existing Riesz Leech lattice; the resulting
+  proof establishes minimum norm 2, used to identify its first theta coefficients.
+  Original source SHA-256: f73f05e494d6c4ec7f65b1aa317199005a5551fd5c67c911b0067438be5d317d

@@ -1,0 +1,39 @@
+{
+  "publication_repository": "KitaKen1/riesz-energy-spheres",
+  "private_repository": "KitaKen1/riesz-energy-spheres-private-ci",
+  "lean_toolchain": "leanprover/lean4:v4.34.1",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "comparator_commit": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+  "lean4export_commit": "076e8e57707e813375e8f9da8bf989799ace9680",
+  "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+  "targets": [
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+  ],
+  "reference_status": "Exact copy of the independent FClikelean draft; compare only its nine research-solved variants.",
+  "toolchain_patches": {
+    "comparator": {
+      "upstream": "leanprover/lean4:v4.34.0",
+      "build": "leanprover/lean4:v4.34.1",
+      "changed_files": [
+        "lean-toolchain"
+      ]
+    },
+    "lean4export": {
+      "upstream": "leanprover/lean4:v4.34.0",
+      "build": "leanprover/lean4:v4.34.1",
+      "changed_files": [
+        "lean-toolchain"
+      ]
+    }
+  },
+  "formal_conjectures_commit": "c77fdd446d23539302aa73bcfae4a9fa962b8382",
+  "ci_repository": "KitaKen1/ci-test-sandbox"
+}

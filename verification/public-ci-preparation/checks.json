@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "dimension_partition": [
+    {
+      "dimension": 2,
+      "selected_targets": [
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two"
+      ],
+      "all_targets": [
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+      ],
+      "complete_config_sha256": "2846d927782a0f8278947bead75dd6e1c5119de133bdd4db21a2a2ea751aa925",
+      "target_sha256": "24c8bbfab4701aa7445ee2090e11f5b26e3a24bb1bb0ad278a3a03818ee95b57",
+      "verification": "Unmodified pinned Comparator, including its builtin kernel replay"
+    },
+    {
+      "dimension": 8,
+      "selected_targets": [
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight"
+      ],
+      "all_targets": [
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+      ],
+      "complete_config_sha256": "2846d927782a0f8278947bead75dd6e1c5119de133bdd4db21a2a2ea751aa925",
+      "target_sha256": "24c8bbfab4701aa7445ee2090e11f5b26e3a24bb1bb0ad278a3a03818ee95b57",
+      "verification": "Unmodified pinned Comparator, including its builtin kernel replay"
+    },
+    {
+      "dimension": 24,
+      "selected_targets": [
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+      ],
+      "all_targets": [
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+      ],
+      "complete_config_sha256": "2846d927782a0f8278947bead75dd6e1c5119de133bdd4db21a2a2ea751aa925",
+      "target_sha256": "24c8bbfab4701aa7445ee2090e11f5b26e3a24bb1bb0ad278a3a03818ee95b57",
+      "verification": "Unmodified pinned Comparator, including its builtin kernel replay"
+    }
+  ],
+  "exact_nine_target_coverage": true,
+  "missing_or_duplicate_targets_rejected": true,
+  "extra_axiom_rejected": true,
+  "proof_sources_unchanged_from_sandbox_pass": true,
+  "proof_digest": "f75dfc28ca6b3dc45ef089ed1c7dfa995313b09625e7130a497566b1ed90ecdf",
+  "actionlint": "PASS: comparator.yml, proof-stage.yml, library-cache.yml",
+  "shell_syntax": "PASS: run-check.sh",
+  "build_partition": "PASS: 1245 modules exactly once in six dependency-ordered batches",
+  "cold_start_proof_cache": "NONE; same-run artifacts only",
+  "full_imported_environment_audit": "Optional dispatch input; required Comparator builtin replays remain mandatory"
+}

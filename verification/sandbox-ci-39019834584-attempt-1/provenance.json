@@ -1,0 +1,32 @@
+{
+  "repository": "KitaKen1/ci-test-sandbox",
+  "run_id": 39019834584,
+  "run_attempt": 1,
+  "proof_commit": null,
+  "tested_commit": "350f66c19e51d419c1ea161416a08385cc0c5242",
+  "archive_commit": null,
+  "run_url": "https://github.com/KitaKen1/ci-test-sandbox/actions/runs/39019834584",
+  "conclusion": "failure",
+  "artifacts": [
+    {
+      "id": 12096063214,
+      "name": "build-39019834584-1",
+      "file": "artifacts/12096063214-build-39019834584-1.zip",
+      "github_digest": "sha256:bcc0922b18b2582f97c0c1a63a3034e4da6906a28cbf16ef37005264d933e2c3",
+      "sha256": "bcc0922b18b2582f97c0c1a63a3034e4da6906a28cbf16ef37005264d933e2c3",
+      "digest_matches": true,
+      "expires_at": "2027-01-15T09:05:59Z"
+    },
+    {
+      "id": 12095579601,
+      "name": "fc-challenge-39019834584-1",
+      "file": "artifacts/12095579601-fc-challenge-39019834584-1.zip",
+      "github_digest": "sha256:87183f6d2751309c8fe2d66ce35f77977c648d48fb9b96b4066e3865c54cc8c5",
+      "sha256": "87183f6d2751309c8fe2d66ce35f77977c648d48fb9b96b4066e3865c54cc8c5",
+      "digest_matches": true,
+      "expires_at": "2027-01-15T09:05:59Z"
+    }
+  ],
+  "retrieved_at_utc": "2026-10-17T09:15:58.640304+00:00",
+  "note": "API metadata, original ZIPs, full job logs and all extracted receipts preserved. SHA256SUMS are local file identities, not a signed GitHub attestation. Record the archive commit after committing."
+}

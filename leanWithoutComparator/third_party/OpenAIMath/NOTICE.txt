@@ -1,0 +1,25 @@
+OpenAI math: triangular-lattice Gaussian minorants (vendored subset)
+
+Source:   https://github.com/openai/math
+Commit:   fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (HEAD of the default branch on 2026-10-13)
+License:  Apache License 2.0 (see LICENSE, the repository licence, and LICENSE-lean, the licence
+          file of the `lean` directory)
+Fetched:  2026-10-13, with the permission of the project owner
+
+Contents, unmodified:
+  lean/OAI/Analysis/Triangular/   276 Lean files, 8823385 bytes
+                                  (module names OAI.Analysis.Triangular.*; they import Mathlib only)
+  challenge/                      the comparator challenge statement and its configuration
+                                  (lean/ComparatorChallenges/TriangularGaussian.{lean,json} upstream;
+                                  the challenge file contains `sorry` by design and is NOT compiled here)
+  upstream/                       lake-manifest.json, lakefile.lean and lean-toolchain of the upstream
+                                  `lean` directory, kept as a record of the pinned versions
+                                  (Lean 4.34.1; Mathlib d13f23b723b8a846827a245b89c10fc7d3f11612,
+                                  the same revision as this project)
+  MANIFEST.sha256                 SHA-256 of every vendored file
+
+Used theorem: OAI.AtomicTriangular.sharp_gaussian_minorants_with_construction
+(module OAI.Analysis.Triangular.GaussianMinorants).
+
+The upstream work is AI-generated and checked by Lean; its manuscripts are not peer reviewed.
+Nothing in this directory was written or changed by the Riesz project.

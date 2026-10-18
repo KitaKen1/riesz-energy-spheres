@@ -1,177 +1,250 @@
-# Next-order Riesz and Logarithmic Energy on Spheres
+# Lean proof of next-order Riesz and logarithmic energy on spheres
 
-For $`d\in\{2,8,24\}`$, let $`\mathbb S^d`$ be the unit sphere in $`\mathbb R^{d+1}`$, with surface area $`A_d`$ and uniform probability measure $`\sigma_d`$. For $`N`$ distinct points, use the **ordered** sum and Euclidean chordal distance:
+Conjecture 3 of [Brauchart, Hardin and Saff (2012)](https://arxiv.org/abs/1202.4037)
+asks whether the following Riesz energy asymptotics hold.
 
-```math
-E_s(X)=\sum_{i\ne j}|x_i-x_j|^{-s}.
-```
-
-Write $`\mathcal E_s(d,N)`$ for its infimum when $`0<s<d`$ and its supremum when $`-2<s<0`$. Set
-
-```math
-I_{s,d}=\iint_{\mathbb S^d\times\mathbb S^d}|x-y|^{-s}\,d\sigma_d(x)\,d\sigma_d(y).
-```
-
-Let $`L_2`$ be the triangular lattice of covolume one, $`L_8=E_8`$, and $`L_{24}`$ the Leech lattice of covolume one. The Epstein convention is
-
-```math
-Z_L(s)=\sum_{v\in L\setminus\{0\}}|v|^{-s}
-\qquad(\operatorname{Re}s>d),
-```
-
-with meromorphic continuation outside the convergence region.
-
-> [!NOTE]
-> **Main result (next-order energy).**
+> **Conjecture 3: next-order Riesz energy.**
+> Let $d\ge2$ and $-2<s<d+2$, $s\ne0,d$. On the unit sphere
+> $\mathbb S^d\subset\mathbb R^{d+1}$, let $\mathcal E_s(d,N)$ be the optimal
+> ordered sum $\sum_{i\ne j}|x_i-x_j|^{-s}$ over configurations of $N$ distinct
+> points, minimized for $s>0$ and maximized for $s<0$. Then there is a constant
+> $C_{s,d}$ such that
 >
-> Using the lattice Gaussian minorant theorem stated in the manuscript, for each fixed $`-2<s<d`$, $`s\ne0`$,
+> $$\mathcal E_s(d,N)=V_{s,d}N^2+A_d^{-s/d}C_{s,d}N^{1+s/d}+o(N^{1+s/d}).$$
 >
-> ```math
-> \mathcal E_s(d,N)=I_{s,d}N^2+
-> A_d^{-s/d}Z_{L_d}(s)N^{1+s/d}+o(N^{1+s/d}).
-> ```
+> Here $A_d$ is the sphere's area. For $s<d$, $V_{s,d}$ is the continuous energy
+> of uniform probability measure; for $s>d$, its analytic continuation is used.
+> In dimensions $d=2,4,8,24$, the additional prediction is
 >
-> In particular, on the unit sphere $`\mathbb S^8`$,
+> $$C_{s,d}=Z_{L_d}(s),$$
 >
-> ```math
-> \boxed{\mathcal E_4(8,N)=\frac7{16}N^2-
-> \frac{5\sqrt{210}}{48}N^{3/2}+o(N^{3/2}).}
-> ```
+> where $L_2,L_4,L_8,L_{24}$ are the covolume-one triangular, D4, E8 and Leech
+> lattices, and $Z_L$ is the continued Epstein zeta function in the distance exponent.
+
+Conjecture 4 of [Brauchart, Hardin and Saff (2012)](https://arxiv.org/abs/1202.4037)
+asks whether the following logarithmic energy asymptotics hold.
+
+> **Conjecture 4: the logarithmic energy coefficient.**
+> Let $d\in\{2,4,8,24\}$, and let $\mathcal E_{\log}(d,N)$ be the minimum of
+> the ordered logarithmic sum $-\sum_{i\ne j}\log|x_i-x_j|$ on $\mathbb S^d$.
+> Then
 >
-> All limits are over every sufficiently large integer $`N`$.
+> $$\mathcal E_{\log}(d,N)=W_dN^2-\frac Nd\log N+
+> \left(Z'_{L_d}(0)+\frac1d\log A_d\right)N+o(N),$$
+>
+> where $W_d$ is the continuous logarithmic energy of uniform probability measure
+> on the sphere.
 
-A proof sketch follows; the [PDF manuscript](PDF/riesz-energy-spheres.pdf) contains the detailed argument for all three dimensions, including positive and negative Riesz exponents, logarithmic energy, and spherical cap discrepancy. Section 4 states the lattice Gaussian minorant theorem and checks its Fourier and covolume conventions. Sections 13–18 give explicit Gaussian error bounds, equal-mass cells, simultaneous selection, and both endpoint estimates.
+A related spherical cap discrepancy conjecture in
+[Brauchart (2011), §3](https://arxiv.org/abs/1103.3088) asks for the following
+asymptotics. Its predicted lattice coefficients are also discussed in
+[Bilyk and Brauchart (2025), §5.3](https://arxiv.org/html/2502.15984v1#S5.SS3).
 
-## Proof sketch
+> **Conjecture: optimal spherical cap $L^2$ discrepancy.**
+> Let $d\ge2$, and let $\sigma_d$ be uniform probability measure on $\mathbb S^d$.
+> For an $N$-point configuration $X\subset\mathbb S^d$, let $D_2(X)$
+> be the square root of the integral of
+> $\bigl(|X\cap C|/N-\sigma_d(C)\bigr)^2$ over spherical caps
+> $C(z,t)=\{x:\langle x,z\rangle\ge t\}$, using uniform directions $z$ and Lebesgue height measure
+> $dt$ on $[-1,1]$. Then there is a constant $K_d>0$ such that
+>
+> $$\inf_{|X|=N}D_2(X)=K_dN^{-1/2-1/(2d)}+o\!\left(N^{-1/2-1/(2d)}\right).$$
+>
+> For $d=2,4,8,24$, the predicted coefficient is
+>
+> $$K_d=\sqrt{-\kappa_d A_d^{1/d}Z_{L_d}(-1)},\qquad
+> \kappa_d=\frac{\Gamma((d+1)/2)}{d\sqrt\pi\,\Gamma(d/2)}.$$
 
-### 1. Transfer sharp Gaussian minorants to the sphere
+This repository provides Lean **4.34.1** sources for $d=2,8,24$,
+with $-2<s<d$, $s\ne0$ for Riesz energy.
 
-For every required scale $`\beta`$, the lattice input supplies a Schwartz function satisfying
+| Problem | Scope | Status |
+|---|---|---|
+| Conjecture 3 (Riesz) | General $d\ge2$ | Open |
+| Conjecture 3 (Riesz) | $d=2,8,24$; $-2<s<d$, $s\ne0$ | Solved |
+| Conjecture 4 (logarithmic) | $d=2,4,8,24$ | Open |
+| Conjecture 4 (logarithmic) | $d=2,8,24$ | Solved |
+| Cap discrepancy conjecture | General $d\ge2$ | Open |
+| Cap discrepancy conjecture | $d=2,8,24$ | Solved |
 
-```math
-f_\beta(x)\le e^{-\pi\beta|x|^2},\qquad
-\widehat f_\beta\ge0,\qquad
-\widehat f_\beta(0)-f_\beta(0)=\Theta_L(\beta)-1.
-```
+The repository has two main components:
 
-The last equality follows from contact on the lattice, Fourier zeros on the dual lattice, and Poisson summation. Localize these positive definite kernels in small sphere charts. A continuous-background positivity inequality and an approximate-identity limit give, for arbitrary configurations with $`N\to\infty`$,
+1. **A Formal Conjectures style statement.**
+   [FClikelean/](FClikelean/) contains an independent statement draft with nine open
+   problems and nine solved dimension variants, with references in the docstrings.
+2. **The Lean proof.**
+   [FCSolution.lean](lean/FCSolution.lean) provides the nine solved FC variants through
+   the existing sphere energy proofs and the [definition bridges](lean/comparator/TARGET-CORRESPONDENCE.md).
 
-```math
-\liminf_{N\to\infty}\frac1N
-\sum_{i,j}e^{-\pi t(N/A_d)^{2/d}|x_i-x_j|^2}\ge\Theta_L(t).
-```
+## Formal Conjectures like targets
 
-The diagonal is included here. No separation, equidistribution, or local lattice structure is assumed for these arbitrary configurations. In dimension eight, Gaussian minorants away from the self-dual scale suffice; nearby scales and continuity of theta recover the desired profile.
+### FClikelean
 
-### 2. Subtract the actual background before taking the Mellin limit
+The proposed FC-style statements are in
+[RieszEnergySpheres.lean](FClikelean/RieszEnergySpheres.lean).
+The file imports `FormalConjecturesUtil` and groups eighteen declarations into three
+families: Riesz energy, logarithmic energy and cap discrepancy. Each family separates
+the open coefficient-existence problem in arbitrary dimensions from the open lattice
+formula in dimensions 2, 4, 8 and 24. Each lattice problem is followed by
+`.variants.dimension_two`, `.dimension_four`, `.dimension_eight` and
+`.dimension_twenty_four` statements. The four-dimensional variants are tagged open;
+the other three dimension variants are tagged solved.
+The docstrings cite the original conjectures
+in [BHS12], [Br11] and [BB25], and the dimension-specific results in [Ki26].
 
-Put $`a_N=(N/A_d)^{1/d}`$ and let $`B_d(u)`$ be the Gaussian potential of the uniform probability measure with kernel $`e^{-\pi u|x-y|^2}`$. If $`G_N`$ is the normalized full Gaussian sum above, define
+The Riesz variants combine positive and negative exponents in the range
+$`-2<s<d`$, $`s\ne0`$, including the regular E8 value at $`s=2`$.
+The logarithmic lattice problem retains Conjecture 4's original dimensions 2, 4, 8 and 24.
+The $`s=4`$ example is contained in the S⁸ Riesz variant.
 
-```math
-H_N(t)=G_N(t)-NB_d(a_N^2t),\qquad F_N(t)=H_N(t)-1.
-```
+The theorem proofs contain `sorry`, as in an FC statement file. This is a submission
+draft; correspondence with the proof project's targets remains for the owner's review.
 
-Gaussian positivity gives $`H_N\ge0`$, while polar integration gives
+### Comparator target
 
-```math
-NB_d(a_N^2t)\le t^{-d/2},\qquad
-NB_d(a_N^2t)\longrightarrow t^{-d/2}.
-```
-
-Thus $`F_N(t)\ge-\min(1,t^{-d/2})`$. For $`0<s<d`$ this is an integrable lower bound after multiplication by $`t^{s/2-1}`$. The Mellin identity and Fatou's lemma give the sharp universal lower bound with coefficient $`A_d^{-s/d}Z_L(s)`$.
-
-For $`-2<s<0`$, the subtracted Mellin formula uses $`H_N`$ and has a negative gamma prefactor. The same Gaussian argument gives the universal upper bound appropriate to a maximization problem.
-
-### 3. Build matching configurations in exact-area charts
-
-The explicit chart
-
-```math
-\Phi(z,t)=\bigl(z,\sqrt{1-|z|^2}\sin t,\sqrt{1-|z|^2}\cos t\bigr)
-```
-
-has Gram determinant one. Small lattice patches therefore have exact surface-area masses. A finite separated family can cover arbitrarily close to the whole sphere, with masses chosen as rational $`d`$th powers so that node counts and background masses agree exactly.
-
-For $`d=8`$, $`s=4`$, a sixth-order equal-weight boundary rule yields a curved-background quadrature error $`O(h^5)`$. Simultaneous differentiation moves the most singular terms to faces, where the Peano kernel controls them. Every interior row has the local regularized lattice limit, and all boundary rows have a common $`O(h^4)`$ bound. Neutralization then produces the coefficient $`Z_{E_8}(4)=-5\pi^2/6`$.
-
-For the general construction, the order-fourteen rule bounds the physical Gaussian bump error by a constant times the softened Gaussian integral over the sphere. Its squared integral is computed exactly. If $`H_{F,N}`$ is the centered foreground Gaussian defect divided by $`N`$, the resulting bound is
-
-```math
-\int_0^w\alpha^{q-1}H_{F,N}(\alpha)\,d\alpha
-\le \frac{Cw^{q+14-d/2}}{q+14-d/2}
-   +C_{F,q}a_N^{d-28-2q},\qquad -1<q<0.
-```
-
-The second term tends to zero in all three dimensions. The manuscript also gives the critical order-twelve calculation in dimension 24: for $`q=s/2>0`$, its smallest-scale error is $`O(N^{-s/24})`$.
-
-### 4. Construct one configuration at every integer size
-
-For fixed patch sides $`\lambda_i`$, set
-
-```math
-n_i(N)=\lfloor\lambda_i a_N\rfloor,\qquad
-\lambda_i(N)=\frac{n_i(N)}{a_N}.
-```
-
-The contracted patch has exactly $`n_i(N)^d`$ nodes and probability mass $`n_i(N)^d/N`$. Fill its complement with exactly
-
-```math
-k_N=N-\sum_i n_i(N)^d
-```
-
-points, one from each cell of mass $`1/N`$. In dimensions eight and 24, a fine chart grid and a coarser partition of the remaining mass give the squared-diameter bound, including the cost of cells that join distant pieces. In dimension two, a spanning tree of adjacent cells keeps each carried remainder inside one original cell and gives a uniform diameter bound.
-
-Three nonnegative costs are controlled together: the small-scale centered Gaussian integral, the residual Gaussian sum at the left edge of the window, and the large-scale off-diagonal integral. Their expectations are bounded explicitly. Markov's inequality and the union bound select **one** injective configuration satisfying all three estimates.
-
-A diagonal choice of the approximation stage gives configurations at every sufficiently large integer $`N`$ with the sharp Gaussian profile and uniform bounds
+[Challenge.lean](lean/Challenge.lean) supplies the reference statements, and
+[FCSolution.lean](lean/FCSolution.lean) supplies their proofs. The principal explicit
+target is `RieszSphereFC.riesz_energy_four_sphere8`:
 
 ```math
-\int_0^1\alpha^{q-1}H_N(\alpha)\,d\alpha\le\mathcal B_0,
-\qquad
-\int_1^\infty\alpha^{v-1}(G_N(\alpha)-1)\,d\alpha\le\mathcal B_\infty,
+\mathcal E_4(8,N)=\frac7{16}N^2-\frac{5\sqrt{210}}{48}N^{3/2}+o(N^{3/2}).
 ```
 
-where $`-1<q<0<v<d/2`$. For a Riesz exponent $`s=2p`$, choose $`q<p<v`$. The two omitted tails then tend to zero by explicit power estimates. The same construction covers dimension two; its pointwise small-scale bound and its shrinking-cutoff integral are proved separately in Section 17.
+The other targets cover positive and negative Riesz exponents, logarithmic energy
+and cap discrepancy in all three dimensions, including the removable E8 value
+at $`s=2`$. The
+[correspondence table](lean/comparator/TARGET-CORRESPONDENCE.md) records the
+natural-language clauses and their reference declarations.
 
-### 5. Derive logarithmic energy and cap discrepancy
+## Mathematical explanation (AI generated)
 
-A Frullani identity, with separate small- and large-scale bounds, establishes
+Write $`a_N=(N/A_d)^{1/d}`$ for the microscopic scale. Then
+$`Na_N^s=A_d^{-s/d}N^{1+s/d}`$, which gives the area factor in the next-order term.
+
+**1. Obtain sharp Gaussian lower bounds.** Gaussian minorants for the triangular,
+E8 and Leech lattices supply the local coefficients. Localization to sphere charts
+and a positive-definiteness inequality compare arbitrary configurations with
+the uniform background.
+
+**2. Recover the Riesz coefficient.** Subtract the continuous Gaussian background
+before taking the Mellin integral. The resulting coefficient is the continued
+Epstein zeta function. For E8 it has the explicit form
+
+```math
+Z_{E_8}(s)=240\,2^{-s/2}\zeta(s/2)\zeta(s/2-3),
+\qquad Z_{E_8}(2)=120\zeta'(-2).
+```
+
+For negative exponents the comparison gives an upper bound on the energy,
+so the extremal problem uses a supremum.
+
+**3. Construct matching configurations.** Place scaled lattice patches in
+exact-area sphere charts. Boundary quadrature and residual cells control the
+errors. Integer patch budgets produce configurations at every sufficiently large
+size, giving a limit along all integers.
+
+**4. Pass to logarithmic energy.** A Frullani integral gives the logarithmic limit,
+with $`W_d=\iint-\log|x-y|\,d\sigma_d(x)d\sigma_d(y)`$:
 
 ```math
 \mathcal E_{\log}(d,N)=W_dN^2-\frac Nd\log N+
-\left(Z'_{L_d}(0)+\frac1d\log A_d\right)N+o(N),
+\left(Z'_{L_d}(0)+\frac1d\log A_d\right)N+o(N).
 ```
 
-where $`W_d=\iint-\log|x-y|\,d\sigma_d(x)d\sigma_d(y)`$. The same two integral bounds control both ends of the Frullani integral on the same configurations. No differentiation of an asymptotic remainder is used.
-
-For cap discrepancy, integrate cap height against $`dt`$ on $`[-1,1]`$ and direction against $`\sigma_d`$. Stolarsky's identity gives
+**5. Recover cap discrepancy.** Stolarsky's identity relates discrepancy to the
+negative Riesz exponent $`s=-1`$. For caps
+$`C(z,t)=\{x:\langle x,z\rangle\ge t\}`$, let $`D_2`$ use uniform directions
+and Lebesgue height measure $`dt`$ on $`[-1,1]`$. Then
 
 ```math
-D_2(X)^2=\kappa_d\left(I_{-1,d}-\frac{E_{-1}(X)}{N^2}\right),
-\qquad
-\kappa_d=\frac{\Gamma((d+1)/2)}{d\sqrt\pi\,\Gamma(d/2)}.
+N^{1/2+1/(2d)}\inf_X D_2(X)\longrightarrow
+\sqrt{-\kappa_d A_d^{1/d}Z_{L_d}(-1)},\qquad
+\kappa_2=\frac14,\quad\kappa_8=\frac{35}{256},\quad
+\kappa_{24}=\frac{676039}{8388608}.
 ```
 
-Consequently,
+The [proof note](PDF/riesz-energy-spheres.pdf) gives the mathematical argument.
 
-```math
-N^{1/2+1/(2d)}\inf_XD_2(X)\longrightarrow
-\sqrt{-\kappa_d A_d^{1/d}Z_{L_d}(-1)}.
-```
+## Files
 
-## Detailed manuscript
+| Directory | Lean version | Purpose |
+|---|---|---|
+| [lean/](lean/) | `v4.34.1` | Canonical proof, pinned dependencies, Challenge and FCSolution. |
+| [leanWithoutComparator/](leanWithoutComparator/) | `v4.34.1` | The same proof for browsing and building, with Comparator-only files removed. |
+| [FClikelean/](FClikelean/) | Upstream FC environment | Independent proposed FC-style statements, prepared for review. |
+| [lean/comparator/](lean/comparator/) | `v4.34.1` | Input pins, source correspondence, verification scripts and guide. |
+| [.github/workflows/](.github/workflows/) | GitHub-hosted Linux | Prepared build, Comparator, axiom audit and fresh kernel replay workflow. |
+| [PDF/](PDF/) | — | Proof note, TeX source and existing timestamp evidence. |
 
-- [PDF manuscript](PDF/riesz-energy-spheres.pdf)
+[SOURCE-MANIFEST.json](SOURCE-MANIFEST.json) records the input hashes and the common
+sources of the canonical and supplementary proof projects.
 
-## Conclusion
+## Verification
 
-Using the lattice Gaussian minorant theorem stated in the manuscript, the argument gives the next-order Riesz and logarithmic energy asymptotics on the unit spheres of dimensions two, eight, and 24. Localized Gaussian bounds and matching lattice-patch constructions give the same coefficient. Adjusting each patch side to the prescribed density gives every integer size, and one simultaneous selection controls both endpoints. Stolarsky's identity gives the corresponding spherical cap discrepancy limit.
+### Lean execution results
 
-In dimension eight, the inverse-fourth coefficient is explicit:
+The proof project pins Lean 4.34.1 and a fixed Mathlib commit.
+[FCAudit.lean](lean/FCAudit.lean) lists the nine solved FC targets for an axiom audit.
+The exact eighteen-statement FC Challenge and all nine solution targets compiled
+successfully on GitHub CI, using a recorded import-only compatibility patch for
+FC utilities. The [three dimension-specific Comparator jobs](https://github.com/KitaKen1/ci-test-sandbox/actions/runs/39109164457)
+also passed, including builtin-kernel replay and the permitted-axiom audit.
+That sandbox verification reused completed build products from an earlier run.
+Logs and receipts are recorded in [verification/](verification/).
 
-```math
-\mathcal E_4(8,N)=\frac7{16}N^2-
-\frac{5\sqrt{210}}{48}N^{3/2}+o(N^{3/2}).
-```
+The owner's statement review and public cold-start CI remain pending.
 
-All energies use ordered pairs and chordal distance. Negative Riesz exponents use a supremum; positive Riesz and logarithmic energies use an infimum.
+### Lean Comparator check
+
+The prepared Comparator setup uses Lean 4.34.1 throughout. The tool revisions are
+fixed in [pins.json](lean/comparator/pins.json); Comparator and Lean4export have
+toolchain-only changes from 4.34.0 to 4.34.1.
+The workflow selects the nine solved variants from an exact copy of the FC draft,
+permits only `[propext, Classical.choice, Quot.sound]`, and requires Comparator's
+fresh builtin-kernel replay in all three dimension jobs.
+
+The proof build is divided into six jobs, with a four-hour compile budget per
+job. Artifacts pass completed products along the same workflow, so a first run
+needs no previous project proof cache. Comparator then runs separately for
+$d=2,8,24$, with three unchanged FC targets in each job. Public verification of
+this complete workflow is pending.
+
+## Appendix: timeline (AI generated)
+
+| Date | Contributor | Contribution |
+|---|---|---|
+| February 2012 | J. S. Brauchart, D. P. Hardin and E. B. Saff | Surveyed optimal sphere energy and formulated next-order Riesz and logarithmic energy conjectures ([paper](https://arxiv.org/abs/1202.4037)). |
+| 2022 | Henry Cohn, Abhinav Kumar, Stephen D. Miller, Danylo Radchenko and Maryna Viazovska | Proved universal optimality of E8 and the Leech lattice for completely monotonic potentials, using sharp auxiliary functions and Fourier interpolation ([paper](https://annals.math.princeton.edu/2022/196-3/p03)). |
+| October 2026 | Kenta Kitamura | Prepared the [sphere energy manuscript](PDF/riesz-energy-spheres.pdf), the Lean proof sources and the FC-style statement draft in this repository. |
+
+The Euclidean lattice results provide Gaussian input. The spherical next-order
+argument also requires localization, subtraction of the continuous background
+and matching point configurations on the sphere.
+
+## Appendix: Verification by Lean Comparator on GitHub CI runner
+
+Comparator verifies each theorem and its dependent definitions against the reference,
+checks the allowed axioms and replays the proof in Lean's builtin kernel.
+Each dimension job replays the selected proofs and their dependencies from scratch.
+An optional manual audit additionally replays every imported declaration with
+`leanchecker --fresh FCSolution`.
+
+### Certification Within 90 days: CI results
+
+The workflow retains logs and artifacts for 90 days.
+The [private sandbox run](https://github.com/KitaKen1/ci-test-sandbox/actions/runs/39109164457)
+passed all three dimension-specific Comparator jobs, covering the nine solved
+FC variants. Public cold-start CI remains pending.
+
+### Certification After 90 days: archive
+
+An archived run records the tested commit, run and attempt, and includes the original
+artifact ZIPs, full job logs, run metadata, receipts and SHA-256 checksums.
+The sandbox evidence is archived in [verification/](verification/), including
+the original successful Comparator artifacts, job logs and checked target scope.
+
+### Reproduce the verification
+
+From `lean/`, build with `lake exe cache get && lake build`.
+For the complete Linux checks, run the [verification workflow](.github/workflows/comparator.yml)
+in a repository you control. See [the verification guide](lean/comparator/README.md).

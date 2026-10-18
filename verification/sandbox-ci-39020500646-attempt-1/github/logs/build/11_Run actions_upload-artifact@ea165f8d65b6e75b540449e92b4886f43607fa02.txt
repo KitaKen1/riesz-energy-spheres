@@ -1,0 +1,24 @@
+﻿2026-10-17T09:16:39.6984346Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-17T09:16:39.6984805Z with:
+2026-10-17T09:16:39.6985585Z   name: build-39020500646-1
+2026-10-17T09:16:39.6985861Z   path: build-receipt/
+2026-10-17T09:16:39.6986095Z   retention-days: 90
+2026-10-17T09:16:39.6986322Z   if-no-files-found: error
+2026-10-17T09:16:39.6986563Z   compression-level: 6
+2026-10-17T09:16:39.6986792Z   overwrite: false
+2026-10-17T09:16:39.6987023Z   include-hidden-files: false
+2026-10-17T09:16:39.6987272Z ##[endgroup]
+2026-10-17T09:16:39.8765138Z (node:2195) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-17T09:16:39.8766751Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-17T09:16:39.8879267Z With the provided path, there will be 8 files uploaded
+2026-10-17T09:16:39.8880520Z Artifact name is valid!
+2026-10-17T09:16:39.8881132Z Root directory input is valid!
+2026-10-17T09:16:40.1165658Z Beginning upload of artifact content to blob storage
+2026-10-17T09:16:40.1832411Z (node:2195) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-17T09:16:40.2536238Z Uploaded bytes 144132
+2026-10-17T09:16:40.3086041Z Finished uploading artifact content to blob storage!
+2026-10-17T09:16:40.3092972Z SHA256 digest of uploaded artifact zip is ebc1c24492a603e63d354ea2354c64d19cbdcb6d9fb9fffd7db76f727c171416
+2026-10-17T09:16:40.3093975Z Finalizing artifact upload
+2026-10-17T09:16:40.5147252Z Artifact build-39020500646-1.zip successfully finalized. Artifact ID 12096084116
+2026-10-17T09:16:40.5148003Z Artifact build-39020500646-1 has been successfully uploaded! Final size is 144132 bytes. Artifact ID is 12096084116
+2026-10-17T09:16:40.5156387Z Artifact download URL: https://github.com/KitaKen1/ci-test-sandbox/actions/runs/39020500646/artifacts/12096084116

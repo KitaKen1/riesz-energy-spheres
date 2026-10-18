@@ -1,0 +1,16 @@
+import FCSolution
+
+#print axioms RieszSphereFC.riesz_energy_four_sphere8
+#print axioms RieszSphereFC.riesz_energy_sphere2
+#print axioms RieszSphereFC.riesz_energy_neg_sphere2
+#print axioms RieszSphereFC.log_energy_sphere2
+#print axioms RieszSphereFC.cap_discrepancy_sphere2
+#print axioms RieszSphereFC.riesz_energy_sphere8
+#print axioms RieszSphereFC.riesz_energy_neg_sphere8
+#print axioms RieszSphereFC.log_energy_sphere8
+#print axioms RieszSphereFC.cap_discrepancy_sphere8
+#print axioms RieszSphereFC.riesz_energy_sphere24
+#print axioms RieszSphereFC.riesz_energy_neg_sphere24
+#print axioms RieszSphereFC.log_energy_sphere24
+#print axioms RieszSphereFC.cap_discrepancy_sphere24
+#print axioms RieszSphereFC.riesz_energy_two_sphere8

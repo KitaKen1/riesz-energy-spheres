@@ -1,0 +1,44 @@
+﻿2026-10-17T09:14:59.2522708Z Current runner version: '2.337.0'
+2026-10-17T09:14:59.2602341Z ##[group]Runner Image Provisioner
+2026-10-17T09:14:59.2603788Z Hosted Compute Agent
+2026-10-17T09:14:59.2604819Z Version: 20261012.601
+2026-10-17T09:14:59.2605876Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-17T09:14:59.2607651Z Build Date: 2026-10-12T17:48:21Z
+2026-10-17T09:14:59.2608854Z Worker ID: {c35a8af3-0f93-472d-863e-5ae1782fb51b}
+2026-10-17T09:14:59.2610059Z Region: centralus
+2026-10-17T09:14:59.2611136Z Cloud: Azure
+2026-10-17T09:14:59.2612258Z ##[endgroup]
+2026-10-17T09:14:59.2614967Z ##[group]Operating System
+2026-10-17T09:14:59.2616089Z Ubuntu
+2026-10-17T09:14:59.2637426Z 24.04.5
+2026-10-17T09:14:59.2638574Z LTS
+2026-10-17T09:14:59.2639459Z ##[endgroup]
+2026-10-17T09:14:59.2640467Z ##[group]Runner Image
+2026-10-17T09:14:59.2641554Z Image: ubuntu-24.04
+2026-10-17T09:14:59.2642495Z Version: 20261012.334.1
+2026-10-17T09:14:59.2644768Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-17T09:14:59.2648052Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-17T09:14:59.2649957Z ##[endgroup]
+2026-10-17T09:14:59.2652269Z ##[group]GITHUB_TOKEN Permissions
+2026-10-17T09:14:59.2655676Z Contents: read
+2026-10-17T09:14:59.2656699Z Metadata: read
+2026-10-17T09:14:59.2678962Z ##[endgroup]
+2026-10-17T09:14:59.2682403Z Secret source: Actions
+2026-10-17T09:14:59.2684119Z Cache mode: write
+2026-10-17T09:14:59.2685732Z Prepare workflow directory
+2026-10-17T09:14:59.3909757Z Prepare all required actions
+2026-10-17T09:14:59.4031274Z Complete job name: verification_status
+2026-10-17T09:14:59.5240222Z ##[group]Run test "$FC_CHALLENGE" = success
+2026-10-17T09:14:59.5241742Z [36;1mtest "$FC_CHALLENGE" = success[0m
+2026-10-17T09:14:59.5242914Z [36;1mtest "$READY" = true[0m
+2026-10-17T09:14:59.5244095Z [36;1mtest "$COMPARE" = success[0m
+2026-10-17T09:14:59.5245423Z [36;1mtest "$REPLAY" = success[0m
+2026-10-17T09:14:59.6126139Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-17T09:14:59.6128390Z env:
+2026-10-17T09:14:59.6129188Z   FC_CHALLENGE: failure
+2026-10-17T09:14:59.6129852Z   READY: 
+2026-10-17T09:14:59.6130391Z   COMPARE: skipped
+2026-10-17T09:14:59.6131014Z   REPLAY: skipped
+2026-10-17T09:14:59.6131580Z ##[endgroup]
+2026-10-17T09:14:59.6388489Z ##[error]Process completed with exit code 1.
+2026-10-17T09:14:59.6574732Z Cleaning up orphan processes

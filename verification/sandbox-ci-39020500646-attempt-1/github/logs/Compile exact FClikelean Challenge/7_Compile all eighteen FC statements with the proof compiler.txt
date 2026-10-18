@@ -1,0 +1,43 @@
+﻿2026-10-17T09:22:18.6434744Z ##[group]Run bash comparator/build-fc-challenge.sh
+2026-10-17T09:22:18.6435065Z [36;1mbash comparator/build-fc-challenge.sh[0m
+2026-10-17T09:22:18.6486012Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-17T09:22:18.6486291Z ##[endgroup]
+2026-10-17T09:22:19.0116512Z warning: formal_conjectures: repository '/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures' has local changes
+2026-10-17T09:22:20.1115055Z Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+2026-10-17T09:22:20.2064184Z warning: formal_conjectures: repository '/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures' has local changes
+2026-10-17T09:22:31.5157599Z ✔ [8924/8934] Built FormalConjecturesUtil.Linters.CopyrightLinter (621ms)
+2026-10-17T09:22:31.9164788Z ✔ [8925/8935] Built FormalConjecturesForMathlib.Lean.Elab.InfoTree.Util (322ms)
+2026-10-17T09:22:32.4168208Z ✔ [8926/8936] Built FormalConjecturesForMathlib.Tactic.Linter.Term (529ms)
+2026-10-17T09:22:33.4622363Z ✔ [8927/8936] Built FormalConjecturesUtil.Linters.ImportLinter (981ms)
+2026-10-17T09:22:34.0333612Z ✔ [8928/8937] Built FormalConjecturesUtil.Attributes.AMS (3.1s)
+2026-10-17T09:22:34.1425169Z ✔ [8929/8937] Built FormalConjecturesUtil.Linters.ExistsImplicationLinter (734ms)
+2026-10-17T09:22:34.8385486Z ✔ [8930/8938] Built FormalConjecturesUtil.Linters.LatexDocstringLinter (864ms)
+2026-10-17T09:22:35.8304356Z ✔ [8932/8942] Built FormalConjecturesUtil.Linters.ModuleDocstringLinter (933ms)
+2026-10-17T09:22:36.5285547Z ✔ [8933/8942] Built FormalConjecturesUtil.Linters.NamespaceLinter (725ms)
+2026-10-17T09:22:37.2297848Z ✔ [8934/8942] Built FormalConjecturesUtil.Linters.StubLinter (735ms)
+2026-10-17T09:22:37.6314184Z ✔ [8935/8942] Built FormalConjecturesUtil.Attributes.Basic (3.5s)
+2026-10-17T09:22:39.3337341Z ✔ [8936/8942] Built FormalConjecturesUtil.Linters.CategoryLinter (1.7s)
+2026-10-17T09:22:39.3353542Z ✔ [8937/8942] Built FormalConjecturesUtil.Linters.FormalProofLinter (1.7s)
+2026-10-17T09:22:40.5355187Z ✔ [8938/8942] Built FormalConjecturesUtil.Linters.CategoryDocstringLinter (1.2s)
+2026-10-17T09:22:40.8347850Z ✔ [8939/8942] Built FormalConjecturesUtil.Linters.AMSLinter (1.5s)
+2026-10-17T09:22:56.8507295Z ✔ [8940/8942] Built FormalConjecturesUtil (15s)
+2026-10-17T09:23:01.3572263Z ⚠ [8941/8942] Built Challenge (4.4s)
+2026-10-17T09:23:01.3573626Z warning: Challenge.lean:129:8: declaration uses `sorry`
+2026-10-17T09:23:01.3574193Z warning: Challenge.lean:141:8: declaration uses `sorry`
+2026-10-17T09:23:01.3574743Z warning: Challenge.lean:155:8: declaration uses `sorry`
+2026-10-17T09:23:01.3575244Z warning: Challenge.lean:166:8: declaration uses `sorry`
+2026-10-17T09:23:01.3575750Z warning: Challenge.lean:179:8: declaration uses `sorry`
+2026-10-17T09:23:01.3576268Z warning: Challenge.lean:192:8: declaration uses `sorry`
+2026-10-17T09:23:01.3576752Z warning: Challenge.lean:204:8: declaration uses `sorry`
+2026-10-17T09:23:01.3577221Z warning: Challenge.lean:218:8: declaration uses `sorry`
+2026-10-17T09:23:01.3577735Z warning: Challenge.lean:233:8: declaration uses `sorry`
+2026-10-17T09:23:01.3578236Z warning: Challenge.lean:245:8: declaration uses `sorry`
+2026-10-17T09:23:01.3578750Z warning: Challenge.lean:259:8: declaration uses `sorry`
+2026-10-17T09:23:01.3579241Z warning: Challenge.lean:273:8: declaration uses `sorry`
+2026-10-17T09:23:01.3580072Z warning: Challenge.lean:286:8: declaration uses `sorry`
+2026-10-17T09:23:01.3580538Z warning: Challenge.lean:297:8: declaration uses `sorry`
+2026-10-17T09:23:01.3580994Z warning: Challenge.lean:312:8: declaration uses `sorry`
+2026-10-17T09:23:01.3581451Z warning: Challenge.lean:323:8: declaration uses `sorry`
+2026-10-17T09:23:01.3648087Z warning: Challenge.lean:336:8: declaration uses `sorry`
+2026-10-17T09:23:01.3648503Z warning: Challenge.lean:349:8: declaration uses `sorry`
+2026-10-17T09:23:01.3695083Z Build completed successfully (8942 jobs).

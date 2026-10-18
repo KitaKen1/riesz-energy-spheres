@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "targets": [
+    "RieszSphereFC.riesz_energy_four_sphere8",
+    "RieszSphereFC.riesz_energy_sphere2",
+    "RieszSphereFC.riesz_energy_neg_sphere2",
+    "RieszSphereFC.log_energy_sphere2",
+    "RieszSphereFC.cap_discrepancy_sphere2",
+    "RieszSphereFC.riesz_energy_sphere8",
+    "RieszSphereFC.riesz_energy_neg_sphere8",
+    "RieszSphereFC.log_energy_sphere8",
+    "RieszSphereFC.cap_discrepancy_sphere8",
+    "RieszSphereFC.riesz_energy_sphere24",
+    "RieszSphereFC.riesz_energy_neg_sphere24",
+    "RieszSphereFC.log_energy_sphere24",
+    "RieszSphereFC.cap_discrepancy_sphere24",
+    "RieszSphereFC.riesz_energy_two_sphere8"
+  ],
+  "reference_imports": [
+    "Mathlib.MeasureTheory.Constructions.HaarToSphere",
+    "Mathlib.Analysis.InnerProductSpace.PiL2",
+    "Mathlib.NumberTheory.LSeries.RiemannZeta",
+    "Mathlib.NumberTheory.LSeries.AbstractFuncEq",
+    "Mathlib.LinearAlgebra.Matrix.Notation",
+    "Mathlib.MeasureTheory.Integral.Prod"
+  ],
+  "definition_holes": false,
+  "mirror_files": 1340,
+  "hashed_files": 2705,
+  "checkout_base_commit": "c04a9e6a03da7be8247d9585237a14d918f3775d",
+  "working_tree_dirty": true,
+  "tested_commit": null,
+  "source_manifest_sha256": "8b2beb4a51c898ca7056dd297a9d1091281a09498f77392c8423a292c6c7ee50",
+  "pins": {
+    "publication_repository": "KitaKen1/riesz-energy-spheres",
+    "private_repository": "KitaKen1/riesz-energy-spheres-private-ci",
+    "lean_toolchain": "leanprover/lean4:v4.34.1",
+    "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "comparator_commit": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+    "lean4export_commit": "076e8e57707e813375e8f9da8bf989799ace9680",
+    "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+    "targets": [
+      "RieszSphereFC.riesz_energy_four_sphere8",
+      "RieszSphereFC.riesz_energy_sphere2",
+      "RieszSphereFC.riesz_energy_neg_sphere2",
+      "RieszSphereFC.log_energy_sphere2",
+      "RieszSphereFC.cap_discrepancy_sphere2",
+      "RieszSphereFC.riesz_energy_sphere8",
+      "RieszSphereFC.riesz_energy_neg_sphere8",
+      "RieszSphereFC.log_energy_sphere8",
+      "RieszSphereFC.cap_discrepancy_sphere8",
+      "RieszSphereFC.riesz_energy_sphere24",
+      "RieszSphereFC.riesz_energy_neg_sphere24",
+      "RieszSphereFC.log_energy_sphere24",
+      "RieszSphereFC.cap_discrepancy_sphere24",
+      "RieszSphereFC.riesz_energy_two_sphere8"
+    ],
+    "reference_status": "Local FC-style targets, not an accepted upstream Formal Conjectures entry.",
+    "toolchain_patches": {
+      "comparator": {
+        "upstream": "leanprover/lean4:v4.34.0",
+        "build": "leanprover/lean4:v4.34.1",
+        "changed_files": [
+          "lean-toolchain"
+        ]
+      },
+      "lean4export": {
+        "upstream": "leanprover/lean4:v4.34.0",
+        "build": "leanprover/lean4:v4.34.1",
+        "changed_files": [
+          "lean-toolchain"
+        ]
+      }
+    }
+  },
+  "proof_digest": "ca8ccf4a54015cfbdb521e55109db1d81e9229129b49e1fe32353c88004afd22"
+}

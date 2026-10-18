@@ -1,0 +1,166 @@
+Changes made in this snapshot after the copy (the manifest lists the ORIGINAL hashes)
+====================================================================================
+
+1. Shared upstream modules (2026-10-13)
+
+Ten modules of the Sphere-Packing-Lean port are also part of the Riesz library, ported from the
+same upstream commit under the same declaration names:
+
+  SpherePacking.CohnElkies.PoissonSummationGeneral                    = Riesz.PoissonLattice
+  SpherePacking.CohnElkies.PoissonSummationLattices.PoissonSummation  = Riesz.PoissonStandardLattice
+  SpherePacking.CohnElkies.PoissonSummationLattices.UnitAddTorus      = Riesz.PoissonTorus
+  SpherePacking.CohnElkies.PoissonSummationSchwartz.Basic             = Riesz.PoissonSchwartzBasic
+  SpherePacking.CohnElkies.PoissonSummationSchwartz.PoissonSummation  = Riesz.PoissonSchwartz
+  SpherePacking.ForMathlib.BoundsOnIcc                                = Riesz.BoundsOnIcc
+  SpherePacking.ForMathlib.FourierLinearEquiv                         = Riesz.FourierLinearEquiv
+  SpherePacking.ForMathlib.RadialSchwartz.Cutoff                      = Riesz.RadialCutoff
+  SpherePacking.ForMathlib.RadialSchwartz.Multidimensional            = Riesz.RadialMultidimensional
+  SpherePacking.ForMathlib.RadialSchwartz.OneSided                    = Riesz.RadialSchwartz
+
+A Lean file cannot import two modules that declare the same name, so a module of this project
+that uses both libraries needs one copy.  The ten files above are kept here unmodified but are
+NOT built and NOT imported; their only importers outside the ten are redirected to the Riesz
+modules:
+
+lean/E8Leech/LatticeCalibration.lean
+    `import SpherePacking.CohnElkies.PoissonSummationGeneral` -> `import Riesz.PoissonLattice`
+    original sha256 f81590ada5ab8d7ae6a1ae795c9efeb21396364178a4a03dc84a03a6ed772a49
+    patched  sha256 7df8aa037998257833496995073420255ce0d9bfde96f275234e4a225060e03a
+lean/E8Leech/E8Duality.lean
+    `import SpherePacking.CohnElkies.PoissonSummationGeneral` -> `import Riesz.PoissonLattice`
+    original sha256 9bfcd4951ad59beea868d2fefdf02bf7100afea39d1296b8d51ea45f28f2a7ea
+    patched  sha256 248365ce402aa90107d71cb721b4282f57f80964e258c46682545fb24771f13f
+lean/E8Leech/CKMRVSchwartz.lean
+    `import SpherePacking.ForMathlib.RadialSchwartz.OneSided` -> `import Riesz.RadialSchwartz`
+    original sha256 4ee8b7cbf100d7b8f40f1ca606fbf23308b5a95084a28b761b43d3e1f0a29ee5
+    patched  sha256 284245b2cf8ce8137f34f1245d39ed5bfc83d9ab7fccd5bff23699b1d8565f2f
+lean/E8Leech/GaussianSchwartz.lean
+    `import SpherePacking.ForMathlib.RadialSchwartz.OneSided` -> `import Riesz.RadialSchwartz`
+    original sha256 e94acb0149553588634f7f76c2f4f7e7a394d6a4068c59199f73bc306253a590
+    patched  sha256 c229209dd3220dc9d883aa9cacfceeeef42d4882689479e58daa971d616b47b6
+
+2. Toolchain port (2026-10-13)
+
+The snapshot was written for Lean 4.33.1 and Mathlib 0df444a360eaa60ab8c11dca51a86af692955474; this
+project compiles it with Lean 4.34.1 and Mathlib d13f23b723b8a846827a245b89c10fc7d3f11612.  The
+entries below are all the changes made for that.  They change proofs only: tactic scripts, lemma
+names, `simp` sets, explicit arguments, and Mathlib import lines.  No statement of a theorem was
+changed, no declaration was added, removed or renamed, and the `decide +kernel` certificates and
+the generated data of the `Kron*` modules were not touched.
+3 of the changed places are inside `def`s (`StationaryPointProcess.dilate`,
+`StationaryPointProcess.deleteClose`, `StationaryPointProcess.deletedClose`): each of them changes
+only the proof of a proposition-valued structure field; the data fields and the types are unchanged.
+
+Not a change of this snapshot, but relevant for reading its statements with the newer Mathlib:
+between the two Mathlib revisions the junk values of two definitions changed.
+`MeasureTheory.Measure.map f μ` for a non-a.e.-measurable `f` was `0` and is now `0` if `μ = 0`
+and a Dirac mass otherwise (Mathlib #42322); `MeasureTheory.eLpNorm f p μ` for a `f` that is not
+a.e. strongly measurable is now `∞`, and `MemLp f p μ` is defined as `eLpNorm f p μ < ∞`
+(Mathlib #42406).  The statements of the snapshot that mention them are textually unchanged.
+
+`-` lines are the original text (as in the manifest), `+` lines the text used here; line numbers
+refer to the original file.  13 files, 14 changed places.
+
+lean/E8Leech/BoxOverlap.lean
+    original sha256 242882ee89697d4f129d83e86c2c8dc23478736470def15cbd3546c3e47308e9
+    patched  sha256 c909b0d57f778d771132bf884b0a349613d5b1a5761be063ec3e115c75b89e0c
+  * theorem boxOverlapRatio_le_one, l.118: Mathlib rename (#39692): the ordered-semiring `Finset.prod_le_one` is now `Finset.prod_le_one₀`
+      -   apply Finset.prod_le_one
+      +   apply Finset.prod_le_one₀
+
+lean/E8Leech/Dilation.lean
+    original sha256 4753b3a46360b8aa79486beb8c65d16ede7e0b3c6f2fe2bfac7540d6ef8ec47a
+    patched  sha256 cd3bfdf31b88a978ac516b8eb8bde2c4ac8f03261d161209500c6202f83a8788
+  * def StationaryPointProcess.dilate, l.72: Mathlib #42322 changed the default value of `Measure.map` and removed `Measure.isProbabilityMeasure_map`; the push-forward of a probability measure is now an instance (this is the proof of the proposition-valued field `probability`; the data fields are unchanged)
+      -     exact Measure.isProbabilityMeasure_map (measurable_dilate a ha).aemeasurable
+      +     exact inferInstance
+
+lean/E8Leech/E8Lattice.lean
+    original sha256 0d6d464888091c783cb781915e3df991ed291415ee2a0339521b61b23bfbcab9
+    patched  sha256 80f3afb7cc9b2f7e8263537f0500d4636ddcb130b6f9ef82670ddcb847d986c0
+  * theorem e8TriangularMatrix_lower, l.45: `norm_num` now closes the goal; the trailing `decide` had no goal left
+      -   decide
+
+lean/E8Leech/EulerProductBounds.lean
+    original sha256 0f68a9e8a2ffc037be950ee3b73c7f1269b169432c5e6b3be1de4613c96f4c53
+    patched  sha256 7ffad2b0edc80cb85d5bde325d2e9059f04d822eca6ee7866809d5e0e84b2b79
+  * theorem eulerQProduct_upper, l.64: Mathlib rename (#39692): the ordered-semiring `Finset.prod_le_one` is now `Finset.prod_le_one₀`
+      -   exact Finset.prod_le_one
+      +   exact Finset.prod_le_one₀
+
+lean/E8Leech/LocalSecondMoments.lean
+    original sha256 ac7d17832a16757f076f6deeb8274cd38b68ca781185abe6ce9ae4775a14eb70
+    patched  sha256 e9a0ee4539e4dca036100df900736dfe7d6d31d41116db4335355187771a7281
+  * theorem memLp_two_toReal_of_second_moment, l.200-201: Mathlib #42406: `MemLp f p μ` is now `eLpNorm f p μ < ∞` (no measurability component) and `eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top` takes the measurability as an argument
+      -   refine ⟨hf.ennreal_toReal.aestronglyMeasurable, ?_⟩
+      -   rw [eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top two_ne_zero ENNReal.ofNat_ne_top]
+      +   rw [memLp_iff, eLpNorm_lt_top_iff_lintegral_rpow_enorm_lt_top two_ne_zero ENNReal.ofNat_ne_top
+      +     hf.ennreal_toReal.aestronglyMeasurable]
+
+lean/E8Leech/StationaryDeletion.lean
+    original sha256 22f98e080292b1079d204b684d36eff27fcfba6a870c78eb43358a4cde303d5c
+    patched  sha256 4e94f803dd9f5c1fc16422ebf5d9479058165ee98a88f8b04108b0458d4b9b42
+  * def StationaryPointProcess.deleteClose, l.49: Mathlib #42322 changed the default value of `Measure.map` and removed `Measure.isProbabilityMeasure_map`; the push-forward of a probability measure is now an instance (this is the proof of the proposition-valued field `probability`; the data fields are unchanged)
+      -     exact Measure.isProbabilityMeasure_map (measurable_deleteClose r).aemeasurable
+      +     exact inferInstance
+
+lean/E8Leech/StationaryIntensity.lean
+    original sha256 36d6e384c23ba4a3234e2e19b29b5caa149995c45575be6cd31ced555f5ba7ef
+    patched  sha256 0f5ee0df6dabbffc6d9af4fb2916879ab405a5db8edc6714f526a4c0a0f23097
+  * def StationaryPointProcess.deletedClose, l.151: Mathlib #42322 changed the default value of `Measure.map` and removed `Measure.isProbabilityMeasure_map`; the push-forward of a probability measure is now an instance (this is the proof of the proposition-valued field `probability`; the data fields are unchanged)
+      -     exact Measure.isProbabilityMeasure_map (measurable_deletedClose r).aemeasurable
+      +     exact inferInstance
+
+lean/E8Leech/TaylorModelOps.lean
+    original sha256 ff2a7a06bdc0cf70313b32a3db340f5ae4d3fa04f2453e170978387cfb553160
+    patched  sha256 b0d84ab29d797bba1640f20b97b3e1c30e5ddfd6a383460424984b3b1c5d71ee
+  * imports, l.3: `Rat.cast_pow` (used by `push_cast`) is no longer in the transitive imports; its module is imported explicitly
+      + import Mathlib.Data.Rat.Cast.Lemmas
+
+lean/SpherePacking/ForMathlib/IteratedDeriv.lean
+    original sha256 01ca92bb92195a02db2e4e34432cebafac72169b9e22bce733aeae7bea2c65b5
+    patched  sha256 2e0266f3787d31090c2636cec7be1e6a5d224aab92765fcf73da79d957e59706
+  * lemma iteratedFDeriv_add₆_apply', l.154-158: the deprecated alias `iteratedFDeriv_add_apply'` was removed from Mathlib; it was an alias of `fun_iteratedFDeriv_add_apply`
+      -   simp [iteratedFDeriv_add_apply' (𝕜 := ℝ) (i := n) (x := x) h12345 hf₆,
+      -     iteratedFDeriv_add_apply' (𝕜 := ℝ) (i := n) (x := x) h1234 hf₅,
+      -     iteratedFDeriv_add_apply' (𝕜 := ℝ) (i := n) (x := x) h123 hf₄,
+      -     iteratedFDeriv_add_apply' (𝕜 := ℝ) (i := n) (x := x) h12 hf₃,
+      -     iteratedFDeriv_add_apply' (𝕜 := ℝ) (i := n) (x := x) hf₁ hf₂]
+      +   simp [fun_iteratedFDeriv_add_apply (𝕜 := ℝ) (i := n) (x := x) h12345 hf₆,
+      +     fun_iteratedFDeriv_add_apply (𝕜 := ℝ) (i := n) (x := x) h1234 hf₅,
+      +     fun_iteratedFDeriv_add_apply (𝕜 := ℝ) (i := n) (x := x) h123 hf₄,
+      +     fun_iteratedFDeriv_add_apply (𝕜 := ℝ) (i := n) (x := x) h12 hf₃,
+      +     fun_iteratedFDeriv_add_apply (𝕜 := ℝ) (i := n) (x := x) hf₁ hf₂]
+
+lean/SpherePacking/ModularForms/DimGenCongLevels/Auxiliary.lean
+    original sha256 1849cce9a5c0bd377dde240ec9b2c3a3ce6d886e9b91e55560e83f9aae0c9767
+    patched  sha256 6ac266008d3058c0997ed5c6e140160f88fc534088eb8fb02cc753b25111c0a4
+  * lemma qExpansion_coeff_eq_zero_of_cuspFunction_isBigO_pow, l.149: `simp` now reduces the norm positivity to `0 < π`; `Real.pi_pos` is given instead of `Real.pi_ne_zero`
+      -       simp [Real.pi_ne_zero]
+      +       simp [Real.pi_pos]
+
+lean/SpherePacking/ModularForms/Eta.lean
+    original sha256 dc45c11e55b37aaabf703aaef37826b5ced4022b9c7435e9185c7e0e49a39b9c
+    patched  sha256 9cb576d44f72e2191e4cfe2d27d4148b3a05a05be6ff79e0b30b6892015ae0ce
+  * lemma eta_logDeriv, l.118: Mathlib: `logDeriv_mul` is now stated for `f * g`; the `fun z => f z * g z` form (the old statement) is `logDeriv_fun_mul`
+      -   rw [logDeriv_mul]
+      +   rw [logDeriv_fun_mul]
+  * lemma eta_logDeriv_eql, l.233: Mathlib: `logDeriv_mul` is now stated for `f * g`; the `fun z => f z * g z` form (the old statement) is `logDeriv_fun_mul`
+      -   rw [h0, show ((csqrt) * etaSP) = (fun x => (csqrt) x * etaSP x) by rfl, logDeriv_mul]
+      +   rw [h0, show ((csqrt) * etaSP) = (fun x => (csqrt) x * etaSP x) by rfl, logDeriv_fun_mul]
+
+lean/SpherePacking/ModularForms/MultipliableLemmas.lean
+    original sha256 6d51505691781dd5ef303e2efccc9e23fe79b3d71d3c5787eb0d6c0ee1db17ea
+    patched  sha256 c2760a886fb77e6bf55a8285610293688e0a5487b85717a38a20d02e4e9eb04b
+  * theorem hasProd_le_nonneg, l.96: Mathlib rename (#39692): the ordered-semiring `Finset.prod_le_prod` is now `Finset.prod_le_prod₀`
+      -   le_of_tendsto_of_tendsto' hf hg fun _ ↦ Finset.prod_le_prod (fun i _ ↦ h0 i) (fun i _ ↦ h i)
+      +   le_of_tendsto_of_tendsto' hf hg fun _ ↦ Finset.prod_le_prod₀ (fun i _ ↦ h0 i) (fun i _ ↦ h i)
+
+lean/SpherePacking/ModularForms/SlashActionAuxil.lean
+    original sha256 9d94303e065d2ce45d80084f4fee4c56c95c6925e6615d0e5dbe925cf460fa68
+    patched  sha256 0888e4e360733326607629d2820718f78a5ab195c05f327e6d0f0ff29656bb96
+  * lemma Γ2_descent, l.240-241: after `convert … using 1` the remaining goal `|x| = |y|` is no longer closed by `rfl`, and no second goal is left for `ring_nf`; closed by `congr 1; ring`
+      -   · rfl
+      -   · ring_nf
+      +   congr 1
+      +   ring

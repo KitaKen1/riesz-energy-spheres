@@ -1,0 +1,16 @@
+⚠ [3208/3209] Built Challenge (29s)
+warning: Challenge.lean:8:8: declaration uses `sorry`
+warning: Challenge.lean:16:8: declaration uses `sorry`
+warning: Challenge.lean:22:8: declaration uses `sorry`
+warning: Challenge.lean:28:8: declaration uses `sorry`
+warning: Challenge.lean:34:8: declaration uses `sorry`
+warning: Challenge.lean:41:8: declaration uses `sorry`
+warning: Challenge.lean:47:8: declaration uses `sorry`
+warning: Challenge.lean:53:8: declaration uses `sorry`
+warning: Challenge.lean:59:8: declaration uses `sorry`
+warning: Challenge.lean:66:8: declaration uses `sorry`
+warning: Challenge.lean:72:8: declaration uses `sorry`
+warning: Challenge.lean:78:8: declaration uses `sorry`
+warning: Challenge.lean:84:8: declaration uses `sorry`
+warning: Challenge.lean:91:8: declaration uses `sorry`
+Build completed successfully (3209 jobs).

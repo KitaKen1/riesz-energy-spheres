@@ -1,0 +1,4 @@
+The finite characteristic-function quadratic-form proofs in Riesz/CharFun.lean are adapted from TauCetiProject/TauCeti.
+Copyright (c) 2026 The Tau Ceti contributors. Apache License 2.0.
+Source: https://github.com/TauCetiProject/TauCeti/blob/98962476aaba1de05b4a883df5af0562247cb501/TauCeti/Analysis/Bochner/CharFun/PosDef.lean
+The Gaussian rescaling calculation in Riesz/GaussianPSD.lean is adapted from Gaussian/Basic.lean at the same commit.

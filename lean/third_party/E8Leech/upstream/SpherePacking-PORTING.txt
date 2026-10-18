@@ -1,0 +1,691 @@
+Sphere-Packing-Lean port for E8Leach
+====================================
+
+Source: https://github.com/math-inc/Sphere-Packing-Lean
+Commit: 1e98fb493088948ca7bbf47d7faed49cc5b39fc4 ("Add dim 8 and dim 24 formalizations"),
+pinned at Lean v4.28.0 / Mathlib v4.28.0 upstream.
+License: Apache License 2.0 (copy: licenses/Sphere-Packing-Apache-2.0.txt).
+Copyright headers of the original files are retained. Every modified file carries the line
+"-- Modified for E8Leach (Lean 4.33.1 / pinned Mathlib port, 2026-10-10); see SpherePacking/PORTING.txt."
+
+Target environment: Lean v4.33.1, Mathlib 0df444a360eaa60ab8c11dca51a86af692955474 (this project's pin).
+Target scope: the import closure of SpherePacking.Dim8.MainTheorem (Viazovska's theorem in
+dimension 8), plus one added compatibility module (SpherePacking/ForMathlib/QExpansionCompat.lean).
+Only modules that already compile are copied here; the current list is at the end of this file.
+
+Kinds of changes (no statement of a ported theorem was weakened; proofs only, plus the items below):
+1. Proof repairs for the newer elaborator/simp:
+   - `simpa ... using t` whose closing check now fails was replaced by `exact t`, or by `simpa` with
+     a few extra unfolding lemmas (`Function.comp_def`, `Pi.*_def`, `Submodule.vadd_def`, ...),
+     or by `convert t using n` followed by closing tactics. Choices were made by compiling
+     candidates and keeping the first that removes the error.
+   - Later modules use a uniform rule instead: every `simpa ... using t` becomes
+     `simpa ... using! t`. Lean 4.33 closes `simpa ... using t` at reducible transparency;
+     the built-in `using!` form keeps the default-transparency close of Lean 4.28, so the proof
+     text is unchanged apart from the `!` (tools/bang.py in the port workspace).
+   - Declarations that relied on the old definitional-unfolding behaviour are prefixed with
+     `set_option backward.isDefEq.respectTransparency false in` (the same mechanism used
+     throughout pinned Mathlib).
+   - `convert` is used with `(postTransparency := .instances)` where instance-equality side goals
+     appeared; this reproduces the earlier behaviour of `convert`.
+2. API renames in Mathlib: `NoAtoms` -> `MeasureTheory.NullSingletonClass`, `DFunLike.coe_injective'`
+   -> `coe_injective`, `SlashInvariantFormClass.cuspFunction` -> `UpperHalfPlane.cuspFunction`,
+   `qExpansion_add/sub/smul/eq_zero_iff` -> `ModularForm.*`, `Summable.subtype (s := _)` -> `(p := _)`,
+   the new `ModularGroup.coe_S/coe_T` and `S_mul_S_eq` lemmas, `Ring.add_congr/mul_congr` (tactic
+   internals in Tactic/NormNumI), `Simp.Result` field `cache`, `deriveBool` dependent match.
+3. Module names: files named `Aux.lean` were renamed `Auxiliary.lean` (Lean 4.33 rejects the
+   non-portable module name `Aux`); imports were updated accordingly.
+4. Visibility/structure: `PeriodicSpherePacking.instFintypeNumReps'` became a reducible `def`
+   (its explicit arguments cannot be inferred by instance search); `negI : Γ(2)` is defined as
+   `⟨-1, _⟩` (the same element as `!![-1,0;0,-1]`).
+5a. Added module `SpherePacking.ForMathlib.CancelDenomsCompat`. Three `cancel_denoms` helper
+   lemmas (`mul_subst`, `cancel_factors_eq_div`, `derive_trans`) are cited by name in upstream
+   proofs. In the pinned Mathlib they moved into a `meta` section of `Mathlib.Tactic.CancelDenoms`,
+   so this module restates them, with the same statements and the same proofs, under the old
+   `CancelDenoms` names.
+5b. Level-one rank lemmas: Mathlib now states them for `(mapGL ℝ).range`, while upstream uses
+   `Γ(1)`. Local `Γ(1)` versions transport them along `Γ(1) = ⊤`, using the
+   `∀ G [G.HasDetOne], G = range → …` / `rintro G _ rfl` pattern.
+   This affects DimensionFormulas and Dim24 …/RootlessCase/ThetaEquality.
+5c. Elaboration details:
+   - The Fourier transform `𝓕 f` of a plain function, and `fourierCLE ℂ E`, no longer infer their
+     codomain from the argument alone. Type ascriptions were added (FourierPermutations).
+   - `S * T * S` matrix entries are now computed by `rfl` and `ModularGroup.denom_apply`
+     (PermJ12Regularity, dims 8 and 24).
+5d. Name clash with newer Mathlib: `ModularForm.dimension_level_one` (DimensionFormulas, with the
+   extra hypothesis `3 ≤ k`) clashes with Mathlib's `ModularForm.dimension_level_one` in
+   `NumberTheory.ModularForms.LevelOne.DimensionFormula` as soon as both are imported. It is
+   renamed `ModularForm.dimension_level_one_of_three_le` (its only use is in the same file).
+   A static scan of the 2,483 declaration names of the Dim8 closure found no other clash with
+   Mathlib or with `E8Leech` (2026-10-11).
+5. Added module `SpherePacking.ForMathlib.QExpansionCompat`: re-proves the earlier
+   `ModularFormClass.cuspFunction_apply_zero`, `qExpansion_coeff_zero` and
+   `hasFPowerSeries_cuspFunction` names from the current `UpperHalfPlane` API.
+
+Compilation options for this library (lakefile `leanOptions` and scripts/check_project.py):
+  pp.unicode.fun=true, autoImplicit=false, relaxedAutoImplicit=false,
+  weak.linter.style.longLine=false, weak.linter.style.longFile=1500 (the upstream lakefile options).
+  scripts/check_project.py lists the 251 modules in topological order (SPL_MODULES).
+  Integration build (2026-10-11): 251/251 modules, 0 errors, 66 linter warnings in 17 modules
+  (style linters only; record ~/lean-build/e8leach-spl-port/integrate-build2.json).
+
+6. Dim24 upper-bound closure (2026-10-11)
+   SpherePacking.Dim24.MagicFunction.F.UpperBound and its closure (452 workspace modules, 319 beyond
+   the Dim8 closure) were ported with the same options; the uniqueness part of the Leech theorem is not
+   included. Manual fixes beyond the automatic simpa/option repairs:
+   Dim24 port fixes (2026-10-11, session 6; record in SpherePacking/PORTING.txt when integrating):
+   - Ineq2/GeOneCoeffs: set_option maxHeartbeats 1000000 for the 25-case table lemma (4.33 slower whnf).
+   - B/Defs/PsiExtensions: `fun_prop [hH2, hH3, hH4]` -> `fun_prop` (local hypotheses are used automatically; lists take constants only).
+   - AppendixA/EisensteinSeriesBounds, BLeadingNumLowerBound/PsiCoeffMatch: Finset.antidiagonal.fst_le/snd_le -> Finset.Nat.antidiagonal.fst_lt/snd_lt (+ Nat.le_of_lt_succ / Nat.succ_le_of_lt).
+   - B/PureImag: simp now normalizes conj (z^10) to (conj z)^10 first; added hpow' in that form.
+   - Ineq2 DenomReduction/LowerBound, TruncAux/Denom: `lia` (grind) fails on real division; rw [div_eq_mul_one_div]; linarith.
+   - Ineq2Varphi/CertAssemble: `simp [List.getElem_map]` no progress -> exact List.getElem_map _.
+   - BLeadingNumLowerBound/CoeffMatchingLemmas: add BleadingCoeffs.QN to simp set (decides 0 < QN).
+   - ExactTruncPosRigorous/SmallIntervalLB: goal closed only up to defeq after simp; added rfl.
+   - Port target restricted to the closure of Dim24.MagicFunction.F.UpperBound (452 modules); uniqueness part (BS81 etc.) not needed.
+   - Ineq2/GeOne/NumTruncBound, LeOne/TruncAux/NumTailBound/TailTermBounds: `lia` -> `linarith` (real-arithmetic chains).
+   - A/DefsAux/Schwartz/I4Smooth: `simpa [hEq] using! (f.mul g).neg` -> rw [← hEq]; exact (f.mul g).neg (Pi-form Continuous.mul; simp hit non-exposed Complex.mulAux).
+   - A/DefsAux/Schwartz/I6Differentiation: continuity of `coeff` by `simp only [coeff, ...]; fun_prop`.
+   - F/ProfileComplex/A1: `intervalIntegral.intervalIntegrable_const` -> root `intervalIntegrable_const` (Mathlib rename).
+   - A/SpecialValues/Aux02 (l.591): `lia` (grind) fails on a nonlinear chain -> `linarith`.
+   - A/Eigen/PermI56KernelSetup (l.151): `dsimp [permI5KernelMeas]` no progress on a private def -> removed (exact closes by defeq).
+   - B/Eigen/PermJ5 (l.206): `lia` (grind) fails to chain integral equalities -> `rw [hpull, htoIter, hswap', hintEq]`.
+   - F/Laplace/B/SubLeadingBounds/DeltaDivQLowerBound (l.66): `dist`/`‖·-·‖` no longer defeq-visible (instNorm not exposed) -> `simpa only [Metric.mem_ball, dist_eq_norm] using ...`.
+   - A/SpecialValues/EvenAProfile/Basic: same cause at two `hBall` terms -> `Filter.mem_of_superset (Filter.mem_map.mp ...)` + `simpa [Metric.mem_ball, dist_eq_norm]`; `lia` -> `rw [hEq]; exact hmem.le`; final `dist` goal -> `rw [dist_eq_norm]`.
+   - A/SpecialValues/EvenAProfile/AtFour (l.146): final `dist` goal -> `rw [dist_eq_norm]` (instNorm not exposed).
+   - F/Laplace/B/SubLeadingBounds/ExactTruncBound (l.422): `lia` (grind) fails to chain -> `rw [hsum_eq]; exact htri.trans hsum`.
+   - A/SpecialValues/Final/DerivFour (l.125, l.168), F/Laplace/Fourier/Continuation/IntegrandSetup (l.254, preemptive): `Tendsto.eventually (ball_mem_nhds ..)` against a `‖· - l‖ < 1` goal -> `simpa only [Metric.mem_ball, dist_eq_norm] using ...`.
+   - F/Laplace/Profiles/BProfile/TailDifference (l.260): `intervalIntegral.intervalIntegrable_const` -> `intervalIntegrable_const`.
+   - A/SpecialValues/Final/DerivTwoLaurent/AvaluesConvergentRange (l.224): `lia` -> `rw [← hres']; exact hres.trans hle`.
+   - A/SpecialValues/Final/DerivTwoLaurent/AvaluesEqAvaluesImpl: `simpa [Metric.mem_ball]` now needs `dist_eq_norm` (l.447); `lia` -> `rw [hnorm]; linarith [hmul]` (l.691).
+   - F/Sign/SignConditions (l.64): `simp` now rewrites `↑(rexp _)` to `cexp` and leaves `mul_re` residue -> `exact Complex.re_mul_ofReal _ _`.
+
+Files currently in this project (570 modules):
+  SpherePacking.Basic.Domains.RightHalfPlane: 2 changed diff lines
+  SpherePacking.Basic.Domains.WedgeSet: unchanged
+  SpherePacking.Basic.PeriodicPacking.Auxiliary (renamed from SpherePacking.Basic.PeriodicPacking.Aux): 26 changed diff lines
+  SpherePacking.Basic.PeriodicPacking.BoundaryControl: 14 changed diff lines
+  SpherePacking.Basic.PeriodicPacking.DensityFormula: 4 changed diff lines
+  SpherePacking.Basic.PeriodicPacking.PeriodicConstant: 3 changed diff lines
+  SpherePacking.Basic.PeriodicPacking.Theorem22: 23 changed diff lines
+  SpherePacking.Basic.SpherePacking: 18 changed diff lines
+  SpherePacking.CohnElkies.DualSubmoduleDiscrete: unchanged
+  SpherePacking.CohnElkies.LPBound: 4 changed diff lines
+  SpherePacking.CohnElkies.LPBoundAux: 2 changed diff lines
+  SpherePacking.CohnElkies.LPBoundCalcLemmas: 2 changed diff lines
+  SpherePacking.CohnElkies.LPBoundReindex: 2 changed diff lines
+  SpherePacking.CohnElkies.LPBoundSummability: unchanged
+  SpherePacking.CohnElkies.LPBoundSwapSums: 3 changed diff lines
+  SpherePacking.CohnElkies.LatticeSumBounds: unchanged
+  SpherePacking.CohnElkies.PoissonSummationGeneral: 16 changed diff lines
+  SpherePacking.CohnElkies.PoissonSummationLattices.PoissonSummation: 14 changed diff lines
+  SpherePacking.CohnElkies.PoissonSummationLattices.UnitAddTorus: 19 changed diff lines
+  SpherePacking.CohnElkies.PoissonSummationSchwartz.Basic: 14 changed diff lines
+  SpherePacking.CohnElkies.PoissonSummationSchwartz.PoissonSummation: 7 changed diff lines
+  SpherePacking.CohnElkies.Prereqs: 2 changed diff lines
+  SpherePacking.Contour.GaussianIntegral: unchanged
+  SpherePacking.Contour.MobiusInv.Basic: 9 changed diff lines
+  SpherePacking.Contour.MobiusInv.ContourChange: 2 changed diff lines
+  SpherePacking.Contour.MobiusInv.LineMap: unchanged
+  SpherePacking.Contour.MobiusInv.PermJ12PsiFourier: unchanged
+  SpherePacking.Contour.MobiusInv.Segments: 2 changed diff lines
+  SpherePacking.Contour.MobiusInv.WedgeSet: unchanged
+  SpherePacking.Contour.MobiusInv.WedgeSetContour: unchanged
+  SpherePacking.Contour.PermJ12Contour: 5 changed diff lines
+  SpherePacking.Contour.PermJ12CurveIntegral: unchanged
+  SpherePacking.Contour.PermJ12DiffContOnCl: unchanged
+  SpherePacking.Contour.PermJ12Fourier: unchanged
+  SpherePacking.Contour.PermJ12FourierCurveIntegral: 2 changed diff lines
+  SpherePacking.Contour.PermJ12Tendsto: 9 changed diff lines
+  SpherePacking.Contour.PermJ5Kernel: unchanged
+  SpherePacking.Contour.Segments: 4 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.AbsBoundQ: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingCoeffs: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingDeltaBounds: 20 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingKernelRewrite: 6 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.BleadingNumDecomp: 58 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.CoeffBounds: 42 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.CoeffMatchingComputations: 80 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.CoeffMatchingLemmas: 96 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.CoeffQTableRewrites: 22 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.CoeffZModel: 22 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.ConstBounds: 32 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.ConvolutionAlgebra: 12 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.DeltaCoeffBounds: 18 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.DeltaHatSqTable: 22 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.EvenReindex: 2 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.FinalLowerBound: 14 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.HeadEqualsExactTrunc: 28 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.LowerBound: 8 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.Numerators: 6 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.Phi1CoreTable: 22 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.Phi2CoreTable: 12 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PhiCoeffBounds: 10 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PhiDeltaQSeries.Basic: 34 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PhiDeltaQSeries.Identities: 94 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PiBoundsAndTruncCompare: 18 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PowerBounds: 24 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PsiCoeffFunAndTail.Basic: 24 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PsiCoeffFunAndTail.PsiCoeffFun: 98 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PsiCoeffMatch: 92 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PsiRSeriesSetup.Basic: 40 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PsiRSeriesSetup.Defs: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PsiRSeriesSetup.SparseCoeffs: 46 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.PsiTable: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.QSeriesHelpers: 44 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.QSeriesTailAndCoeffBounds.TailBound: 16 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.RemainderBound: 58 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.SeriesSplit: 4 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.ShiftSums: 12 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.TailBounds: 32 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.ThetaRSeriesSpecialize: 50 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.TruncCoeffCertificate: 22 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.VarphiQSeries: 80 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.VarphiTable: 44 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingNumLowerBound.ZVArith: 14 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingTailReduction: 4 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.BLeadingTruncBounds: 12 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.CoeffBoundConstants: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.Constants: 2 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.EisensteinSeriesBounds: 46 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.ExpBounds: 10 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.GeometricTailBounds: 22 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.Ineq2TruncLeOneCoeffsRigor: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.PolyOfCoeffsLemmas: 14 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.Polynomials.Basic: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.Polynomials.CoeffsBleading: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.Polynomials.CoeffsIneq2: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.Polynomials.CoeffsVarphi: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.Polynomials.CoeffsVarphiInt: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.PsiInumCoeffsTable: unchanged
+  SpherePacking.Dim24.Inequalities.AppendixA.QSeries: 6 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.QSeriesMul: 10 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.QSeriesSummable: 14 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.QSeriesTailBounds: 12 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.RBounds: 24 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.RSeriesTailBounds: 12 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.VarphiLeOneNumLowerBound.CoeffModel: 31 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.VarphiLeOneNumLowerBound.ExactTruncTail.AuxIneqs: 38 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.VarphiLeOneNumLowerBound.ExactTruncTail.ExactTruncation: 34 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.VarphiLeOneNumLowerBound.HeadIdentification: 26 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.VarphiLeOneNumLowerBound.TailBound.NormRemainder: 28 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.VarphiLeOneNumLowerBound.TailBound.PowComparisons: 10 changed diff lines
+  SpherePacking.Dim24.Inequalities.AppendixA.VarphiLeOneNumLowerBound.TailBound.TailEstimate: 18 changed diff lines
+  SpherePacking.Dim24.Inequalities.BLeadingTerms: 12 changed diff lines
+  SpherePacking.Dim24.Inequalities.Certificate.ZVArith: 8 changed diff lines
+  SpherePacking.Dim24.Inequalities.Defs: 2 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.AppendixA.Trunc: unchanged
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.AppendixA.TruncPos: 14 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.DenomReduction.LowerBound: 15 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.DenomReduction.Numerators: 12 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.Ineq2PsiSnum.PsiSnumCoeffs.Bounds: 60 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.Ineq2PsiSnum.PsiSnumCoeffs.Cert: 84 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.Ineq2PsiSnum.RSeries: 10 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.Ineq2PsiSnum.RSeriesOps: 91 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.Ineq2PsiSnum.SummabilityReindex: 22 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.Ineq2Varphi.CertAssemble: 22 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.Ineq2Varphi.CertData: 44 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.Ineq2Varphi.CertPrelude: 38 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.Ineq2Varphi.TailBound: 18 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.Monotonicity: 16 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.NumTruncBound: 18 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.TailNumerics.ConstantsPi: 14 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.TailNumerics.GeomRatio: unchanged
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.TailNumerics.Majorant: 42 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.TruncEvalRewrite: 28 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.TruncRewrite: unchanged
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOne.VarphiRealPart: 10 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOneCoeffs: 11 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOnePsiSnumCert.SumRange: 10 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOnePsiSnumCert.VerifyH4H2: 20 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOnePsiSnumCert.VerifyThetaH4: 22 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOnePsiSnumOps: unchanged
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOnePsiSnumTables.H4Pow2Table: unchanged
+  SpherePacking.Dim24.Inequalities.Ineq2.GeOnePsiSnumTables.ThetaTables: unchanged
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.Positivity: 18 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.Trunc: 60 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.CoeffModel: unchanged
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.Denom: 9 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.ExactTrunc: unchanged
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.ExactTruncPosRigorous.Common: 42 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.ExactTruncPosRigorous.LargeDefs: 8 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.ExactTruncPosRigorous.LargeEvalLe: 30 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.ExactTruncPosRigorous.LargeEvalPos: 20 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.ExactTruncPosRigorous.SmallDefs: 2 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.ExactTruncPosRigorous.SmallEvalLe: 38 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.ExactTruncPosRigorous.SmallIntervalLB: 31 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.NumTailBound.Defs: 14 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.NumTailBound.Head: 42 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.NumTailBound.TailConstants: 8 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.NumTailBound.TailNormBound: 2 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.NumTailBound.TailTermBounds: 26 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.NumTailBound.TailTriangle: 2 changed diff lines
+  SpherePacking.Dim24.Inequalities.Ineq2.LeOne.TruncAux.PariCoeffs: unchanged
+  SpherePacking.Dim24.Inequalities.Ineq2.Statement: unchanged
+  SpherePacking.Dim24.Inequalities.VarphiNeg.GeOne.AppendixABridge: unchanged
+  SpherePacking.Dim24.Inequalities.VarphiNeg.GeOne.Defs: unchanged
+  SpherePacking.Dim24.Inequalities.VarphiNeg.GeOne.Negativity: 26 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.GeOne.TailBound.Geometric: 10 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.GeOne.TailBound.TailBound: 32 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.LeOne.Negativity: 12 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.LeOne.Transform: 8 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.LeOne.Trunc.DeltaBounds: 12 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.LeOne.Trunc.ExactTruncPosRigorous.Positivity: 22 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.LeOne.Trunc.ExactTruncPosRigorous.Prelude: 42 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.LeOne.Trunc.ExactTruncPosRigorous.Term2LowerBound: 28 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.LeOne.Trunc.ExactTruncPosRigorous.Term4LowerBound: 30 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.LeOne.Trunc.ExactTruncTailBound: 4 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.LeOne.Trunc.TransformedRe: 14 changed diff lines
+  SpherePacking.Dim24.Inequalities.VarphiNeg.Statement: unchanged
+  SpherePacking.Dim24.MagicFunction.A.Defs: unchanged
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Prelude: 4 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.Function: 6 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.I1Decay: 32 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.I1Prelude: 14 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.I1Smoothness: 28 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.I2Smooth: 22 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.I3Smooth: 28 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.I4Smooth: 19 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.I5Smooth: 30 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.I6ContDiffDecay: 40 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.I6Differentiation: 40 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.Schwartz.I6Preamble: 4 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.DefsAux.VarphiExpBounds: 16 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.Eigenfunction: 2 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.GaussianFourier: 2 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI12ContourDeformation: 10 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI12CurveIntegrals: 8 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI12FourierCurveIntegrals: 20 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI12FourierKernels: 10 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI12Integrability: 18 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI12Measurability: 36 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI12Prelude: 16 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI12ProductIntegrability: 22 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI12Regularity: 70 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI56ChangeOfVariables: 14 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI56FourierPermutation: 10 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.PermI56KernelSetup: 35 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.Eigen.Prelude: 12 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.LaplaceZeros: 6 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.LaplaceZerosTail.HolomorphyHelpers: 62 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.LaplaceZerosTail.TailBounds: 44 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.LaplaceZerosTail.TailDeform: 161 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.PureImag: 102 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Aux01: 50 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Aux02: 118 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Aux03.Integrability: 36 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Aux03.Transforms: 34 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Aux04: 50 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.EvenAProfile.AtFour: 35 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.EvenAProfile.Basic: 103 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivDefs: 102 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivFour: 130 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoAtTwo: 40 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.AvaluesBridge: 18 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.AvaluesConvergentRange: 97 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.AvaluesEqAvaluesImpl: 169 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.AvaluesRemIntDom: 39 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.AvaluesRemainderIntegral: 78 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.AvaluesRemainderIntegralDCT: 18 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.AvaluesRemainderIntegralDefs: unchanged
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.AvaluesRemainderLargeBound: 140 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.Basic: unchanged
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.CCancel: 4 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.CancelD: 10 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.CoeffExp: 4 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.Defs: unchanged
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.LaplaceIntegrals: 8 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.Ptilde: 4 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.SincAux: 4 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.SincExp: 36 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.SingularIntegral: 22 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.Varphi2ConstCoeff: 92 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.Varphi2ConstTerm: 30 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.DerivTwoLaurent.Varphi2ConstValue: 38 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Final.Values: 16 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Prelude: 20 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Radial: 18 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Varphi1A: 89 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Varphi1B: 98 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Varphi1C: 30 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.SpecialValues.Varphi2: 16 changed diff lines
+  SpherePacking.Dim24.MagicFunction.A.VarphiBounds: 211 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.Eigenfunction: 8 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.J1Smooth: 23 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.J1SmoothDecay: 24 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.J1SmoothIntegrals: 26 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.J2Smooth: 16 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.J3Smooth: 20 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.J4Smooth: 16 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.J5Smooth: 30 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.J5SmoothIntegrals: 40 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.J6Derivatives: 40 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.J6Smooth: 50 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.PsiExtensions: 72 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.PsiSDecay: 50 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.PsiSPrelims: 34 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.PsiSRectAnalytic: 20 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.PsiSRectIdentity: 38 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Defs.PsiSlash: 16 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ12ContourIdentity: 16 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ12CurveIntegrals: 61 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ12DiffContOnCl: 6 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ12FourierJ1: 26 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ12FourierJ2: 46 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ12Measurability: 8 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ12Regularity: 45 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ5: 18 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ5ChangeOfVariables: 10 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ5Integrability: 34 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.PermJ5KernelSetup: 10 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.Eigen.Prelude: 22 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.PureImag: 46 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Basic: 48 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.BProfileDeriv: 52 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.BfunFour: 30 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.BfunTwo: 50 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.CuspAtInfinity: 18 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.CuspCoefficient.H2: 10 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.CuspCoefficient.H4: 54 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.CuspCoefficient.PsiI: 46 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.DeltaQHalf.Base: 72 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.DeltaQHalf.InvSq: 20 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.H2H4.H2: 44 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.H2H4.H4: 32 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.QHalfTheta4: 40 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.Rectangle: 42 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.Theta2Trunc: 66 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.TopEdge.Base: 6 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.TopEdge.J6: 30 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Derivatives.TopEdge.Limits: 26 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.EvenU.BProfileZeros: 66 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.EvenU.J135Factor: 24 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.EvenU.SumIdentities: 42 changed diff lines
+  SpherePacking.Dim24.MagicFunction.B.SpecialValues.Final: 22 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.BKernelAsymptotics: unchanged
+  SpherePacking.Dim24.MagicFunction.F.Constants: 14 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Defs: unchanged
+  SpherePacking.Dim24.MagicFunction.F.Fourier: unchanged
+  SpherePacking.Dim24.MagicFunction.F.Laplace.A.Basic: 10 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Apply: unchanged
+  SpherePacking.Dim24.MagicFunction.F.Laplace.B.Basic: 22 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.B.LeadingCorrection: 44 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.B.SubLeadingBounds.BKernelSubLeadingBound: 34 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.B.SubLeadingBounds.DeltaDivQLowerBound: 25 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.B.SubLeadingBounds.ExactTruncBound: 21 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.B.SubLeadingContinuation.Agreement: 36 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.B.SubLeadingContinuation.Analyticity: 60 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.B.SubLeadingContinuation.TailIntegrand: 88 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Equality.A.AKernelIntegralIdentity: 14 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Equality.A.Defs: 30 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Equality.A.GPsiIntegrability: 4 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Equality.A.GVIntegralDecomposition: 52 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Equality.B: 22 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Fourier.B: 14 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Fourier.BSubLeading: 12 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Fourier.Basic: 4 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Fourier.Continuation.BKernelBounds: 24 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Fourier.Continuation.Continuation: 12 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Fourier.Continuation.Differentiable: 46 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Fourier.Continuation.IntegrandSetup: 67 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Fourier.Continuation.LaplaceSplit: 46 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Fourier.Continuation.Prelude: 4 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.KernelTools: 6 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Kernels: unchanged
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Profiles.AProfile: 4 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Profiles.BProfile.Bounds: 54 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Profiles.BProfile.IntegralLemmas: 40 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Profiles.BProfile.LaplaceFormula: 52 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Profiles.BProfile.RectangleIdentity: 8 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.Profiles.BProfile.TailDifference: 76 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Laplace.TopologyDomains: 80 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.ProfileComplex.A1: 54 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.ProfileComplex.A2: 90 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.ProfileComplex.A3: 94 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.ProfileComplex.B: 122 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.RealValued: unchanged
+  SpherePacking.Dim24.MagicFunction.F.Scaled: 6 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Sign.Auxiliary: added for E8Leach
+  SpherePacking.Dim24.MagicFunction.F.Sign.SignConditions: 74 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.UpperBound: 14 changed diff lines
+  SpherePacking.Dim24.MagicFunction.F.Zero: 6 changed diff lines
+  SpherePacking.Dim24.MagicFunction.MkRadial: unchanged
+  SpherePacking.Dim24.MagicFunction.PureImagCommon: 6 changed diff lines
+  SpherePacking.Dim24.MagicFunction.Radial: unchanged
+  SpherePacking.Dim24.MagicFunction.SpecialValuesExpU: 26 changed diff lines
+  SpherePacking.Dim24.ModularForms.Psi.Defs: 2 changed diff lines
+  SpherePacking.Dim24.ModularForms.Psi.ImagAxis: 48 changed diff lines
+  SpherePacking.Dim24.ModularForms.Psi.Relations: 90 changed diff lines
+  SpherePacking.Dim24.ModularForms.Varphi: 27 changed diff lines
+  SpherePacking.Dim8.E8.Basic: 14 changed diff lines
+  SpherePacking.Dim8.E8.Packing: 19 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Basic: unchanged
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.FourierPermutations: 6 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI12ContourAux: 4 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI12ContourMain: 2 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI12Fourier: 46 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI12FourierAux: 6 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI12FourierIntegrableI1: 48 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI12FourierIntegrableI2: 42 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI12FourierMain: 14 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI12Prelude: 40 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI12WedgeDomain: 44 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI5Integrability: 46 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI5Kernel: 8 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Eigenfunction.PermI5Main: 18 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Integrability.ComplexIntegrands: 16 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Integrability.RealIntegrands: 54 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.IntegralEstimates.BoundingAux: unchanged
+  SpherePacking.Dim8.MagicFunction.a.IntegralEstimates.BoundingAuxIci: unchanged
+  SpherePacking.Dim8.MagicFunction.a.IntegralEstimates.I1: 20 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.IntegralEstimates.I2: 30 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.IntegralEstimates.I3: 6 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.IntegralEstimates.I4: 32 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.IntegralEstimates.I5: 4 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.IntegralEstimates.I6: 76 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.IntegralEstimates.PowExpBounds: unchanged
+  SpherePacking.Dim8.MagicFunction.a.Schwartz.Basic: 104 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Schwartz.DecayI1: 77 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Schwartz.SmoothI1: 32 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Schwartz.SmoothI2: 28 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Schwartz.SmoothI4: 28 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.Schwartz.SmoothI6: 54 changed diff lines
+  SpherePacking.Dim8.MagicFunction.a.SpecialValues: 251 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Basic: unchanged
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.FourierPermutations: 12 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.GaussianFourier: 4 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.PermJ12ContourDeformation: 2 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.PermJ12CurveIntegrals: 14 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.PermJ12Defs: unchanged
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.PermJ12DiffContOnCl: 4 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.PermJ12FourierJ1: 28 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.PermJ12FourierJ1Kernel: 26 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.PermJ12FourierJ2: 48 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.PermJ12Regularity: 43 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.PermJ5: 24 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.PermJ5Integrability: 34 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Eigenfunction.Prelude: 12 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Psi: 10 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.PsiBounds: 22 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.PsiParamRelations: unchanged
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.Basic: 30 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.BoundsAux: unchanged
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.PsiExpBounds.Basic: unchanged
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.PsiExpBounds.PsiSDecay: 4 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.SmoothJ1: 64 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.SmoothJ2: unchanged
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.SmoothJ24Common: 2 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.SmoothJ3: unchanged
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.SmoothJ4: unchanged
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.SmoothJ5: 16 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.Schwartz.SmoothJ6.Bounds: 21 changed diff lines
+  SpherePacking.Dim8.MagicFunction.b.SpecialValues: 88 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.Basic: unchanged
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.A.APrimeExtension: 196 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.A.Cancellation.ImagAxis: 116 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.A.Cancellation.Integrability: 122 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.A.Cancellation.LargeImagApprox: 97 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.A.Continuation: 34 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.A.Core: unchanged
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.A.IntegralLemmas: 33 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.A.Parametric: 54 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.A.Representation: 43 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.B.AnotherIntegral: 22 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.B.BPrimeExtension: 148 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.B.Cancellation: unchanged
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.B.Continuation: 24 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.B.Parametric: 6 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.B.PsiICancellation: 3 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.B.ThetaAxis.HExpansions: unchanged
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.B.ThetaAxis.InvH2Sq: 3 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.B.ThetaAxis.QExpansion: unchanged
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.Common: 2 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.AnotherIntegral.ContinuationCommon: 2 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.Defs: unchanged
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.DeltaBounds: 2 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.ImagAxisReal: 12 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.IneqA: 6 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.IneqB: 6 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.IneqCommon: 76 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.IntegralA: 14 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.IntegralB: 92 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.IntegralPieces: unchanged
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.IntegralReductions: 4 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.IntegralReps.ACDomain: unchanged
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.LaplaceA.Basic: 74 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.LaplaceA.FiniteDifference: 8 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.LaplaceA.LaplaceRepresentation: 8 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.LaplaceA.StripBounds: 104 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.LaplaceA.TailDeformation: 146 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.LaplaceB.Basic: 73 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.LaplaceB.ContourIdentities: 26 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.LaplaceB.LaplaceRepresentation: 148 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.LaplaceLemmas: unchanged
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.PureImaginary: 46 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.RealValued: unchanged
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.ScaledMagic: 22 changed diff lines
+  SpherePacking.Dim8.MagicFunction.g.CohnElkies.SignConditions: 9 changed diff lines
+  SpherePacking.Dim8.MainTheorem: 2 changed diff lines
+  SpherePacking.Dim8.ScaledMagic: 8 changed diff lines
+  SpherePacking.Dim8.UpperBound: 10 changed diff lines
+  SpherePacking.ForMathlib.AtImInfty: unchanged
+  SpherePacking.ForMathlib.BoundsOnIcc: unchanged
+  SpherePacking.ForMathlib.CancelDenomsCompat: added for E8Leach
+  SpherePacking.ForMathlib.CauchyGoursat.OpenRectangular: unchanged
+  SpherePacking.ForMathlib.ComplexI: unchanged
+  SpherePacking.ForMathlib.ContDiffOnByDeriv: unchanged
+  SpherePacking.ForMathlib.Cusps: unchanged
+  SpherePacking.ForMathlib.DerivHelpers: unchanged
+  SpherePacking.ForMathlib.ENNReal: unchanged
+  SpherePacking.ForMathlib.Encard: 2 changed diff lines
+  SpherePacking.ForMathlib.ExpBounds: unchanged
+  SpherePacking.ForMathlib.ExpNormSqDiv: unchanged
+  SpherePacking.ForMathlib.ExpPiIMulMulI: unchanged
+  SpherePacking.ForMathlib.Fourier: unchanged
+  SpherePacking.ForMathlib.FourierLinearEquiv: unchanged
+  SpherePacking.ForMathlib.FourierPhase: unchanged
+  SpherePacking.ForMathlib.FunctionsBoundedAtInfty: unchanged
+  SpherePacking.ForMathlib.GaussianFourierCommon: unchanged
+  SpherePacking.ForMathlib.GaussianRexpIntegrable: unchanged
+  SpherePacking.ForMathlib.GaussianRexpIntegral: unchanged
+  SpherePacking.ForMathlib.IntegrablePowMulExp: unchanged
+  SpherePacking.ForMathlib.IntegralProd: unchanged
+  SpherePacking.ForMathlib.IntervalIntegral: unchanged
+  SpherePacking.ForMathlib.IteratedDeriv: 3 changed diff lines
+  SpherePacking.ForMathlib.QExpansionCompat: added for E8Leach
+  SpherePacking.ForMathlib.RadialSchwartz.Cutoff: 5 changed diff lines
+  SpherePacking.ForMathlib.RadialSchwartz.Multidimensional: 3 changed diff lines
+  SpherePacking.ForMathlib.RadialSchwartz.OneSided: 10 changed diff lines
+  SpherePacking.ForMathlib.ScalarOneForm: 2 changed diff lines
+  SpherePacking.ForMathlib.ScalarOneFormDiffContOnCl: 4 changed diff lines
+  SpherePacking.ForMathlib.ScalarOneFormFDeriv: 2 changed diff lines
+  SpherePacking.ForMathlib.SigmaBounds: unchanged
+  SpherePacking.ForMathlib.SigmaSummability: unchanged
+  SpherePacking.ForMathlib.SlashActions: 4 changed diff lines
+  SpherePacking.ForMathlib.SpecificLimits: unchanged
+  SpherePacking.ForMathlib.Tprod: unchanged
+  SpherePacking.ForMathlib.UpperHalfPlane: 5 changed diff lines
+  SpherePacking.ForMathlib.VolumeOfBalls: 2 changed diff lines
+  SpherePacking.ForMathlib.ZLattice: unchanged
+  SpherePacking.Integration.DifferentiationUnderIntegral: 17 changed diff lines
+  SpherePacking.Integration.EndpointIntegrability: unchanged
+  SpherePacking.Integration.FubiniIoc01: unchanged
+  SpherePacking.Integration.InvChangeOfVariables: unchanged
+  SpherePacking.Integration.J6Integrable: unchanged
+  SpherePacking.Integration.Measure: unchanged
+  SpherePacking.Integration.SmoothIntegralCommon: unchanged
+  SpherePacking.Integration.SmoothIntegralIciOne: unchanged
+  SpherePacking.Integration.UpperHalfPlaneComp: 2 changed diff lines
+  SpherePacking.MagicFunction.IntegralParametrisations: unchanged
+  SpherePacking.MagicFunction.IntegralParametrisationsContinuity: 11 changed diff lines
+  SpherePacking.MagicFunction.PolyFourierCoeffBound: 129 changed diff lines
+  SpherePacking.MagicFunction.PsiTPrimeZ1: 2 changed diff lines
+  SpherePacking.MagicFunction.PsiTPrimeZ1Integrability: 2 changed diff lines
+  SpherePacking.ModularForms.BigO: unchanged
+  SpherePacking.ModularForms.CLogArgLemmas: 2 changed diff lines
+  SpherePacking.ModularForms.CSqrt: unchanged
+  SpherePacking.ModularForms.Cauchylems: 28 changed diff lines
+  SpherePacking.ModularForms.CuspFormIsoModforms: 19 changed diff lines
+  SpherePacking.ModularForms.Delta.Basic: 10 changed diff lines
+  SpherePacking.ModularForms.Delta.ImagAxis: 5 changed diff lines
+  SpherePacking.ModularForms.Derivative: 267 changed diff lines
+  SpherePacking.ModularForms.DimGenCongLevels.Auxiliary (renamed from SpherePacking.ModularForms.DimGenCongLevels.Aux): 40 changed diff lines
+  SpherePacking.ModularForms.DimGenCongLevels.Basic: unchanged
+  SpherePacking.ModularForms.DimGenCongLevels.FiniteDimensional: 13 changed diff lines
+  SpherePacking.ModularForms.DimGenCongLevels.NormReduction: 15 changed diff lines
+  SpherePacking.ModularForms.DimGenCongLevels.NormTransfer: 25 changed diff lines
+  SpherePacking.ModularForms.DimensionFormulas: 169 changed diff lines
+  SpherePacking.ModularForms.E2.Basic: 2 changed diff lines
+  SpherePacking.ModularForms.E2.Transform: 25 changed diff lines
+  SpherePacking.ModularForms.Eisenstein: 33 changed diff lines
+  SpherePacking.ModularForms.EisensteinBase: 26 changed diff lines
+  SpherePacking.ModularForms.Eisensteinqexpansions: 7 changed diff lines
+  SpherePacking.ModularForms.Equivs: unchanged
+  SpherePacking.ModularForms.Eta: 52 changed diff lines
+  SpherePacking.ModularForms.FG.AsymptoticsTools: 8 changed diff lines
+  SpherePacking.ModularForms.FG.Basic: 89 changed diff lines
+  SpherePacking.ModularForms.FG.Inequalities: 147 changed diff lines
+  SpherePacking.ModularForms.FG.L10OverAsymptotics: 184 changed diff lines
+  SpherePacking.ModularForms.FG.Positivity: 125 changed diff lines
+  SpherePacking.ModularForms.IsCuspForm: 9 changed diff lines
+  SpherePacking.ModularForms.IteratedDerivs: 7 changed diff lines
+  SpherePacking.ModularForms.JacobiTheta: 62 changed diff lines
+  SpherePacking.ModularForms.LimUnderLemmas: 8 changed diff lines
+  SpherePacking.ModularForms.LogDerivLemmas: unchanged
+  SpherePacking.ModularForms.Lv1Lv2Identities: 48 changed diff lines
+  SpherePacking.ModularForms.MultipliableLemmas: 4 changed diff lines
+  SpherePacking.ModularForms.PhiTransform: 3 changed diff lines
+  SpherePacking.ModularForms.PhiTransformLemmas: 4 changed diff lines
+  SpherePacking.ModularForms.QExpansion: unchanged
+  SpherePacking.ModularForms.QExpansionLemmas.LimitsAtInfinity: 16 changed diff lines
+  SpherePacking.ModularForms.QExpansionLemmas.QExpansionAlgebra: 4 changed diff lines
+  SpherePacking.ModularForms.ResToImagAxis: 2 changed diff lines
+  SpherePacking.ModularForms.SlashActionAuxil: 25 changed diff lines
+  SpherePacking.ModularForms.SummableLemmas.Basic: 7 changed diff lines
+  SpherePacking.ModularForms.SummableLemmas.Cotangent: 5 changed diff lines
+  SpherePacking.ModularForms.SummableLemmas.G2: 3 changed diff lines
+  SpherePacking.ModularForms.SummableLemmas.IntPNat: unchanged
+  SpherePacking.ModularForms.SummableLemmas.QExpansion: 17 changed diff lines
+  SpherePacking.ModularForms.TSumDerivWithin: unchanged
+  SpherePacking.ModularForms.TendsToLemmas: unchanged
+  SpherePacking.ModularForms.ThetaDerivIdentities: 142 changed diff lines
+  SpherePacking.Tactic.FunPropExt: 2 changed diff lines
+  SpherePacking.Tactic.NormNumI: 14 changed diff lines
+
+The full port workspace (all 829 upstream files, partially ported, with the repair tools) is kept
+outside Dropbox at ~/lean-build/e8leach-spl-port; modules are moved here once they compile.
+
+Linter warnings (2026-10-10, not yet cleaned; no errors): ForMathlib.Encard 1, Basic.SpherePacking 10, Basic.PeriodicPacking.Auxiliary 8, Basic.PeriodicPacking.Theorem22 2, Basic.PeriodicPacking.DensityFormula 3, Basic.PeriodicPacking.PeriodicConstant 2.
+They are deprecations, unused-tactic notices and `Try this` suggestions introduced by the port; a cleanup pass is scheduled.
+
+2026-10-13 local BRR extension (LPBound.lean):
+  Export periodic_poisson_identity and periodic_poisson_lower_bound from the
+  existing Poisson calculation, retaining the full off-diagonal sum instead of
+  replacing it by the diagonal upper bound. The lower bound assumes only real,
+  nonnegative Fourier transform and bounded representatives; it does not assume
+  sign away from zero, separation=1, unique cover or nonempty centres.
+  Existing LPBound private proofs are reused for the Fourier zero-mode bound.
+  Remove redundant I suffixes on local let/have instances to satisfy the current
+  Lean style linter. These changes do not alter existing public LP statements.
+  The extension is compiled and audited with the current local BRR milestone;
+  it has not been included in a new full clean rebuild of the entire port.

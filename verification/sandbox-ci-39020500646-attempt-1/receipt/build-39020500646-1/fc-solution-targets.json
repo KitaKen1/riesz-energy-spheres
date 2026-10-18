@@ -1,0 +1,43 @@
+{
+  "status": "FAIL",
+  "selected_targets": [
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+  ],
+  "missing_solution_targets": [
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+  ],
+  "different_source_signatures": [],
+  "available_solution_targets": [
+    "RieszSphereFC.riesz_energy_four_sphere8",
+    "RieszSphereFC.riesz_energy_sphere2",
+    "RieszSphereFC.riesz_energy_neg_sphere2",
+    "RieszSphereFC.log_energy_sphere2",
+    "RieszSphereFC.cap_discrepancy_sphere2",
+    "RieszSphereFC.riesz_energy_sphere8",
+    "RieszSphereFC.riesz_energy_neg_sphere8",
+    "RieszSphereFC.log_energy_sphere8",
+    "RieszSphereFC.cap_discrepancy_sphere8",
+    "RieszSphereFC.riesz_energy_sphere24",
+    "RieszSphereFC.riesz_energy_neg_sphere24",
+    "RieszSphereFC.log_energy_sphere24",
+    "RieszSphereFC.cap_discrepancy_sphere24",
+    "RieszSphereFC.riesz_energy_two_sphere8"
+  ],
+  "formal_type_comparison": "NOT_RUN: performed by Comparator only after proof build"
+}

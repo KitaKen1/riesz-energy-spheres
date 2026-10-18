@@ -1,0 +1,13 @@
+.DS_Store
+**/.lake/
+**/__pycache__/
+*.pyc
+build-receipt/
+comparator-receipt/
+replay-receipt/
+/fc-challenge-receipt/
+/build-stage-[1-6]-receipt/
+/stage-products/
+/comparator-S2-receipt/
+/comparator-S8-receipt/
+/comparator-S24-receipt/

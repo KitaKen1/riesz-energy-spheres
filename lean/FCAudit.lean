@@ -1,0 +1,11 @@
+import FCSolution
+
+#print axioms RieszSphereFC.riesz_energy_lattice.variants.dimension_two
+#print axioms RieszSphereFC.riesz_energy_lattice.variants.dimension_eight
+#print axioms RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four
+#print axioms RieszSphereFC.log_energy_lattice.variants.dimension_two
+#print axioms RieszSphereFC.log_energy_lattice.variants.dimension_eight
+#print axioms RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four
+#print axioms RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two
+#print axioms RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight
+#print axioms RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four

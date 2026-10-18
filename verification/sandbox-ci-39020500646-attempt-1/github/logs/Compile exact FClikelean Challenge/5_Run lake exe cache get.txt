@@ -1,0 +1,142 @@
+﻿2026-10-17T09:18:57.6825494Z ##[group]Run lake exe cache get
+2026-10-17T09:18:57.6825746Z [36;1mlake exe cache get[0m
+2026-10-17T09:18:57.6878107Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-17T09:18:57.6878398Z ##[endgroup]
+2026-10-17T09:18:58.6625009Z info: downloading https://releases.lean-lang.org/lean4/v4.34.1/lean-4.34.1-linux.tar.zst
+2026-10-17T09:19:07.2252146Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1
+2026-10-17T09:19:28.8664058Z info: formal_conjectures: cloning https://github.com/google-deepmind/formal-conjectures.git
+2026-10-17T09:19:32.7850647Z info: formal_conjectures: checking out revision 'c77fdd446d23539302aa73bcfae4a9fa962b8382'
+2026-10-17T09:19:33.0100035Z info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git
+2026-10-17T09:20:15.3725091Z info: mathlib: checking out revision 'd13f23b723b8a846827a245b89c10fc7d3f11612'
+2026-10-17T09:20:17.1203967Z info: plausible: cloning https://github.com/leanprover-community/plausible
+2026-10-17T09:20:17.7133440Z info: plausible: checking out revision '118aa17ee84656b8bd727fef7c458ee8c833385c'
+2026-10-17T09:20:17.7260345Z info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+2026-10-17T09:20:18.1947594Z info: LeanSearchClient: checking out revision 'ddf04cf3949fa556442341e87d47f9f6e6074707'
+2026-10-17T09:20:18.2073840Z info: importGraph: cloning https://github.com/leanprover-community/import-graph
+2026-10-17T09:20:18.8653852Z info: importGraph: checking out revision 'e928b72544873815af278d38681b31c0293588e3'
+2026-10-17T09:20:18.8853779Z info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+2026-10-17T09:20:20.1294123Z info: proofwidgets: checking out revision '106ff4fafc74ef4ac99d81dbf3ab399118f497a5'
+2026-10-17T09:20:20.6353848Z info: aesop: cloning https://github.com/leanprover-community/aesop
+2026-10-17T09:20:21.9609480Z info: aesop: checking out revision '355695d523e41d0554926416cba2a2b3544fbbc9'
+2026-10-17T09:20:21.9777131Z info: Qq: cloning https://github.com/leanprover-community/quote4
+2026-10-17T09:20:22.6150101Z info: Qq: checking out revision '6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259'
+2026-10-17T09:20:22.6276831Z info: batteries: cloning https://github.com/leanprover-community/batteries
+2026-10-17T09:20:27.4254108Z info: batteries: checking out revision 'f2effa3d803fda822b1f97b806c47cf2adfbcbc2'
+2026-10-17T09:20:27.4550308Z info: Cli: cloning https://github.com/leanprover/lean4-cli
+2026-10-17T09:20:28.0067913Z info: Cli: checking out revision 'e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204'
+2026-10-17T09:20:28.3204329Z ✔ [1/5] Built Cache.Cli (267ms)
+2026-10-17T09:20:28.7214114Z ✔ [4/12] Built Cache.Lean (334ms)
+2026-10-17T09:20:29.0259112Z ✔ [5/12] Built Cache.Env (390ms)
+2026-10-17T09:20:29.6274159Z ✔ [7/42] Built Batteries.Tactic.OpenPrivate (1.0s)
+2026-10-17T09:20:29.6283324Z ✔ [8/42] Built Cache.Infra (550ms)
+2026-10-17T09:20:29.8258342Z ✔ [9/42] Built Cache.Cli:c.o (167ms)
+2026-10-17T09:20:29.8273270Z ✔ [10/42] Built Cache.Lean:c.o (176ms)
+2026-10-17T09:20:29.9275632Z ✔ [11/42] Built Cache.Env:c.o (191ms)
+2026-10-17T09:20:30.0284162Z ✔ [12/42] Built Cache.Infra:c.o (268ms)
+2026-10-17T09:20:31.4313981Z ✔ [13/42] Built Batteries.Tactic.OpenPrivate:c.o (1.5s)
+2026-10-17T09:20:31.7315380Z ✔ [14/42] Built Cache.IO (1.7s)
+2026-10-17T09:20:32.7355199Z ✔ [15/42] Built Cache.Hashing (996ms)
+2026-10-17T09:20:33.2361376Z ✔ [16/42] Built Cache.Hashing:c.o (499ms)
+2026-10-17T09:20:33.5376097Z ✔ [17/42] Built Cache.IO:c.o (1.8s)
+2026-10-17T09:20:34.9409903Z ✔ [18/42] Built Cache.Requests (1.7s)
+2026-10-17T09:20:35.6425176Z ✔ [19/42] Built Cache.Marker (720ms)
+2026-10-17T09:20:35.8446227Z ✔ [20/42] Built Cache.Marker:c.o (140ms)
+2026-10-17T09:20:36.7455105Z ✔ [21/42] Built Cache.Query (912ms)
+2026-10-17T09:20:37.4484066Z ✔ [22/42] Built Cache.Upload.Dest (742ms)
+2026-10-17T09:20:37.8482039Z ✔ [23/42] Built Cache.Query:c.o (352ms)
+2026-10-17T09:20:37.9483293Z ✔ [24/42] Built Cache.Requests:c.o (2.0s)
+2026-10-17T09:20:37.9503536Z ✔ [25/42] Built Cache.Upload.Dest:c.o (150ms)
+2026-10-17T09:20:38.6514052Z ✔ [26/42] Built Cache.Upload.Rclone (732ms)
+2026-10-17T09:20:38.7509923Z ✔ [27/42] Built Cache.Warning (804ms)
+2026-10-17T09:20:38.9512421Z ✔ [28/42] Built Cache.Upload.Rclone:c.o (203ms)
+2026-10-17T09:20:39.1515126Z ✔ [29/42] Built Cache.Warning:c.o (268ms)
+2026-10-17T09:20:39.3524111Z ✔ [30/42] Built Cache.Upload.Curl (651ms)
+2026-10-17T09:20:39.5536393Z ✔ [31/42] Built Cache.Upload.Curl:c.o (215ms)
+2026-10-17T09:20:40.0553992Z ✔ [32/42] Built Cache.Upload.Azure (679ms)
+2026-10-17T09:20:40.1549606Z ✔ [33/42] Built Cache.Upload.Azure:c.o (145ms)
+2026-10-17T09:20:40.3555363Z ✔ [34/42] Built Cache.Upload.S3 (766ms)
+2026-10-17T09:20:40.6576874Z ✔ [35/42] Built Cache.Upload.S3:c.o (354ms)
+2026-10-17T09:20:40.9585994Z ✔ [36/42] Built Cache.Upload.Defs (629ms)
+2026-10-17T09:20:41.1594173Z ✔ [37/42] Built Cache.Upload.Defs:c.o (163ms)
+2026-10-17T09:20:41.4604362Z ✔ [38/42] Built Cache.Upload (519ms)
+2026-10-17T09:20:41.5595568Z ✔ [39/42] Built Cache.Upload:c.o (126ms)
+2026-10-17T09:20:42.4607154Z ✔ [40/42] Built Cache.Main (955ms)
+2026-10-17T09:20:43.1617418Z ✔ [41/42] Built Cache.Main:c.o (713ms)
+2026-10-17T09:20:44.0646564Z ✔ [42/42] Built cache:exe (884ms)
+2026-10-17T09:20:46.5586256Z Current branch: HEAD
+2026-10-17T09:20:46.5593342Z Using cache from origin: (some leanprover-community/mathlib4)
+2026-10-17T09:20:46.5598832Z Attempting to download 8908 file(s) from leanprover-community/mathlib4 cache at https://cache.mathlib.org/mathlib4-master
+2026-10-17T09:20:46.8078843Z 
+2026-10-17T09:20:46.9103827Z Downloaded: 1 file(s) [attempted 1/8908 = 0%, 198 KB/s], Decompressed: 0
+2026-10-17T09:20:47.0126393Z Downloaded: 106 file(s) [attempted 106/8908 = 1%, 447 KB/s], Decompressed: 17
+2026-10-17T09:20:47.1164026Z Downloaded: 253 file(s) [attempted 253/8908 = 2%, 609 KB/s], Decompressed: 17
+2026-10-17T09:20:47.2195982Z Downloaded: 351 file(s) [attempted 351/8908 = 3%, 330 KB/s], Decompressed: 17
+2026-10-17T09:20:47.3223048Z Downloaded: 464 file(s) [attempted 464/8908 = 5%, 614 KB/s], Decompressed: 68
+2026-10-17T09:20:47.4345584Z Downloaded: 599 file(s) [attempted 599/8908 = 6%, 1116 KB/s], Decompressed: 68
+2026-10-17T09:20:47.5334714Z Downloaded: 757 file(s) [attempted 757/8908 = 8%, 1257 KB/s], Decompressed: 68
+2026-10-17T09:20:47.6473816Z Downloaded: 915 file(s) [attempted 915/8908 = 10%, 2243 KB/s], Decompressed: 68
+2026-10-17T09:20:47.7448294Z Downloaded: 1017 file(s) [attempted 1017/8908 = 11%, 1268 KB/s], Decompressed: 68
+2026-10-17T09:20:47.8793835Z Downloaded: 1131 file(s) [attempted 1131/8908 = 12%, 1360 KB/s], Decompressed: 68
+2026-10-17T09:20:47.9923989Z Downloaded: 1264 file(s) [attempted 1264/8908 = 14%, 584 KB/s], Decompressed: 68
+2026-10-17T09:20:48.1014117Z Downloaded: 1422 file(s) [attempted 1422/8908 = 15%, 710 KB/s], Decompressed: 68
+2026-10-17T09:20:48.2102427Z Downloaded: 1578 file(s) [attempted 1578/8908 = 17%, 928 KB/s], Decompressed: 68
+2026-10-17T09:20:48.3194271Z Downloaded: 1730 file(s) [attempted 1730/8908 = 19%, 666 KB/s], Decompressed: 68
+2026-10-17T09:20:48.4196427Z Downloaded: 1845 file(s) [attempted 1845/8908 = 20%, 498 KB/s], Decompressed: 68
+2026-10-17T09:20:48.5254299Z Downloaded: 1960 file(s) [attempted 1960/8908 = 22%, 604 KB/s], Decompressed: 68
+2026-10-17T09:20:48.6250034Z Downloaded: 2104 file(s) [attempted 2104/8908 = 23%, 2227 KB/s], Decompressed: 68
+2026-10-17T09:20:48.7308564Z Downloaded: 2265 file(s) [attempted 2265/8908 = 25%, 1148 KB/s], Decompressed: 68
+2026-10-17T09:20:48.8305609Z Downloaded: 2421 file(s) [attempted 2421/8908 = 27%, 2011 KB/s], Decompressed: 375
+2026-10-17T09:20:48.9390499Z Downloaded: 2525 file(s) [attempted 2525/8908 = 28%, 2009 KB/s], Decompressed: 375
+2026-10-17T09:20:49.0521248Z Downloaded: 2680 file(s) [attempted 2680/8908 = 30%, 2709 KB/s], Decompressed: 375
+2026-10-17T09:20:49.1693916Z Downloaded: 2783 file(s) [attempted 2783/8908 = 31%, 510 KB/s], Decompressed: 375
+2026-10-17T09:20:49.2804604Z Downloaded: 2942 file(s) [attempted 2942/8908 = 33%, 474 KB/s], Decompressed: 375
+2026-10-17T09:20:49.3827507Z Downloaded: 3043 file(s) [attempted 3043/8908 = 34%, 641 KB/s], Decompressed: 375
+2026-10-17T09:20:49.4864362Z Downloaded: 3160 file(s) [attempted 3160/8908 = 35%, 1174 KB/s], Decompressed: 375
+2026-10-17T09:20:49.5935201Z Downloaded: 3280 file(s) [attempted 3280/8908 = 36%, 3186 KB/s], Decompressed: 375
+2026-10-17T09:20:49.8083861Z Downloaded: 3431 file(s) [attempted 3431/8908 = 38%, 1685 KB/s], Decompressed: 375
+2026-10-17T09:20:49.9155455Z Downloaded: 3535 file(s) [attempted 3535/8908 = 39%, 274 KB/s], Decompressed: 375
+2026-10-17T09:20:50.0161570Z Downloaded: 3686 file(s) [attempted 3686/8908 = 41%, 270 KB/s], Decompressed: 375
+2026-10-17T09:20:50.1403990Z Downloaded: 3826 file(s) [attempted 3826/8908 = 42%, 669 KB/s], Decompressed: 375
+2026-10-17T09:20:50.2434321Z Downloaded: 3952 file(s) [attempted 3952/8908 = 44%, 527 KB/s], Decompressed: 375
+2026-10-17T09:20:50.3414189Z Downloaded: 4089 file(s) [attempted 4089/8908 = 45%, 1576 KB/s], Decompressed: 375
+2026-10-17T09:20:50.4633819Z Downloaded: 4202 file(s) [attempted 4202/8908 = 47%, 816 KB/s], Decompressed: 375
+2026-10-17T09:20:50.5662103Z Downloaded: 4312 file(s) [attempted 4312/8908 = 48%, 167 KB/s], Decompressed: 375
+2026-10-17T09:20:50.6914356Z Downloaded: 4440 file(s) [attempted 4440/8908 = 49%, 2001 KB/s], Decompressed: 375
+2026-10-17T09:20:50.7950159Z Downloaded: 4593 file(s) [attempted 4593/8908 = 51%, 179 KB/s], Decompressed: 375
+2026-10-17T09:20:50.9094051Z Downloaded: 4738 file(s) [attempted 4738/8908 = 53%, 3654 KB/s], Decompressed: 375
+2026-10-17T09:20:51.0099405Z Downloaded: 4855 file(s) [attempted 4855/8908 = 54%, 499 KB/s], Decompressed: 375
+2026-10-17T09:20:51.1096287Z Downloaded: 4984 file(s) [attempted 4984/8908 = 55%, 3362 KB/s], Decompressed: 375
+2026-10-17T09:20:51.2246618Z Downloaded: 5113 file(s) [attempted 5113/8908 = 57%, 197 KB/s], Decompressed: 375
+2026-10-17T09:20:51.3327294Z Downloaded: 5222 file(s) [attempted 5222/8908 = 58%, 2504 KB/s], Decompressed: 375
+2026-10-17T09:20:51.4363778Z Downloaded: 5371 file(s) [attempted 5371/8908 = 60%, 9404 KB/s], Decompressed: 375
+2026-10-17T09:20:51.5464303Z Downloaded: 5491 file(s) [attempted 5491/8908 = 61%, 5168 KB/s], Decompressed: 375
+2026-10-17T09:20:51.6454668Z Downloaded: 5596 file(s) [attempted 5596/8908 = 62%, 4804 KB/s], Decompressed: 375
+2026-10-17T09:20:51.7564022Z Downloaded: 5715 file(s) [attempted 5715/8908 = 64%, 3638 KB/s], Decompressed: 375
+2026-10-17T09:20:51.8593893Z Downloaded: 5872 file(s) [attempted 5872/8908 = 65%, 1220 KB/s], Decompressed: 375
+2026-10-17T09:20:51.9634017Z Downloaded: 5976 file(s) [attempted 5976/8908 = 67%, 239 KB/s], Decompressed: 375
+2026-10-17T09:20:52.0653948Z Downloaded: 6110 file(s) [attempted 6110/8908 = 68%, 1652 KB/s], Decompressed: 375
+2026-10-17T09:20:52.1781645Z Downloaded: 6247 file(s) [attempted 6247/8908 = 70%, 1241 KB/s], Decompressed: 375
+2026-10-17T09:20:52.2773578Z Downloaded: 6381 file(s) [attempted 6381/8908 = 71%, 696 KB/s], Decompressed: 375
+2026-10-17T09:20:52.3814105Z Downloaded: 6528 file(s) [attempted 6528/8908 = 73%, 3384 KB/s], Decompressed: 375
+2026-10-17T09:20:52.4823093Z Downloaded: 6626 file(s) [attempted 6626/8908 = 74%, 221 KB/s], Decompressed: 375
+2026-10-17T09:20:52.5826185Z Downloaded: 6763 file(s) [attempted 6763/8908 = 75%, 2520 KB/s], Decompressed: 375
+2026-10-17T09:20:52.6833959Z Downloaded: 6929 file(s) [attempted 6929/8908 = 77%, 2177 KB/s], Decompressed: 375
+2026-10-17T09:20:52.7873913Z Downloaded: 7041 file(s) [attempted 7041/8908 = 79%, 335 KB/s], Decompressed: 375
+2026-10-17T09:20:52.8863961Z Downloaded: 7160 file(s) [attempted 7160/8908 = 80%, 1754 KB/s], Decompressed: 375
+2026-10-17T09:20:52.9924077Z Downloaded: 7255 file(s) [attempted 7255/8908 = 81%, 969 KB/s], Decompressed: 375
+2026-10-17T09:20:53.0903970Z Downloaded: 7392 file(s) [attempted 7392/8908 = 82%, 239 KB/s], Decompressed: 375
+2026-10-17T09:20:53.1976346Z Downloaded: 7525 file(s) [attempted 7525/8908 = 84%, 352 KB/s], Decompressed: 375
+2026-10-17T09:20:53.3404295Z Downloaded: 7641 file(s) [attempted 7641/8908 = 85%, 120 KB/s], Decompressed: 375
+2026-10-17T09:20:53.4434243Z Downloaded: 7652 file(s) [attempted 7652/8908 = 85%, 4503 KB/s], Decompressed: 375
+2026-10-17T09:20:53.5459360Z Downloaded: 7807 file(s) [attempted 7807/8908 = 87%, 557 KB/s], Decompressed: 375
+2026-10-17T09:20:53.6632966Z Downloaded: 7965 file(s) [attempted 7965/8908 = 89%, 837 KB/s], Decompressed: 375
+2026-10-17T09:20:53.7654280Z Downloaded: 8071 file(s) [attempted 8071/8908 = 90%, 1805 KB/s], Decompressed: 375
+2026-10-17T09:20:53.8646156Z Downloaded: 8199 file(s) [attempted 8199/8908 = 92%, 1582 KB/s], Decompressed: 375
+2026-10-17T09:20:53.9656307Z Downloaded: 8280 file(s) [attempted 8280/8908 = 92%, 426 KB/s], Decompressed: 375
+2026-10-17T09:20:54.0663917Z Downloaded: 8411 file(s) [attempted 8411/8908 = 94%, 932 KB/s], Decompressed: 375
+2026-10-17T09:20:54.1638527Z Downloaded: 8516 file(s) [attempted 8516/8908 = 95%, 879 KB/s], Decompressed: 375
+2026-10-17T09:20:54.2713757Z Downloaded: 8638 file(s) [attempted 8638/8908 = 96%, 766 KB/s], Decompressed: 375
+2026-10-17T09:20:54.3245422Z Downloaded: 8808 file(s) [attempted 8808/8908 = 98%, 2170 KB/s], Decompressed: 375
+2026-10-17T09:20:54.3264142Z Downloaded: 8908 file(s) [attempted 8908/8908 = 100%, 2170 KB/s], Decompressed: 375
+2026-10-17T09:22:18.4630994Z Decompressed 8908 file(s)
+2026-10-17T09:22:18.4631678Z Already decompressed 8908 file(s)

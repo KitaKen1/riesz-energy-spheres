@@ -1,0 +1,62 @@
+{
+  "scope": "Files prepared for owner audit. Further local checks and CI are not requested.",
+  "recorded_at_utc": "2026-10-16T14:43:49.783342+00:00",
+  "tested_commit": null,
+  "checkout_base_commit": "c04a9e6a03da7be8247d9585237a14d918f3775d",
+  "working_tree_dirty": true,
+  "source_manifest_sha256": "8b2beb4a51c898ca7056dd297a9d1091281a09498f77392c8423a292c6c7ee50",
+  "proof_digest": "ca8ccf4a54015cfbdb521e55109db1d81e9229129b49e1fe32353c88004afd22",
+  "lean_version": "Lean (version 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "manuscript_files_sha256": {
+    "PDF/riesz-energy-spheres.pdf": "089f1963258dd20eb59b52c06123af0b728079d0b8ce23e818553ec69f69c5ec",
+    "PDF/riesz-energy-spheres.pdf.ots": "784a5254330dbc6944d44ecf657993f045c55e6dedafbf34c27d263a32d45c11",
+    "PDF/riesz-energy-spheres.tex": "8aa2ad2f22adeb856f3a203fc4bb49a1f51c9e102663ea86d6dfbf7ba92bba3f"
+  },
+  "review_documents_sha256": {
+    "verification/STATEMENT-REVIEW.ja.md": "98e63117b4820aa6ecc6518f2666cdd4f917ee7fdd270400d888a26f062e10cc",
+    "lean/comparator/TARGET-CORRESPONDENCE.md": "eaabc4f2439760a68d967de861766ceefb84b030c259cc6f289987448926a7d6"
+  },
+  "checks": {
+    "source_and_written_statements": {
+      "status": "PASS",
+      "exit_code": 0,
+      "receipt": "local-inputs/input-check.json"
+    },
+    "reference_compile": {
+      "status": "PASS",
+      "exit_code": 0,
+      "command": "cd lean && lake build Challenge",
+      "log": "challenge-build.log",
+      "intentional_theorem_holes": 14
+    },
+    "standalone_fc_compile": {
+      "status": "PASS",
+      "exit_code": 0,
+      "command": "cd lean && lake env lean ../FClikelean/RieszEnergySpheres.lean",
+      "log": "fc-draft.log",
+      "intentional_theorem_holes": 14
+    },
+    "canonical_proof_build": {
+      "status": "STOPPED_BY_USER",
+      "command": "cd lean && LEAN_NUM_THREADS=2 lake build FCSolution",
+      "log": "local-build.log",
+      "exit_code": 143
+    },
+    "target_axiom_audit": {
+      "status": "NOT_RUN"
+    },
+    "local_comparator": {
+      "status": "NOT_RUN"
+    },
+    "standalone_fresh_kernel_replay": {
+      "status": "NOT_RUN"
+    }
+  },
+  "owner_statement_review": "PENDING",
+  "github_mutations_performed": false,
+  "private_ci": "NOT_REQUESTED_BY_USER",
+  "public_ci": "NOT_REQUESTED_BY_USER",
+  "superseded_on": "2026-10-17",
+  "superseded_scope": "Historical receipt for the previous manifest. The compact FC draft has not been compiled or audited."
+}

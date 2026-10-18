@@ -1,0 +1,23 @@
+Compiling FCSolution
+RESULT FCSolution 0
+Compiling FCAudit
+'RieszSphereFC.riesz_energy_lattice.variants.dimension_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RieszSphereFC.riesz_energy_lattice.variants.dimension_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RieszSphereFC.log_energy_lattice.variants.dimension_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RieszSphereFC.log_energy_lattice.variants.dimension_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RESULT FCAudit 0

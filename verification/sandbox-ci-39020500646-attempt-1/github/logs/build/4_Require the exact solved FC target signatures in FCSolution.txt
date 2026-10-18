@@ -1,0 +1,49 @@
+﻿2026-10-17T09:16:39.4854445Z ##[group]Run python3 lean/comparator/check-solution-targets.py --receipt-dir build-receipt
+2026-10-17T09:16:39.4855521Z [36;1mpython3 lean/comparator/check-solution-targets.py --receipt-dir build-receipt[0m
+2026-10-17T09:16:39.4918317Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-17T09:16:39.4918715Z ##[endgroup]
+2026-10-17T09:16:39.5316212Z The solution does not yet supply the exact FClikelean solved targets.
+2026-10-17T09:16:39.5316985Z {
+2026-10-17T09:16:39.5317379Z   "status": "FAIL",
+2026-10-17T09:16:39.5335872Z   "selected_targets": [
+2026-10-17T09:16:39.5340436Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+2026-10-17T09:16:39.5341525Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+2026-10-17T09:16:39.5342676Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+2026-10-17T09:16:39.5343727Z     "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+2026-10-17T09:16:39.5344729Z     "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+2026-10-17T09:16:39.5346278Z     "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+2026-10-17T09:16:39.5347334Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+2026-10-17T09:16:39.5348391Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+2026-10-17T09:16:39.5349456Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+2026-10-17T09:16:39.5350429Z   ],
+2026-10-17T09:16:39.5350969Z   "missing_solution_targets": [
+2026-10-17T09:16:39.5351780Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+2026-10-17T09:16:39.5352766Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+2026-10-17T09:16:39.5353797Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+2026-10-17T09:16:39.5354820Z     "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+2026-10-17T09:16:39.5355987Z     "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+2026-10-17T09:16:39.5356932Z     "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+2026-10-17T09:16:39.5357898Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+2026-10-17T09:16:39.5358892Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+2026-10-17T09:16:39.5360008Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+2026-10-17T09:16:39.5360813Z   ],
+2026-10-17T09:16:39.5361355Z   "different_source_signatures": [],
+2026-10-17T09:16:39.5362032Z   "available_solution_targets": [
+2026-10-17T09:16:39.5362712Z     "RieszSphereFC.riesz_energy_four_sphere8",
+2026-10-17T09:16:39.5363476Z     "RieszSphereFC.riesz_energy_sphere2",
+2026-10-17T09:16:39.5364138Z     "RieszSphereFC.riesz_energy_neg_sphere2",
+2026-10-17T09:16:39.5364825Z     "RieszSphereFC.log_energy_sphere2",
+2026-10-17T09:16:39.5365720Z     "RieszSphereFC.cap_discrepancy_sphere2",
+2026-10-17T09:16:39.5366404Z     "RieszSphereFC.riesz_energy_sphere8",
+2026-10-17T09:16:39.5367076Z     "RieszSphereFC.riesz_energy_neg_sphere8",
+2026-10-17T09:16:39.5367892Z     "RieszSphereFC.log_energy_sphere8",
+2026-10-17T09:16:39.5368569Z     "RieszSphereFC.cap_discrepancy_sphere8",
+2026-10-17T09:16:39.5369255Z     "RieszSphereFC.riesz_energy_sphere24",
+2026-10-17T09:16:39.5370242Z     "RieszSphereFC.riesz_energy_neg_sphere24",
+2026-10-17T09:16:39.5370934Z     "RieszSphereFC.log_energy_sphere24",
+2026-10-17T09:16:39.5371599Z     "RieszSphereFC.cap_discrepancy_sphere24",
+2026-10-17T09:16:39.5372298Z     "RieszSphereFC.riesz_energy_two_sphere8"
+2026-10-17T09:16:39.5372923Z   ],
+2026-10-17T09:16:39.5373639Z   "formal_type_comparison": "NOT_RUN: performed by Comparator only after proof build"
+2026-10-17T09:16:39.5374521Z }
+2026-10-17T09:16:39.5387596Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,26 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "FCSolution",
+  "theorem_names": [
+    "RieszSphereFC.riesz_energy_four_sphere8",
+    "RieszSphereFC.riesz_energy_sphere2",
+    "RieszSphereFC.riesz_energy_neg_sphere2",
+    "RieszSphereFC.log_energy_sphere2",
+    "RieszSphereFC.cap_discrepancy_sphere2",
+    "RieszSphereFC.riesz_energy_sphere8",
+    "RieszSphereFC.riesz_energy_neg_sphere8",
+    "RieszSphereFC.log_energy_sphere8",
+    "RieszSphereFC.cap_discrepancy_sphere8",
+    "RieszSphereFC.riesz_energy_sphere24",
+    "RieszSphereFC.riesz_energy_neg_sphere24",
+    "RieszSphereFC.log_energy_sphere24",
+    "RieszSphereFC.cap_discrepancy_sphere24",
+    "RieszSphereFC.riesz_energy_two_sphere8"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": false
+}

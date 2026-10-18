@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.34.1",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source": "S8s4.lean",
+  "cache_origin": "/Users/kenta/Dropbox/Intellectual Moonshine/?AI\u6570\u5b66/Log2/.lake/packages",
+  "method": "direct lean with LEAN_PATH; not a full project build",
+  "main_target_proved": false,
+  "source_sha256": "d9b7bfa301bf16406421e22234838d53331038766b02f6366c8546424fc10d79"
+}

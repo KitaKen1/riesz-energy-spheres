@@ -1,0 +1,20 @@
+warning: formal_conjectures: repository '/home/runner/work/ci-test-sandbox/ci-test-sandbox/tested-source/lean/.lake/packages/formal_conjectures' has local changes
+'RieszSphereFC.riesz_energy_lattice.variants.dimension_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RieszSphereFC.riesz_energy_lattice.variants.dimension_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RieszSphereFC.log_energy_lattice.variants.dimension_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RieszSphereFC.log_energy_lattice.variants.dimension_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

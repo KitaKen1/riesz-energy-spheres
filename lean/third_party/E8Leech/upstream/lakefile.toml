@@ -1,0 +1,21 @@
+name = "e8Leech"
+version = "0.1.0"
+defaultTargets = ["E8Leech"]
+
+[[lean_lib]]
+name = "E8Leech"
+# Synchronous elaboration. The generated Kron* modules are sequences of kernel checks; with
+# asynchronous elaboration the memory of a finished check is not reused by the next one and the
+# footprint grows through the whole file (see CI.txt, 2026-10-13).
+moreLeanArgs = ["-DElab.async=false"]
+
+# Ported Sphere-Packing-Lean modules (see SpherePacking/PORTING.txt).
+[[lean_lib]]
+name = "SpherePacking"
+globs = ["SpherePacking.+"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false }
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "0df444a360eaa60ab8c11dca51a86af692955474"

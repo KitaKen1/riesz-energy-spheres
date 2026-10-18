@@ -1,0 +1,1307 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=21mm,top=22mm,bottom=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathptmx,mathrsfs}
+\usepackage{enumitem}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{microtype}
+\hypersetup{pdftitle={Next-order Riesz and logarithmic energy on spheres},pdfauthor={Kenta Kitamura},pdfsubject={Spheres of dimensions 2, 8 and 24; lattice coefficients and spherical cap discrepancy}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{2em}
+\linespread{1.06}
+\setlist{nosep,leftmargin=1.6em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Sph}{\mathbb S}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\G}{\mathsf G}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\one}{\mathbf1}
+\numberwithin{equation}{section}
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname.\quad}
+\makeatother
+\let\originalsection\section
+\renewcommand{\section}{\ifnum\value{section}>0\clearpage\fi\originalsection}
+
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Next-order Riesz and logarithmic energy\par on spheres of dimensions 2, 8 and 24}\par\vspace{10pt}
+\end{center}
+
+\section{Statements and conventions}
+Let $\Sph^d=\{x\in\R^{d+1}:\abs{x}=1\}$, with surface area $A_d$ and uniform probability measure $\sigma_d=A_d^{-1}\dd A$. Distances are Euclidean chordal distances. A configuration is an injective map $X:\{1,\ldots,N\}\to\Sph^d$. We use ordered pairs throughout:
+\begin{equation}
+ E_s(X)=\sum_{i\ne j}\abs{x_i-x_j}^{-s},\qquad
+ E_{\log}(X)=-\sum_{i\ne j}\log\abs{x_i-x_j}.
+\end{equation}
+For $0<s<d$ put $\cE_s(d,N)=\inf_X E_s(X)$; for $-2<s<0$ put $\cE_s(d,N)=\sup_X E_s(X)$. Thus negative exponents mean maximization of positive powers of distance. Put $\cE_{\log}(d,N)=\inf_X E_{\log}(X)$. The continuous constants are
+\begin{equation}
+ I_{s,d}=\iint\abs{x-y}^{-s}\dd\sigma_d(x)\dd\sigma_d(y),\quad
+ W_d=-\iint\log\abs{x-y}\dd\sigma_d(x)\dd\sigma_d(y).
+\end{equation}
+Let $L_2$ be the triangular lattice scaled to covolume one, $L_8=E_8$, and $L_{24}$ the Leech lattice of covolume one. Our Epstein convention is
+\begin{equation}\label{eq:epstein-convention}
+ Z_L(s)=\sum_{v\in L\setminus\{0\}}\abs v^{-s}\quad(\mathop{\rm Re}s>d),
+\end{equation}
+continued meromorphically elsewhere, with the regular value at $s=0$. In particular, $Z_L(0)=-1$. When $u=s/2$ is used as the variable, differentiation contributes a factor of two.
+
+\begin{theorem}[Riesz asymptotics]\label{thm:riesz}
+For $d\in\{2,8,24\}$, under the sharp Gaussian input $\G(L_d)$ in Section~\ref{sec:input}, and for every fixed $-2<s<d$, $s\ne0$,
+\begin{equation}\label{eq:main}
+ \cE_s(d,N)=I_{s,d}N^2+A_d^{-s/d}Z_{L_d}(s)N^{1+s/d}
+                  +o(N^{1+s/d}).
+\end{equation}
+The limit is over all positive integers $N$, with the infimum or supremum convention specified above. The lattice Gaussian minorant theorem in Section~\ref{sec:input} supplies $\G(L_d)$ for each of the three stated lattices.
+\end{theorem}
+
+\begin{corollary}[The inverse-fourth energy on $\Sph^8$]\label{cor:s8four}
+With the preceding ordered-pair and unit-radius conventions,
+\begin{equation}\label{eq:s8four}
+ \cE_4(8,N)=\frac7{16}N^2-\frac{5\sqrt{210}}{48}N^{3/2}+o(N^{3/2}).
+\end{equation}
+\end{corollary}
+
+\begin{theorem}[Logarithmic energy]\label{thm:log}
+Under the same inputs,
+\begin{equation}\label{eq:logmain}
+ \cE_{\log}(d,N)=W_dN^2-\frac Nd\log N+
+ \left(Z'_{L_d}(0)+\frac1d\log A_d\right)N+o(N).
+\end{equation}
+For $d=8$ the coefficient of $N$ is
+\begin{equation}\label{eq:log8}
+ -60\zeta'(-3)+\frac58\log2-\frac18\log105.
+\end{equation}
+\end{theorem}
+
+For $z\in\Sph^d$ and $t\in[-1,1]$, let $C(z,t)=\{x:x\cdot z\ge t\}$. Our squared cap discrepancy is
+\begin{equation}\label{eq:discdef}
+ D_2(X)^2=\int_{-1}^1\int_{\Sph^d}
+ \left(\frac1N\sum_i\one_{C(z,t)}(x_i)-\sigma_d(C(z,t))\right)^2
+ \dd\sigma_d(z)\dd t.
+\end{equation}
+The height measure is $\dd t$, of total mass two. Define $\cD_d(N)=\inf_XD_2(X)$.
+
+\begin{theorem}[Spherical cap discrepancy]\label{thm:disc}
+Under the same inputs,
+\begin{equation}\label{eq:discmain}
+ N^{1/2+1/(2d)}\cD_d(N)\longrightarrow
+ \left(\kappa_d[-A_d^{1/d}Z_{L_d}(-1)]\right)^{1/2},\qquad
+ \kappa_d=\frac{\Gamma((d+1)/2)}{d\sqrt\pi\Gamma(d/2)}.
+\end{equation}
+Here $\kappa_2=1/4$, $\kappa_8=35/256$, and $\kappa_{24}=676039/8388608$.
+\end{theorem}
+
+The proof proceeds by a Gaussian lower bound and matching lattice-patch constructions. The Gaussian minorant theorem used in the lower bound is stated explicitly in Section~\ref{sec:input}. Sections~\ref{sec:localization}--\ref{sec:upperfour} give the lower bound and the direct inverse-fourth construction. Sections~\ref{sec:gaussian-upper}--\ref{sec:negative-alln} construct points at every integer size and prove both endpoint estimates for all the Riesz exponents. Sections~\ref{sec:logarithmic}--\ref{sec:stolarsky} give logarithmic energy and discrepancy.
+
+\section{Continuous energy and normalization}\label{sec:continuous}
+Fix $x\in\Sph^d$. Rotation invariance makes the integral of a radial kernel independent of $x$. If $\rho=\abs{x-y}=2\sin(\theta/2)$, polar integration gives
+\begin{equation}\label{eq:polar}
+ \int_{\Sph^d}g(\abs{x-y})\dd\sigma_d(y)
+ =\frac{A_{d-1}}{A_d}\int_0^2g(\rho)\rho^{d-1}
+             (1-\rho^2/4)^{d/2-1}\dd\rho.
+\end{equation}
+Indeed $\sin\theta=\rho(1-\rho^2/4)^{1/2}$ and $\dd\theta=(1-\rho^2/4)^{-1/2}\dd\rho$. The surface area is $A_d=2\pi^{(d+1)/2}/\Gamma((d+1)/2)$.
+
+\begin{lemma}\label{lem:continuous}
+For $s<d$,
+\begin{equation}\label{eq:beta}
+ I_{s,d}=2^{-s}\frac{\Gamma(d)\Gamma((d-s)/2)}
+                         {\Gamma(d/2)\Gamma(d-s/2)},\qquad
+ W_d=-\log2+\frac12\bigl(\psi(d)-\psi(d/2)\bigr).
+\end{equation}
+In particular, $A_2=4\pi$, $A_8=32\pi^4/105$, and $I_{4,8}=7/16$.
+\end{lemma}
+\begin{proof}
+Insert $g(\rho)=\rho^{-s}$ in \eqref{eq:polar} and set $v=\rho^2/4$. The resulting integral is
+$2^{d-s-1}B((d-s)/2,d/2)$. Multiplication by $A_{d-1}/A_d$, followed by the duplication formula for $\Gamma$, gives the first equality. The power $\rho^{d-1-s}$ is integrable at zero precisely when $s<d$.
+
+For $s$ in a compact interval around zero, $\rho^{-s}\abs{\log\rho}$ has an integrable majorant against the polar measure. Differentiating the first equality at zero is therefore justified and gives $W_d$. Substitution of $d=8$, $s=4$ gives $2^{-4}\Gamma(8)\Gamma(2)/(\Gamma(4)\Gamma(6))=7/16$.
+\end{proof}
+The density-one microscopic length is $a_N^{-1}$, where
+\begin{equation}\label{eq:density}
+ a_N=(N/A_d)^{1/d},\qquad Na_N^s=A_d^{-s/d}N^{1+s/d}.
+\end{equation}
+Thus every coefficient contains the indicated area factor. Rescaling a lattice without changing its covolume convention would change that coefficient.
+
+\section{Theta functions and the Epstein coefficient}\label{sec:theta}
+For a lattice $L$ of covolume one, put
+\begin{equation}
+ \Theta_L(t)=\sum_{v\in L}e^{-\pi t\abs v^2},\qquad t>0.
+\end{equation}
+All three lattices in this paper are isometric to their duals. Poisson summation for the Gaussian consequently gives
+\begin{equation}\label{eq:thetafun}
+ \Theta_L(t)=t^{-d/2}\Theta_L(1/t).
+\end{equation}
+Lattice point counting in annuli proves local uniform convergence of the theta sum and exponential decay of $\Theta_L(t)-1$ as $t\to\infty$. These facts also follow by bounding each annular sum by a polynomial in the radius times its Gaussian factor.
+
+\begin{proposition}[Convergent integral formulas]\label{prop:zeta}
+For real $0<s<d$,
+\begin{equation}\label{eq:zpositive}
+ Z_L(s)=\frac{\pi^{s/2}}{\Gamma(s/2)}
+ \int_0^\infty t^{s/2-1}\bigl(\Theta_L(t)-1-t^{-d/2}\bigr)\dd t.
+\end{equation}
+For $-2<s<0$,
+\begin{equation}\label{eq:znegative}
+ Z_L(s)=\frac{\pi^{s/2}}{\Gamma(s/2)}
+ \int_0^\infty t^{s/2-1}\bigl(\Theta_L(t)-t^{-d/2}\bigr)\dd t.
+\end{equation}
+In the second formula the integral is positive and $\Gamma(s/2)<0$, so $Z_L(s)<0$.
+\end{proposition}
+\begin{proof}
+For $\mathop{\rm Re}s>d$, integrate the nonzero Gaussian terms individually. Their Mellin integrals are $\Gamma(s/2)(\pi\abs v^2)^{-s/2}$; absolute convergence justifies the interchange.
+
+Write $u=s/2$ and split the integral at one. Apply \eqref{eq:thetafun} to its lower half and make the substitution $t\mapsto1/t$. This yields the meromorphic continuation of the completed function:
+\begin{equation}\label{eq:completed}
+ \pi^{-u}\Gamma(u)Z_L(2u)=
+ \int_1^\infty(t^{u-1}+t^{d/2-u-1})(\Theta_L(t)-1)\dd t
+ -\frac1u-\frac1{d/2-u}.
+\end{equation}
+The integral is entire in $u$ by exponential decay on compact subsets. For $0<u<d/2$, splitting the integral in \eqref{eq:zpositive} reproduces \eqref{eq:completed}. At zero its integrand behaves as $-t^{u-1}$, and at infinity as $-t^{u-d/2-1}$, so it is absolutely integrable.
+
+For $-1<u<0$, add one to the bracket in the positive-strip formula. Near zero the transformed theta tail is exponentially small; near infinity the new bracket tends to one. Both ends are integrable. Splitting again at one gives the same continuation. Finally, Poisson summation expresses $\Theta_L(t)-t^{-d/2}$ as a strictly positive dual-lattice tail. The sign of $\Gamma(u)$ on $(-1,0)$ proves the last claim.
+\end{proof}
+
+\begin{lemma}[The regular value at zero]\label{lem:zetazero}
+The continuation satisfies $Z_L(0)=-1$. If
+\begin{equation}
+ J_L=\int_0^1\frac{\Theta_L(t)-t^{-d/2}}t\dd t+
+      \int_1^\infty\frac{\Theta_L(t)-1-t^{-d/2}}t\dd t,
+\end{equation}
+then $Z'_L(0)=(J_L-\gamma-\log\pi)/2$.
+\end{lemma}
+\begin{proof}
+The positive-strip integral is $-1/u+J_L+O(u)$ at $u=0$. Also $\pi^u/\Gamma(u)=u+(\gamma+\log\pi)u^2+O(u^3)$. Multiplication gives $Z_L(2u)=-1+u(J_L-\gamma-\log\pi)+O(u^2)$, proving both statements. Differentiation under the two integrals follows from exponential decay at zero after the theta transformation and power decay at infinity.
+\end{proof}
+
+\section{The precise Gaussian input}\label{sec:input}
+We fix the Fourier convention $\widehat f(\xi)=\int_{\R^d}f(x)e^{-2\pi i x\cdot\xi}\dd x$.
+
+\begin{definition}\label{def:G}
+The sharp Gaussian input $\G(L)$ means that for each $\beta>0$ there is a real Schwartz function $f_\beta$ with real nonnegative Fourier transform such that
+\begin{equation}\label{eq:input}
+ f_\beta(x)\le e^{-\pi\beta\abs x^2}\ (x\ne0),\qquad
+ \widehat f_\beta(0)-f_\beta(0)=\Theta_L(\beta)-1.
+\end{equation}
+The weaker input $\G^*(L)$ asks for these functions only when $\beta\ne1$.
+\end{definition}
+No continuity of the family in $\beta$ is required. Continuity in $x$ extends the minorant inequality to the origin when needed.
+
+We use the following known Gaussian minorant theorem in its precise analytic form. For the covolume-one triangular lattice it is the sharp triangular Gaussian minorant theorem; for $E_8$ and the Leech lattice it is the Gaussian auxiliary-function theorem of Cohn--Kumar--Miller--Radchenko--Viazovska.
+
+\begin{theorem}[Lattice Gaussian minorants]\label{thm:lattice-gaussian}
+Let $L=L_2,E_8$, or $L_{24}$. For every $\beta>0$ there is a real radial Schwartz function $f_\beta$ on $\R^d$ such that
+\begin{align}
+ f_\beta(x)&\le e^{-\pi\beta\abs x^2}&& (x\in\R^d),\notag\\
+ \widehat f_\beta(\xi)&\ge0&& (\xi\in\R^d),\label{eq:lattice-minorant-theorem}\\
+ f_\beta(v)&=e^{-\pi\beta\abs v^2}&& (v\in L\setminus\{0\}),\notag\\
+ \widehat f_\beta(w)&=0&& (w\in L^*\setminus\{0\}).\notag
+\end{align}
+The Fourier convention is the one fixed at the start of this section.
+\end{theorem}
+
+This is the lattice theorem used in the proof; its interpolation construction is taken as known. We now verify the entire passage from this statement to the sphere hypotheses. A Gaussian written as $e^{-u\abs x^2}$ has $u=\pi\beta$ here. If the triangular lattice is presented with basis $(1,0),(1/2,\sqrt3/2)$, multiply its coordinates by $(\sqrt3/2)^{-1/2}$ to obtain $L_2$. Under a dilation by $a>0$, put $g(x)=f(x/a)$. Then $\widehat g(\xi)=a^d\widehat f(a\xi)$, the lattice becomes $aL$, and its dual becomes $a^{-1}L^*$. Thus the pointwise signs and both contact conditions are preserved with the Gaussian parameter changed by $a^{-2}$. The covolume-one versions in the theorem have exactly the normalization used here.
+
+\begin{lemma}[Contact gives calibration]\label{lem:contact}
+Suppose $f$ is a Gaussian minorant, $\widehat f\ge0$, $f(v)=e^{-\pi\beta\abs v^2}$ for every nonzero $v\in L$, and $\widehat f(w)=0$ for every nonzero $w\in L^*$. Then \eqref{eq:input} holds.
+\end{lemma}
+\begin{proof}
+Poisson summation at covolume one gives $\sum_{v\in L}f(v)=\sum_{w\in L^*}\widehat f(w)$. Both sums converge absolutely because $f$ and $\widehat f$ are Schwartz. The right side is $\widehat f(0)$; the left side is $f(0)+\Theta_L(\beta)-1$. Rearranging proves the claim.
+\end{proof}
+Applying the preceding lemma to Theorem~\ref{thm:lattice-gaussian} proves $\G(L_d)$ for the three stated lattices. The pointwise inequality, Fourier nonnegativity, and contact conditions above are the precise lattice facts used below. Minimization of the theta function among lattices alone does not supply these hypotheses: the minorant inequality is required at every point of Euclidean space.
+
+\begin{lemma}[Positive definiteness for measures]\label{lem:psd}
+If $f$ is Schwartz and $\widehat f\ge0$, then for any finite real signed measure $\mu$,
+\begin{equation}\label{eq:psd}
+ \iint f(x-y)\dd\mu(x)\dd\mu(y)=
+ \int\widehat f(\xi)\left|\int e^{2\pi i x\cdot\xi}\dd\mu(x)\right|^2\dd\xi\ge0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Fourier inversion applies to a Schwartz function. The absolute value of the iterated integrand is bounded in integral by $\norm{\widehat f}_1\norm\mu_{\rm TV}^2$. Fubini therefore applies, and the two measure integrals are complex conjugates. This proves the identity and its sign.
+\end{proof}
+
+\section{Localizing the Gaussian bound on a sphere}\label{sec:localization}
+For a configuration of size $N$, define
+\begin{equation}\label{eq:GN}
+ G_N(t)=\frac1N\sum_{i,j}e^{-\pi t a_N^2\abs{x_i-x_j}^2}.
+\end{equation}
+
+\begin{proposition}[Universal profile]\label{prop:profile}
+Assume $\G^*(L)$. For every sequence of distinct-point configurations with sizes $N\to\infty$ and every $t>0$,
+\begin{equation}\label{eq:profile}
+ \liminf_{N\to\infty}G_N(t)\ge\Theta_L(t).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Write a north-pole cap as $x(u)=(u,\sqrt{1-\abs u^2})$, $\abs u<r<1$, and take a nonzero smooth nonnegative cutoff $\chi$ supported in this cap. Let $c_\chi=\int\chi^2\dd\sigma_d$ and choose $\beta=t/(1-r^2)$. The radii may be chosen arbitrarily small while avoiding $\beta=1$. For normalized Haar measure on $SO(d+1)$ define
+\begin{equation}\label{eq:localized}
+ K_N(x,y)=c_\chi^{-1}\int\chi(Rx)\chi(Ry)
+ f_\beta\bigl(a_N(\pi Rx-\pi Ry)\bigr)\dd R,
+\end{equation}
+where $\pi$ is the cap's first-$d$-coordinate projection. This is continuous and rotation invariant. Each integrand is positive definite by Lemma~\ref{lem:psd}, also after multiplying by the two cutoffs. Hence $K_N$ is positive definite for finite signed measures.
+
+On the cap, $\abs{x(u)-x(v)}^2\le\abs{u-v}^2/(1-r^2)$. Therefore the minorant inequality and Cauchy--Schwarz in the rotation variable give
+\begin{equation}\label{eq:Kbound}
+ K_N(x,y)\le e^{-\pi t a_N^2\abs{x-y}^2},\qquad K_N(x,x)=f_\beta(0).
+\end{equation}
+In fact $\int\chi(Rx)\chi(Ry)\dd R\le c_\chi$. Nonnegativity of $f_\beta$ itself is unnecessary.
+
+The row integral $b_N=\int K_N(x,y)\dd\sigma_d(y)$ is constant. Apply positive definiteness to $\mu=\sum_i\delta_{x_i}-N\sigma_d$. It gives $\sum_{i,j}K_N(x_i,x_j)\ge N^2b_N$. Subtract the $N$ diagonal terms and restore the Gaussian diagonal to obtain
+\begin{equation}\label{eq:Gb}
+ G_N(t)\ge Nb_N+1-f_\beta(0).
+\end{equation}
+
+For the limit of $Nb_N$, write $J(u)=(1-\abs u^2)^{-1/2}$ and extend $g(u)=\chi(x(u))J(u)$ by zero. Using $a_N^d=N/A_d$ in the change of variables gives
+\begin{equation}\label{eq:rowlimit}
+ Nb_N=\frac{\displaystyle\int f_\beta(w)\int g(u)g(u-w/a_N)\dd u\dd w}
+                  {\displaystyle\int\chi(x(u))^2J(u)\dd u}.
+\end{equation}
+The inner integral is bounded in absolute value by $\norm g_2^2$ and tends to $\norm g_2^2$. Dominated convergence, using $f_\beta\in L^1$, shows that the limit is
+$\widehat f_\beta(0)\int\chi^2J^2/\int\chi^2J\ge\widehat f_\beta(0)$.
+Insert this into \eqref{eq:Gb} and use calibration to get $\liminf G_N(t)\ge\Theta_L(\beta)$. Finally shrink $r$ to zero. Continuity of $\Theta_L$ proves \eqref{eq:profile}. The cutoff and its constants are fixed before $N$ tends to infinity.
+\end{proof}
+The argument uses only scales different from one. Continuity of the theta function recovers the limiting profile at every positive scale, so $\G^*(L)$ suffices in place of $\G(L)$ in the main assertions.
+
+\section{The actual Gaussian background and the positive lower bound}\label{sec:lower}
+Put $B_d(u)=\int e^{-\pi u\abs{x-y}^2}\dd\sigma_d(y)$, independently of $x$, and define
+\begin{equation}\label{eq:HF}
+ H_N(t)=G_N(t)-NB_d(a_N^2t),\qquad F_N(t)=H_N(t)-1.
+\end{equation}
+The subtraction uses the actual sphere background at the finite size $N$.
+
+\begin{lemma}\label{lem:background}
+For $d\ge2$ and $t>0$,
+\begin{equation}\label{eq:background}
+ 0\le NB_d(a_N^2t)\le t^{-d/2},\qquad
+ NB_d(a_N^2t)\longrightarrow t^{-d/2},\qquad
+ F_N(t)\ge-\min\{1,t^{-d/2}\}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Use \eqref{eq:polar} and set $v=a_N\rho$. Since $N/a_N^d=A_d$, the background equals
+\begin{equation}
+ A_{d-1}\int_0^{2a_N}e^{-\pi t v^2}v^{d-1}
+       (1-v^2/(4a_N^2))^{d/2-1}\dd v.
+\end{equation}
+The extra factor lies in $[0,1]$; the integral extended to infinity is the Euclidean Gaussian integral $t^{-d/2}$. Dominated convergence gives the limit. Ambient Gaussian positive definiteness applied to $\sum_i\delta_{x_i}-N\sigma_d$ gives $H_N\ge0$. The Gaussian diagonal gives $G_N\ge1$. Thus $F_N\ge-1$ and $F_N\ge-NB_d\ge-t^{-d/2}$.
+\end{proof}
+
+\begin{lemma}[Mellin identity]\label{lem:mellin}
+For $0<s<d$ and a fixed injective configuration,
+\begin{equation}\label{eq:mellinpos}
+ \frac{E_s(X)-I_{s,d}N^2}{N^{1+s/d}}=
+ \frac{\pi^{s/2}A_d^{-s/d}}{\Gamma(s/2)}
+           \int_0^\infty t^{s/2-1}F_N(t)\dd t.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $r>0$, substitute $v=\pi a_N^2r^2t$ into the gamma integral. This represents $r^{-s}$ as the Mellin integral of its Gaussian. Sum over the finitely many nonzero distances. Separately integrate the nonnegative Gaussian against $\sigma_d\otimes\sigma_d$; Tonelli and Lemma~\ref{lem:continuous} show its Mellin integral is finite. Subtract the two finite integrals and use \eqref{eq:density}. The minus one in $F_N$ removes exactly the Gaussian diagonal.
+\end{proof}
+
+\begin{proposition}[Uniform lower bound]\label{prop:positive-lower}
+Under $\G^*(L)$, for every $0<s<d$ and $\eps>0$, all sufficiently large $N$ and all configurations satisfy
+\begin{equation}
+ E_s(X)\ge I_{s,d}N^2+(A_d^{-s/d}Z_L(s)-\eps)N^{1+s/d}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The common lower bound for the integrand in \eqref{eq:mellinpos} is
+$-t^{s/2-1}\min(1,t^{-d/2})$. It is integrable at both ends exactly when $0<s<d$. Proposition~\ref{prop:profile}, Lemma~\ref{lem:background}, and Fatou's lemma, after adding this integrable majorant, give the lower limit of the Mellin integral as at least the integral in \eqref{eq:zpositive}. This proves the bound along every sequence with $N\to\infty$. If the claimed uniform eventual statement failed, choose a counterexample at an increasing sequence of sizes; the sequential bound gives a contradiction.
+\end{proof}
+No separation estimate, equidistribution assumption, or local lattice resemblance is imposed on the arbitrary configurations in this proof.
+
+\section{Equal-weight quadrature with boundary corrections}\label{sec:quadrature}
+An equal-weight rule is necessary because each node represents one point of the final configuration. Arbitrary Gaussian quadrature weights cannot be interpreted as an unweighted configuration with the prescribed cardinality.
+
+For the inverse-fourth argument let $h=1/m$, $m\ge8$. Replace the first four midpoint positions in mesh units by the four roots $\alpha_0,\ldots,\alpha_3$ of
+\begin{align}
+ P(x)={}&39813120x^4-316846080x^3+842745600x^2 \notag\\
+        &-840595488x+226287557,
+\end{align}
+respectively in $(.418,.419)$, $(1.575,1.576)$, $(2.453,2.454)$, and $(3.510,3.511)$. Reflect the same corrections at the right endpoint and leave the interior midpoints unchanged. Denote the resulting nodes in $[0,1]$ by $T_m$ and put $q_hg=h\sum_{x\in T_m}g(x)$.
+
+\begin{lemma}\label{lem:peano}
+The nodes lie in their own mesh cells and are separated by more than $h/2$. The rule has total mass one, is exact on polynomials of degree at most five, and has the representation
+\begin{equation}\label{eq:peano}
+ (q_h-I)g=\int_0^1P_h(t)g^{(6)}(t)\dd t,\qquad
+ \abs{P_h(t)}\le C\min\{h^6,t^6,(1-t)^6\}.
+\end{equation}
+Here $I g=\int_0^1g$ and $C$ is independent of $m$.
+\end{lemma}
+\begin{proof}
+The isolating intervals give the location and separation assertions. Newton identities applied to $P$ compute the first power sums of the four roots. After subtracting the four midpoint sums, the moments of orders zero through four are
+\begin{equation}
+ \Delta p_0=0,\quad \Delta p_1=-1/24,\quad
+ \Delta p_2=0,\quad \Delta p_3=7/960,\quad \Delta p_4=0.
+\end{equation}
+For a polynomial of degree at most five, expand the reflected correction at the other endpoint. The midpoint Euler--Maclaurin formula has only its second- and fourth-order errors in this degree range, and these are cancelled by the displayed first and third moments. The fifth-moment terms cancel between the two ends. This proves exactness.
+
+Taylor's integral remainder and exactness on degree-five polynomials give
+\begin{equation}
+ P_h(t)=\frac1{5!}\left[h\sum_{x\in T_m}(x-t)_+^5
+                         -\int_0^1(x-t)_+^5\dd x\right].
+\end{equation}
+The left-oriented expression using $(t-x)_+^5$ is equal to this one because their difference is the quadrature error of a polynomial of degree at most five. In the interior, the midpoint sum of the truncated fifth power has bounded periodic Bernoulli remainder of order $h^6$; the endpoint corrections cancel the lower powers just computed. In the fixed-width boundary strips, rescale $t$ by $h$; only finitely many corrected nodes occur, and the resulting piecewise polynomial is uniformly bounded. Before the first node, the left-oriented formula is $-t^6/6!$. Between that node and the edge of the boundary strip, $t$ is comparable to $h$, so the bound $Ch^6$ also implies $Ct^6$. Reflect at the right endpoint. This proves the three bounds in \eqref{eq:peano}.
+\end{proof}
+
+For the tensor rule $Q_h=q_h^{\otimes d}$ the identity
+\begin{equation}\label{eq:telescoping}
+ Q_h-I^{\otimes d}=\sum_{j=1}^d q_h^{\otimes(j-1)}
+                       \otimes(q_h-I)\otimes I^{\otimes(d-j)}
+\end{equation}
+reduces estimates to one-variable derivatives. The other factors are positive measures of mass one. Moreover, a coordinate interval of length $r\ge h$ has quadrature mass at most $C(r+h)$; a box of side $r$ consequently has mixed integral/quadrature mass $O(r^d)$.
+
+For the Gaussian constructions we need the corresponding rules at orders twelve and fourteen. Their existence follows from a finite moment construction.
+
+\begin{lemma}[Higher-order boundary rules]\label{lem:highrule}
+For each even integer $r\ge2$, there are fixed boundary corrections of the midpoint rule such that, for all sufficiently large $m$, the corrected rule has equal weights $1/m$, one node in the middle half of each mesh cell, and is exact on polynomials of degree at most $r-1$. Moreover,
+\begin{equation}\label{eq:highrule}
+ \abs{(q_m-I)g}\le C_r m^{-r}\int_0^1\abs{g^{(r)}(t)}\dd t.
+\end{equation}
+Only a fixed number of cells at each endpoint are changed.
+\end{lemma}
+\begin{proof}
+Let $B_j(x)$ be the Bernoulli polynomials, defined by
+\[
+ \frac{ze^{xz}}{e^z-1}=\sum_{j=0}^{\infty}B_j(x)\frac{z^j}{j!}.
+\]
+Put $q=r-1$ and $c_\ell=B_{\ell+1}(1/2)/(\ell+1)$ for $1\le\ell\le q$. We first choose finitely many half-integer positions $t_i$ and shifts $\delta_i$, with $\abs{\delta_i}<1/4$, satisfying
+\begin{equation}\label{eq:boundary-moments}
+ \sum_i\bigl((t_i+\delta_i)^\ell-t_i^\ell\bigr)=c_\ell
+ \qquad(1\le\ell\le q).
+\end{equation}
+Choose distinct $u_1,\ldots,u_q\in(0,1)$. For each $j$ take $n$ consecutive half-integers $t_{ja}$ near $Ku_j$, where $1\le a\le n$, and give this cluster a common shift $\delta_j$. For fixed $n$ and $K\to\infty$, the polynomial maps
+\[
+ F_{K,\ell}(\delta)=K^{1-\ell}
+ \sum_{j,a}\bigl((t_{ja}+\delta_j)^\ell-t_{ja}^\ell\bigr)
+\]
+converge, together with their first derivatives on bounded sets, to
+\[
+ F_{\infty,\ell}(\delta)=\ell n\sum_j u_j^{\ell-1}\delta_j.
+\]
+The coefficient matrix is invertible by the Vandermonde determinant. The solution of
+$F_\infty(\delta)=(c_1,0,\ldots,0)$ has size $O(1/n)$. Fix $n$ large enough that each component has absolute value less than $1/8$. The inverse function theorem, applied near this solution, gives for all sufficiently large $K$ a solution of
+$F_{K,\ell}(\delta)=K^{1-\ell}c_\ell$ with $\abs{\delta_j}<1/4$. The clusters are disjoint when $K$ is large. Fix such a $K$ and its shifts. This proves \eqref{eq:boundary-moments} with finitely many fixed nodes.
+
+For $h=1/m$, replace each selected left midpoint $ht_i$ by $h(t_i+\delta_i)$ and reflect the same changes at the right endpoint. The two boundary sets are disjoint for large $m$. For a polynomial $g$ of degree at most $r-1$, the midpoint Euler--Maclaurin identity is finite:
+\[
+ h\sum_{k=0}^{m-1}g((k+1/2)h)-\int_0^1g
+ =\sum_{\ell=1}^{r-1}\frac{B_{\ell+1}(1/2)}{(\ell+1)!}
+ h^{\ell+1}\bigl(g^{(\ell)}(1)-g^{(\ell)}(0)\bigr).
+\]
+The left correction contributes
+$\sum_\ell h^{\ell+1}c_\ell g^{(\ell)}(0)/\ell!$;
+the right contributes
+$\sum_\ell(-1)^\ell h^{\ell+1}c_\ell g^{(\ell)}(1)/\ell!$.
+Since $c_\ell=0$ for even $\ell$, these corrections cancel every term of the midpoint error. This proves exactness.
+
+For general $g$, the Euler--Maclaurin remainder is bounded by
+$C_rh^r\int_0^1\abs{g^{(r)}}$. Expand the finitely many endpoint corrections through degree $r-1$. Their integral Taylor remainders are bounded by the same expression: each corrected point has distance at most a fixed multiple of $h$ from the endpoint, and its weight is $h$. The polynomial terms cancel as above. This proves \eqref{eq:highrule}. Finally, $\abs{\delta_i}<1/4$ places every node in the middle half of its own cell, giving separation at least $h/2$.
+\end{proof}
+We use this lemma with $r=12$ and $r=14$. The fixed number of altered boundary cells is negligible as $m\to\infty$.
+
+\section{The curved background estimate at exponent four}\label{sec:backgroundfour}
+We now give the direct construction in dimension eight. Let $Q=[0,1]^8$ and let $F$ be $C^7$ on a neighborhood of $Q$, with
+\begin{equation}\label{eq:bilip}
+ \abs{F(x)-F(y)}\ge\lambda\abs{x-y}\quad(x,y\in Q)
+\end{equation}
+for a fixed $\lambda>0$. Assume bounds on its derivatives through order seven. Define $V_F(x)=\int_Q\abs{F(x)-F(y)}^{-4}\dd y$.
+
+\begin{proposition}\label{prop:backgroundfour}
+There is a constant depending on $F$ and $\lambda$, but not on $h$, such that
+\begin{equation}\label{eq:bgfour}
+ \abs{Q_hV_F-\int_QV_F}\le C_Fh^5.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Regularize the kernel as $k_\eps(x,y)=(\abs{F(x)-F(y)}^2+\eps^2)^{-2}$ and let $V_\eps(x)=\int_Qk_\eps(x,y)\dd y$. Fix a coordinate $j$ and write $D_j=\partial_{x_j}+\partial_{y_j}$ and $r_\eps=(\abs{x-y}^2+\eps^2)^{1/2}$. For $z=F(x)-F(y)$,
+$D_j^az=\partial_j^aF(x)-\partial_j^aF(y)=O(\abs{x-y})$ for $a\le6$. The seventh derivative bound gives the Lipschitz estimate at $a=6$.
+
+The chain rule, with \eqref{eq:bilip}, therefore gives
+\begin{equation}\label{eq:simderiv}
+ \abs{D_j^a\partial_{y_j}^bk_\eps(x,y)}
+       \le C r_\eps^{-4-b}\qquad(a+b\le6).
+\end{equation}
+Indeed, if $q=\abs z^2+\eps^2$, a product of $\ell$ derivatives of $q$ has order $r_\eps^{2\ell-b}$, while the $\ell$th derivative of $q^{-2}$ has order $r_\eps^{-4-2\ell}$. Their product has the stated exponent.
+
+Use the full expansion $\partial_{x_j}^6=(D_j-\partial_{y_j})^6$ and integrate every term with a $y_j$ derivative once across the interval:
+\begin{align}\label{eq:faces}
+ \partial_{x_j}^6V_\eps(x)
+ ={}&\int_QD_j^6k_\eps(x,y)\dd y\\
+ &+\sum_{b=1}^6(-1)^b\binom6b
+ \int_{[0,1]^7}\left[D_j^{6-b}\partial_{y_j}^{b-1}k_\eps(x,y)
+              \right]_{y_j=0}^{y_j=1}\dd y'.\notag
+\end{align}
+The interior term is uniformly bounded because $\abs{x-y}^{-4}$ is locally integrable in dimension eight. The most singular face term has exponent $-9$ over a seven-dimensional face. Scaling the tangential variables gives
+\[
+ \int_{\R^7}(\abs z^2+a^2)^{-9/2}\dd z=C a^{-2}.
+\]
+Less singular face terms are bounded by a constant plus this one. Hence
+\begin{equation}\label{eq:facebound}
+ \abs{\partial_{x_j}^6V_\eps(x)}
+ \le C\left(1+(x_j^2+\eps^2)^{-1}
+              +((1-x_j)^2+\eps^2)^{-1}\right).
+\end{equation}
+For $w_h(t)=\min(h^6,t^6,(1-t)^6)$,
+\begin{equation}
+ \int_0^1w_h(t)t^{-2}\dd t
+ \le\int_0^ht^4\dd t+h^6\int_h^1t^{-2}\dd t\le\frac65h^5.
+\end{equation}
+The reflected endpoint obeys the same estimate. Equations \eqref{eq:peano}, \eqref{eq:telescoping}, and \eqref{eq:facebound} now give
+$\abs{Q_hV_\eps-\int_QV_\eps}\le Ch^5$, uniformly in $\eps$.
+
+Finally $0\le a^{-4}-(a^2+\eps^2)^{-2}\le2\eps^2a^{-6}$. Since the exponent six is still locally integrable in dimension eight, \eqref{eq:bilip} yields $\sup_Q\abs{V_F-V_\eps}\le C\eps^2$. Let $\eps$ decrease to zero at fixed $h$. This proves \eqref{eq:bgfour}, without assuming that the unregularized potential is $C^6$ on the boundary.
+\end{proof}
+The extra power of $h$ relative to the singular row error is essential: it makes the background negligible after second-order normalization.
+
+\section{Flat regularization and the local lattice constant}\label{sec:flat}
+For an injective linear map $B:\R^8\to\R^k$ and a fixed smooth cutoff $\chi$, equal to one near zero and of compact support, define
+\begin{equation}
+ D_B(R)=\sum_{z\in\Z^8\setminus\{0\}}\abs{Bz}^{-4}\chi(z/R)
+             -\int_{\R^8}\abs{By}^{-4}\chi(y/R)\dd y.
+\end{equation}
+
+\begin{lemma}\label{lem:flat}
+On a compact set of injective maps with singular values uniformly bounded above and away from zero, there is a continuous function $c(B)$ such that
+\begin{equation}\label{eq:flattail}
+ \abs{D_B(R)-c(B)}\le CR^{-2}\quad(R\ge1).
+\end{equation}
+It obeys $c(aB)=a^{-4}c(B)$ and $c(UB)=c(B)$ for $a>0$ and an isometric embedding $U$. If $B\Z^8=E_8$ at covolume one, then $c(B)=Z_{E_8}(4)$.
+\end{lemma}
+\begin{proof}
+On an annulus of radius $R$, six derivatives of the cut-off inverse-fourth kernel are $O(R^{-10})$. Apply the sixth-order tensor rule on a box larger than the support. Place its endpoint corrections outside the support and translate the midpoint mesh to $\Z^8$; only ordinary lattice nodes contribute. The discrepancy between lattice sum and integral is $O(R^8R^{-10})=O(R^{-2})$, uniformly in $B$.
+
+Apply this to $\chi(y/(2R))-\chi(y/R)$ and sum the dyadic bounds:
+$\sum_{j\ge0}C(2^jR)^{-2}\le(4C/3)R^{-2}$. This proves a common limit along dyadic radii. Comparison of a general radius with its adjacent dyadic radii proves \eqref{eq:flattail}. The same estimate applied to the difference of two cutoffs proves independence of the cutoff.
+
+For fixed $R$, $D_B(R)$ is continuous in $B$. The absolute variation of the finite sum and the integral is bounded by $C\norm{B-C}R^4$. Combining this with the two tails and choosing $R=\norm{B-C}^{-1/6}$ gives a local bound $C\norm{B-C}^{1/3}$ for $\abs{c(B)-c(C)}$. Homogeneity and isometric invariance hold already in the defining differences.
+
+For the $E_8$ basis, Gaussian damping gives the same regularization: first fix a bounded annulus and pass between cutoffs there, then use the uniform annular tail to remove it. The damped difference is
+$\pi^2\int_0^\infty t(\Theta_{E_8}(t)-1-t^{-4})\dd t$.
+Proposition~\ref{prop:zeta} identifies it with $Z_{E_8}(4)$. This also fixes the normalization of $c$.
+\end{proof}
+
+\section{Every interior row and the neutralized patch}\label{sec:rows}
+With $F$ as in Section~\ref{sec:backgroundfour}, define for $x\in T_m^8$
+\begin{equation}
+ e_h(x)=h^8\sum_{\substack{y\in T_m^8\\y\ne x}}\abs{F(x)-F(y)}^{-4}-V_F(x).
+\end{equation}
+
+\begin{lemma}\label{lem:rows}
+Uniformly over all nodes, $\abs{e_h(x)}\le Ch^4$. For each fixed $\delta>0$, uniformly for nodes in $[\delta,1-\delta]^8$,
+\begin{equation}\label{eq:rowlimitfour}
+ h^{-4}e_h(x)\longrightarrow c(DF(x)).
+\end{equation}
+More precisely, if $(2R+5)h<\delta$, then
+\begin{equation}\label{eq:rowerror}
+ \abs{h^{-4}e_h(x)-c(DF(x))}\le C(R^{-2}+hR^5).
+\end{equation}
+\end{lemma}
+\begin{proof}
+For an annular piece at distance $r\ge h$ from $x$, six derivatives of the kernel have size at most $Cr^{-10}$. Its support has mixed quadrature/integral mass $O(r^8)$, by the node counting after \eqref{eq:telescoping}. Thus its error is $O(h^6r^{-2})$. Summing for $r=h,2h,4h,\ldots$ gives $O(h^4)$. Within distance $Ch$, separation and \eqref{eq:bilip} bound both the integral and the off-diagonal sum by $Ch^4$. This proves the all-row bound, including the boundary rows.
+
+For an interior node, the nodes within $2Rh$ are uncorrected midpoints, so their differences divided by $h$ are exactly integer vectors. Taylor expansion gives
+\[
+ h^{-1}(F(x+hz)-F(x))=DF(x)z+O(h\abs z^2).
+\]
+The inverse-fourth kernel changes by at most $Ch\abs z^{-3}$. Its sum and integral over $\abs z\le2R$ are bounded by $ChR^5$. The remainder after the local cutoff is $O(R^{-2})$ by the annular estimate after division by $h^4$. Lemma~\ref{lem:flat} gives \eqref{eq:rowerror}. First let $h\to0$ at fixed $R$, and then let $R\to\infty$.
+\end{proof}
+
+Put $n=m^8$ and define the neutralized off-diagonal energy
+\begin{equation}
+ \mathscr R_{F,h}=\sum_{x\ne y}\abs{F(x)-F(y)}^{-4}
+                   -2n\sum_xV_F(x)+n^2\int_QV_F(x)\dd x.
+\end{equation}
+\begin{proposition}\label{prop:patchfour}
+\begin{equation}\label{eq:patchfour}
+ h^{12}\mathscr R_{F,h}\longrightarrow\int_Qc(DF(x))\dd x.
+\end{equation}
+\end{proposition}
+\begin{proof}
+A direct rearrangement gives
+$h^{16}\mathscr R_{F,h}=Q_he_h-(Q_hV_F-IV_F)$.
+After multiplication by $h^{-4}$ the second term tends to zero by Proposition~\ref{prop:backgroundfour}. For the first term, restrict initially to the interior at distance $\delta$ from the boundary. Lemma~\ref{lem:rows} supplies uniform convergence there. The complementary strip contains $O(\delta+h)$ of the quadrature mass and has a uniform bounded normalized row error. The continuous function $c(DF(x))$ is Riemann integrable and its quadrature sums converge. Let $h\to0$ and then $\delta\to0$.
+\end{proof}
+This proof uses every row, with an explicit uniform estimate on the boundary strip. A computation at only the central lattice row would not justify \eqref{eq:patchfour}.
+
+\section{Exact area charts and almost-full rational patch families}\label{sec:charts}
+For $z\in\R^{d-1}$, $\abs z<1$, and $-\pi<t<\pi$, use
+\begin{equation}\label{eq:chart}
+ \Phi(z,t)=(z,\sqrt{1-\abs z^2}\sin t,\sqrt{1-\abs z^2}\cos t).
+\end{equation}
+Its Gram matrix is block diagonal:
+\begin{equation}
+ D\Phi^TD\Phi=
+ \begin{pmatrix}I+zz^T/(1-\abs z^2)&0\\0&1-\abs z^2\end{pmatrix}.
+\end{equation}
+The matrix determinant lemma gives determinant one. Thus $\Phi^*(\dd A)=\dd z\dd t$ exactly, and $D\Phi(0)$ is an isometric embedding.
+
+Choose a determinant-one basis map $B$ for the relevant lattice and set
+\begin{equation}
+ F_{U,\ell}(x)=U\Phi(\ell B(x-x_*)),\qquad x_*=(1/2,\ldots,1/2).
+\end{equation}
+For small $\ell$, this is injective and bi-Lipschitz on the cube; it has surface-area Jacobian $\ell^d$. Consequently its image has probability mass $r=\ell^d/A_d$. Also $\ell^{-1}DF_{U,\ell}$ tends uniformly to an isometric copy of $B$.
+
+\begin{lemma}\label{lem:rationalpatches}
+For any distortion tolerance $\eta>0$ and lost-mass tolerance $b>0$, there is a finite family of such patches with separated closures, total probability mass greater than $1-b$ and less than one, and masses $r_j=(b_j/q)^d$ with positive integers $b_j,q$. All their normalized derivatives are within $\eta$ of isometric copies of $B$.
+\end{lemma}
+\begin{proof}
+Patches of scale $\ell$ contain and are contained in spherical balls of radii $c\ell$ and $C\ell$, uniformly in their centers. In any uncovered open region choose a compact subset containing at least half its measure. A maximal separated finite set at scale $3C\ell$ gives disjoint patches inside the region, while enlarged balls cover that compact subset. The small-ball upper area bound $C'\ell^d$ implies that the chosen patches remove a fixed positive proportion of the remaining measure. The proportion is independent of the region and the sufficiently small scale.
+
+Repeat finitely many times until the uncovered measure is below $b/2$. Choose the scales small enough at every step to meet the derivative tolerance. There are now finitely many disjoint compact patches with positive mutual distances. Approximate each $r_j^{1/d}$ from below by a positive rational $b_j/q$ with one common denominator, and shrink its patch accordingly. The total loss can be made less than $b/2$. A strict shrink ensures total mass less than one and preserves separation.
+\end{proof}
+For this fixed geometry the sizes
+\begin{equation}\label{eq:rationalsizes}
+ M=(qm)^d,\qquad n_j=(b_jm)^d=Mr_j,\qquad
+ n_0=M-\sum_jn_j
+\end{equation}
+are exact integers. The order of choices is: tolerances, then the finite geometry and denominator, then $m\to\infty$, then smaller tolerances.
+
+\section{The inverse-fourth upper bound on the sphere}\label{sec:upperfour}
+Apply Section~\ref{sec:charts} in dimension eight. On patch $\Omega_j$ place the $n_j$ points from the sixth-order tensor rule. Let $P_j$ be their counting measure, $\beta_j=M\sigma_8|_{\Omega_j}$, and $\nu_j=P_j-\beta_j$. The coordinate background is exactly $n_j\dd x$.
+
+\begin{proposition}\label{prop:upperfour}
+For every $\eps>0$ and all sufficiently large integers $N$, there is an injective $N$-point configuration satisfying
+\begin{equation}\label{eq:upperfour}
+ E_4(X)\le\frac7{16}N^2+
+            \left(A_8^{-1/2}Z_{E_8}(4)+\eps\right)N^{3/2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+For fixed patches, Proposition~\ref{prop:patchfour} and homogeneity give
+\begin{equation}\label{eq:patchmass}
+ \frac{\mathscr R_j}{M^{3/2}}\longrightarrow
+ \frac{r_j}{\sqrt{A_8}}\int_Qc(\ell_j^{-1}DF_j(x))\dd x.
+\end{equation}
+The factor follows from $n_j^{3/2}\ell_j^{-4}=M^{3/2}r_j/\sqrt{A_8}$. By continuity in Lemma~\ref{lem:flat}, the integrand differs from $Z_{E_8}(4)$ by a quantity $\omega(\eta)\to0$.
+
+For distinct fixed patches, the cross kernel is smooth on the product of their closed cubes. The neutralized cross term is
+$n_in_j(Q_{h_i}-I)(Q_{h_j}-I)K_{ij}$. Apply the sixth-order estimate on one side and the total-variation bound two on the other. Its size is $O(M^2M^{-6/8})=O(M^{5/4})$, hence $o(M^{3/2})$. Constants may depend on the fixed separation.
+
+Write $\Omega_0$ for the complement, $b_0=\sigma_8(\Omega_0)>0$, and $\rho_0=\sigma_8|_{\Omega_0}/b_0$. Choose exactly $n_0=Mb_0$ independent points from $\rho_0$. Their centered measure has expectation zero, so all cross terms with fixed patch measures have expectation zero. Their self-neutralized energy has expectation $-n_0I_4(\rho_0)\le0$. It is finite because
+$I_4(\rho_0)\le I_{4,8}/b_0$, by the constant sphere potential. Atomlessness makes all random points distinct almost surely, and they avoid the other patches.
+
+The total background is $M\sigma_8$. Its constant potential gives the exact identity
+\begin{equation}
+ \mathscr R(P,M\sigma_8)=E_4(P)-I_{4,8}M^2.
+\end{equation}
+Take an outcome with energy no greater than its expectation. Equations \eqref{eq:patchmass} and the cross estimate imply
+\begin{equation}\label{eq:subsequpper}
+ \limsup_m\frac{E_4(X_M)-I_{4,8}M^2}{M^{3/2}}
+ \le A_8^{-1/2}\bigl((1-b_0)Z_{E_8}(4)+\omega(\eta)\bigr).
+\end{equation}
+
+To reach a general $N$, choose the smallest $M=(qm)^8\ge N$. Then $M/N\to1$. A uniform $N$-element subset of the $M$ labels includes a fixed ordered pair with probability
+$p_{N,M}=N(N-1)/(M(M-1))$. Hence one subconfiguration has energy at most $p_{N,M}E_4(X_M)$. The background correction obeys
+\begin{equation}\label{eq:backgroundsampling}
+ p_{N,M}M^2-N^2=\frac{N(N-M)}{M-1}\le0,
+\end{equation}
+and
+\begin{equation}
+ \frac{p_{N,M}M^{3/2}}{N^{3/2}}
+ =\frac{N-1}{N}\left(\frac NM\right)^{1/2}\frac M{M-1}\longrightarrow1.
+\end{equation}
+Since $I_{4,8}>0$, the background correction is favorable. First make $\eta$ and $b_0$ small, then take $N$ large. This proves \eqref{eq:upperfour}.
+\end{proof}
+The proof is not a pairwise distortion estimate on the full $N^2$ energy. The local comparison is applied only after neutralization, at the scale of the second term.
+
+\section{Gaussian errors with an explicit integrable bound}\label{sec:gaussian-upper}
+Put $a_N=(N/A_d)^{1/d}$ and $c_N=\pi a_N^2$. In this section $d\in\{2,8,24\}$ and $D=d+1$. For a finite signed measure $\mu$ on the sphere, regarded as a measure on $\R^D$, write
+\[
+ Q_t(\mu)=\iint e^{-t\abs{x-y}^2}\dd\mu(x)\dd\mu(y),\qquad
+ b_t(z)=\int_{\Sph^d}e^{-2t\abs{x-z}^2}\dd\sigma_d(x).
+\]
+Thus $H_N(\alpha)=Q_{c_N\alpha}(\sum_i\delta_{x_i}-N\sigma_d)/N$.
+Completing the square gives the exact identity
+\begin{equation}\label{eq:bumpsquare}
+ Q_t(\mu)=\left(\frac{4t}{\pi}\right)^{D/2}
+ \int_{\R^D}\left(\int e^{-2t\abs{x-z}^2}\dd\mu(x)\right)^2\dd z.
+\end{equation}
+Indeed, $\abs{x-z}^2+\abs{y-z}^2=\abs{x-y}^2/2+2\abs{z-(x+y)/2}^2$. The Gaussian integral in $z$ proves the formula; its absolute integral is finite for a measure of finite total variation. In particular,
+\begin{equation}\label{eq:young}
+ Q_t(\mu+\nu)\le(1+\eta)Q_t(\mu)+(1+\eta^{-1})Q_t(\nu)
+ \quad(\eta>0).
+\end{equation}
+
+We first prove the local quadrature estimate, including the function that bounds its error. Let $Q=[0,1]^d$, and let $\Psi:Q\to\R^D$ be a smooth normalized patch map. Fix constants $\ell_0>0$ and $\Lambda_j<\infty$ such that
+\begin{equation}\label{eq:normalized-chart-bounds}
+ \ell_0\abs{x-y}\le\abs{\Psi(x)-\Psi(y)}\le\Lambda_1\abs{x-y},
+ \qquad \sup_Q\abs{\partial_i^j\Psi}\le\Lambda_j\quad(1\le j\le r).
+\end{equation}
+For the small charts of Section~\ref{sec:charts}, these constants can be chosen uniformly: differentiate the displayed chart formula on a fixed compact subset of $\abs z<1$, and then compose with the fixed lattice basis. Dividing a patch of side $\lambda$ by $\lambda$ leaves its first derivative bounded and multiplies its higher derivatives by nonnegative powers of $\lambda$. Thus shrinking the patch does not enlarge these bounds.
+
+Let $q_n^{\otimes d}$ be the order-$r$ rule of Lemma~\ref{lem:highrule}, with $r$ even. All its nodes lie in the middle half of their mesh cells. For $z\in\R^D$, choose $x_*\in Q$ minimizing $\abs{\Psi(x)-z}$ and put $\delta_z=\abs{\Psi(x_*)-z}$. Define
+\begin{equation}\label{eq:explicit-envelope}
+ U_{\tau,z}(x)=e^{-\tau\delta_z^2/4}
+       \prod_{i=1}^d e^{-\tau\ell_0^2(x_i-x_{*,i})^2/16},
+ \qquad
+ V_{\tau,z}=\int_Q e^{-\tau\abs{\Psi(x)-z}^2/8}\dd x.
+\end{equation}
+Both quantities are now explicit functions, rather than unspecified error factors.
+
+\begin{lemma}[Localized Gaussian quadrature]\label{lem:gaussian-quadrature}
+For every fixed $\kappa<\infty$ there is a constant $C$ depending only on $d,r,\kappa$ and the bounds in \eqref{eq:normalized-chart-bounds} such that, whenever $0<\tau\le\kappa n^2$,
+\begin{equation}\label{eq:bumperror}
+ \left|q_n^{\otimes d}e^{-\tau\abs{\Psi-z}^2}
+       -\int_Qe^{-\tau\abs{\Psi-z}^2}\right|
+ \le Cn^{-r}(1+\tau^{r/2})V_{\tau,z}.
+\end{equation}
+For $0<\tau\le2$, the factor $1+\tau^{r/2}$ can be replaced by $\sqrt\tau$ after enlarging $C$.
+\end{lemma}
+\begin{proof}
+Write $w=\abs{\Psi(x)-z}$. Repeated differentiation of the exponential produces terms
+$C e^{-\tau w^2}\tau^k w^j$ times bounded products of derivatives of $\Psi$, where $1\le k\le r$, $0\le j\le k$, and $2k-j\le r$. To see the last inequality, each factor obtained by differentiating $\abs{\Psi-z}^2$ either contains one undifferentiated $\Psi-z$ and at least one derivative, or contains two differentiated factors and at least two derivatives. If there are $k$ such factors and $j$ undifferentiated factors, at least $2k-j$ derivatives have been used. The bound
+$u^j e^{-u^2/2}\le C_j$ therefore gives
+\[
+ \abs{\partial_i^r e^{-\tau\abs{\Psi(x)-z}^2}}
+ \le C(1+\tau^{r/2})e^{-\tau w^2/2}.
+\]
+For $\tau\le2$, each exponent $k-j/2$ is at least $1/2$, which gives the sharper factor $\sqrt\tau$.
+
+Minimality of $x_*$ and the lower Lipschitz bound give
+$w\ge\delta_z$ and $2w\ge\ell_0\abs{x-x_*}$. Averaging their squares yields
+\[
+ w^2\ge\tfrac12\delta_z^2+\tfrac18\ell_0^2\abs{x-x_*}^2,
+ \qquad e^{-\tau w^2/2}\le U_{\tau,z}(x).
+\]
+Conversely, $w\le\delta_z+\Lambda_1\abs{x-x_*}$, so
+\[
+ V_{\tau,z}\ge e^{-\tau\delta_z^2/4}
+   \prod_i\int_0^1e^{-\tau\Lambda_1^2(u-x_{*,i})^2/4}\dd u.
+\]
+Each integral on the right is at least $c/(1+\sqrt\tau)$, uniformly for its center in $[0,1]$. This follows by integrating on the longer side of the center over an interval of length $\min(1/2,1/\sqrt\tau)$.
+
+The corresponding integral with the coefficient $\ell_0^2/16$ is at most $C/(1+\sqrt\tau)$. Its quadrature average has the same upper bound when $\tau\le\kappa n^2$: group the nodes by their integer distance from the cell containing the center and use
+\[
+ \frac1n\sum_{j\ge0}e^{-c\tau j^2/n^2}
+ \le C\left(\frac1n+\frac1{\sqrt\tau}\right).
+\]
+For $\tau\le1$ use total mass one; for $1\le\tau\le\kappa n^2$ the right side is bounded by $C_\kappa/\sqrt\tau$. Thus every mixed product of integrals and quadrature averages of $U_{\tau,z}$ is bounded by $C V_{\tau,z}$.
+
+Apply the tensor telescoping identity \eqref{eq:telescoping}. In its $i$th term the Peano estimate integrates the $r$th derivative in coordinate $i$, while the other coordinates carry positive integral or quadrature measures. Insert the derivative bound and then the preceding product estimate. Summing the $d$ terms proves both assertions.
+\end{proof}
+
+Consider a finite separated family of exact-area patches. In patch $i$ let its physical side be $\lambda_i$, its mesh size be $n_i$, and impose the exact relation
+\begin{equation}\label{eq:exact-density-mesh}
+ \lambda_i=n_i/a_N.
+\end{equation}
+The patch has area $\lambda_i^d$ and hence mass $n_i^d/N$ under $\sigma_d$. Let $F$ denote their union, let $Y$ be the foreground nodes, and put
+$\mu_F=\sum_{y\in Y}\delta_y-N\sigma_d|_F$.
+This signed measure has mass zero on every patch.
+
+Apply Lemma~\ref{lem:gaussian-quadrature} with
+$\tau=2t\lambda_i^2$ and the normalized image of $z$. At $t=c_N\alpha$, relation \eqref{eq:exact-density-mesh} gives $\tau/n_i^2=2\pi\alpha$. Therefore one constant works for $0<\alpha\le1$. Multiplying the quadrature error by $n_i^d$ and changing variables to the physical patch gives
+\[
+ \left|\int e^{-2t\abs{x-z}^2}\dd\mu_{F,i}(x)\right|
+ \le C\bigl(n_i^{-r}+\alpha^{r/2}\bigr)
+       N\int_{F_i}e^{-2(t/8)\abs{x-z}^2}\dd\sigma_d(x).
+\]
+The coefficient of $\alpha^{r/2}$ is independent of the patch size and of the number of patches. Summing over disjoint patches, and putting $e_N=\max_i n_i^{-r}$, proves
+\begin{equation}\label{eq:physical-bump}
+ \left|\int e^{-2t\abs{x-z}^2}\dd\mu_F(x)\right|
+       \le CN(e_N+\alpha^{r/2})b_{t/8}(z).
+\end{equation}
+This is the promised global bound by an explicitly defined function.
+
+For fixed patch geometry, $n_i\asymp a_N$, so $e_N\le C_Fa_N^{-r}$. For $t\le1$, the sharper local estimate instead gives
+\begin{equation}\label{eq:physical-bump-small}
+ \left|\int e^{-2t\abs{x-z}^2}\dd\mu_F(x)\right|
+       \le C_FN a_N^{-r}\sqrt t\,b_{t/8}(z).
+\end{equation}
+Here and below $C_F$ may depend on the fixed finite family; the constants multiplying the main powers of $\alpha$ do not. The same estimates hold uniformly if the sides of a fixed family change by $O(a_N^{-1})$.
+
+To integrate these bounds, apply \eqref{eq:bumpsquare} to $\sigma_d$ at scale $t/8$. It gives, exactly,
+\begin{equation}\label{eq:envelope-square-integral}
+ \left(\frac{4t}{\pi}\right)^{D/2}\int b_{t/8}(z)^2\dd z
+       =8^{D/2}B_d\left(\frac{t}{8\pi}\right).
+\end{equation}
+The polar bound of Lemma~\ref{lem:background} implies
+$N B_d(a_N^2\alpha/8)\le8^{d/2}\alpha^{-d/2}$, while $B_d\le1$.
+Consequently, for $H_{F,N}(\alpha)=Q_{c_N\alpha}(\mu_F)/N$,
+\begin{align}
+ H_{F,N}(\alpha)&\le C_F a_N^{d-2r+2}\alpha
+                  &&(0<\alpha\le c_N^{-1}),\label{eq:submesh-budget}\\
+ H_{F,N}(\alpha)&\le C_F a_N^{-2r}\alpha^{-d/2}
+                         +C\alpha^{r-d/2}
+                  &&(c_N^{-1}\le\alpha\le1).\label{eq:foreground-budget}
+\end{align}
+The first line uses \eqref{eq:physical-bump-small}; the second uses \eqref{eq:physical-bump} and $(u+v)^2\le2u^2+2v^2$.
+
+\begin{proposition}[The lower endpoint]\label{prop:foreground-endpoint}
+If $-1<q<d/2$ and $r+q>d/2$, then for $0<w\le1$,
+\begin{equation}\label{eq:foreground-integrated}
+ \int_0^w\alpha^{q-1}H_{F,N}(\alpha)\dd\alpha
+ \le \frac{Cw^{q+r-d/2}}{q+r-d/2}
+                 +C_{F,q}a_N^{d-2r-2q}.
+\end{equation}
+In particular, the second term tends to zero.
+\end{proposition}
+\begin{proof}
+Below $c_N^{-1}$, integration of \eqref{eq:submesh-budget} gives
+\[
+ C_Fa_N^{d-2r+2}\frac{(c_N^{-1})^{q+1}}{q+1}
+       =\frac{C_F\pi^{-q-1}}{q+1}a_N^{d-2r-2q}.
+\]
+Above $c_N^{-1}$, the first term in \eqref{eq:foreground-budget} has integral at most
+\[
+ \frac{C_Fa_N^{-2r}(c_N^{-1})^{q-d/2}}{d/2-q}
+       =\frac{C_F\pi^{d/2-q}}{d/2-q}a_N^{d-2r-2q}.
+\]
+The second term integrates to the first term of \eqref{eq:foreground-integrated}. These upper bounds remain valid when $w<c_N^{-1}$ by extending the positive integrals.
+\end{proof}
+
+For $d=24$, $r=12$ and a positive exponent $s=2q$, the vanishing term is precisely $C_{F,q}a_N^{-2q}$, or a constant times $N^{-s/24}$. The remaining integral is at most $Cw^q/q$. Thus the smallest scales really disappear even in the critical order-twelve calculation. For negative powers or logarithms, use $r=14$: then $d-2r-2q\le-4-2q<0$ for every $-1<q<0$, and $q+r-d/2\ge q+2>0$. We use order fourteen in the common construction below for all three dimensions.
+
+\section{Equal-mass cells, including the remaining mass}\label{sec:cells}
+We require cells of mass exactly $1/N$, not merely cells of comparable mass. Null sets may be assigned arbitrarily throughout. Every measurable subset of the sphere can be cut into a prescribed smaller mass: integrate its indicator over the sublevel sets of a fixed coordinate. The resulting distribution function is continuous because each coordinate level has surface measure zero, and its limits are zero and the total mass. The intermediate value theorem gives the cut. Repeating gives any finite prescribed list of masses.
+
+\begin{lemma}[Partition of a small remainder]\label{lem:pool}
+Let $R$ have mass $k/N$ and let $0<H\le1$. There is a partition into $k$ cells of mass $1/N$ such that all but at most $C_dH^{-(d+1)}$ cells have diameter at most $\sqrt{d+1}\,H$. The remaining cells have diameter at most two.
+\end{lemma}
+\begin{proof}
+Intersect the sphere with the half-open ambient cubes of side $H$ meeting $[-1,1]^{d+1}$. There are at most $(2/H+3)^{d+1}\le5^{d+1}H^{-(d+1)}$ such cubes. In each intersection with $R$, remove as many complete cells of mass $1/N$ as possible using the preceding cutting procedure. Each remaining piece has mass less than $1/N$. Their total is an integer multiple of $1/N$, since both the initial mass and the removed mass are such multiples. List these pieces, join their masses in that order, and cut whenever the accumulated mass reaches $1/N$. This makes fewer additional cells than there are cubes. They lie on the unit sphere, so their diameters are at most two. This proves the stated counts without assuming that the remaining pieces are adjacent.
+\end{proof}
+
+\begin{lemma}[Cells in dimensions eight and 24]\label{lem:high-dimensional-cells}
+For $d=8$ or $24$, let $R$ be the complement of a finite separated family of small closed chart parallelepipeds. There is a constant $B_d$, independent of this family, such that for every $\varepsilon>0$ and all sufficiently large $N$ with $k=N\sigma_d(R)\in\N$, there are $k$ cells of mass $1/N$ and diameter bounds $\delta_j$ satisfying
+\begin{equation}\label{eq:rescells}
+ c_N\sum_{j=1}^k\delta_j^2\le B_d k+\varepsilon N.
+\end{equation}
+The threshold is uniform under sufficiently small changes in the sides of the fixed patches.
+\end{lemma}
+\begin{proof}
+Fix a finite cover by exact-area charts with Lipschitz constant at most two. Assign overlaps to the first chart in a fixed ordering. The boundaries of the assigned regions, and those of the removed patches, are contained in finitely many smooth faces. Their $u$-neighborhood has mass at most $Q_Ru$: in a chart each face is covered by finitely many bounded Lipschitz graphs, and a strip of thickness $u$ over such a graph has volume $O(u)$ by Fubini. The constants remain bounded when the sides of the fixed finite patch family vary slightly.
+
+Put $h=(A_d/N)^{1/d}$. Retain the grid cubes of side $h$ whose images lie in their assigned region and in $R$. Each has mass $h^d/A_d=1/N$ and diameter at most $2\sqrt d\,h$. A point not in a retained cube is within $C_dh$ of one of the boundaries just listed. Indeed the cube containing its coordinate is either excluded by a boundary crossing or lies within one mesh width of the boundary of its chart domain. The remaining mass is therefore at most $Q_R'h$ and is an integer multiple of $1/N$.
+
+Use Lemma~\ref{lem:pool} on that remainder at scale $H=\tau\sqrt h$, with $\tau>0$ fixed for the moment. The good cells contribute at most $4\pi d k$, since $c_Nh^2=\pi$. The ordinary remainder cells contribute at most
+\[
+ c_N(d+1)H^2\,NQ_R'h=(d+1)\pi\tau^2Q_R'N.
+\]
+The exceptional cells contribute at most
+\[
+ 4c_N C_d H^{-(d+1)}
+       =4\pi C_d\tau^{-(d+1)}h^{-2-(d+1)/2}.
+\]
+Dividing this last expression by $N=A_dh^{-d}$ gives
+\begin{equation}\label{eq:carry-cost}
+ \frac{4\pi C_d}{A_d}\tau^{-(d+1)}h^{(d-5)/2}\longrightarrow0.
+\end{equation}
+Both $d=8$ and $d=24$ satisfy $d>5$. First choose $\tau$ to make the ordinary remainder cost at most $\varepsilon N/2$, then increase $N$ to make \eqref{eq:carry-cost} at most $\varepsilon/2$. This proves \eqref{eq:rescells}, with $B_d=4\pi d$. This order of choices accounts for the mass that was moved between distant cubes.
+\end{proof}
+
+Dimension two needs a different construction, because the exponent in \eqref{eq:carry-cost} would be negative.
+
+\begin{lemma}[Connected cells in dimension two]\label{lem:two-dimensional-cells}
+For the complement $R$ of a finite separated family of sufficiently small chart parallelograms on $\Sph^2$, there is a universal $B_2$ such that, for all sufficiently large $N$ with $k=N\sigma_2(R)\in\N$, the cells can be chosen with
+\begin{equation}\label{eq:two-cells}
+ c_N\sum_{j=1}^k\delta_j^2\le B_2k.
+\end{equation}
+The same assertion holds for the whole sphere. The threshold is uniform under small changes of the fixed patch sides.
+\end{lemma}
+\begin{proof}
+Include the boundaries of the holes and denote the resulting compact carrier by $\overline R$. Its measure is unchanged. It is connected: join two points by a spherical path, perturb it to cross the finitely many boundaries transversely, and replace every segment in a hole by an arc along that hole's boundary. The boundaries are disjoint simple closed curves, so these finitely many replacements lie in $\overline R$.
+
+There are constants $c_0>0$ independent of the family and $h_R>0$ possibly depending on it such that
+\begin{equation}\label{eq:local-mass-two}
+ \sigma_2(R\cap B(x,h))\ge c_0h^2
+ \quad(x\in\overline R,\ 0<h<h_R).
+\end{equation}
+To verify this, choose $h_R$ smaller than a fixed fraction of the separation of the holes and of the chart radii. Such a ball meets at most one hole. If its center is at distance at least $h/4$ from that hole, a ball of radius $h/4$ remains in $R$. Otherwise use coordinates at a nearby boundary point. Outside a parallelogram a supporting line leaves a half-disk, and at a corner at least one fixed exterior sector remains. The fixed triangular-lattice angles and the uniform upper and lower chart Lipschitz bounds place a disk of radius $c h$ in this exterior portion and within $B(x,h)$. Its spherical area is at least $c'h^2$. This proves \eqref{eq:local-mass-two}; the same disk estimates prove its uniformity under the specified side changes.
+
+Choose a maximal $h$-separated set of centers $z_i$ in $\overline R$. Their closed $h$-balls cover $\overline R$. Form measurable nearest-center cells $V_i$, breaking ties by the index. Then
+\[
+ V_i\subset B(z_i,h),\qquad
+ R\cap B(z_i,h/2)\subset V_i\quad\hbox{up to a null set}.
+\]
+Join centers whose distance is at most $3h$. This graph is connected: the relatively open balls of radius $3h/2$ cover the connected carrier, and a disconnected intersection graph would partition that carrier into two disjoint nonempty relatively open sets. Their intersections give edges of the stated graph.
+
+The graph has degree at most a constant $\Delta$ independent of $R$ and $h$. Indeed the disjoint spherical balls of radius $h/3$ about neighbors of $z_i$ lie in $B(z_i,10h/3)$. The uniform upper and lower spherical cap area bounds bound their number. Fix this $\Delta$, and choose
+\[
+ h^2=\frac{4(\Delta+1)}{c_0N}.
+\]
+For sufficiently large $N$, \eqref{eq:local-mass-two} gives $\sigma_2(V_i)\ge(\Delta+1)/N$ for every cell.
+
+Take a spanning tree and process vertices from the leaves to the root. A processed child leaves a remainder of mass less than $1/N$ contained in that child's original cell. Complete each such remainder to mass $1/N$ using part of the parent's original cell. There are at most $\Delta$ children, so less than $\Delta/N$ of the parent is needed. Its mass lower bound ensures that these completions are possible. Divide the unused part of the parent into cells of mass $1/N$, leaving a remainder of mass less than $1/N$ contained in the parent itself. This proves the induction invariant; remainders never extend down a chain of earlier vertices. At the root the remainder is zero because the total mass is $k/N$.
+
+A completed cell lies in either one $V_i$ or the union of a parent and a child. Its diameter is at most $h+3h+h=5h$. Since $c_N=N/4$ on $\Sph^2$,
+\[
+ c_N\sum_j\delta_j^2\le\frac N4\,k\,25h^2
+       =\frac{25(\Delta+1)}{c_0}k.
+\]
+Thus one may take $B_2=25(\Delta+1)/c_0$. This also proves that the mass carried along the tree has the claimed spatial control.
+\end{proof}
+
+\begin{lemma}[Residual sampling]\label{lem:cells}
+Let $C_1,\ldots,C_k$ be cells of mass $1/N$ in $R$. Independently choose $Y_j$ with distribution $\rho_j=N\sigma_d|_{C_j}$ and put $\nu=\sum_j\delta_{Y_j}-N\sigma_d|_R$. Then
+\begin{equation}\label{eq:cellcost}
+ \E Q_t(\nu)=\sum_j\left(1-\iint e^{-t\abs{x-y}^2}\dd\rho_j(x)\dd\rho_j(y)\right)
+       \le\sum_j\min(1,t\delta_j^2).
+\end{equation}
+The expectation of its cross term with any fixed signed measure is zero.
+\end{lemma}
+\begin{proof}
+Each $\rho_j$ has mass one and $\E(\delta_{Y_j}-\rho_j)=0$. Independence kills all cross terms between different cells. The diagonal contribution for one cell is one, while its two cross terms and its background leave one copy of the subtracted double integral. Use $0\le1-e^{-u}\le\min(1,u)$. The final assertion follows from centering and Fubini. The samples are distinct and avoid any fixed finite foreground almost surely, because the measures have no atoms and the cells are disjoint.
+\end{proof}
+
+\section{One configuration for all required estimates}\label{sec:positive-upper}
+Fix parameters
+\begin{equation}\label{eq:budget-parameters}
+ -1<q<0,\qquad 0<v<d/2,
+\end{equation}
+and use the order-fourteen rule. For an injective configuration define the nonnegative quantities
+\begin{equation}\label{eq:two-budgets}
+ M_q(X)=\int_0^1\alpha^{q-1}H_N(\alpha)\dd\alpha,
+ \qquad
+ T_v(X)=\int_1^\infty\alpha^{v-1}(G_N(\alpha)-1)\dd\alpha.
+\end{equation}
+For each fixed configuration these integrals are finite: at zero, its centered Gaussian defect is $O(\alpha)$, because the signed measure has mass zero and the sphere is bounded; at infinity its off-diagonal Gaussian sum decays exponentially. We will produce configurations with bounds independent of their size and of the approximation stage.
+
+\begin{lemma}[Exact cardinalities by changing the patch sides]\label{lem:allN-patches}
+Fix a finite separated family of small exact-area lattice patches with sides $\lambda_i>0$. For every sufficiently large integer $N$, put
+\begin{equation}\label{eq:floor-patch-sides}
+ n_i(N)=\lfloor\lambda_i a_N\rfloor,\qquad
+ \lambda_i(N)=n_i(N)/a_N.
+\end{equation}
+Shrink each coordinate parallelepiped about its center to side $\lambda_i(N)$. Its order-fourteen tensor rule has $n_i(N)^d$ nodes and its spherical probability mass is exactly $n_i(N)^d/N$. The number of points left to place is the nonnegative integer
+\begin{equation}\label{eq:residual-count}
+ k_N=N-\sum_i n_i(N)^d.
+\end{equation}
+If the original uncovered mass is $\rho$, the new uncovered mass is $\rho+O_F(a_N^{-1})$.
+\end{lemma}
+\begin{proof}
+All $n_i$ tend to infinity and eventually exceed the fixed minimum needed by the rule. A centered contraction of a convex coordinate parallelepiped stays inside it, so the new patches remain disjoint and have the original positive separation. The area Jacobian is one and the lattice basis has determinant one. Hence the new patch has area $\lambda_i(N)^d=n_i(N)^d/a_N^d$, which becomes $n_i(N)^d/N$ after division by $A_d$. Summing these masses gives at most one, proving $k_N\ge0$.
+
+The inequalities $0\le\lambda_i-\lambda_i(N)<a_N^{-1}$ imply
+\[
+ 0\le\lambda_i^d-\lambda_i(N)^d
+       \le d\lambda_i^{d-1}a_N^{-1}.
+\]
+Sum over the fixed finite family and divide by $A_d$. This proves the mass estimate. The chart derivative bounds, the separation, and the boundary-neighborhood constants of Section~\ref{sec:cells} remain uniformly bounded for these shrinking patches, since each new side tends to a fixed positive side.
+\end{proof}
+
+We next record the deterministic foreground estimates. Given $0<\eta<1/2$ and $\alpha_0>0$, the family can be chosen to have distortion at most $\eta$ and uncovered mass as small as desired, by Section~\ref{sec:charts}. Here distortion means that distances in each coordinate patch satisfy
+\[
+ (1-\eta)\abs{B(u-w)}\le\abs{\Phi(u)-\Phi(w)}
+       \le(1+\eta)\abs{B(u-w)}
+\]
+after the fixed translation and the lattice coordinate change; this follows by integrating the derivative bound on the convex coordinate domain. With the mesh relation of Lemma~\ref{lem:allN-patches}, the rescaled interior lattice spacing is exactly one.
+
+Let $G_{F,N}$ denote the full Gaussian sum over foreground nodes divided by $N$. At every $\alpha\ge\alpha_0$, an uncorrected pair is bounded by the corresponding lattice Gaussian at scale $(1-\eta)^2\alpha$. Its row sum is at most $\Theta_{L_d}((1-\eta)^2\alpha)$. In each patch only $O(n_i^{d-1})$ nodes have a corrected coordinate. These nodes also have a uniform row bound. Indeed, if $j,k\in\Z^d$ are their cell labels, the middle-half property gives coordinate separation at least $\abs{j-k}/(2n_i)$. The fixed lower singular value of the lattice basis and the chart distance bound therefore give
+\begin{equation}\label{eq:corrected-separation}
+ \abs{x_j-x_k}\ge c_*a_N^{-1}\abs{j-k}
+ \quad(j\ne k)
+\end{equation}
+for a fixed $c_*>0$. Thus every within-patch row is bounded by
+$\sum_{z\in\Z^d}e^{-\pi c_*^2\alpha\abs z^2}$.
+The number of pairs with at least one corrected endpoint is controlled by twice the sum of the corrected rows. After division by $N$, its bound tends to zero uniformly for $\alpha\ge\alpha_0$.
+
+If two patches have separation $b>0$, their total cross contribution is at most $N e^{-\pi\alpha a_N^2b^2}$. This also tends to zero uniformly for $\alpha\ge\alpha_0$. We have proved that, after increasing the size threshold,
+\begin{equation}\label{eq:foreground-window}
+ G_{F,N}(\alpha)\le\Theta_{L_d}((1-\eta)^2\alpha)+\eta
+                    \quad(\alpha\ge\alpha_0).
+\end{equation}
+No limiting configuration or unproved uniformity in $\alpha$ is used in this estimate.
+
+There are constants $K_0,K_\infty<\infty$, depending on $d,q,v$ but not on the family or stage, such that for all sufficiently large $N$,
+\begin{align}
+ \int_0^1\alpha^{q-1}H_{F,N}(\alpha)\dd\alpha&\le K_0,
+                                                       \label{eq:foreground-macro}\\
+ \frac1N\sum_{x\ne y\in Y}\int_1^\infty
+       \alpha^{v-1}e^{-c_N\alpha\abs{x-y}^2}\dd\alpha&\le K_\infty.
+                                                       \label{eq:foreground-tail}
+\end{align}
+For the first, Proposition~\ref{prop:foreground-endpoint} permits
+$K_0=1+C/(q+14-d/2)$ after its family-dependent error has become at most one. For the second, one may take
+\begin{equation}\label{eq:foreground-tail-constant}
+ K_\infty=1+\int_1^\infty\alpha^{v-1}
+       \sum_{z\in\Z^d\setminus\{0\}}e^{-\pi c_*^2\alpha\abs z^2}\dd\alpha.
+\end{equation}
+The integral is finite by Gaussian decay. Estimate \eqref{eq:corrected-separation} bounds all within-patch pairs. For the cross-patch terms put $\kappa_N=\pi a_N^2b^2$, where $b$ is a common positive separation. Their integral is at most
+\[
+ N\int_1^\infty\alpha^{v-1}e^{-\kappa_N\alpha}\dd\alpha
+ \le N e^{-\kappa_N/2}\Gamma(v)(2/\kappa_N)^v\longrightarrow0.
+\]
+It is therefore eventually at most one. These arguments prove both bounds with the asserted order of choices.
+
+It remains to fill the uncovered region without choosing a different sample for each estimate. Put $\rho_N=k_N/N$. Use the cells of Section~\ref{sec:cells}, with
+$c_N\sum\delta_j^2\le B_d k_N+\varepsilon N$, and let $Y_j$ be their independent samples. Define three nonnegative random variables:
+\begin{align}
+ U&=\frac1N\int_0^1\alpha^{q-1}Q_{c_N\alpha}(\nu)\dd\alpha,
+                                                        \label{eq:selection-costs}\\
+ V&=\frac1N\sum_{j,l}e^{-c_N\alpha_0\abs{Y_j-Y_l}^2},\notag\\
+ W&=\frac1N\int_1^\infty\alpha^{v-1}
+       \left(\sum_{j\ne l}e^{-c_N\alpha\abs{Y_j-Y_l}^2}
+       +2\sum_{x\in Y}\sum_j e^{-c_N\alpha\abs{x-Y_j}^2}\right)\dd\alpha.\notag
+\end{align}
+Here $Y$ is the deterministic foreground, and $\nu$ is the centered residual measure of Lemma~\ref{lem:cells}. Tonelli's theorem applies to each expression. That lemma and $NB_d(a_N^2\alpha)\le\alpha^{-d/2}$ give
+\begin{equation}\label{eq:selection-expectations}
+ \E U\le\frac{B_d\rho_N+\varepsilon}{q+1},\qquad
+ \E V\le\rho_N(1+\alpha_0^{-d/2}),\qquad
+ \E W\le\frac3{d/2-v}=:K_R.
+\end{equation}
+For clarity, the first estimate integrates
+$N^{-1}\E Q_{c_N\alpha}(\nu)\le\alpha(B_d\rho_N+\varepsilon)$.
+For the second, the diagonal contributes $\rho_N$ and the off-diagonal expectation is at most
+$N\iint_{R\times R}e^{-c_N\alpha_0\abs{x-y}^2}\dd\sigma_d(x)\dd\sigma_d(y)
+\le\rho_N\alpha_0^{-d/2}$.
+For the third, residual-residual pairs contribute at most $\rho_N\alpha^{-d/2}$. Residual-foreground pairs contribute at most $2\alpha^{-d/2}$, because the full-sphere Gaussian potential is constant and the foreground has at most $N$ points. Integrate $3\alpha^{v-1-d/2}$ over $[1,\infty)$.
+
+Choose the uncovered mass small enough and then the cell tolerance small enough that
+\begin{equation}\label{eq:selection-tolerances}
+ \frac{B_d\rho_N+\varepsilon}{q+1}\le\frac14,
+ \qquad \rho_N(1+\alpha_0^{-d/2})\le\frac{\eta^2}4.
+\end{equation}
+These hold eventually by Lemma~\ref{lem:allN-patches}, after choosing the original uncovered mass with strict margins. Markov's inequality and the union bound now show that the events
+$U>1$, $V>\eta^2$, and $W>4K_R$ have union of probability at most $3/4$. There is therefore one sample satisfying all three bounds. Intersect with the probability-one event of distinctness and avoidance of the foreground. This gives an injective configuration of exactly $N$ points.
+
+For this same configuration, \eqref{eq:young} with $\eta=1$ for the centered measures gives
+\begin{equation}\label{eq:uniform-budget-constants}
+ M_q(X)\le2(K_0+1)=:\mathcal B_0,
+ \qquad T_v(X)\le K_\infty+4K_R=:\mathcal B_\infty.
+\end{equation}
+The uncentered Gaussian quadratic form is also positive semidefinite. Apply \eqref{eq:young} to the two counting measures and use monotonicity of the residual full sum in $\alpha$. Equations \eqref{eq:foreground-window} and $V\le\eta^2$ yield, simultaneously for all $\alpha\ge\alpha_0$,
+\begin{align}
+ G_N(\alpha)&\le(1+\eta)G_{F,N}(\alpha)+(1+\eta^{-1})V\notag\\
+ &\le(1+\eta)\Theta_{L_d}((1-\eta)^2\alpha)+4\eta.
+                                                       \label{eq:joint-window}
+\end{align}
+The constants $\mathcal B_0,\mathcal B_\infty$ are independent of $\eta,\alpha_0$ and the chosen patch family. Only the size threshold depends on those choices.
+
+\begin{proposition}[A sequence at every integer size]\label{prop:common-sequence}
+For every $q,v$ in \eqref{eq:budget-parameters}, there are injective configurations $X_N$ for every sufficiently large integer $N$ such that
+\begin{equation}\label{eq:common-sequence}
+ G_N(\alpha)\longrightarrow\Theta_{L_d}(\alpha)\quad(\alpha>0),
+ \qquad M_q(X_N)\le\mathcal B_0,\quad T_v(X_N)\le\mathcal B_\infty.
+\end{equation}
+On each compact interval of positive scales, the $G_N$ have a common bound.
+\end{proposition}
+\begin{proof}
+At stage $j\ge3$, choose $\eta=1/j$ and $\alpha_0=1/j$, then choose the finite patch family, residual mass, and cell tolerance as above. Increase a threshold $N_j$ until every estimate of this stage holds for every $N\ge N_j$. Require also $N_j>N_{j-1}$ and $N_j\ge j$. For $N\ge N_3$ let $j(N)$ be the largest $j$ with $N_j\le N$, and choose the configuration just constructed at that stage and size. Then $j(N)\to\infty$, while the two bounds in \eqref{eq:uniform-budget-constants} remain unchanged. Equation \eqref{eq:joint-window} and continuity of theta give the pointwise upper limit. Proposition~\ref{prop:profile} gives the opposite lower limit. On $[a,b]\subset(0,\infty)$, the window is eventually bounded by $2\Theta_{L_d}(a/4)+4$; enlarge this constant for the finitely many remaining configurations. This proves all assertions.
+\end{proof}
+
+\section{Riesz energies: both endpoints of the integral}\label{sec:negative}
+Let $s\ne0$, $-2<s<d$, and put $p=s/2$. Choose
+\begin{equation}\label{eq:riesz-budget-choice}
+ -1<q<\min(p,0),\qquad \max(p,0)<v<d/2,
+\end{equation}
+and use the one sequence from Proposition~\ref{prop:common-sequence} with these parameters. Write
+$h(\alpha)=\Theta_{L_d}(\alpha)-\alpha^{-d/2}$ and $f(\alpha)=h(\alpha)-1$.
+The exact background limit gives $H_N\to h$ and $F_N\to f$ at every positive scale.
+
+We spell out all endpoint estimates. For $0<\delta\le1$, the common lower-end bound implies
+\begin{equation}\label{eq:small-weight-transfer}
+ \int_0^\delta\alpha^{p-1}H_N(\alpha)\dd\alpha
+ \le\delta^{p-q}M_q(X_N)\le\mathcal B_0\delta^{p-q}.
+\end{equation}
+Here $p-q>0$ and $H_N\ge0$. When $p>0$, use $\abs{F_N}\le H_N+1$ to obtain
+\begin{equation}\label{eq:positive-small}
+ \int_0^\delta\alpha^{p-1}\abs{F_N(\alpha)}\dd\alpha
+ \le\mathcal B_0\delta^{p-q}+\frac{\delta^p}{p}.
+\end{equation}
+For $R\ge1$, since $v>p$,
+\[
+ \int_R^\infty\alpha^{p-1}(G_N(\alpha)-1)\dd\alpha
+ \le R^{p-v}T_v(X_N)\le\mathcal B_\infty R^{p-v}.
+\]
+If $p>0$, the decomposition $F_N=(G_N-1)-NB_d(a_N^2\alpha)$ therefore gives
+\begin{equation}\label{eq:positive-large}
+ \int_R^\infty\alpha^{p-1}\abs{F_N(\alpha)}\dd\alpha
+ \le\mathcal B_\infty R^{p-v}+\frac{R^{p-d/2}}{d/2-p}.
+\end{equation}
+If $p<0$, use $0\le H_N\le G_N=1+(G_N-1)$ instead:
+\begin{equation}\label{eq:negative-large}
+ \int_R^\infty\alpha^{p-1}H_N(\alpha)\dd\alpha
+ \le\frac{R^p}{-p}+\mathcal B_\infty R^{p-v}.
+\end{equation}
+Every right side tends to zero at its stated endpoint, uniformly in $N$.
+
+On $[\delta,R]$, the common Gaussian bound and the background bound give an integrable constant majorant after multiplication by $\alpha^{p-1}$. Dominated convergence applies there. First pass to the limit in $N$, then send $\delta$ to zero and $R$ to infinity using the four displayed estimates and the convergent lattice integrals of Proposition~\ref{prop:zeta}. We obtain
+\begin{align}
+ \int_0^\infty\alpha^{p-1}F_N(\alpha)\dd\alpha
+     &\longrightarrow\int_0^\infty\alpha^{p-1}f(\alpha)\dd\alpha
+       &&(p>0),\label{eq:positive-integral-limit}\\
+ \int_0^\infty\alpha^{p-1}H_N(\alpha)\dd\alpha
+     &\longrightarrow\int_0^\infty\alpha^{p-1}h(\alpha)\dd\alpha
+       &&(p<0).\label{eq:negative-integral-limit}
+\end{align}
+Thus the simultaneous selection supplies exactly the uniform integrability needed, rather than only pointwise convergence of Gaussian sums.
+
+For completeness, the negative-exponent Mellin identity follows directly by integration by parts:
+\begin{equation}\label{eq:negative-mellin-scalar}
+ r^{-s}=\frac1{\Gamma(p)}\int_0^\infty
+                 (e^{-tr^2}-1)t^{p-1}\dd t\qquad(-1<p<0).
+\end{equation}
+At zero the bracket is $O(t)$, and at infinity $t^{p-1}$ is integrable. Integration by parts gives $\Gamma(p)r^{-2p}$; the formula extends to $r=0$ by the zero value of $r^{-s}$. Summing over all ordered pairs, including the zero diagonal, and subtracting the continuous integral cancels the constant terms. The change $t=c_N\alpha$ gives
+\begin{equation}\label{eq:negmellin}
+ \frac{E_s(X)-I_{s,d}N^2}{Na_N^s}
+       =\frac{\pi^p}{\Gamma(p)}
+                       \int_0^\infty\alpha^{p-1}H_N(\alpha)\dd\alpha.
+\end{equation}
+The positive counterpart, already proved in Section~\ref{sec:lower}, has $F_N$ in place of $H_N$. Equations \eqref{eq:positive-integral-limit}--\eqref{eq:negative-integral-limit} and Proposition~\ref{prop:zeta} consequently give
+\begin{equation}\label{eq:attaining-riesz}
+ E_s(X_N)=I_{s,d}N^2+A_d^{-s/d}Z_{L_d}(s)N^{1+s/d}
+                         +o(N^{1+s/d})
+\end{equation}
+at every sufficiently large integer size.
+
+For positive $s$, the universal lower bound of Section~\ref{sec:lower} and \eqref{eq:attaining-riesz} prove the asserted infimum asymptotic. For negative $s$, Fatou applied to the nonnegative functions $\alpha^{p-1}H_N$ and the universal Gaussian profile gives a lower bound for the integral in \eqref{eq:negmellin}. Since $\Gamma(p)<0$, it is a universal upper bound for energy. The attaining sequence proves the opposite inequality for the supremum. These bounds apply to extrema without assuming that an optimizer exists: if the eventual universal bound failed, choose a violating configuration at an increasing sequence of sizes and apply the just proved sequential bound. The elementary infimum and supremum argument is also written out in Section~\ref{sec:extrema}.
+
+\section{The two-dimensional endpoint in detail}\label{sec:negative-alln}
+The construction above already has exactly $N$ points in dimension two. It does not add an independently chosen batch to a configuration at a smaller size. We give a pointwise endpoint estimate as well, so that the small-scale control in this dimension can be checked directly.
+
+Fix $-2<s<0$, put $p=s/2$, and choose
+\[
+ q=\frac{p-1}{2}\in(-1,0),\qquad p-q=\frac{p+1}{2}>0.
+\]
+Use Proposition~\ref{prop:common-sequence} with this $q$ and any $0<v<1$. Its constant $\mathcal B_0=2(K_0+1)$ is defined in \eqref{eq:uniform-budget-constants}, where $K_0=1+C/(q+13)$ for $d=2$ and the order-fourteen rule. Define
+\begin{equation}\label{eq:two-D-constant}
+ D_q=2^{3/2}\frac{q}{2^q-1}\,\mathcal B_0.
+\end{equation}
+This is a finite positive constant depending on $q$ and the uniform chart and quadrature bounds, and not on $N$ or the approximation stage.
+
+\begin{lemma}[An explicit pointwise bound]\label{lem:two-pointwise-endpoint}
+For all configurations of this sequence and $0<\alpha\le1/2$,
+\begin{equation}\label{eq:two-pointwise-bound}
+ 0\le H_N(\alpha)\le D_q\alpha^{-q}.
+\end{equation}
+Consequently, for every $L\ge2$,
+\begin{equation}\label{eq:two-cutoff-bound}
+ \int_0^{1/L}\alpha^{p-1}H_N(\alpha)\dd\alpha
+       \le\frac{D_q}{p-q}L^{-(p-q)}\longrightarrow0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $\mu=\sum_i\delta_{x_i}-N\sigma_2$, viewed as a signed measure on $\R^3$. The Fourier transform of the Gaussian gives
+\[
+ Q_t(\mu)=\left(\frac\pi t\right)^{3/2}
+        \int_{\R^3}e^{-\pi^2\abs\xi^2/t}\abs{\widehat\mu(\xi)}^2\dd\xi.
+\]
+The integrand is nonnegative, and the integral is finite because $\widehat\mu$ is bounded. For $\alpha\le\beta\le2\alpha$, comparison of the densities in this formula gives
+\begin{equation}\label{eq:doubling}
+ H_N(\alpha)\le(\beta/\alpha)^{3/2}H_N(\beta)
+                         \le2^{3/2}H_N(\beta).
+\end{equation}
+Multiply by $\beta^{q-1}$ and integrate over $[\alpha,2\alpha]\subset(0,1]$. Since
+\[
+ \int_\alpha^{2\alpha}\beta^{q-1}\dd\beta
+       =\alpha^q\frac{2^q-1}{q}>0,
+\]
+the bound $M_q(X_N)\le\mathcal B_0$ gives
+$H_N(\alpha)\alpha^q(2^q-1)/q\le2^{3/2}\mathcal B_0$.
+This is \eqref{eq:two-pointwise-bound}. Its integral against $\alpha^{p-1}$ is \eqref{eq:two-cutoff-bound}, because $p-q>0$.
+\end{proof}
+
+The estimate above is uniform in the same configurations that satisfy the Gaussian window and the large-scale integral bound. It is therefore valid for a shrinking cutoff $1/L$ while $N$ changes. On $[1/L,w]$ the same calculation gives
+\[
+ \int_{1/L}^{w}\alpha^{p-1}H_N(\alpha)\dd\alpha
+       \le\frac{D_q}{p-q}w^{p-q}\qquad(1/L\le w\le1/2).
+\]
+No unspecified constant and no additional selection of points is needed. The exact count \eqref{eq:residual-count}, the connected-cell construction, and the three-cost selection prove the all-integer-size assertion in this dimension as well.
+
+\section{Logarithmic energy with both endpoints controlled}\label{sec:logarithmic}
+Choose any fixed $-1<q<0$ and $0<v<d/2$, and use Proposition~\ref{prop:common-sequence} once with these parameters. Frullani's identity is
+\begin{equation}\label{eq:frullani}
+ -\log r=\frac12\int_0^\infty\frac{e^{-tr^2}-e^{-t}}t\dd t
+ \quad(r>0).
+\end{equation}
+For a fixed injective configuration the paired integral converges. Its continuous counterpart converges by the polar formula. Summing the off-diagonal terms and subtracting the continuous background gives
+\[
+ 2(E_{\log}(X)-W_dN^2)=
+ \int_0^\infty\frac{Q_t(\sum_i\delta_{x_i}-N\sigma_d)-N(1-e^{-t})}{t}\dd t.
+\]
+Put
+\begin{equation}\label{eq:JN}
+ J_N=\int_0^\infty
+       \frac{F_N(\alpha)+\one_{(0,1)}(\alpha)}\alpha\dd\alpha.
+\end{equation}
+The substitution $t=c_N\alpha$ and
+$\int_0^\infty(e^{-\alpha}-\one_{(0,1)}(\alpha))\dd\alpha/\alpha=-\gamma$ yield
+\begin{equation}\label{eq:logidentity}
+ \frac{E_{\log}(X)-W_dN^2+(N/d)\log N}{N}
+       =\frac12(J_N-\gamma-\log\pi)+\frac1d\log A_d.
+\end{equation}
+These are equalities of convergent paired integrals, not differences of separately divergent integrals.
+
+For the universal lower bound, the integrand of $J_N$ equals $H_N/\alpha\ge0$ below one. Above one it is at least $-\alpha^{-d/2-1}$. Fatou's lemma and Proposition~\ref{prop:profile} give
+$\liminf J_N\ge J_{L_d}$, with $J_{L_d}$ as in Lemma~\ref{lem:zetazero}.
+
+For the attaining sequence, the two uniform bounds give the explicit endpoint estimates
+\begin{align}
+ \int_0^\delta\frac{H_N(\alpha)}\alpha\dd\alpha
+       &\le\mathcal B_0\delta^{-q}&& (0<\delta\le1),
+                                                    \label{eq:log-small-bound}\\
+ \int_R^\infty\frac{\abs{F_N(\alpha)}}\alpha\dd\alpha
+       &\le\mathcal B_\infty R^{-v}+\frac2dR^{-d/2}&& (R\ge1).
+                                                    \label{eq:log-large-bound}
+\end{align}
+The first follows by writing $\alpha^{-1}=\alpha^{q-1}\alpha^{-q}$ and using $-q>0$. The second follows from
+$\abs{F_N}\le(G_N-1)+\alpha^{-d/2}$ and $v>0$.
+On $[\delta,R]$ the common Gaussian bound gives dominated convergence. Let $N\to\infty$, then $\delta\downarrow0$ and $R\to\infty$. The displayed estimates prove $J_N\to J_{L_d}$.
+
+Finally Lemma~\ref{lem:zetazero} identifies
+$(J_{L_d}-\gamma-\log\pi)/2=Z'_{L_d}(0)$. Together with \eqref{eq:logidentity}, the universal bound and the attaining configurations prove
+\[
+ \cE_{\log}(d,N)=W_dN^2-\frac Nd\log N+
+       \left(Z'_{L_d}(0)+\frac1d\log A_d\right)N+o(N)
+\]
+for every sufficiently large integer $N$. This proof uses neither differentiation of a Riesz error term nor a change of configurations between its two endpoint estimates.
+
+\section{Stolarsky's identity and the discrepancy constant}\label{sec:stolarsky}
+We derive the exact normalization in \eqref{eq:discdef}. Let $\nu=N^{-1}\sum_i\delta_{x_i}-\sigma_d$, so $\nu(\Sph^d)=0$. For $a,b\in[-1,1]$,
+\begin{equation}
+ \int_{-1}^1\one_{a\ge t}\one_{b\ge t}\dd t
+ =1+\min(a,b)=1+\frac{a+b-\abs{a-b}}2.
+\end{equation}
+Set $a=x\cdot z$, $b=y\cdot z$ and integrate against $\nu(x)\nu(y)$. The constant term and the two linear terms vanish because $\nu$ has mass zero. Rotation invariance gives
+\[
+ \int_{\Sph^d}\abs{(x-y)\cdot z}\dd\sigma_d(z)
+ =m_d\abs{x-y},\qquad m_d=\int_{\Sph^d}\abs{z_1}\dd\sigma_d(z).
+\]
+Fubini applies since all integrands are bounded. Consequently
+\begin{equation}\label{eq:stolarsky}
+ D_2(X)^2=-\frac{m_d}{2}\iint\abs{x-y}\dd\nu(x)\dd\nu(y)
+ =\kappa_d\left(I_{-1,d}-\frac{E_{-1}(X)}{N^2}\right).
+\end{equation}
+For the last equality use the constant potential of $\sigma_d$. The coordinate density is proportional to $(1-t^2)^{d/2-1}$ on $[-1,1]$, so beta integration gives
+$m_d=2\Gamma((d+1)/2)/(d\sqrt\pi\Gamma(d/2))=2\kappa_d$.
+
+At $s=-1$, Theorem~\ref{thm:riesz} gives
+\begin{equation}
+ \sup_X E_{-1}(X)=I_{-1,d}N^2+
+                  A_d^{1/d}Z_{L_d}(-1)N^{1-1/d}+o(N^{1-1/d}).
+\end{equation}
+Subtract from $I_{-1,d}$ in \eqref{eq:stolarsky} and multiply by $N^{1+1/d}$. This gives the squared version of \eqref{eq:discmain}. The coefficient is positive by the sign statement in Proposition~\ref{prop:zeta}. Taking square roots proves Theorem~\ref{thm:disc}. Exact optimizers are unnecessary: infima commute with an increasing continuous square-root map on nonnegative values, or one can use the two eventual configuration inequalities directly.
+
+Using $\dd t/2$ in place of $\dd t$ would divide the squared constant by two. Using unordered pairs would divide the energy coefficient by two. Neither alternative is used in this manuscript.
+
+\section{Explicit coefficients in dimension eight}\label{sec:coeff8}
+The $E_8$ theta series has shell expansion
+\begin{equation}
+ \Theta_{E_8}(t)=1+240\sum_{n\ge1}\sigma_3(n)e^{-2\pi nt}.
+\end{equation}
+For $\mathop{\rm Re}s>8$, absolute convergence and the divisor-sum Dirichlet series give
+\begin{equation}\label{eq:e8closed}
+ Z_{E_8}(s)=240\,2^{-s/2}\zeta(s/2)\zeta(s/2-3).
+\end{equation}
+Both sides continue meromorphically, so the equality persists wherever interpreted by continuation.
+
+At $s=4$,
+\[
+ Z_{E_8}(4)=60\zeta(2)\zeta(-1)=-5\pi^2/6.
+\]
+Combining this with $A_8=32\pi^4/105$ gives
+\begin{equation}
+ A_8^{-1/2}Z_{E_8}(4)
+ =-\frac{5\pi^2}{6}\sqrt{\frac{105}{32\pi^4}}
+ =-\frac{5\sqrt{210}}{48}.
+\end{equation}
+Lemma~\ref{lem:continuous}, the lower bound of Section~\ref{sec:lower}, and Proposition~\ref{prop:upperfour} prove Corollary~\ref{cor:s8four}.
+
+At $s=2$, put $u=s/2$ and take $u\to1$. The factor $\zeta(u)$ has a simple pole of residue one while $\zeta(u-3)$ has a simple zero with derivative $\zeta'(-2)$. Hence
+\begin{equation}\label{eq:e8two}
+ Z_{E_8}(2)=120\zeta'(-2),\qquad
+ C_{2,8}=A_8^{-1/4}\,120\zeta'(-2).
+\end{equation}
+The value at the removable singularity is obtained by taking the limit of the product.
+
+For the logarithmic coefficient, differentiate \eqref{eq:e8closed} at zero, using $\zeta(0)=-1/2$, $\zeta(-3)=1/120$, and $\zeta'(0)=-\tfrac12\log(2\pi)$. The result is
+\begin{equation}
+ Z'_{E_8}(0)=-60\zeta'(-3)-\frac12\log\pi.
+\end{equation}
+Adding $(\log A_8)/8$ gives \eqref{eq:log8}. At $s=-1$ the cap coefficient is therefore
+\begin{equation}
+ c_8=\left[-\frac{35}{256}A_8^{1/8}
+       \,240\,2^{1/2}\zeta(-1/2)\zeta(-7/2)\right]^{1/2}.
+\end{equation}
+The continued-Epstein form is preferable to a decimal approximation, since it fixes every scaling convention.
+
+\section{Dimension two and dimension 24}\label{sec:otherdims}
+The three dimensions use the same normalization but different lattice data. This section collects the full statements in one notation.
+
+In dimension two, let
+\begin{equation}
+ b=\sqrt3/2,\qquad
+ B_2=\begin{pmatrix}b^{-1/2}&\tfrac12b^{-1/2}\\0&b^{1/2}\end{pmatrix},
+ \qquad L_2=B_2\Z^2.
+\end{equation}
+Then $\det B_2=1$ and
+$\abs{B_2(m,n)}^2=(2/\sqrt3)(m^2+mn+n^2)$. The upper constructions use this actual lattice inside the exact-area charts. The theta continuation of Section~\ref{sec:theta} defines $Z_{L_2}$ without requiring a Dirichlet $L$-function convention. The final formulas are
+\begin{align}
+ \cE_s(2,N)&=I_{s,2}N^2+(4\pi)^{-s/2}Z_{L_2}(s)N^{1+s/2}
+                   +o(N^{1+s/2}),\\
+ \cE_{\log}(2,N)&=\left(\tfrac12-\log2\right)N^2
+       -\tfrac12N\log N+
+       \left(Z'_{L_2}(0)+\tfrac12\log(4\pi)\right)N+o(N),\\
+ N^{3/4}\cD_2(N)&\longrightarrow
+       \left[-\tfrac14(4\pi)^{1/2}Z_{L_2}(-1)\right]^{1/2}.
+\end{align}
+The Riesz range is $-2<s<2$, excluding zero. In the first line $I_{s,2}=2^{1-s}/(2-s)$, obtained directly from \eqref{eq:beta}.
+
+For the Leech lattice $L_{24}$, let
+\begin{equation}
+ A_{24}=\frac{2\pi^{25/2}}{\Gamma(25/2)}.
+\end{equation}
+The coefficient is defined by the theta continuation in Section~\ref{sec:theta}. For $-2<s<24$, $s\ne0$,
+\begin{align}
+ \cE_s(24,N)&=I_{s,24}N^2+
+        A_{24}^{-s/24}Z_{L_{24}}(s)N^{1+s/24}+o(N^{1+s/24}),\\
+ \cE_{\log}(24,N)&=W_{24}N^2-\tfrac1{24}N\log N+
+     \left(Z'_{L_{24}}(0)+\tfrac1{24}\log A_{24}\right)N+o(N),\\
+ N^{25/48}\cD_{24}(N)&\longrightarrow
+ \left[-\frac{676039}{8388608}A_{24}^{1/24}Z_{L_{24}}(-1)\right]^{1/2}.
+\end{align}
+The lattice Gaussian minorant theorem supplies $\G(L_{24})$ for the universal bounds. The matching constructive bounds use the lattice geometry, the high-order boundary rules, and the exact-mass residual partitions proved above.
+
+\section{From configuration inequalities to extremal limits}\label{sec:extrema}
+For completeness, we spell out the logical passage used in the theorem statements. Let $\mathcal X_N$ be the set of injective configurations, $a_N>0$ eventually, and let $b_N,c$ be real. Suppose that for every $\eps>0$ all sufficiently large $N$ satisfy
+\begin{equation}\label{eq:boundslogic}
+ \forall X\in\mathcal X_N,\quad c-\eps\le\frac{E(X)-b_N}{a_N},
+ \qquad
+ \exists X\in\mathcal X_N,\quad\frac{E(X)-b_N}{a_N}\le c+\eps.
+\end{equation}
+The second condition makes $\mathcal X_N$ nonempty eventually; the first gives a finite lower bound for its energy range. Therefore its real infimum is meaningful and
+\[
+ b_N+a_N(c-\eps)\le\inf_XE(X)\le b_N+a_N(c+\eps).
+\]
+Divide by $a_N$ and use the epsilon definition of a limit. Reversing both inequalities proves the supremum version. There is no need to establish existence of a minimizer or maximizer.
+
+For positive Riesz energies, set $a_N=N^{1+s/d}$ and $b_N=I_{s,d}N^2$. For negative Riesz energies use the supremum version with the same $a_N,b_N$. For logarithmic energy set $a_N=N$ and $b_N=W_dN^2-(N/d)\log N$. For discrepancy apply the same principle to the already scaled nonnegative root discrepancy.
+
+\section{Conclusion}
+Using the lattice Gaussian minorant theorem and the lattice-patch constructions, we obtain, for $d\in\{2,8,24\}$ and each fixed $-2<s<d$, $s\ne0$,
+\[
+ \cE_s(d,N)=I_{s,d}N^2+A_d^{-s/d}Z_{L_d}(s)N^{1+s/d}
+                  +o(N^{1+s/d}).
+\]
+The extremum is an infimum for $s>0$ and a supremum for $s<0$. Localization of the Gaussian minorants supplies the universal inequality. Exact-area patches, equal-weight boundary corrections, and residual cells supply the matching configurations. Choosing the patch sides as $\lfloor\lambda_i a_N\rfloor/a_N$ and filling the exact remaining mass gives the result at every sufficiently large integer size. The same configuration satisfies the Gaussian window and both endpoint integral bounds.
+
+The separate logarithmic argument gives
+\[
+ \cE_{\log}(d,N)=W_dN^2-\frac Nd\log N+
+ \left(Z'_{L_d}(0)+\frac1d\log A_d\right)N+o(N).
+\]
+Stolarsky's identity then gives the cap-discrepancy limit with the same lattice coefficient at $s=-1$. All formulas use the unit sphere, chordal distance, ordered pairs, and uniform probability measure.
+
+In particular, the dimension-eight coefficient at $s=4$ is explicit:
+\[
+ \boxed{\cE_4(8,N)=\frac7{16}N^2-
+ \frac{5\sqrt{210}}{48}N^{3/2}+o(N^{3/2}).}
+\]
+The positive, negative, logarithmic, and discrepancy limits follow from the respective endpoint estimates proved above; no differentiation of an uncontrolled asymptotic remainder is required.
+\end{document}

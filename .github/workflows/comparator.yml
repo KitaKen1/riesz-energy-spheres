@@ -1,0 +1,203 @@
+# Tests the exact FClikelean Challenge from a cold project build.
+name: Riesz sphere target verification
+
+on:
+  push:
+    branches: [main, riesz-publication-test, "riesz-fc-target-ci-*"]
+    paths: ["lean/**", "leanWithoutComparator/**", "FClikelean/**", ".github/workflows/**"]
+  workflow_dispatch:
+    inputs:
+      full_environment_replay:
+        description: Additional leanchecker replay of every imported declaration
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: riesz-fc-staged-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  fc_challenge:
+    name: Compile exact FClikelean Challenge
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 lean/comparator/check-inputs.py --receipt-dir fc-challenge-receipt
+      - run: bash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 8 4
+      - run: lake exe cache get
+        working-directory: lean
+      - name: Adapt FC utility imports to the pinned proof Mathlib
+        run: python3 lean/comparator/prepare-fc-utils.py --receipt-dir fc-challenge-receipt
+      - name: Compile all eighteen FC statements with the proof compiler
+        run: bash comparator/build-fc-challenge.sh
+        working-directory: lean
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fc-challenge-${{ github.run_id }}-${{ github.run_attempt }}
+          path: fc-challenge-receipt/
+          retention-days: 90
+          if-no-files-found: warn
+
+  build_stage_1:
+    uses: ./.github/workflows/proof-stage.yml
+    with:
+      stage: 1
+
+  build_stage_2:
+    needs: build_stage_1
+    uses: ./.github/workflows/proof-stage.yml
+    with:
+      stage: 2
+
+  build_stage_3:
+    needs: build_stage_2
+    uses: ./.github/workflows/proof-stage.yml
+    with:
+      stage: 3
+
+  build_stage_4:
+    needs: build_stage_3
+    uses: ./.github/workflows/proof-stage.yml
+    with:
+      stage: 4
+
+  build_stage_5:
+    needs: build_stage_4
+    uses: ./.github/workflows/proof-stage.yml
+    with:
+      stage: 5
+
+  build:
+    needs: build_stage_5
+    uses: ./.github/workflows/proof-stage.yml
+    with:
+      stage: 6
+
+  comparator:
+    name: Comparator S${{ matrix.dimension }}
+    needs: build
+    if: needs.build.outputs.ready == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix:
+        dimension: [2, 8, 24]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - run: python3 lean/comparator/check-inputs.py --receipt-dir comparator-S${{ matrix.dimension }}-receipt
+      - run: bash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 8 4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - run: lake exe cache get
+        working-directory: lean
+      - name: Adapt FC utility imports to the pinned proof Mathlib
+        run: python3 lean/comparator/prepare-fc-utils.py --receipt-dir comparator-S${{ matrix.dimension }}-receipt
+      - name: Build trusted mathematical challenge before restoring solution products
+        working-directory: lean
+        run: |
+          lake build Challenge
+          mkdir -p "$RUNNER_TEMP/trusted-challenge"
+          find .lake/build -type f \( -name 'Challenge.*' -o -name 'FCTargetDefinitions.*' \) -print0 | tar --null -T - -cf "$RUNNER_TEMP/trusted-challenge/files.tar"
+      - name: Install pinned tools in fresh checker job
+        env:
+          COMPARATOR_TOOLS: ${{ runner.temp }}/comparator-tools
+        run: bash lean/comparator/install-tools.sh
+      - name: Download all six completed build batches
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: proof-products-*-${{ github.run_id }}-${{ github.run_attempt }}
+          path: stage-products
+          merge-multiple: true
+      - name: Restore products from this exact workflow run
+        run: python3 lean/comparator/build-products.py restore --directory stage-products --stage 6
+      - name: Restore the separately compiled trusted challenge
+        working-directory: lean
+        run: tar -xf "$RUNNER_TEMP/trusted-challenge/files.tar"
+      - name: Compare target, audit all target axioms, replay built-in kernel
+        env:
+          COMPARATOR_TOOLS: ${{ runner.temp }}/comparator-tools
+        run: bash lean/comparator/run-check.sh ${{ matrix.dimension }}
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: comparator-S${{ matrix.dimension }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: comparator-S${{ matrix.dimension }}-receipt/
+          retention-days: 90
+          if-no-files-found: error
+
+  replay:
+    name: Optional full imported-environment replay
+    needs: build
+    if: needs.build.outputs.ready == 'true' && inputs.full_environment_replay == true
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - run: bash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 16 3
+      - run: lake exe cache get
+        working-directory: lean
+      - name: Adapt FC utility imports to the pinned proof Mathlib
+        run: python3 lean/comparator/prepare-fc-utils.py --receipt-dir replay-receipt
+      - name: Download all six completed build batches
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: proof-products-*-${{ github.run_id }}-${{ github.run_attempt }}
+          path: stage-products
+          merge-multiple: true
+      - name: Restore products from this exact workflow run
+        run: python3 lean/comparator/build-products.py restore --directory stage-products --stage 6
+      - name: Fresh replay of the complete target proof environment
+        working-directory: lean
+        run: |
+          mkdir -p ../replay-receipt
+          /usr/bin/time -v lake env leanchecker --fresh FCSolution > ../replay-receipt/replay.log 2> ../replay-receipt/time.log
+          grep -q 'Exit status: 0' ../replay-receipt/time.log
+          printf 'PASS\n' > ../replay-receipt/status.txt
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: replay-${{ github.run_id }}-${{ github.run_attempt }}
+          path: replay-receipt/
+          retention-days: 90
+          if-no-files-found: warn
+
+  verification_status:
+    needs: [fc_challenge, build_stage_1, build_stage_2, build_stage_3, build_stage_4, build_stage_5, build, comparator, replay]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Require completed build and all three Comparator kernel replays
+        env:
+          FC_CHALLENGE: ${{ needs.fc_challenge.result }}
+          READY: ${{ needs.build.outputs.ready }}
+          BUILD: ${{ needs.build.result }}
+          COMPARE: ${{ needs.comparator.result }}
+          REPLAY: ${{ needs.replay.result }}
+          EXTRA_REPLAY: ${{ inputs.full_environment_replay == true }}
+        run: |
+          test "$FC_CHALLENGE" = success
+          test "$BUILD" = success
+          test "$READY" = true
+          test "$COMPARE" = success
+          if [[ "$EXTRA_REPLAY" = true ]]; then
+            test "$REPLAY" = success
+          else
+            test "$REPLAY" = skipped
+          fi

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "generated_outputs_accepted": true,
+  "unexpected_untracked_file_rejected": true,
+  "tracked_file_change_rejected": true,
+  "frozen_target_sha256": "24c8bbfab4701aa7445ee2090e11f5b26e3a24bb1bb0ad278a3a03818ee95b57"
+}

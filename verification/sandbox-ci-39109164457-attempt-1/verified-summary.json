@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "run_id": 39109164457,
+  "run_url": "https://github.com/KitaKen1/ci-test-sandbox/actions/runs/39109164457",
+  "workflow_commit": "52be53de1ae72768696e595661f12a067963f784",
+  "tested_proof_commit": "a656684e3fe5a7660cf356cc3e6438cf7b1accc0",
+  "source_build_run": 39083278047,
+  "cold_start_certification": false,
+  "target_changed": false,
+  "target_count": 9,
+  "dimension_receipts": {
+    "S2": {
+      "status": "PASS",
+      "targets": [
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two"
+      ],
+      "artifact_sha256": "e608f9f22573690fb72c5ad571a29938312a84a99bcd7928f0e358cebba062ea",
+      "kernel_replay": "PASS",
+      "axiom_audit_all_nine": "PASS"
+    },
+    "S8": {
+      "status": "PASS",
+      "targets": [
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight"
+      ],
+      "artifact_sha256": "0e67c98a5c37084978af6468e91bd88da8660c352c3b83a0032cbe2a5b675768",
+      "kernel_replay": "PASS",
+      "axiom_audit_all_nine": "PASS"
+    },
+    "S24": {
+      "status": "PASS",
+      "targets": [
+        "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+        "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+        "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+      ],
+      "artifact_sha256": "09f44c7210ab17b7eb9e42fce620b0d7abf987bce0be911e6992cb4d0b0a300d",
+      "kernel_replay": "PASS",
+      "axiom_audit_all_nine": "PASS"
+    }
+  },
+  "scope": "Three sandboxed Comparator jobs cover all nine unchanged FC targets, including dependent definitions, allowed axioms, and builtin kernel replay. Reuses verified completed build products from a prior run. Public and single-workflow cold-start verification remain pending."
+}

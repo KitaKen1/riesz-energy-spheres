@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "selected_targets": [
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+  ],
+  "missing_solution_targets": [],
+  "different_source_signatures": [],
+  "available_solution_targets": [
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+  ],
+  "formal_type_comparison": "NOT_RUN: performed by Comparator only after proof build"
+}

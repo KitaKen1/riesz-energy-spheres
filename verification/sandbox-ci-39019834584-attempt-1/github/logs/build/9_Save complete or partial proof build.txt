@@ -1,0 +1,10 @@
+﻿2026-10-17T09:06:08.7872314Z ##[group]Run actions/cache/save@v4
+2026-10-17T09:06:08.7872546Z with:
+2026-10-17T09:06:08.7872721Z   path: lean/.lake/build
+2026-10-17T09:06:08.7873080Z   key: riesz-fc-e999bbe6ce47908984e0fd8889868cd62b0acae84feca7af380b172753b4801b-39019834584-1
+2026-10-17T09:06:08.7873461Z   enableCrossOsArchive: false
+2026-10-17T09:06:08.7873665Z ##[endgroup]
+2026-10-17T09:06:08.8789766Z (node:2072) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-17T09:06:08.8793286Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-17T09:06:08.8897733Z [warning]Path Validation Error: Path(s) specified in the action for caching do(es) not exist, hence no cache is being saved.
+2026-10-17T09:06:08.8928469Z ##[warning]Cache save failed.

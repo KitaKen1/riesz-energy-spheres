@@ -1,0 +1,37 @@
+Adapted E8 matrix, lower-triangular determinant certificate, and real basis construction from Sphere-Packing-Lean.
+Source: https://github.com/math-inc/Sphere-Packing-Lean/blob/1e98fb493088948ca7bbf47d7faed49cc5b39fc4/SpherePacking/Dim8/E8/Basic.lean
+Copyright (c) 2025 Bhavik Mehta. Authors: Bhavik Mehta, Gareth Ma.
+Apache License, Version 2.0.
+Modified: specialized names and field to this project and real scalars; continuous coordinate map added. E8Parity.lean adapts the concrete inverse-coordinate formulas and proves the integer/half-integer, even-sum equivalence using explicit integer witnesses. The whole library and generic submodule infrastructure were not imported.
+
+The Gaussian-domination proof architecture in Riesz/E8ThetaSummable.lean was
+adapted from the same pinned repository's rank-24 ThetaAnalytic.lean, using
+this project's actual rank-8 lattice and compatible pinned mathlib APIs.
+Source: https://github.com/math-inc/Sphere-Packing-Lean/blob/1e98fb493088948ca7bbf47d7faed49cc5b39fc4/SpherePacking/Dim24/Uniqueness/Rigidity/Classify/EvenUnimodular/ThetaAnalytic.lean
+The external module and its imported dependency closure were not built here.
+Local uniform convergence, holomorphy, cusp limit and explicit integer dual
+basis certificates were added in this project.
+
+
+Selected generic Poisson and radial Schwartz closure adapted from the same
+immutable commit 1e98fb493088948ca7bbf47d7faed49cc5b39fc4:
+SpherePacking/CohnElkies/PoissonSummationLattices/UnitAddTorus.lean
+SpherePacking/CohnElkies/PoissonSummationLattices/PoissonSummation.lean
+SpherePacking/CohnElkies/PoissonSummationSchwartz/Basic.lean
+SpherePacking/CohnElkies/PoissonSummationSchwartz/PoissonSummation.lean
+SpherePacking/CohnElkies/PoissonSummationGeneral.lean
+SpherePacking/ForMathlib/FourierLinearEquiv.lean
+SpherePacking/ForMathlib/RadialSchwartz/Cutoff.lean
+SpherePacking/ForMathlib/RadialSchwartz/Multidimensional.lean
+SpherePacking/ForMathlib/RadialSchwartz/OneSided.lean
+SpherePacking/ForMathlib/BoundsOnIcc.lean
+The Gaussian profile/decay part of the rank-24 ThetaTransform.lean listed
+in the source manifest was adapted to actual rank eight in E8ThetaSchwartz.
+Original copyright/author headers are retained where provided.
+Modifications: local import paths, visibility, pinned mathlib API adaptation,
+explicit coercion/definitional-equality steps; dimension-eight specialization
+and use of the existing Gaussian Fourier formula in the E8 application.
+Local selected adaptations prove general lattice Poisson summation and the
+actual E8 S law/modular form. The original rank-24 modules and the entire
+upstream repository were not built. No sharp all-scale Gaussian minorant or
+Riesz regularization theorem is supplied by this port.

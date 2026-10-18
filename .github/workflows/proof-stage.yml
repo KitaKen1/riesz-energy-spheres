@@ -1,0 +1,78 @@
+name: Compile one sphere proof batch
+on:
+  workflow_call:
+    inputs:
+      stage:
+        type: number
+        required: true
+    outputs:
+      ready:
+        value: ${{ jobs.compile.outputs.ready }}
+      proof_digest:
+        value: ${{ jobs.compile.outputs.proof_digest }}
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    outputs:
+      ready: ${{ steps.compile.outputs.ready }}
+      proof_digest: ${{ steps.inputs.outputs.proof_digest }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - id: inputs
+        run: python3 lean/comparator/check-inputs.py --receipt-dir build-stage-${{ inputs.stage }}-receipt
+      - run: python3 lean/comparator/check-solution-targets.py --receipt-dir build-stage-${{ inputs.stage }}-receipt
+      - run: python3 lean/comparator/build-stage.py
+      - run: bash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 8 4
+      - run: lake exe cache get
+        working-directory: lean
+      - run: python3 lean/comparator/prepare-fc-utils.py --receipt-dir build-stage-${{ inputs.stage }}-receipt
+      - name: Download completed batches from this workflow only
+        if: inputs.stage > 1
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: proof-products-*-${{ github.run_id }}-${{ github.run_attempt }}
+          path: stage-products
+          merge-multiple: true
+      - name: Restore exact earlier batches, with no previous-run proof cache
+        env:
+          RZ_STAGE: ${{ inputs.stage }}
+        run: |
+          python3 - <<'PY'
+          import os, shutil
+          assert os.environ.get('GITHUB_ACTIONS') == 'true'
+          assert os.environ.get('RUNNER_ENVIRONMENT') == 'github-hosted'
+          shutil.rmtree('lean/.lake/build', ignore_errors=True)
+          PY
+          python3 lean/comparator/build-products.py restore --directory stage-products --stage "$((RZ_STAGE - 1))"
+          python3 lean/comparator/build-products.py snapshot --directory stage-products --stage "$RZ_STAGE" --state "$RUNNER_TEMP/pre-build.json"
+      - id: compile
+        name: Complete this batch within four hours
+        run: bash comparator/build-stage.sh ${{ inputs.stage }}
+        working-directory: lean
+      - name: Package only newly built or changed products
+        run: python3 lean/comparator/build-products.py pack --directory stage-products --stage ${{ inputs.stage }} --state "$RUNNER_TEMP/pre-build.json"
+      - name: Pass completed products to subsequent jobs
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: proof-products-${{ inputs.stage }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            stage-products/build-stage-${{ inputs.stage }}.tar.gz
+            stage-products/build-stage-${{ inputs.stage }}.json
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: build-stage-${{ inputs.stage }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: build-stage-${{ inputs.stage }}-receipt/
+          retention-days: 90
+          if-no-files-found: error

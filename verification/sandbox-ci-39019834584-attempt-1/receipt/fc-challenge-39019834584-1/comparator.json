@@ -1,0 +1,21 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "FCSolution",
+  "theorem_names": [
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": false
+}

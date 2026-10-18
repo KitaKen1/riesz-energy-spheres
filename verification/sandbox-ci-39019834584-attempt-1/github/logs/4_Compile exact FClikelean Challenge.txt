@@ -1,0 +1,757 @@
+﻿2026-10-17T09:06:02.8838377Z Current runner version: '2.337.0'
+2026-10-17T09:06:02.8859803Z ##[group]Runner Image Provisioner
+2026-10-17T09:06:02.8860384Z Hosted Compute Agent
+2026-10-17T09:06:02.8860841Z Version: 20261012.601
+2026-10-17T09:06:02.8861309Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-17T09:06:02.8861807Z Build Date: 2026-10-12T17:48:21Z
+2026-10-17T09:06:02.8862232Z Worker ID: {7d5708a6-d10b-47c0-83f8-72366dcd143f}
+2026-10-17T09:06:02.8862659Z Region: westus2
+2026-10-17T09:06:02.8863062Z Cloud: Azure
+2026-10-17T09:06:02.8863441Z ##[endgroup]
+2026-10-17T09:06:02.8864371Z ##[group]Operating System
+2026-10-17T09:06:02.8864766Z Ubuntu
+2026-10-17T09:06:02.8865100Z 24.04.5
+2026-10-17T09:06:02.8865706Z LTS
+2026-10-17T09:06:02.8866101Z ##[endgroup]
+2026-10-17T09:06:02.8866483Z ##[group]Runner Image
+2026-10-17T09:06:02.8866884Z Image: ubuntu-24.04
+2026-10-17T09:06:02.8867251Z Version: 20261012.334.1
+2026-10-17T09:06:02.8868145Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-17T09:06:02.8869366Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-17T09:06:02.8869966Z ##[endgroup]
+2026-10-17T09:06:02.8870647Z ##[group]GITHUB_TOKEN Permissions
+2026-10-17T09:06:02.8872259Z Contents: read
+2026-10-17T09:06:02.8872625Z Metadata: read
+2026-10-17T09:06:02.8873146Z ##[endgroup]
+2026-10-17T09:06:02.8875021Z Secret source: Actions
+2026-10-17T09:06:02.8875856Z Cache mode: write
+2026-10-17T09:06:02.8876314Z Prepare workflow directory
+2026-10-17T09:06:02.9195114Z Prepare all required actions
+2026-10-17T09:06:02.9238364Z Getting action download info
+2026-10-17T09:06:03.2995366Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-17T09:06:03.7544028Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-17T09:06:04.0287431Z Complete job name: Compile exact FClikelean Challenge
+2026-10-17T09:06:04.0751318Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-17T09:06:04.0751844Z with:
+2026-10-17T09:06:04.0752091Z   persist-credentials: false
+2026-10-17T09:06:04.0752392Z   repository: KitaKen1/ci-test-sandbox
+2026-10-17T09:06:04.0754559Z   token: ***
+2026-10-17T09:06:04.0754793Z   ssh-strict: true
+2026-10-17T09:06:04.0755033Z   ssh-user: git
+2026-10-17T09:06:04.0755268Z   clean: true
+2026-10-17T09:06:04.0755694Z   sparse-checkout-cone-mode: true
+2026-10-17T09:06:04.0755982Z   fetch-depth: 1
+2026-10-17T09:06:04.0756227Z   fetch-tags: false
+2026-10-17T09:06:04.0756481Z   show-progress: true
+2026-10-17T09:06:04.0756735Z   lfs: false
+2026-10-17T09:06:04.0756965Z   submodules: false
+2026-10-17T09:06:04.0757216Z   set-safe-directory: true
+2026-10-17T09:06:04.0757500Z   allow-unsafe-pr-checkout: false
+2026-10-17T09:06:04.0757866Z ##[endgroup]
+2026-10-17T09:06:04.1552156Z Syncing repository: KitaKen1/ci-test-sandbox
+2026-10-17T09:06:04.1554338Z ##[group]Getting Git version info
+2026-10-17T09:06:04.1555316Z Working directory is '/home/runner/work/ci-test-sandbox/ci-test-sandbox'
+2026-10-17T09:06:04.1556930Z [command]/usr/bin/git version
+2026-10-17T09:06:04.1636002Z git version 2.55.0
+2026-10-17T09:06:04.1652120Z ##[endgroup]
+2026-10-17T09:06:04.1664702Z Temporarily overriding HOME='/home/runner/work/_temp/b8102018-da91-4f21-a173-1ec70a32ea15' before making global git config changes
+2026-10-17T09:06:04.1667356Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-17T09:06:04.1669682Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ci-test-sandbox/ci-test-sandbox
+2026-10-17T09:06:04.1718981Z Deleting the contents of '/home/runner/work/ci-test-sandbox/ci-test-sandbox'
+2026-10-17T09:06:04.1722126Z ##[group]Initializing the repository
+2026-10-17T09:06:04.1725550Z [command]/usr/bin/git init /home/runner/work/ci-test-sandbox/ci-test-sandbox
+2026-10-17T09:06:04.1827383Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-17T09:06:04.1828303Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-17T09:06:04.1829190Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-17T09:06:04.1830235Z hint: call:
+2026-10-17T09:06:04.1830647Z hint:
+2026-10-17T09:06:04.1831156Z hint: 	git config --global init.defaultBranch <name>
+2026-10-17T09:06:04.1831795Z hint:
+2026-10-17T09:06:04.1832351Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-17T09:06:04.1833952Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-17T09:06:04.1835762Z hint:
+2026-10-17T09:06:04.1836215Z hint: 	git branch -m <name>
+2026-10-17T09:06:04.1836703Z hint:
+2026-10-17T09:06:04.1837319Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-17T09:06:04.1838421Z Initialized empty Git repository in /home/runner/work/ci-test-sandbox/ci-test-sandbox/.git/
+2026-10-17T09:06:04.1841435Z [command]/usr/bin/git remote add origin https://github.com/KitaKen1/ci-test-sandbox
+2026-10-17T09:06:04.1886505Z ##[endgroup]
+2026-10-17T09:06:04.1887268Z ##[group]Disabling automatic garbage collection
+2026-10-17T09:06:04.1890595Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-17T09:06:04.1920124Z ##[endgroup]
+2026-10-17T09:06:04.1920884Z ##[group]Setting up auth
+2026-10-17T09:06:04.1926186Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T09:06:04.1954677Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T09:06:04.2263679Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T09:06:04.2293994Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T09:06:04.2485569Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T09:06:04.2510354Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T09:06:04.2699038Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-17T09:06:04.2730142Z ##[endgroup]
+2026-10-17T09:06:04.2730948Z ##[group]Fetching the repository
+2026-10-17T09:06:04.2738306Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +350f66c19e51d419c1ea161416a08385cc0c5242:refs/remotes/origin/riesz-fc-target-ci-20261017
+2026-10-17T09:06:04.8456954Z From https://github.com/KitaKen1/ci-test-sandbox
+2026-10-17T09:06:04.8458307Z  * [new ref]         350f66c19e51d419c1ea161416a08385cc0c5242 -> origin/riesz-fc-target-ci-20261017
+2026-10-17T09:06:04.8460877Z ##[endgroup]
+2026-10-17T09:06:04.8461690Z ##[group]Determining the checkout info
+2026-10-17T09:06:04.8462649Z ##[endgroup]
+2026-10-17T09:06:04.8467109Z [command]/usr/bin/git sparse-checkout disable
+2026-10-17T09:06:04.8513890Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-17T09:06:04.8624351Z ##[group]Checking out the ref
+2026-10-17T09:06:04.8626106Z [command]/usr/bin/git checkout --progress --force -B riesz-fc-target-ci-20261017 refs/remotes/origin/riesz-fc-target-ci-20261017
+2026-10-17T09:06:05.0941355Z Switched to a new branch 'riesz-fc-target-ci-20261017'
+2026-10-17T09:06:05.0947224Z branch 'riesz-fc-target-ci-20261017' set up to track 'origin/riesz-fc-target-ci-20261017'.
+2026-10-17T09:06:05.0959379Z ##[endgroup]
+2026-10-17T09:06:05.1000019Z [command]/usr/bin/git log -1 --format=%H
+2026-10-17T09:06:05.1023722Z 350f66c19e51d419c1ea161416a08385cc0c5242
+2026-10-17T09:06:05.1031842Z ##[group]Removing auth
+2026-10-17T09:06:05.1034707Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T09:06:05.1063563Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T09:06:05.1251024Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T09:06:05.1272754Z http.https://github.com/.extraheader
+2026-10-17T09:06:05.1286558Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-17T09:06:05.1310419Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T09:06:05.1586283Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T09:06:05.1612840Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T09:06:05.1807636Z ##[endgroup]
+2026-10-17T09:06:05.1997346Z ##[group]Run python3 lean/comparator/check-inputs.py --receipt-dir fc-challenge-receipt
+2026-10-17T09:06:05.1999462Z [36;1mpython3 lean/comparator/check-inputs.py --receipt-dir fc-challenge-receipt[0m
+2026-10-17T09:06:05.2232963Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-17T09:06:05.2233699Z ##[endgroup]
+2026-10-17T09:06:06.1390548Z {"status": "PASS", "targets": ["RieszSphereFC.riesz_energy_lattice.variants.dimension_two", "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight", "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.log_energy_lattice.variants.dimension_two", "RieszSphereFC.log_energy_lattice.variants.dimension_eight", "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"], "reference_imports": ["Mathlib.MeasureTheory.Constructions.HaarToSphere", "Mathlib.Analysis.InnerProductSpace.PiL2", "Mathlib.NumberTheory.LSeries.RiemannZeta", "Mathlib.NumberTheory.LSeries.AbstractFuncEq", "Mathlib.LinearAlgebra.Matrix.Notation", "Mathlib.MeasureTheory.Integral.Prod"], "definition_holes": false, "mirror_files": 1340, "hashed_files": 2707, "fc_reference_correspondence": "EXACT_CHALLENGE_COPY; SOLUTION_CHECK_SEPARATE", "fc_exact_source_copy": true, "fc_statement_count": 18, "comparator_target_count": 9, "checkout_base_commit": "350f66c19e51d419c1ea161416a08385cc0c5242", "working_tree_dirty": false, "tested_commit": "350f66c19e51d419c1ea161416a08385cc0c5242", "source_manifest_sha256": "acaf1ba518cda98a683326afa0e7d57fb78945586b97b829317a4827624e0422", "pins": {"publication_repository": "KitaKen1/riesz-energy-spheres", "private_repository": "KitaKen1/riesz-energy-spheres-private-ci", "lean_toolchain": "leanprover/lean4:v4.34.1", "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612", "comparator_commit": "d03acab154d269c06e60e4de7e4cc85deebff94b", "lean4export_commit": "076e8e57707e813375e8f9da8bf989799ace9680", "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4", "targets": ["RieszSphereFC.riesz_energy_lattice.variants.dimension_two", "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight", "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.log_energy_lattice.variants.dimension_two", "RieszSphereFC.log_energy_lattice.variants.dimension_eight", "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"], "reference_status": "Exact copy of the independent FClikelean draft; compare only its nine research-solved variants.", "toolchain_patches": {"comparator": {"upstream": "leanprover/lean4:v4.34.0", "build": "leanprover/lean4:v4.34.1", "changed_files": ["lean-toolchain"]}, "lean4export": {"upstream": "leanprover/lean4:v4.34.0", "build": "leanprover/lean4:v4.34.1", "changed_files": ["lean-toolchain"]}}, "formal_conjectures_commit": "c77fdd446d23539302aa73bcfae4a9fa962b8382", "ci_repository": "KitaKen1/ci-test-sandbox"}, "proof_digest": "e999bbe6ce47908984e0fd8889868cd62b0acae84feca7af380b172753b4801b"}
+2026-10-17T09:06:06.1589272Z ##[group]Run bash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 8 4
+2026-10-17T09:06:06.1589856Z [36;1mbash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 8 4[0m
+2026-10-17T09:06:06.1648403Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-17T09:06:06.1648706Z ##[endgroup]
+2026-10-17T09:08:22.3624580Z info: downloading installer
+2026-10-17T09:08:22.6477135Z 2
+2026-10-17T09:08:22.6494042Z                total        used        free      shared  buff/cache   available
+2026-10-17T09:08:22.6495746Z Mem:           7.8Gi       883Mi       3.8Gi        44Mi       3.5Gi       6.9Gi
+2026-10-17T09:08:22.6498140Z Swap:          3.0Gi          0B       3.0Gi
+2026-10-17T09:08:22.6513060Z Filesystem      Size  Used Avail Use% Mounted on
+2026-10-17T09:08:22.6513978Z /dev/root        72G   23G   50G  32% /
+2026-10-17T09:08:22.6528845Z /dev/root        72G   23G   50G  32% /
+2026-10-17T09:08:22.6936938Z added 8 GB of swap on /
+2026-10-17T09:08:22.6946690Z                total        used        free      shared  buff/cache   available
+2026-10-17T09:08:22.6947423Z Mem:               7           0           3           0           3           6
+2026-10-17T09:08:22.6948037Z Swap:             10           0          10
+2026-10-17T09:08:22.6971099Z NAME              TYPE SIZE USED PRIO
+2026-10-17T09:08:22.6971804Z /swapfile         file   3G   0B   -2
+2026-10-17T09:08:22.6973724Z /swap-extra-32694 file   8G   0B   -3
+2026-10-17T09:08:22.7006744Z ##[group]Run lake exe cache get
+2026-10-17T09:08:22.7006936Z [36;1mlake exe cache get[0m
+2026-10-17T09:08:22.7058536Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-17T09:08:22.7058737Z ##[endgroup]
+2026-10-17T09:08:23.2543631Z info: downloading https://releases.lean-lang.org/lean4/v4.34.1/lean-4.34.1-linux.tar.zst
+2026-10-17T09:08:32.4534010Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1
+2026-10-17T09:08:52.2111346Z info: formal_conjectures: cloning https://github.com/google-deepmind/formal-conjectures.git
+2026-10-17T09:08:54.9226698Z info: formal_conjectures: checking out revision 'c77fdd446d23539302aa73bcfae4a9fa962b8382'
+2026-10-17T09:08:55.0012943Z info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git
+2026-10-17T09:09:38.0771855Z info: mathlib: checking out revision 'd13f23b723b8a846827a245b89c10fc7d3f11612'
+2026-10-17T09:09:39.6195177Z info: plausible: cloning https://github.com/leanprover-community/plausible
+2026-10-17T09:09:39.9606968Z info: plausible: checking out revision '118aa17ee84656b8bd727fef7c458ee8c833385c'
+2026-10-17T09:09:39.9737147Z info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+2026-10-17T09:09:40.2457757Z info: LeanSearchClient: checking out revision 'ddf04cf3949fa556442341e87d47f9f6e6074707'
+2026-10-17T09:09:40.2627430Z info: importGraph: cloning https://github.com/leanprover-community/import-graph
+2026-10-17T09:09:40.5820604Z info: importGraph: checking out revision 'e928b72544873815af278d38681b31c0293588e3'
+2026-10-17T09:09:40.5999602Z info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+2026-10-17T09:09:41.1230094Z info: proofwidgets: checking out revision '106ff4fafc74ef4ac99d81dbf3ab399118f497a5'
+2026-10-17T09:09:41.6126612Z info: aesop: cloning https://github.com/leanprover-community/aesop
+2026-10-17T09:09:42.1606740Z info: aesop: checking out revision '355695d523e41d0554926416cba2a2b3544fbbc9'
+2026-10-17T09:09:42.1779815Z info: Qq: cloning https://github.com/leanprover-community/quote4
+2026-10-17T09:09:42.5176632Z info: Qq: checking out revision '6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259'
+2026-10-17T09:09:42.5304861Z info: batteries: cloning https://github.com/leanprover-community/batteries
+2026-10-17T09:09:46.7077097Z info: batteries: checking out revision 'f2effa3d803fda822b1f97b806c47cf2adfbcbc2'
+2026-10-17T09:09:46.7362971Z info: Cli: cloning https://github.com/leanprover/lean4-cli
+2026-10-17T09:09:47.0214051Z info: Cli: checking out revision 'e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204'
+2026-10-17T09:09:47.3338117Z ✔ [1/5] Built Cache.Cli (270ms)
+2026-10-17T09:09:47.6359010Z ✔ [2/12] Built Cache.Lean (307ms)
+2026-10-17T09:09:48.0386719Z ✔ [5/12] Built Cache.Env (361ms)
+2026-10-17T09:09:48.5576221Z ✔ [7/42] Built Batteries.Tactic.OpenPrivate (908ms)
+2026-10-17T09:09:48.5576698Z ✔ [8/42] Built Cache.Infra (473ms)
+2026-10-17T09:09:48.6557492Z ✔ [9/42] Built Cache.Cli:c.o (119ms)
+2026-10-17T09:09:48.6557942Z ✔ [10/42] Built Cache.Lean:c.o (133ms)
+2026-10-17T09:09:48.7587443Z ✔ [11/42] Built Cache.Env:c.o (147ms)
+2026-10-17T09:09:48.8567282Z ✔ [12/42] Built Cache.Infra:c.o (208ms)
+2026-10-17T09:09:49.8417268Z ✔ [13/42] Built Batteries.Tactic.OpenPrivate:c.o (1.1s)
+2026-10-17T09:09:50.2427886Z ✔ [14/42] Built Cache.IO (1.3s)
+2026-10-17T09:09:51.0466795Z ✔ [15/42] Built Cache.Hashing (861ms)
+2026-10-17T09:09:51.4466674Z ✔ [16/42] Built Cache.Hashing:c.o (399ms)
+2026-10-17T09:09:51.5459759Z ✔ [17/42] Built Cache.IO:c.o (1.3s)
+2026-10-17T09:09:52.7524446Z ✔ [18/42] Built Cache.Requests (1.3s)
+2026-10-17T09:09:53.4546657Z ✔ [19/42] Built Cache.Marker (611ms)
+2026-10-17T09:09:53.5542249Z ✔ [20/42] Built Cache.Marker:c.o (102ms)
+2026-10-17T09:09:54.2578889Z ✔ [21/42] Built Cache.Query (787ms)
+2026-10-17T09:09:54.9586621Z ✔ [22/42] Built Cache.Upload.Dest (649ms)
+2026-10-17T09:09:54.9596115Z ✔ [23/42] Built Cache.Requests:c.o (2.2s)
+2026-10-17T09:09:55.0587798Z ✔ [24/42] Built Cache.Upload.Dest:c.o (107ms)
+2026-10-17T09:09:55.1592186Z ✔ [25/42] Built Cache.Query:c.o (260ms)
+2026-10-17T09:09:55.7616835Z ✔ [26/42] Built Cache.Warning (695ms)
+2026-10-17T09:09:55.8599894Z ✔ [27/42] Built Cache.Upload.Rclone (660ms)
+2026-10-17T09:09:56.0602327Z ✔ [28/42] Built Cache.Warning:c.o (216ms)
+2026-10-17T09:09:56.2607107Z ✔ [29/42] Built Cache.Upload.Rclone:c.o (148ms)
+2026-10-17T09:09:56.3606913Z ✔ [30/42] Built Cache.Upload.Curl (598ms)
+2026-10-17T09:09:56.5600166Z ✔ [31/42] Built Cache.Upload.Curl:c.o (173ms)
+2026-10-17T09:09:56.9687042Z ✔ [32/42] Built Cache.Upload.Azure (638ms)
+2026-10-17T09:09:57.1681953Z ✔ [33/42] Built Cache.Upload.Azure:c.o (123ms)
+2026-10-17T09:09:57.2696828Z ✔ [34/42] Built Cache.Upload.S3 (713ms)
+2026-10-17T09:09:57.5707138Z ✔ [35/42] Built Cache.Upload.S3:c.o (275ms)
+2026-10-17T09:09:57.7702067Z ✔ [36/42] Built Cache.Upload.Defs (530ms)
+2026-10-17T09:09:57.8706981Z ✔ [37/42] Built Cache.Upload.Defs:c.o (133ms)
+2026-10-17T09:09:58.2746705Z ✔ [38/42] Built Cache.Upload (453ms)
+2026-10-17T09:09:58.3737015Z ✔ [39/42] Built Cache.Upload:c.o (102ms)
+2026-10-17T09:09:58.9741995Z ✔ [40/42] Built Cache.Main (786ms)
+2026-10-17T09:09:59.5750968Z ✔ [41/42] Built Cache.Main:c.o (542ms)
+2026-10-17T09:10:00.2816947Z ✔ [42/42] Built cache:exe (739ms)
+2026-10-17T09:10:02.4148901Z Current branch: HEAD
+2026-10-17T09:10:02.4149466Z Using cache from origin: (some leanprover-community/mathlib4)
+2026-10-17T09:10:02.4150362Z Attempting to download 8908 file(s) from leanprover-community/mathlib4 cache at https://cache.mathlib.org/mathlib4-master
+2026-10-17T09:10:02.6993839Z 
+2026-10-17T09:10:02.8000856Z Downloaded: 1 file(s) [attempted 1/8908 = 0%, 55 KB/s], Decompressed: 0
+2026-10-17T09:10:02.9023383Z Downloaded: 147 file(s) [attempted 147/8908 = 1%, 183 KB/s], Decompressed: 17
+2026-10-17T09:10:03.0066620Z Downloaded: 315 file(s) [attempted 315/8908 = 3%, 1535 KB/s], Decompressed: 17
+2026-10-17T09:10:03.1047944Z Downloaded: 472 file(s) [attempted 472/8908 = 5%, 1919 KB/s], Decompressed: 17
+2026-10-17T09:10:03.2126718Z Downloaded: 632 file(s) [attempted 632/8908 = 7%, 89 KB/s], Decompressed: 17
+2026-10-17T09:10:03.3137107Z Downloaded: 777 file(s) [attempted 777/8908 = 8%, 2300 KB/s], Decompressed: 17
+2026-10-17T09:10:03.4168061Z Downloaded: 945 file(s) [attempted 945/8908 = 10%, 611 KB/s], Decompressed: 110
+2026-10-17T09:10:03.5177069Z Downloaded: 1106 file(s) [attempted 1106/8908 = 12%, 1479 KB/s], Decompressed: 110
+2026-10-17T09:10:03.6167457Z Downloaded: 1269 file(s) [attempted 1269/8908 = 14%, 1346 KB/s], Decompressed: 110
+2026-10-17T09:10:03.7176860Z Downloaded: 1386 file(s) [attempted 1386/8908 = 15%, 4842 KB/s], Decompressed: 110
+2026-10-17T09:10:03.8246894Z Downloaded: 1555 file(s) [attempted 1555/8908 = 17%, 284 KB/s], Decompressed: 110
+2026-10-17T09:10:03.9296585Z Downloaded: 1684 file(s) [attempted 1684/8908 = 18%, 2185 KB/s], Decompressed: 110
+2026-10-17T09:10:04.0316530Z Downloaded: 1810 file(s) [attempted 1810/8908 = 20%, 1861 KB/s], Decompressed: 110
+2026-10-17T09:10:04.1313819Z Downloaded: 1954 file(s) [attempted 1954/8908 = 21%, 6821 KB/s], Decompressed: 110
+2026-10-17T09:10:04.2319409Z Downloaded: 2124 file(s) [attempted 2124/8908 = 23%, 1166 KB/s], Decompressed: 110
+2026-10-17T09:10:04.3366750Z Downloaded: 2268 file(s) [attempted 2268/8908 = 25%, 1962 KB/s], Decompressed: 110
+2026-10-17T09:10:04.4399882Z Downloaded: 2434 file(s) [attempted 2434/8908 = 27%, 260 KB/s], Decompressed: 110
+2026-10-17T09:10:04.5422479Z Downloaded: 2556 file(s) [attempted 2556/8908 = 28%, 1040 KB/s], Decompressed: 110
+2026-10-17T09:10:04.6506594Z Downloaded: 2655 file(s) [attempted 2655/8908 = 29%, 1081 KB/s], Decompressed: 110
+2026-10-17T09:10:04.7546641Z Downloaded: 2828 file(s) [attempted 2828/8908 = 31%, 272 KB/s], Decompressed: 110
+2026-10-17T09:10:04.8648768Z Downloaded: 2965 file(s) [attempted 2965/8908 = 33%, 2387 KB/s], Decompressed: 110
+2026-10-17T09:10:04.9867811Z Downloaded: 3116 file(s) [attempted 3116/8908 = 34%, 1815 KB/s], Decompressed: 110
+2026-10-17T09:10:05.0806869Z Downloaded: 3272 file(s) [attempted 3272/8908 = 36%, 2855 KB/s], Decompressed: 110
+2026-10-17T09:10:05.1824448Z Downloaded: 3396 file(s) [attempted 3396/8908 = 38%, 5649 KB/s], Decompressed: 110
+2026-10-17T09:10:05.2852403Z Downloaded: 3573 file(s) [attempted 3573/8908 = 40%, 2663 KB/s], Decompressed: 110
+2026-10-17T09:10:05.3859105Z Downloaded: 3719 file(s) [attempted 3719/8908 = 41%, 1145 KB/s], Decompressed: 110
+2026-10-17T09:10:05.4965893Z Downloaded: 3863 file(s) [attempted 3863/8908 = 43%, 380 KB/s], Decompressed: 110
+2026-10-17T09:10:05.5991196Z Downloaded: 3882 file(s) [attempted 3882/8908 = 43%, 10529 KB/s], Decompressed: 110
+2026-10-17T09:10:05.7136810Z Downloaded: 3978 file(s) [attempted 3978/8908 = 44%, 721 KB/s], Decompressed: 110
+2026-10-17T09:10:05.8386576Z Downloaded: 4130 file(s) [attempted 4130/8908 = 46%, 2636 KB/s], Decompressed: 110
+2026-10-17T09:10:05.9376309Z Downloaded: 4274 file(s) [attempted 4274/8908 = 47%, 2970 KB/s], Decompressed: 110
+2026-10-17T09:10:06.0470629Z Downloaded: 4468 file(s) [attempted 4468/8908 = 50%, 592 KB/s], Decompressed: 110
+2026-10-17T09:10:06.1494350Z Downloaded: 4588 file(s) [attempted 4588/8908 = 51%, 7720 KB/s], Decompressed: 110
+2026-10-17T09:10:06.2509163Z Downloaded: 4773 file(s) [attempted 4773/8908 = 53%, 302 KB/s], Decompressed: 110
+2026-10-17T09:10:06.3556591Z Downloaded: 4915 file(s) [attempted 4915/8908 = 55%, 995 KB/s], Decompressed: 110
+2026-10-17T09:10:06.4543382Z Downloaded: 5066 file(s) [attempted 5066/8908 = 56%, 1249 KB/s], Decompressed: 110
+2026-10-17T09:10:06.5657371Z Downloaded: 5234 file(s) [attempted 5234/8908 = 58%, 762 KB/s], Decompressed: 110
+2026-10-17T09:10:06.6606629Z Downloaded: 5330 file(s) [attempted 5330/8908 = 59%, 260 KB/s], Decompressed: 110
+2026-10-17T09:10:06.7693808Z Downloaded: 5509 file(s) [attempted 5509/8908 = 61%, 2833 KB/s], Decompressed: 110
+2026-10-17T09:10:06.8717493Z Downloaded: 5602 file(s) [attempted 5602/8908 = 62%, 5184 KB/s], Decompressed: 110
+2026-10-17T09:10:06.9964844Z Downloaded: 5780 file(s) [attempted 5780/8908 = 64%, 1323 KB/s], Decompressed: 865
+2026-10-17T09:10:07.0678168Z Downloaded: 5926 file(s) [attempted 5926/8908 = 66%, 3604 KB/s], Decompressed: 865
+2026-10-17T09:10:07.1716755Z Downloaded: 6099 file(s) [attempted 6099/8908 = 68%, 1486 KB/s], Decompressed: 865
+2026-10-17T09:10:07.2866826Z Downloaded: 6238 file(s) [attempted 6238/8908 = 70%, 146 KB/s], Decompressed: 865
+2026-10-17T09:10:07.3754741Z Downloaded: 6414 file(s) [attempted 6414/8908 = 72%, 2564 KB/s], Decompressed: 865
+2026-10-17T09:10:07.4907583Z Downloaded: 6586 file(s) [attempted 6586/8908 = 73%, 1155 KB/s], Decompressed: 865
+2026-10-17T09:10:07.5728664Z Downloaded: 6699 file(s) [attempted 6699/8908 = 75%, 1872 KB/s], Decompressed: 865
+2026-10-17T09:10:07.6829246Z Downloaded: 6872 file(s) [attempted 6872/8908 = 77%, 982 KB/s], Decompressed: 865
+2026-10-17T09:10:07.7896182Z Downloaded: 7012 file(s) [attempted 7012/8908 = 78%, 4935 KB/s], Decompressed: 865
+2026-10-17T09:10:07.9026798Z Downloaded: 7172 file(s) [attempted 7172/8908 = 80%, 254 KB/s], Decompressed: 865
+2026-10-17T09:10:08.0056293Z Downloaded: 7355 file(s) [attempted 7355/8908 = 82%, 210 KB/s], Decompressed: 865
+2026-10-17T09:10:08.1127170Z Downloaded: 7487 file(s) [attempted 7487/8908 = 84%, 1248 KB/s], Decompressed: 865
+2026-10-17T09:10:08.2226933Z Downloaded: 7648 file(s) [attempted 7648/8908 = 85%, 677 KB/s], Decompressed: 865
+2026-10-17T09:10:08.3216720Z Downloaded: 7842 file(s) [attempted 7842/8908 = 88%, 2417 KB/s], Decompressed: 865
+2026-10-17T09:10:08.4236941Z Downloaded: 7984 file(s) [attempted 7984/8908 = 89%, 491 KB/s], Decompressed: 865
+2026-10-17T09:10:08.6231564Z Downloaded: 8102 file(s) [attempted 8102/8908 = 90%, 4406 KB/s], Decompressed: 865
+2026-10-17T09:10:08.7256870Z Downloaded: 8222 file(s) [attempted 8222/8908 = 92%, 1854 KB/s], Decompressed: 865
+2026-10-17T09:10:08.8296716Z Downloaded: 8373 file(s) [attempted 8373/8908 = 93%, 1263 KB/s], Decompressed: 865
+2026-10-17T09:10:08.9299965Z Downloaded: 8493 file(s) [attempted 8493/8908 = 95%, 520 KB/s], Decompressed: 865
+2026-10-17T09:10:09.0311857Z Downloaded: 8671 file(s) [attempted 8671/8908 = 97%, 1874 KB/s], Decompressed: 865
+2026-10-17T09:10:09.1428534Z Downloaded: 8839 file(s) [attempted 8839/8908 = 99%, 1381 KB/s], Decompressed: 865
+2026-10-17T09:10:09.4087574Z Downloaded: 8899 file(s) [attempted 8899/8908 = 99%, 2674 KB/s], Decompressed: 865
+2026-10-17T09:10:09.4088091Z Downloaded: 8906 file(s) [attempted 8906/8908 = 99%, 83 KB/s], Decompressed: 865
+2026-10-17T09:10:09.4088544Z Downloaded: 8908 file(s) [attempted 8908/8908 = 100%, 83 KB/s], Decompressed: 865
+2026-10-17T09:11:33.5403715Z Decompressed 8908 file(s)
+2026-10-17T09:11:33.5404141Z Already decompressed 8908 file(s)
+2026-10-17T09:11:33.6106196Z ##[group]Run bash comparator/build-fc-challenge.sh
+2026-10-17T09:11:33.6106468Z [36;1mbash comparator/build-fc-challenge.sh[0m
+2026-10-17T09:11:33.6762419Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-17T09:11:33.6762630Z ##[endgroup]
+2026-10-17T09:11:35.8938961Z Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+2026-10-17T09:11:50.5017218Z ✔ [8924/8930] Built FormalConjecturesForMathlib.Algebra.GCDMonoid.Finset (1.0s)
+2026-10-17T09:11:50.5036759Z ✔ [8925/8930] Built FormalConjecturesForMathlib.Algebra.GradedMonoid (1.8s)
+2026-10-17T09:11:51.3057254Z ✔ [8926/8931] Built FormalConjecturesForMathlib.Algebra.Group.Action.Pointwise.Set.Basic (839ms)
+2026-10-17T09:11:51.5056827Z ✔ [8927/8932] Built FormalConjecturesForMathlib.Order.Filter.atTopBot.Finset (994ms)
+2026-10-17T09:11:52.1061010Z ✔ [8928/8932] Built FormalConjecturesForMathlib.Algebra.Group.Indicator (762ms)
+2026-10-17T09:11:52.5069230Z ✔ [8929/8933] Built FormalConjecturesForMathlib.Algebra.Group.Pointwise.Finset.Basic (1.0s)
+2026-10-17T09:11:57.4197095Z ✔ [8930/8934] Built FormalConjecturesForMathlib.Algebra.Homology.DerivedCategory.Ext.GradedAlgebra (4.9s)
+2026-10-17T09:11:58.1377943Z ⚠ [8931/8935] Built FormalConjecturesForMathlib.Algebra.Group.GrowthFunction (6.1s)
+2026-10-17T09:11:58.1492720Z warning: FormalConjecturesForMathlib/Algebra/Group/GrowthFunction.lean:20:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:11:58.1493371Z 
+2026-10-17T09:11:58.1505796Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:11:58.9380708Z ⚠ [8932/8936] Built FormalConjecturesForMathlib.Algebra.MvPolynomial.PoissonBracket (1.5s)
+2026-10-17T09:11:58.9587036Z warning: FormalConjecturesForMathlib/Algebra/MvPolynomial/PoissonBracket.lean:88:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-17T09:11:59.5258211Z ✔ [8933/8937] Built FormalConjecturesForMathlib.Algebra.MvPolynomial.RegularFunction (1.3s)
+2026-10-17T09:12:01.4488078Z ✔ [8934/8938] Built FormalConjecturesForMathlib.Algebra.Polynomial.Algebra (1.0s)
+2026-10-17T09:12:01.6312307Z ✔ [8935/8939] Built FormalConjecturesForMathlib.Algebra.Order.Group.Pointwise.Interval (2.7s)
+2026-10-17T09:12:02.5336978Z ✔ [8936/8940] Built FormalConjecturesForMathlib.Algebra.Polynomial.Basic (1.1s)
+2026-10-17T09:12:02.7327319Z ✖ [8937/8941] Building FormalConjecturesForMathlib.Algebra.Polynomial.HasseDeriv (1.1s)
+2026-10-17T09:12:02.7352234Z trace: .> LEAN_PATH=/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/FormalConjecturesForMathlib/Algebra/Polynomial/HasseDeriv.lean -o /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Algebra/Polynomial/HasseDeriv.olean -i /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Algebra/Polynomial/HasseDeriv.ilean -c /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Algebra/Polynomial/HasseDeriv.c --setup /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Algebra/Polynomial/HasseDeriv.setup.json --json
+2026-10-17T09:12:02.7358761Z error: FormalConjecturesForMathlib/Algebra/Polynomial/HasseDeriv.lean:24:8: `Polynomial.hasseDeriv_map` has already been declared
+2026-10-17T09:12:03.8367089Z ✔ [8938/8942] Built FormalConjecturesForMathlib.Algebra.Powerfree (1.3s)
+2026-10-17T09:12:04.6386799Z ✔ [8939/8943] Built FormalConjecturesForMathlib.Algebra.QuadraticAlgebra.Instances (1.9s)
+2026-10-17T09:12:05.0386856Z ✔ [8940/8944] Built FormalConjecturesForMathlib.Algebra.Ring.PythagorasNumber (1.2s)
+2026-10-17T09:12:06.7437108Z ✔ [8941/8945] Built FormalConjecturesForMathlib.AlgebraicGeometry.EllipticCurve.GlobalPeriod (2.1s)
+2026-10-17T09:12:07.1419620Z ✔ [8942/8945] Built FormalConjecturesForMathlib.AlgebraicGeometry.EllipticCurve.MinimalDiscriminant (2.1s)
+2026-10-17T09:12:08.3447238Z ✔ [8943/8949] Built FormalConjecturesForMathlib.AlgebraicGeometry.EllipticCurve.Regulator (1.6s)
+2026-10-17T09:12:09.1448491Z ✔ [8944/8950] Built FormalConjecturesForMathlib.AlgebraicGeometry.EllipticCurve.Tamagawa (1.9s)
+2026-10-17T09:12:09.8462031Z ✖ [8945/8951] Building FormalConjecturesForMathlib.FieldTheory.AbsoluteGaloisGroup (1.5s)
+2026-10-17T09:12:09.8483380Z trace: .> LEAN_PATH=/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/FormalConjecturesForMathlib/FieldTheory/AbsoluteGaloisGroup.lean -o /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/FieldTheory/AbsoluteGaloisGroup.olean -i /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/FieldTheory/AbsoluteGaloisGroup.ilean -c /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/FieldTheory/AbsoluteGaloisGroup.c --setup /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/FieldTheory/AbsoluteGaloisGroup.setup.json --json
+2026-10-17T09:12:09.8494413Z error: FormalConjecturesForMathlib/FieldTheory/AbsoluteGaloisGroup.lean:53:18: `Field.absoluteGaloisGroup.mapOfAlgebra` has already been declared
+2026-10-17T09:12:09.8506256Z error: FormalConjecturesForMathlib/FieldTheory/AbsoluteGaloisGroup.lean:81:18: `Field.absoluteGaloisGroup.map` has already been declared
+2026-10-17T09:12:11.3547949Z ✔ [8948/8952] Built FormalConjecturesForMathlib.AlgebraicGeometry.ProjectiveSpace (2.3s)
+2026-10-17T09:12:11.6566837Z ✔ [8949/8953] Built FormalConjecturesForMathlib.AlgebraicGeometry.VectorBundle (1.8s)
+2026-10-17T09:12:12.7596990Z ✔ [8950/8953] Built FormalConjecturesForMathlib.Analysis.Asymptotics.Basic (1.4s)
+2026-10-17T09:12:12.8597107Z ✔ [8951/8956] Built FormalConjecturesForMathlib.Analysis.Equidistribution.ModOne (1.3s)
+2026-10-17T09:12:14.1607658Z ✔ [8952/8957] Built FormalConjecturesForMathlib.Topology.Algebra.InfiniteSum.Group (1.2s)
+2026-10-17T09:12:15.1646878Z ✔ [8953/8958] Built FormalConjecturesForMathlib.Analysis.Fourier.SpectralSets (2.4s)
+2026-10-17T09:12:15.5645868Z ✔ [8954/8959] Built FormalConjecturesForMathlib.Topology.Algebra.InfiniteSum.Order (1.4s)
+2026-10-17T09:12:16.7675687Z ✔ [8955/8960] Built FormalConjecturesForMathlib.Analysis.Matrix.Spectrum (1.6s)
+2026-10-17T09:12:16.7686358Z ✔ [8956/8960] Built FormalConjecturesForMathlib.Analysis.Real.Cardinality (1.2s)
+2026-10-17T09:12:18.2727230Z ✔ [8957/8961] Built FormalConjecturesForMathlib.Analysis.SpecialFunctions.AdditiveCharacter (1.5s)
+2026-10-17T09:12:18.5726853Z ✔ [8958/8962] Built FormalConjecturesForMathlib.Analysis.HasGaps (1.9s)
+2026-10-17T09:12:20.4752537Z ⚠ [8959/8962] Built FormalConjecturesForMathlib.Analysis.SpecialFunctions.NthRoot (1.9s)
+2026-10-17T09:12:20.4753274Z warning: FormalConjecturesForMathlib/Analysis/SpecialFunctions/NthRoot.lean:39:2: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-17T09:12:20.4754302Z warning: FormalConjecturesForMathlib/Analysis/SpecialFunctions/NthRoot.lean:43:2: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-17T09:12:20.6755561Z ✔ [8960/8965] Built FormalConjecturesForMathlib.Analysis.SpecialFunctions.Log.Basic (2.4s)
+2026-10-17T09:12:21.7785265Z ✔ [8961/8966] Built FormalConjecturesForMathlib.Order.Filter.Cofinite (1.1s)
+2026-10-17T09:12:22.4817619Z ✔ [8962/8967] Built FormalConjecturesForMathlib.Combinatorics.AP.Basic (2.0s)
+2026-10-17T09:12:23.0857013Z ✔ [8963/8967] Built FormalConjecturesForMathlib.Combinatorics.Additive.Convolution (1.3s)
+2026-10-17T09:12:24.3913617Z ✔ [8964/8968] Built FormalConjecturesForMathlib.Combinatorics.Additive.Basis (1.9s)
+2026-10-17T09:12:25.1926888Z ✔ [8965/8968] Built FormalConjecturesForMathlib.Combinatorics.Additive.DifferenceBasis (753ms)
+2026-10-17T09:12:25.7928335Z ✔ [8966/8971] Built FormalConjecturesForMathlib.Combinatorics.Additive.RestrictedSumset (656ms)
+2026-10-17T09:12:26.6951620Z ✔ [8967/8972] Built FormalConjecturesForMathlib.Combinatorics.SetFamily.VCDim (893ms)
+2026-10-17T09:12:31.2051654Z ✔ [8968/8972] Built FormalConjecturesForMathlib.Combinatorics.Basic (4.5s)
+2026-10-17T09:12:33.0069530Z ✔ [8969/8972] Built FormalConjecturesForMathlib.Combinatorics.Additive.Coset (9.9s)
+2026-10-17T09:12:33.6083486Z ✖ [8970/8973] Building FormalConjecturesForMathlib.Combinatorics.Additive.VCDim (2.5s)
+2026-10-17T09:12:33.6131876Z trace: .> LEAN_PATH=/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/FormalConjecturesForMathlib/Combinatorics/Additive/VCDim.lean -o /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Combinatorics/Additive/VCDim.olean -i /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Combinatorics/Additive/VCDim.ilean -c /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Combinatorics/Additive/VCDim.c --setup /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Combinatorics/Additive/VCDim.setup.json --json
+2026-10-17T09:12:33.6155828Z warning: FormalConjecturesForMathlib/Combinatorics/Additive/VCDim.lean:129:2: declaration uses `sorry`
+2026-10-17T09:12:33.6176140Z warning: FormalConjecturesForMathlib/Combinatorics/Additive/VCDim.lean:133:6: `Equiv.Set.congr` has been deprecated: Use `Set.equivOfEq` instead
+2026-10-17T09:12:33.6176630Z 
+2026-10-17T09:12:33.6195855Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.congr` to `Set.equivOfEq x`).
+2026-10-17T09:12:33.6216212Z error: FormalConjecturesForMathlib/Combinatorics/Additive/VCDim.lean:133:25: Application type mismatch: The argument
+2026-10-17T09:12:33.6255643Z   Equiv.funUnique ?m.24 ?m.25
+2026-10-17T09:12:33.6275619Z has type
+2026-10-17T09:12:33.6276060Z   (?m.24 → ?m.25) ≃ ?m.25
+2026-10-17T09:12:33.6295613Z of sort
+2026-10-17T09:12:33.6295796Z   Sort (max (max 1 (imax ?u.24 ?u.23)) ?u.23)
+2026-10-17T09:12:33.6296043Z but is expected to have type
+2026-10-17T09:12:33.6296237Z   ?m.22 = ?m.23
+2026-10-17T09:12:33.6296422Z of sort `Prop` in the application
+2026-10-17T09:12:33.6296666Z   Equiv.Set.congr (Equiv.funUnique ?m.24 ?m.25)
+2026-10-17T09:12:33.6297237Z warning: FormalConjecturesForMathlib/Combinatorics/Additive/VCDim.lean:135:5: `Equiv.Set.congr` has been deprecated: Use `Set.equivOfEq` instead
+2026-10-17T09:12:33.6297690Z 
+2026-10-17T09:12:33.6298008Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.congr` to `Set.equivOfEq x`).
+2026-10-17T09:12:33.6298710Z error: FormalConjecturesForMathlib/Combinatorics/Additive/VCDim.lean:135:24: Application type mismatch: The argument
+2026-10-17T09:12:33.6299174Z   Equiv.funUnique ?m.54 ?m.55
+2026-10-17T09:12:33.6299372Z has type
+2026-10-17T09:12:33.6299629Z   (?m.54 → ?m.55) ≃ ?m.55
+2026-10-17T09:12:33.6299804Z of sort
+2026-10-17T09:12:33.6299975Z   Sort (max (max 1 (imax ?u.44 ?u.43)) ?u.43)
+2026-10-17T09:12:33.6300212Z but is expected to have type
+2026-10-17T09:12:33.6300406Z   ?m.52 = ?m.53
+2026-10-17T09:12:33.6300581Z of sort `Prop` in the application
+2026-10-17T09:12:33.6300815Z   Equiv.Set.congr (Equiv.funUnique ?m.54 ?m.55)
+2026-10-17T09:12:34.2080376Z ⚠ [8971/8977] Built FormalConjecturesForMathlib.Combinatorics.Digraph.Tournament (1.2s)
+2026-10-17T09:12:34.2097317Z warning: FormalConjecturesForMathlib/Combinatorics/Digraph/Tournament.lean:23:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:12:34.2105591Z 
+2026-10-17T09:12:34.2117016Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:12:34.8164735Z ✔ [8972/8979] Built FormalConjecturesForMathlib.Combinatorics.Hypergraph.Basic (1.2s)
+2026-10-17T09:12:35.2172959Z ✔ [8973/8980] Built FormalConjecturesForMathlib.Combinatorics.SetFamily.PropertyB (949ms)
+2026-10-17T09:12:35.9159749Z ✔ [8974/8981] Built FormalConjecturesForMathlib.Combinatorics.LatinSquare (1.1s)
+2026-10-17T09:12:36.9217156Z ✔ [8975/8982] Built FormalConjecturesForMathlib.Combinatorics.LimitObjects.Graphon (1.8s)
+2026-10-17T09:12:37.3266623Z ✔ [8976/8983] Built FormalConjecturesForMathlib.Combinatorics.Hypergraph.Finite (1.4s)
+2026-10-17T09:12:37.9297217Z ✔ [8977/8983] Built FormalConjecturesForMathlib.Combinatorics.Ramsey (1.0s)
+2026-10-17T09:12:39.0316909Z ✔ [8978/8983] Built FormalConjecturesForMathlib.Combinatorics.LimitObjects.Tournamenton (1.7s)
+2026-10-17T09:12:39.2316879Z ✔ [8979/8983] Built FormalConjecturesForMathlib.Combinatorics.Hypergraph.Uniform (1.2s)
+2026-10-17T09:12:40.2328171Z ✔ [8980/8985] Built FormalConjecturesForMathlib.Combinatorics.SetFamily.Sunflower (1.0s)
+2026-10-17T09:12:40.5367169Z ✔ [8981/8986] Built FormalConjecturesForMathlib.Combinatorics.Hypergraph.Extremal (1.5s)
+2026-10-17T09:12:41.7426978Z ✔ [8982/8986] Built FormalConjecturesForMathlib.Combinatorics.Ramsey.Diagonal (1.6s)
+2026-10-17T09:12:41.9426846Z ✔ [8983/8988] Built FormalConjecturesForMathlib.Data.Set.Triplewise (1.4s)
+2026-10-17T09:12:42.7409744Z ✔ [8984/8989] Built FormalConjecturesForMathlib.Combinatorics.SetTheory.PartitionRelation (994ms)
+2026-10-17T09:12:42.9411837Z ✔ [8985/8990] Built FormalConjecturesForMathlib.Combinatorics.SetFamily.UnionFree (971ms)
+2026-10-17T09:12:43.9452396Z ⚠ [8986/8991] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Balanced (1.0s)
+2026-10-17T09:12:43.9456340Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Balanced.lean:19:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:12:43.9475753Z 
+2026-10-17T09:12:43.9495803Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:12:44.3456431Z ⚠ [8987/8992] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Degrees (1.6s)
+2026-10-17T09:12:44.3467557Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Degrees.lean:24:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:12:44.3489254Z 
+2026-10-17T09:12:44.3505930Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:12:45.3492883Z ✔ [8988/8993] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Circumference (1.0s)
+2026-10-17T09:12:45.4494554Z ✔ [8989/8993] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Chordal (1.5s)
+2026-10-17T09:12:46.6516228Z ✔ [8990/8995] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.AnnihilationNumber (1.3s)
+2026-10-17T09:12:46.7517142Z ✔ [8991/8996] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Clique (1.3s)
+2026-10-17T09:12:47.6587594Z ✔ [8992/8996] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.CompleteGraphEdgeCount (1.0s)
+2026-10-17T09:12:48.1576885Z ✔ [8993/8997] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Connectivity (1.4s)
+2026-10-17T09:12:49.5613457Z ⚠ [8994/8998] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Cvetkovic (1.4s)
+2026-10-17T09:12:49.5646339Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Cvetkovic.lean:20:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:12:49.5665679Z 
+2026-10-17T09:12:49.5696076Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:12:49.9611135Z ✔ [8995/8999] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Coloring.Vertex (2.2s)
+2026-10-17T09:12:50.6633961Z ✔ [8996/9000] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Cycle (1.1s)
+2026-10-17T09:12:50.8635747Z ✔ [8997/9001] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.CycleRank (958ms)
+2026-10-17T09:12:51.6669392Z ✔ [8998/9002] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Decomposition (947ms)
+2026-10-17T09:12:51.7670468Z ✔ [8999/9002] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Degeneracy (926ms)
+2026-10-17T09:12:52.5707736Z ✔ [9000/9005] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.DiamExtra (984ms)
+2026-10-17T09:12:53.0726836Z ✔ [9001/9006] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Domination (1.2s)
+2026-10-17T09:12:54.0736686Z ✔ [9002/9007] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.EdgeColouring (1.0s)
+2026-10-17T09:12:54.7743498Z ✔ [9003/9007] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.VertexDistance (2.2s)
+2026-10-17T09:12:55.2751074Z ✔ [9004/9009] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.FractionalAlpha (1.2s)
+2026-10-17T09:12:55.8756940Z ✔ [9005/9009] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.HarmonicIndex (1.0s)
+2026-10-17T09:12:56.7810101Z ⚠ [9006/9010] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Eccentricity (1.6s)
+2026-10-17T09:12:56.7836240Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Eccentricity.lean:19:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:12:56.7837095Z 
+2026-10-17T09:12:56.7855699Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:12:57.2831311Z ✔ [9007/9011] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.HomDensity (1.4s)
+2026-10-17T09:12:57.7836179Z ✔ [9008/9011] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Hypercube (955ms)
+2026-10-17T09:12:58.4841162Z ⚠ [9009/9013] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Independence (1.2s)
+2026-10-17T09:12:58.4866364Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Independence.lean:19:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:12:58.4867178Z 
+2026-10-17T09:12:58.4885850Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:12:58.9847241Z ⚠ [9010/9016] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Induced (1.2s)
+2026-10-17T09:12:58.9866299Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Induced.lean:19:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:12:58.9885731Z 
+2026-10-17T09:12:58.9885970Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:12:58.9886495Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Induced.lean:45:15: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-17T09:12:58.9887265Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Induced.lean:45:27: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-17T09:12:59.8875562Z ✔ [9011/9017] Built FormalConjecturesForMathlib.Data.Finset.Card (914ms)
+2026-10-17T09:13:00.5894121Z ⚠ [9012/9018] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.LargestInducedTree (2.1s)
+2026-10-17T09:13:00.5916480Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/LargestInducedTree.lean:246:43: `SimpleGraph.girth_le_length` has been deprecated: Use `SimpleGraph.Walk.IsCycle.girth_le_length` instead
+2026-10-17T09:13:00.5935661Z 
+2026-10-17T09:13:00.5936443Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.girth_le_length` to `Walk.IsCycle.girth_le_length x`).
+2026-10-17T09:13:00.5956302Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/LargestInducedTree.lean:409:15: `SimpleGraph.girth_le_length` has been deprecated: Use `SimpleGraph.Walk.IsCycle.girth_le_length` instead
+2026-10-17T09:13:00.5975548Z 
+2026-10-17T09:13:00.5986096Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.girth_le_length` to `Walk.IsCycle.girth_le_length x`).
+2026-10-17T09:13:01.6967953Z ✔ [9013/9018] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Johnson (1.1s)
+2026-10-17T09:13:02.3977138Z ✔ [9014/9019] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.LovaszTheta (2.5s)
+2026-10-17T09:13:03.0996932Z ✔ [9015/9019] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Matching (1.4s)
+2026-10-17T09:13:04.3991730Z ⚠ [9016/9020] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.PathCover (1.2s)
+2026-10-17T09:13:04.4026353Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/PathCover.lean:19:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:13:04.4026934Z 
+2026-10-17T09:13:04.4055775Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:13:04.5007509Z ⚠ [9017/9021] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.InducedTreeNeighborhood (2.1s)
+2026-10-17T09:13:04.5047130Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/InducedTreeNeighborhood.lean:230:15: `SimpleGraph.girth_le_length` has been deprecated: Use `SimpleGraph.Walk.IsCycle.girth_le_length` instead
+2026-10-17T09:13:04.5047855Z 
+2026-10-17T09:13:04.5048257Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.girth_le_length` to `Walk.IsCycle.girth_le_length x`).
+2026-10-17T09:13:04.5049316Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/InducedTreeNeighborhood.lean:259:19: `SimpleGraph.girth_le_length` has been deprecated: Use `SimpleGraph.Walk.IsCycle.girth_le_length` instead
+2026-10-17T09:13:04.5049992Z 
+2026-10-17T09:13:04.5050388Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.girth_le_length` to `Walk.IsCycle.girth_le_length x`).
+2026-10-17T09:13:05.3019185Z ✔ [9018/9022] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Prod (981ms)
+2026-10-17T09:13:05.5021518Z ✔ [9019/9023] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.QuasiLineGraph (976ms)
+2026-10-17T09:13:06.4030673Z ⚠ [9020/9024] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Ramsey (1.0s)
+2026-10-17T09:13:06.4036330Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Ramsey.lean:20:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:13:06.4056331Z 
+2026-10-17T09:13:06.4075753Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:13:06.5037122Z ✖ [9021/9025] Building FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Residue (1.1s)
+2026-10-17T09:13:06.5052988Z trace: .> LEAN_PATH=/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Residue.lean -o /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Residue.olean -i /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Residue.ilean -c /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Residue.c --setup /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Residue.setup.json --json
+2026-10-17T09:13:06.5086255Z error: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Residue.lean:76:2: No goals to be solved
+2026-10-17T09:13:07.5041838Z ✔ [9022/9026] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.SizeRamsey (982ms)
+2026-10-17T09:13:07.6042551Z ✔ [9023/9027] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Saturation (1.3s)
+2026-10-17T09:13:08.7087268Z ✔ [9024/9028] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.SpanningTree (1.2s)
+2026-10-17T09:13:08.7106172Z ✔ [9025/9028] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.SubgraphIsomorphism (1.0s)
+2026-10-17T09:13:09.7106912Z ⚠ [9026/9031] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Temperature (993ms)
+2026-10-17T09:13:09.7108052Z warning: FormalConjecturesForMathlib/Combinatorics/SimpleGraph/Temperature.lean:19:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:13:09.7125593Z 
+2026-10-17T09:13:09.7145895Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:13:10.1093367Z ✔ [9027/9032] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.SzegedIndex (1.4s)
+2026-10-17T09:13:11.1157439Z ✔ [9028/9033] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.WellTotallyDominated (1.0s)
+2026-10-17T09:13:11.3158367Z ✔ [9029/9034] Built FormalConjecturesForMathlib.Geometry.Euclidean (1.6s)
+2026-10-17T09:13:12.2187286Z ✔ [9030/9034] Built FormalConjecturesForMathlib.Combinatorics.YoungDiagram (930ms)
+2026-10-17T09:13:12.7192127Z ✔ [9031/9035] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.WienerIndex (1.6s)
+2026-10-17T09:13:13.6216993Z ✔ [9032/9036] Built FormalConjecturesForMathlib.Computability.AutomaticSequence (958ms)
+2026-10-17T09:13:13.8211015Z ✔ [9033/9038] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.UnitDistancePlaneGraph (1.6s)
+2026-10-17T09:13:14.9247005Z ✔ [9034/9038] Built FormalConjecturesForMathlib.Computability.DFA (1.1s)
+2026-10-17T09:13:15.2257008Z ✔ [9035/9041] Built FormalConjecturesForMathlib.Computability.BitstringEncoding (1.6s)
+2026-10-17T09:13:15.8249447Z ✔ [9036/9041] Built FormalConjecturesForMathlib.Computability.Primrec (921ms)
+2026-10-17T09:13:16.3262797Z ✔ [9037/9043] Built FormalConjecturesForMathlib.Computability.Complexity (1.1s)
+2026-10-17T09:13:16.8277184Z ✔ [9038/9044] Built FormalConjecturesForMathlib.Computability.TuringMachine.PostTuringMachine (1.0s)
+2026-10-17T09:13:16.9306946Z ✔ [9039/9045] Built FormalConjecturesForMathlib.Data.Bool.Basic (591ms)
+2026-10-17T09:13:17.7337826Z ✖ [9040/9045] Building FormalConjecturesForMathlib.Data.Finset.Powerset (953ms)
+2026-10-17T09:13:17.7353135Z trace: .> LEAN_PATH=/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/FormalConjecturesForMathlib/Data/Finset/Powerset.lean -o /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Data/Finset/Powerset.olean -i /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Data/Finset/Powerset.ilean -c /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Data/Finset/Powerset.c --setup /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Data/Finset/Powerset.setup.json --json
+2026-10-17T09:13:17.7371931Z error: FormalConjecturesForMathlib/Data/Finset/Powerset.lean:27:6: `Finset.powersetCard_inter` has already been declared
+2026-10-17T09:13:17.7386137Z error: FormalConjecturesForMathlib/Data/Finset/Powerset.lean:30:14: `Finset.disjoint_powersetCard_powersetCard` has already been declared
+2026-10-17T09:13:18.5337067Z ✖ [9041/9046] Building FormalConjecturesForMathlib.Computability.TuringMachine.BusyBeavers (1.6s)
+2026-10-17T09:13:18.5362293Z trace: .> LEAN_PATH=/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/FormalConjecturesForMathlib/Computability/TuringMachine/BusyBeavers.lean -o /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Computability/TuringMachine/BusyBeavers.olean -i /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Computability/TuringMachine/BusyBeavers.ilean -c /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Computability/TuringMachine/BusyBeavers.c --setup /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Computability/TuringMachine/BusyBeavers.setup.json --json
+2026-10-17T09:13:18.5369701Z warning: FormalConjecturesForMathlib/Computability/TuringMachine/BusyBeavers.lean:227:60: aesop: failed to prove the goal after exhaustive search.
+2026-10-17T09:13:18.5395993Z error: FormalConjecturesForMathlib/Computability/TuringMachine/BusyBeavers.lean:227:42: unsolved goals
+2026-10-17T09:13:18.5405997Z Γ : Type u_3
+2026-10-17T09:13:18.5425865Z Λ : Type u_4
+2026-10-17T09:13:18.5445726Z inst : Inhabited Λ
+2026-10-17T09:13:18.5445936Z inst_1 : Inhabited Γ
+2026-10-17T09:13:18.5465841Z M : Machine Γ Λ
+2026-10-17T09:13:18.5485650Z n k : ℕ
+2026-10-17T09:13:18.5485829Z w : Cfg Γ Λ
+2026-10-17T09:13:18.5485986Z ha' : M.step w = none
+2026-10-17T09:13:18.5486174Z x : M.HaltsAfter (init []) k
+2026-10-17T09:13:18.5486384Z hc : ↑k < ↑n
+2026-10-17T09:13:18.5486552Z h : M.multiStep (init []) n = some w
+2026-10-17T09:13:18.5486804Z ⊢ k < n
+2026-10-17T09:13:18.5487157Z error: FormalConjecturesForMathlib/Computability/TuringMachine/BusyBeavers.lean:226:2: unsolved goals
+2026-10-17T09:13:18.5487571Z case coe
+2026-10-17T09:13:18.5487740Z Γ : Type u_3
+2026-10-17T09:13:18.5487918Z Λ : Type u_4
+2026-10-17T09:13:18.5490826Z inst✝¹ : Inhabited Λ
+2026-10-17T09:13:18.5491122Z inst✝ : Inhabited Γ
+2026-10-17T09:13:18.5491317Z M : Machine Γ Λ
+2026-10-17T09:13:18.5491487Z n : ℕ
+2026-10-17T09:13:18.5491700Z hn : ∃ a, M.multiStep (init []) n = some a
+2026-10-17T09:13:18.5491943Z k a✝ : ℕ
+2026-10-17T09:13:18.5492558Z ha' : ∀ (a : Cfg Γ Λ), M.multiStep (init []) n = some a → M.step a = none
+2026-10-17T09:13:18.5492899Z x✝ : M.HaltsAfter (init []) a✝
+2026-10-17T09:13:18.5493114Z h✝ : k = a✝
+2026-10-17T09:13:18.5493283Z hc : ↑a✝ < ↑n
+2026-10-17T09:13:18.5493508Z ⊢ False
+2026-10-17T09:13:18.9340833Z ✔ [9043/9047] Built FormalConjecturesForMathlib.Data.Finset.Prod (1.1s)
+2026-10-17T09:13:19.4346262Z ⚠ [9044/9048] Built FormalConjecturesForMathlib.Data.Finset.ReciprocalSum (907ms)
+2026-10-17T09:13:19.4347337Z warning: FormalConjecturesForMathlib/Data/Finset/ReciprocalSum.lean:19:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:13:19.4365976Z 
+2026-10-17T09:13:19.4386187Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:13:19.5347085Z ✔ [9045/9049] Built FormalConjecturesForMathlib.Data.Int.IntermediateValue (633ms)
+2026-10-17T09:13:20.0351905Z ✔ [9046/9050] Built FormalConjecturesForMathlib.Data.Int.Order.Basic (577ms)
+2026-10-17T09:13:20.6367000Z ✔ [9047/9051] Built FormalConjecturesForMathlib.Data.Nat.Factorization.Basic (1.1s)
+2026-10-17T09:13:21.2416907Z ✔ [9048/9053] Built FormalConjecturesForMathlib.Data.Nat.Full (1.2s)
+2026-10-17T09:13:21.2446037Z ✔ [9049/9053] Built FormalConjecturesForMathlib.Data.Nat.Init (617ms)
+2026-10-17T09:13:22.4466946Z ✔ [9050/9054] Built FormalConjecturesForMathlib.Data.Nat.MaxPrimeFac (1.2s)
+2026-10-17T09:13:23.2482207Z ✔ [9051/9054] Built FormalConjecturesForMathlib.Data.Nat.Prime.Composite (849ms)
+2026-10-17T09:13:23.4493432Z ⚠ [9052/9058] Built FormalConjecturesForMathlib.Data.Nat.PerfectPower (2.2s)
+2026-10-17T09:13:23.4516295Z warning: FormalConjecturesForMathlib/Data/Nat/PerfectPower.lean:100:14: `Finset.single_le_prod'` has been deprecated: Use `Finset.single_le_prod` instead
+2026-10-17T09:13:23.4535928Z ✖ [9053/9058] Running Batteries.Data.Nat.Gcd
+2026-10-17T09:13:23.4555732Z error: no such file or directory (error code: 2)
+2026-10-17T09:13:23.4575972Z   file: /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/Batteries/Data/Nat/Gcd.lean
+2026-10-17T09:13:23.4585988Z ✖ [9054/9058] Running FormalConjecturesForMathlib.Data.Nat.Prime.Finset
+2026-10-17T09:13:23.4596060Z error: FormalConjecturesForMathlib/Data/Nat/Prime/Finset.lean: bad import 'Batteries.Data.Nat.Gcd'
+2026-10-17T09:13:24.0493762Z ✔ [9055/9059] Built FormalConjecturesForMathlib.Data.Nat.Prime.Defs (783ms)
+2026-10-17T09:13:24.2495563Z ✔ [9056/9060] Built FormalConjecturesForMathlib.Data.Nat.Prime.Infinite (867ms)
+2026-10-17T09:13:25.9542915Z ✔ [9057/9060] Built FormalConjecturesForMathlib.Data.Real.Constants (1.6s)
+2026-10-17T09:13:26.1546340Z ✔ [9058/9062] Built FormalConjecturesForMathlib.Data.Nat.Squarefree (2.1s)
+2026-10-17T09:13:26.8561722Z ✔ [9059/9064] Built FormalConjecturesForMathlib.Data.Real.NearestInt (969ms)
+2026-10-17T09:13:27.0567013Z ✔ [9060/9065] Built FormalConjecturesForMathlib.Data.Set.Interval (885ms)
+2026-10-17T09:13:27.8570568Z ✔ [9061/9066] Built FormalConjecturesForMathlib.Order.Interval.Finset.Basic (997ms)
+2026-10-17T09:13:28.0576853Z ✔ [9062/9067] Built FormalConjecturesForMathlib.Order.Interval.Finset.Nat (948ms)
+2026-10-17T09:13:28.7579439Z ✖ [9063/9068] Building FormalConjecturesForMathlib.Data.Sym.Sym2 (857ms)
+2026-10-17T09:13:28.7603552Z trace: .> LEAN_PATH=/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/FormalConjecturesForMathlib/Data/Sym/Sym2.lean -o /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Data/Sym/Sym2.olean -i /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/Data/Sym/Sym2.ilean -c /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Data/Sym/Sym2.c --setup /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/Data/Sym/Sym2.setup.json --json
+2026-10-17T09:13:28.7626257Z error: FormalConjecturesForMathlib/Data/Sym/Sym2.lean:25:14: `Sym2.fst_out_mk_self` has already been declared
+2026-10-17T09:13:28.7646193Z error: FormalConjecturesForMathlib/Data/Sym/Sym2.lean:26:14: `Sym2.snd_out_mk_self` has already been declared
+2026-10-17T09:13:29.0596786Z ✔ [9064/9068] Built FormalConjecturesForMathlib.Data.ZMod.Fp (1.0s)
+2026-10-17T09:13:29.9605898Z ✔ [9065/9069] Built FormalConjecturesForMathlib.Data.ZMod.PerfectDifferenceSet (892ms)
+2026-10-17T09:13:31.5657391Z ⚠ [9066/9070] Built FormalConjecturesForMathlib.Dynamics.SymbolicDynamics.BlockComplexity (1.6s)
+2026-10-17T09:13:31.5658630Z warning: FormalConjecturesForMathlib/Dynamics/SymbolicDynamics/BlockComplexity.lean:20:0: 'Mathlib.Data.Real.ENatENNReal' has been deprecated: please replace this import by
+2026-10-17T09:13:31.5675749Z 
+2026-10-17T09:13:31.5696119Z import Mathlib.Basic.Real.ENatENNReal
+2026-10-17T09:13:31.6643542Z ✔ [9067/9070] Built FormalConjecturesForMathlib.Data.Set.Density (2.0s)
+2026-10-17T09:13:32.9659224Z ✔ [9068/9072] Built FormalConjecturesForMathlib.FieldTheory.MvRatFunc.Defs (1.2s)
+2026-10-17T09:13:34.1669480Z ⚠ [9069/9075] Built FormalConjecturesForMathlib.Geometry.Group.WordProd (1.2s)
+2026-10-17T09:13:34.1676310Z warning: FormalConjecturesForMathlib/Geometry/Group/WordProd.lean:53:4: `Group.Generators.lift_val_surjective` has been deprecated: Use `Group.Generators.lift_surjective` instead
+2026-10-17T09:13:34.3671928Z ✖ [9070/9076] Building FormalConjecturesForMathlib.FieldTheory.MilnorKTheory (2.9s)
+2026-10-17T09:13:34.3702072Z trace: .> LEAN_PATH=/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/FormalConjecturesForMathlib/FieldTheory/MilnorKTheory.lean -o /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/FieldTheory/MilnorKTheory.olean -i /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/FieldTheory/MilnorKTheory.ilean -c /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/FieldTheory/MilnorKTheory.c --setup /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/FieldTheory/MilnorKTheory.setup.json --json
+2026-10-17T09:13:34.3708895Z error: FormalConjecturesForMathlib/FieldTheory/MilnorKTheory.lean:282:22: unsolved goals
+2026-10-17T09:13:34.3725719Z case steinberg
+2026-10-17T09:13:34.3745680Z F : Type u_1
+2026-10-17T09:13:34.3776235Z inst✝ : Field F
+2026-10-17T09:13:34.3776491Z ℓ : ℕ
+2026-10-17T09:13:34.3786125Z φ : Additive Fˣ →+ ZMod ℓ
+2026-10-17T09:13:34.3805892Z a b : Fˣ
+2026-10-17T09:13:34.3806139Z h✝ : ↑a + ↑b = 1
+2026-10-17T09:13:34.3826118Z ⊢ φ (Additive.ofMul a) • DualNumber.eps * φ (Additive.ofMul b) • DualNumber.eps = 0
+2026-10-17T09:13:35.5767237Z ✔ [9071/9077] Built FormalConjecturesForMathlib.Geometry.Group.WordMetric (1.3s)
+2026-10-17T09:13:35.8786993Z ✔ [9072/9078] Built FormalConjecturesForMathlib.Topology.MetricSpace.GromovProduct (1.4s)
+2026-10-17T09:13:37.0827161Z ✔ [9074/9078] Built FormalConjecturesForMathlib.Topology.MetricSpace.Hyperbolic (1.2s)
+2026-10-17T09:13:37.4831374Z ✔ [9075/9081] Built FormalConjecturesForMathlib.Geometry.Manifold.LieGroupPresentation (1.9s)
+2026-10-17T09:13:38.5977291Z ✔ [9076/9081] Built FormalConjecturesForMathlib.Geometry.Group.Hyperbolic (1.2s)
+2026-10-17T09:13:40.0037987Z ✔ [9077/9082] Built FormalConjecturesForMathlib.Logic.Equiv.Fin.Rotate (1.4s)
+2026-10-17T09:13:42.6349743Z ✔ [9079/9083] Built FormalConjecturesForMathlib.Geometry.«3d» (2.6s)
+2026-10-17T09:13:44.0076992Z ✔ [9080/9084] Built FormalConjecturesForMathlib.GroupTheory.DerivedLength (1.4s)
+2026-10-17T09:13:45.1089494Z ✔ [9081/9085] Built FormalConjecturesForMathlib.GroupTheory.ElementOrders (1.1s)
+2026-10-17T09:13:46.2154741Z ✔ [9082/9087] Built FormalConjecturesForMathlib.Geometry.OrdinaryLines (9.1s)
+2026-10-17T09:13:46.2176451Z ✔ [9083/9087] Built FormalConjecturesForMathlib.GroupTheory.GroupAction.InvolutionFixedPoints (1.1s)
+2026-10-17T09:13:47.2189167Z ✔ [9084/9089] Built FormalConjecturesForMathlib.GroupTheory.GroupAction.MovedPoints (1.0s)
+2026-10-17T09:13:47.2206535Z ✔ [9085/9089] Built FormalConjecturesForMathlib.GroupTheory.GroupAction.OrbitCounts (1.0s)
+2026-10-17T09:13:48.3211400Z ✔ [9086/9091] Built FormalConjecturesForMathlib.GroupTheory.GroupAction.TransitivityDegree (1.1s)
+2026-10-17T09:13:48.3246535Z ✔ [9087/9091] Built FormalConjecturesForMathlib.GroupTheory.PrimeDivisors (1.1s)
+2026-10-17T09:13:49.3306967Z ✔ [9088/9093] Built FormalConjecturesForMathlib.GroupTheory.RationalClasses (989ms)
+2026-10-17T09:13:49.3307672Z ✔ [9089/9093] Built FormalConjecturesForMathlib.GroupTheory.SubgroupCounts (987ms)
+2026-10-17T09:13:50.4317074Z ✔ [9090/9094] Built FormalConjecturesForMathlib.GroupTheory.Torsion (1.1s)
+2026-10-17T09:13:50.8320204Z ✔ [9091/9095] Built FormalConjecturesForMathlib.Lean.Elab.InfoTree.Util (372ms)
+2026-10-17T09:13:51.4347132Z ✔ [9092/9096] Built FormalConjecturesForMathlib.InformationTheory.FiniteEntropy (2.1s)
+2026-10-17T09:13:52.0366947Z ✔ [9093/9097] Built FormalConjecturesForMathlib.LinearAlgebra.AffineSpace.Simplex.Basic (1.2s)
+2026-10-17T09:13:52.7397135Z ✔ [9094/9097] Built FormalConjecturesForMathlib.LinearAlgebra.GeneralLinearGroup (1.3s)
+2026-10-17T09:13:53.5400154Z ✔ [9095/9100] Built FormalConjecturesForMathlib.LinearAlgebra.QuadraticForm.UInvariant (1.5s)
+2026-10-17T09:13:54.0404973Z ✔ [9096/9102] Built FormalConjecturesForMathlib.LinearAlgebra.SpecialLinearGroup (1.3s)
+2026-10-17T09:13:54.7420379Z ⚠ [9097/9103] Built FormalConjecturesForMathlib.ModelTheory.Encoding (1.2s)
+2026-10-17T09:13:54.7428503Z warning: FormalConjecturesForMathlib/ModelTheory/Encoding.lean:123:69: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-17T09:13:55.2424884Z ✔ [9098/9103] Built FormalConjecturesForMathlib.NumberTheory.AdditionChain (1.2s)
+2026-10-17T09:13:55.4429280Z ✔ [9099/9104] Built FormalConjecturesForMathlib.NumberTheory.AdditiveComplement (778ms)
+2026-10-17T09:13:56.6445132Z ✔ [9100/9104] Built FormalConjecturesForMathlib.ModelTheory.Decidability (1.2s)
+2026-10-17T09:13:56.7446364Z ✔ [9101/9105] Built FormalConjecturesForMathlib.ModelTheory.Real (1.5s)
+2026-10-17T09:13:57.8476853Z ✔ [9102/9106] Built FormalConjecturesForMathlib.NumberTheory.AlmostPrime (1.1s)
+2026-10-17T09:13:58.3480153Z ✔ [9103/9106] Built FormalConjecturesForMathlib.NumberTheory.AdditivelyComplete (1.7s)
+2026-10-17T09:13:58.9501847Z ✔ [9104/9108] Built FormalConjecturesForMathlib.NumberTheory.Amicable (1.1s)
+2026-10-17T09:14:00.0585055Z ✔ [9105/9108] Built FormalConjecturesForMathlib.NumberTheory.NormalNumber (1.1s)
+2026-10-17T09:14:00.2597127Z ⚠ [9106/9112] Built FormalConjecturesForMathlib.NumberTheory.ArithmeticFunction.PrimeSeries (1.9s)
+2026-10-17T09:14:00.2616388Z warning: FormalConjecturesForMathlib/NumberTheory/ArithmeticFunction/PrimeSeries.lean:59:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-17T09:14:01.0612545Z ✔ [9107/9113] Built FormalConjecturesForMathlib.NumberTheory.AutomaticNumber (1.0s)
+2026-10-17T09:14:05.5724363Z ✔ [9108/9114] Built FormalConjecturesForMathlib.NumberTheory.AutomorphicForm.BorelJacquet.Subgroups (4.4s)
+2026-10-17T09:14:06.9737151Z ⚠ [9109/9115] Built FormalConjecturesForMathlib.NumberTheory.BeurlingPrimes (1.4s)
+2026-10-17T09:14:06.9738313Z warning: FormalConjecturesForMathlib/NumberTheory/BeurlingPrimes.lean:19:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:14:06.9755617Z 
+2026-10-17T09:14:06.9775692Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:14:07.4731843Z ⚠ [9110/9116] Built FormalConjecturesForMathlib.NumberTheory.AutomorphicForm.BorelJacquet.LieDeriv (7.2s)
+2026-10-17T09:14:07.4733382Z warning: FormalConjecturesForMathlib/NumberTheory/AutomorphicForm/BorelJacquet/LieDeriv.lean:183:16: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-17T09:14:07.4734683Z warning: FormalConjecturesForMathlib/NumberTheory/AutomorphicForm/BorelJacquet/LieDeriv.lean:189:16: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-17T09:14:08.4753058Z ✔ [9111/9117] Built FormalConjecturesForMathlib.NumberTheory.CoveringSystem (976ms)
+2026-10-17T09:14:10.5797063Z ✔ [9112/9117] Built FormalConjecturesForMathlib.NumberTheory.Carmichael (3.7s)
+2026-10-17T09:14:11.5842441Z ✔ [9113/9118] Built FormalConjecturesForMathlib.NumberTheory.DiophantineApproximation.ZNumber (1.0s)
+2026-10-17T09:14:12.7885558Z ✔ [9114/9119] Built FormalConjecturesForMathlib.NumberTheory.DirichletCharacter.Basic (1.1s)
+2026-10-17T09:14:13.8895949Z ✔ [9115/9120] Built FormalConjecturesForMathlib.NumberTheory.Divisors (1.2s)
+2026-10-17T09:14:15.4946406Z ✔ [9116/9121] Built FormalConjecturesForMathlib.NumberTheory.ExpansionEntropy (1.6s)
+2026-10-17T09:14:16.5966934Z ✔ [9117/9122] Built FormalConjecturesForMathlib.NumberTheory.Harmonic (1.1s)
+2026-10-17T09:14:17.5964798Z ✔ [9118/9123] Built FormalConjecturesForMathlib.NumberTheory.AutomorphicForm.BorelJacquet.CenterAction (9.2s)
+2026-10-17T09:14:17.9978993Z ✔ [9119/9124] Built FormalConjecturesForMathlib.NumberTheory.Lacunary (1.4s)
+2026-10-17T09:14:18.9005552Z ✔ [9120/9124] Built FormalConjecturesForMathlib.NumberTheory.LegendreSymbol.Basic (1.3s)
+2026-10-17T09:14:20.5047061Z ✔ [9121/9125] Built FormalConjecturesForMathlib.NumberTheory.MultiplicativelyIndependent (1.6s)
+2026-10-17T09:14:21.9065020Z ✔ [9122/9126] Built FormalConjecturesForMathlib.NumberTheory.NumberField.FundamentalDiscriminant (1.4s)
+2026-10-17T09:14:23.1107550Z ✔ [9123/9127] Built FormalConjecturesForMathlib.NumberTheory.AutomorphicForm.BorelJacquet (5.1s)
+2026-10-17T09:14:23.5111548Z ✔ [9124/9128] Built FormalConjecturesForMathlib.NumberTheory.NumberField.Quadratic (1.5s)
+2026-10-17T09:14:24.4125087Z ✔ [9125/9129] Built FormalConjecturesForMathlib.NumberTheory.PracticalNumbers (939ms)
+2026-10-17T09:14:24.9128521Z ✔ [9126/9130] Built FormalConjecturesForMathlib.NumberTheory.PisotNumber (1.7s)
+2026-10-17T09:14:25.3132079Z ✔ [9127/9131] Built FormalConjecturesForMathlib.NumberTheory.PrimeGap (929ms)
+2026-10-17T09:14:26.0141869Z ✔ [9128/9132] Built FormalConjecturesForMathlib.NumberTheory.Primitive (1.1s)
+2026-10-17T09:14:26.2146772Z ✔ [9129/9133] Built FormalConjecturesForMathlib.NumberTheory.SierpinskiNumber (844ms)
+2026-10-17T09:14:27.4162232Z ✔ [9130/9134] Built FormalConjecturesForMathlib.NumberTheory.SmoothScale (1.4s)
+2026-10-17T09:14:28.1168867Z ✔ [9131/9135] Built FormalConjecturesForMathlib.NumberTheory.WallSunSunPrimes (1.9s)
+2026-10-17T09:14:28.3188912Z ✔ [9132/9136] Built FormalConjecturesForMathlib.NumberTheory.WieferichPrime (969ms)
+2026-10-17T09:14:28.8193666Z ✔ [9133/9137] Built FormalConjecturesForMathlib.Order.Bounds.Basic (720ms)
+2026-10-17T09:14:29.0195886Z ✔ [9134/9138] Built FormalConjecturesForMathlib.Order.Nat (666ms)
+2026-10-17T09:14:29.7201788Z ⚠ [9135/9138] Built FormalConjecturesForMathlib.Order.Unimodular (889ms)
+2026-10-17T09:14:29.7226428Z warning: FormalConjecturesForMathlib/Order/Unimodular.lean:19:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:14:29.7227202Z 
+2026-10-17T09:14:29.7245850Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:14:30.0204462Z ⚠ [9136/9140] Built FormalConjecturesForMathlib.Probability.FiniteMethod (1.0s)
+2026-10-17T09:14:30.0217255Z warning: FormalConjecturesForMathlib/Probability/FiniteMethod.lean:20:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-17T09:14:30.0235784Z 
+2026-10-17T09:14:30.0255923Z import Mathlib.Basic.Real.Basic
+2026-10-17T09:14:31.1214654Z ⚠ [9137/9142] Built FormalConjecturesForMathlib.RepresentationTheory.CharacterDegree (1.4s)
+2026-10-17T09:14:31.1236505Z warning: FormalConjecturesForMathlib/RepresentationTheory/CharacterDegree.lean:18:0: 'Mathlib.Data.Complex.Basic' has been deprecated: please replace this import by
+2026-10-17T09:14:31.1255568Z 
+2026-10-17T09:14:31.1275854Z import Mathlib.Basic.Complex.Basic
+2026-10-17T09:14:31.5246870Z ✔ [9138/9145] Built FormalConjecturesForMathlib.RingTheory.Bialgebra.TrivialModule (1.4s)
+2026-10-17T09:14:32.5276879Z ✔ [9139/9145] Built FormalConjecturesForMathlib.RingTheory.SystemOfParameters (1.4s)
+2026-10-17T09:14:33.6306792Z ✔ [9140/9146] Built FormalConjecturesForMathlib.RingTheory.Ideal.Defs (1.1s)
+2026-10-17T09:14:34.2295953Z ✔ [9141/9147] Built FormalConjecturesForMathlib.RingTheory.Bialgebra.Cohomology (2.8s)
+2026-10-17T09:14:35.3334774Z ✔ [9142/9148] Built FormalConjecturesForMathlib.RingTheory.CohenMacaulayModule (1.7s)
+2026-10-17T09:14:35.3356350Z ✔ [9143/9148] Built FormalConjecturesForMathlib.RingTheory.Ideal.Basic (1.1s)
+2026-10-17T09:14:36.7347552Z ✖ [9144/9149] Building FormalConjecturesForMathlib.RingTheory.MvPolynomial.LexPlusPowers (1.4s)
+2026-10-17T09:14:36.7363149Z trace: .> LEAN_PATH=/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/FormalConjecturesForMathlib/RingTheory/MvPolynomial/LexPlusPowers.lean -o /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/RingTheory/MvPolynomial/LexPlusPowers.olean -i /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/RingTheory/MvPolynomial/LexPlusPowers.ilean -c /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/RingTheory/MvPolynomial/LexPlusPowers.c --setup /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/RingTheory/MvPolynomial/LexPlusPowers.setup.json --json
+2026-10-17T09:14:36.7386017Z error: FormalConjecturesForMathlib/RingTheory/MvPolynomial/LexPlusPowers.lean:68:64: failed to synthesize instance of type class
+2026-10-17T09:14:36.7405900Z   LT (Lex (Fin n →₀ ℕ))
+2026-10-17T09:14:36.7425609Z 
+2026-10-17T09:14:36.7426040Z Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+2026-10-17T09:14:36.7427089Z warning: FormalConjecturesForMathlib/RingTheory/MvPolynomial/LexPlusPowers.lean:87:8: declaration uses `sorry`
+2026-10-17T09:14:36.9356975Z ✔ [9145/9149] Built FormalConjecturesForMathlib.RingTheory.IntersectionMultiplicity (1.6s)
+2026-10-17T09:14:37.8377016Z ✔ [9146/9150] Built FormalConjecturesForMathlib.RingTheory.Ideal.Maximal (1.1s)
+2026-10-17T09:14:38.0373023Z ✔ [9147/9151] Built FormalConjecturesForMathlib.RingTheory.Noetherian.Defs (1.1s)
+2026-10-17T09:14:38.9417114Z ✖ [9148/9152] Building FormalConjecturesForMathlib.SetTheory.Cardinal.Arithmetic (940ms)
+2026-10-17T09:14:38.9454080Z trace: .> LEAN_PATH=/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean:/home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/FormalConjecturesForMathlib/SetTheory/Cardinal/Arithmetic.lean -o /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/SetTheory/Cardinal/Arithmetic.olean -i /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/lib/lean/FormalConjecturesForMathlib/SetTheory/Cardinal/Arithmetic.ilean -c /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/SetTheory/Cardinal/Arithmetic.c --setup /home/runner/work/ci-test-sandbox/ci-test-sandbox/lean/.lake/packages/formal_conjectures/.lake/build/ir/FormalConjecturesForMathlib/SetTheory/Cardinal/Arithmetic.setup.json --json
+2026-10-17T09:14:38.9460947Z error: FormalConjecturesForMathlib/SetTheory/Cardinal/Arithmetic.lean:25:14: `Cardinal.aleph0_le_mk_set` has already been declared
+2026-10-17T09:14:38.9496317Z error: FormalConjecturesForMathlib/SetTheory/Cardinal/Arithmetic.lean:29:6: `Cardinal.mk_sdiff_eq_left'` has already been declared
+2026-10-17T09:14:38.9497436Z error: FormalConjecturesForMathlib/SetTheory/Cardinal/Arithmetic.lean:35:6: `Cardinal.mk_sdiff_eq_left` has already been declared
+2026-10-17T09:14:38.9516197Z error: FormalConjecturesForMathlib/SetTheory/Cardinal/Arithmetic.lean:39:6: `Cardinal.mk_sdiff_eq_left_of_finite'` has already been declared
+2026-10-17T09:14:38.9536071Z error: FormalConjecturesForMathlib/SetTheory/Cardinal/Arithmetic.lean:43:6: `Cardinal.mk_sdiff_eq_left_of_finite` has already been declared
+2026-10-17T09:14:39.6421171Z ✔ [9149/9153] Built FormalConjecturesForMathlib.RingTheory.Valuation.LocalUniformization (1.8s)
+2026-10-17T09:14:39.9424270Z ✔ [9150/9154] Built FormalConjecturesForMathlib.SetTheory.Cardinal.Continuum (947ms)
+2026-10-17T09:14:40.4418706Z ✔ [9151/9155] Built FormalConjecturesForMathlib.Tactic.Linter.Term (575ms)
+2026-10-17T09:14:40.6420649Z ✔ [9152/9156] Built FormalConjecturesForMathlib.SetTheory.Cardinal.SimpleGraph (1.0s)
+2026-10-17T09:14:41.4461359Z ✔ [9153/9157] Built FormalConjecturesForMathlib.Topology.AbsoluteNeighborhoodRetract (944ms)
+2026-10-17T09:14:41.7463885Z ✔ [9154/9158] Built FormalConjecturesForMathlib.Topology.Algebra.InfiniteSum.Real (1.2s)
+2026-10-17T09:14:42.6497139Z ✔ [9155/9159] Built FormalConjecturesForMathlib.Topology.CardinalInvariants (1.2s)
+2026-10-17T09:14:42.7480002Z ✔ [9156/9160] Built FormalConjecturesForMathlib.Topology.Discrete (995ms)
+2026-10-17T09:14:43.5516971Z ✔ [9157/9162] Built FormalConjecturesForMathlib.Topology.GDelta (940ms)
+2026-10-17T09:14:43.6516115Z ✔ [9158/9162] Built FormalConjecturesForMathlib.Topology.Homogeneous (884ms)
+2026-10-17T09:14:43.6520434Z ✖ [9159/9162] Running FormalConjecturesForMathlib
+2026-10-17T09:14:43.6521107Z error: FormalConjecturesForMathlib.lean: bad import 'FormalConjecturesForMathlib.Data.Nat.Prime.Finset'
+2026-10-17T09:14:44.5556841Z ✔ [9160/9166] Built FormalConjecturesForMathlib.Topology.LebesgueCoveringDimension (975ms)
+2026-10-17T09:14:44.7553285Z ✔ [9161/9169] Built FormalConjecturesForMathlib.Topology.MetricSpace.MetricSeparated (1.1s)
+2026-10-17T09:14:45.1568569Z ✔ [9162/9170] Built FormalConjecturesUtil.Linters.CopyrightLinter (435ms)
+2026-10-17T09:14:45.6597056Z ✔ [9163/9172] Built FormalConjecturesUtil.Linters.ExistsImplicationLinter (494ms)
+2026-10-17T09:14:46.1614756Z ✔ [9164/9173] Built FormalConjecturesUtil.Attributes.AMS (1.6s)
+2026-10-17T09:14:46.5626713Z ✔ [9165/9174] Built FormalConjecturesUtil.Linters.ImportLinter (855ms)
+2026-10-17T09:14:46.9618258Z ✔ [9166/9174] Built FormalConjecturesUtil.Linters.LatexDocstringLinter (756ms)
+2026-10-17T09:14:47.5674078Z ✔ [9168/9178] Built FormalConjecturesUtil.Linters.ModuleDocstringLinter (674ms)
+2026-10-17T09:14:48.1697129Z ✔ [9169/9178] Built FormalConjecturesUtil.Linters.NamespaceLinter (550ms)
+2026-10-17T09:14:48.1700167Z ✖ [9170/9178] Running FormalConjecturesUtil
+2026-10-17T09:14:48.1736014Z error: FormalConjecturesUtil.lean: bad import 'FormalConjecturesForMathlib'
+2026-10-17T09:14:48.1756040Z ✖ [9171/9178] Running Challenge
+2026-10-17T09:14:48.1785974Z error: Challenge.lean: bad import 'FormalConjecturesUtil'
+2026-10-17T09:14:48.7707179Z ✔ [9173/9178] Built FormalConjecturesUtil.Linters.StubLinter (598ms)
+2026-10-17T09:14:49.1728679Z ✔ [9174/9178] Built FormalConjecturesUtil.Attributes.Basic (2.7s)
+2026-10-17T09:14:50.5769294Z ✔ [9175/9178] Built FormalConjecturesUtil.Linters.CategoryLinter (1.4s)
+2026-10-17T09:14:50.5776298Z ✔ [9176/9178] Built FormalConjecturesUtil.Linters.FormalProofLinter (1.4s)
+2026-10-17T09:14:51.5804751Z ✔ [9177/9178] Built FormalConjecturesUtil.Linters.CategoryDocstringLinter (988ms)
+2026-10-17T09:14:51.7808902Z ✔ [9178/9178] Built FormalConjecturesUtil.Linters.AMSLinter (1.2s)
+2026-10-17T09:14:51.7816066Z Some required targets logged failures:
+2026-10-17T09:14:51.7850454Z - FormalConjecturesForMathlib.Algebra.Polynomial.HasseDeriv
+2026-10-17T09:14:51.7850976Z - FormalConjecturesForMathlib.FieldTheory.AbsoluteGaloisGroup
+2026-10-17T09:14:51.7851444Z - FormalConjecturesForMathlib.Combinatorics.Additive.VCDim
+2026-10-17T09:14:51.7851906Z - FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Residue
+2026-10-17T09:14:51.7852385Z - FormalConjecturesForMathlib.Data.Finset.Powerset
+2026-10-17T09:14:51.7852845Z - FormalConjecturesForMathlib.Computability.TuringMachine.BusyBeavers
+2026-10-17T09:14:51.7853259Z - Batteries.Data.Nat.Gcd
+2026-10-17T09:14:51.7853585Z - FormalConjecturesForMathlib.Data.Nat.Prime.Finset
+2026-10-17T09:14:51.7853959Z - FormalConjecturesForMathlib.Data.Sym.Sym2
+2026-10-17T09:14:51.7854340Z - FormalConjecturesForMathlib.FieldTheory.MilnorKTheory
+2026-10-17T09:14:51.7854799Z - FormalConjecturesForMathlib.RingTheory.MvPolynomial.LexPlusPowers
+2026-10-17T09:14:51.7855293Z - FormalConjecturesForMathlib.SetTheory.Cardinal.Arithmetic
+2026-10-17T09:14:51.7855780Z - FormalConjecturesForMathlib
+2026-10-17T09:14:51.7856068Z - FormalConjecturesUtil
+2026-10-17T09:14:51.7856330Z - Challenge
+2026-10-17T09:14:51.7856572Z error: build failed
+2026-10-17T09:14:51.9756779Z ##[error]Process completed with exit code 1.
+2026-10-17T09:14:51.9838691Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-17T09:14:51.9839051Z with:
+2026-10-17T09:14:51.9839176Z   name: fc-challenge-39019834584-1
+2026-10-17T09:14:51.9839328Z   path: fc-challenge-receipt/
+2026-10-17T09:14:51.9839467Z   retention-days: 90
+2026-10-17T09:14:51.9839590Z   if-no-files-found: warn
+2026-10-17T09:14:51.9839718Z   compression-level: 6
+2026-10-17T09:14:51.9839837Z   overwrite: false
+2026-10-17T09:14:51.9839954Z   include-hidden-files: false
+2026-10-17T09:14:51.9840086Z ##[endgroup]
+2026-10-17T09:14:52.2490227Z (node:5063) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-17T09:14:52.2491010Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-17T09:14:52.2553768Z With the provided path, there will be 10 files uploaded
+2026-10-17T09:14:52.2557002Z Artifact name is valid!
+2026-10-17T09:14:52.2557983Z Root directory input is valid!
+2026-10-17T09:14:52.6271727Z Beginning upload of artifact content to blob storage
+2026-10-17T09:14:52.6712896Z (node:5063) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-17T09:14:53.1330712Z Uploaded bytes 151432
+2026-10-17T09:14:53.2053134Z Finished uploading artifact content to blob storage!
+2026-10-17T09:14:53.2053733Z SHA256 digest of uploaded artifact zip is 87183f6d2751309c8fe2d66ce35f77977c648d48fb9b96b4066e3865c54cc8c5
+2026-10-17T09:14:53.2056285Z Finalizing artifact upload
+2026-10-17T09:14:53.4958139Z Artifact fc-challenge-39019834584-1.zip successfully finalized. Artifact ID 12095579601
+2026-10-17T09:14:53.4958808Z Artifact fc-challenge-39019834584-1 has been successfully uploaded! Final size is 151432 bytes. Artifact ID is 12095579601
+2026-10-17T09:14:53.4959582Z Artifact download URL: https://github.com/KitaKen1/ci-test-sandbox/actions/runs/39019834584/artifacts/12095579601
+2026-10-17T09:14:53.5196358Z Post job cleanup.
+2026-10-17T09:14:53.5797131Z [command]/usr/bin/git version
+2026-10-17T09:14:53.5835236Z git version 2.55.0
+2026-10-17T09:14:53.5862012Z Temporarily overriding HOME='/home/runner/work/_temp/52eb5670-a2e1-4635-887d-d252f39b9dc6' before making global git config changes
+2026-10-17T09:14:53.5863975Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-17T09:14:53.5865991Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ci-test-sandbox/ci-test-sandbox
+2026-10-17T09:14:53.5897168Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T09:14:53.5926053Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T09:14:53.6154175Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T09:14:53.6173786Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T09:14:53.6354741Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T09:14:53.6379100Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T09:14:53.6671484Z Cleaning up orphan processes
+2026-10-17T09:14:53.6924800Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,120 @@
+E8Leech/E8Coordinates.lean contains a coordinate table and finite-certificate pattern
+adapted from TauCetiProject/TauCeti under the Apache License 2.0 (included in licenses/TauCeti-Apache-2.0.txt).
+Copyright (c) 2026 The Tau Ceti contributors.
+Upstream commit: 98962476aaba1de05b4a883df5af0562247cb501
+Upstream path: TauCeti/LinearAlgebra/RootSystem/E8Coordinates.lean
+Changes: local namespace, explicit Gram matrix, doubled-coordinate E8 set,
+membership lemmas, and compatibility with Lean 4.33.1 without the DynkinType dependency.
+
+Files under research/sources are public upstream source snapshots for research.
+They are not imported by the local Lean library. Original license notices are preserved;
+these snapshots are not a claim that the upstream projects have been built or axiom-audited.
+
+E8Leech/CountingKernel.lean adapts the simple-function approximation argument from
+Mathlib/Probability/Kernel/MeasurableLIntegral.lean, copyright (c) 2023 Rémy Degenne.
+Upstream mathlib commit: 0df444a360eaa60ab8c11dca51a86af692955474.
+Changes: pointwise finite fibers instead of the global IsFiniteKernel hypothesis;
+compact counting-kernel exhaustion and parameter-dependent count queries.
+Apache License 2.0 is included in licenses/Mathlib-Apache-2.0.txt.
+Sparse pinned Mathlib output files were built locally from read-only sources;
+no upstream source changes are made by the support-build script.
+
+LeanLevy selected-source snapshots are at fixed commit
+7e73fd9b23ad52956ec2756a815889a783131ce4; its MIT LICENSE is preserved in
+research/sources/slink/LeanLevy/LICENSE. These are research references only,
+not imported or claimed to be transitively axiom-audited.
+
+E8Leech/E8Lattice.lean adapts the lower triangular E8 basis and determinant/basis
+proof pattern from Sphere-Packing-Lean, copyright (c) 2025 Bhavik Mehta, Gareth Ma.
+Upstream commit: cbe754e5b699945fd391e6398e6293e9fafa16ec.
+Upstream path: SpherePacking/Basic/E8.lean.
+Changes: doubled integer numerator table; explicit inverse integer coefficients;
+identification with the local congruence set; local Euclidean basis and covolume proof.
+Apache License 2.0 is included in licenses/Sphere-Packing-Apache-2.0.txt.
+The upstream main theorem and unfinished LP proofs are not imported.
+
+E8Leech/Golay.lean adapts the explicit Golay generator block, message equivalence,
+weight table, and sixteen split kernel certificates from TauCetiProject/TauCeti.
+Copyright (c) 2026 The Tau Ceti contributors.
+Upstream commit: 98962476aaba1de05b4a883df5af0562247cb501.
+Upstream path: TauCeti/InformationTheory/Coding/Binary/Golay/Basic.lean.
+Changes: local linear-map range in place of upstream LinearCode; local encoding;
+Lean 4.33.1 compatibility; no Construction A, weight-enumerator or TypeII imports.
+Apache License 2.0 is included in licenses/TauCeti-Apache-2.0.txt.
+LeechCoordinates and LeechGeometry use the parity/Golay/mod-eight construction
+described by Conway, Goodman-Strauss and Sloane, Recent Progress in Sphere Packing,
+p. 32, https://strauss.hosted.uark.edu/papers/sphere.pdf, with sqrt(8) normalization.
+
+E8Leech/LeechBasis.lean reuses the determinant-to-basis and volume-transfer
+proof pattern from the above Sphere-Packing-Lean attribution, through E8Lattice.lean.
+The Leech reconstruction, upper-triangular determinant and odd-row replacement
+proofs are local; the external candidate generator is not a proof input.
+
+Historical, retired override:
+research/mathlib-patches/Mathlib/Analysis/Fourier/FourierTransform.lean is an
+explicit local copy and former proof-only override of the pinned Mathlib module.
+Copyright (c) 2023 David Loeffler; Apache License 2.0, retained in the file and
+licenses/Mathlib-Apache-2.0.txt. Upstream revision:
+0df444a360eaa60ab8c11dca51a86af692955474.
+Changes: only the norm-domination subproof of
+VectorFourier.integral_fourierIntegral_swap. Explicit real norm nonnegativity
+and Circle.norm_smul replace convert!/simp; definitions and statement types
+are unchanged. Original source is read-only. The diff, both source hashes,
+reproduction commands, successful compile and separate axiom/olean hash audit
+are recorded in research/mathlib-patches and research/fourier-support-audit-20261009.json.
+This is not an unmodified clean dependency source build. SpectralFiniteForms
+and SpectralPairForms contain local proofs using this pinned Fourier API;
+TauCeti's reviewed positive-definite API is a research reference, not an import.
+
+Current dependency status (2026-10-09): the preceding historical override is
+retired and not used in the current Lean library. The unmodified pinned original
+FourierTransform source compiles with upstream autoImplicit=false and
+maxSynthPendingDepth=3 settings. Source/olean and axiom audit records are in
+research/mathlib-support-fourier-upstream-20261009.json and
+research/fourier-upstream-support-audit-20261009.json. Unchanged read-only upstream
+sources also supply Schwartz support and Int.Star, with separate hash records.
+This remains pinned-cache incremental verification, not a clean Lake/CI build.
+
+E8Leech/ModularCoefficientBounds.lean and
+E8Leech/ExponentialPolynomialCertificates.lean independently prove the mathematical
+inequalities (60), (61), and (41), with coefficients from Seewoo Lee,
+Inequalities involving polynomials and quasimodular forms, arXiv:2602.10536v1,
+https://arxiv.org/html/2602.10536v1, Lemma 3.5 and Appendix A.
+The original posqmf proofs were read and individually built as temporary
+references at commit 6641dda593fa75db6c7b5e5023a890bdcb6266a9. They are not copied
+wholesale into this public library. No repository licence was confirmed.
+See research/posqmf-source-audit-20261009.json. The local Taylor-series proof,
+coarse exponential bound and integer checker are independent implementations.
+No Ramanujan-identity axiom or unfinished analytic-family identification is
+imported from the reference repository.
+
+scripts/ReplayProjectOnce.lean adapts the module-data loading routine from
+Lean 4.33.1 src/LeanChecker.lean, copyright (c) 2023 Kim Morrison.
+Original authors: Kim Morrison and Sebastian Ullrich; Apache License 2.0.
+The same license terms are included in licenses/Mathlib-Apache-2.0.txt.
+Changes: collect all selected project declarations, load their external imports
+once, reject preloaded project declarations, then call Lean.Environment.replay.
+It uses Lean's own kernel, not an independent checker. The exact installed
+upstream source hash and scope are in research/leanchecker-scope-review-20261010.json.
+
+E8Leech/ThetaFunctions.lean and E8Leech/ThetaIdentities.lean follow the mathematical route
+of SpherePacking/ModularForms/JacobiTheta.lean in math-inc/Sphere-Packing-Lean
+(commit 1e98fb493088948ca7bbf47d7faed49cc5b39fc4, source SHA256
+859675e58ea09af4d4d06bf45e359cddbc9888ef4d58107b52bebd03847f6a48) and of its LeanPool port
+LeanPool/LeanModularForms/Modularforms/JacobiTheta.lean (copyright (c) 2026 Chris Birkbeck,
+commit c4d20f0eae6bf3d2577dbea91749d2a080dbbf3c, source SHA256
+ee4eb6e4dc6012cdd77b150e5dddc5a50bb19642aa6e8ee1368792496c92d03a), both Apache License 2.0
+(licenses/Sphere-Packing-Apache-2.0.txt). No upstream file is imported or copied verbatim.
+Changes: pointwise statements on the pinned Mathlib, branch-free fourth-power inversion laws,
+a generic level-one cusp-form constructor from the S and T laws, Tannery majorants
+‖jacobiTheta₂_term n z I‖, and new lambda/imaginary-axis corollaries.
+
+SpherePacking/ contains ported files of Sphere-Packing-Lean (Math, Inc. version),
+copyright held by the authors named in each file header.
+Upstream: https://github.com/math-inc/Sphere-Packing-Lean
+Upstream commit: 1e98fb493088948ca7bbf47d7faed49cc5b39fc4 (Lean v4.28.0 / Mathlib v4.28.0).
+Apache License 2.0 is included in licenses/Sphere-Packing-Apache-2.0.txt.
+Changes: port to Lean 4.33.1 and this project's pinned Mathlib; each modified file carries a
+modification line; the kinds of changes and the per-file list are in SpherePacking/PORTING.txt.
+No ported statement is weakened. E8Leech/SPLPackingDensity.lean uses the ported periodic-packing
+density formula; it does not use any packing optimality theorem.
