@@ -1,0 +1,105 @@
+{
+  "repository": "KitaKen1/riesz-energy-spheres",
+  "run_id": 39173822333,
+  "run_attempt": 1,
+  "proof_commit": "56b3016f2a3ce703ab7f0486dfbc0879742aeddf",
+  "tested_commit": "56b3016f2a3ce703ab7f0486dfbc0879742aeddf",
+  "archive_commit": null,
+  "run_url": "https://github.com/KitaKen1/riesz-energy-spheres/actions/runs/39173822333",
+  "conclusion": "success",
+  "artifacts": [
+    {
+      "id": 12172480918,
+      "name": "comparator-S24-39173822333-1",
+      "file": "artifacts/12172480918-comparator-S24-39173822333-1.zip",
+      "github_digest": "sha256:e5f9570c79eef660a3ba2e4576117f5364a65a2dd6dde44c22f4e36e3d363f33",
+      "sha256": "e5f9570c79eef660a3ba2e4576117f5364a65a2dd6dde44c22f4e36e3d363f33",
+      "digest_matches": true,
+      "expires_at": "2027-01-16T22:48:26Z"
+    },
+    {
+      "id": 12167531973,
+      "name": "comparator-S2-39173822333-1",
+      "file": "artifacts/12167531973-comparator-S2-39173822333-1.zip",
+      "github_digest": "sha256:3b3c249ab907940f7f5d25503589e28470854397ca38dfe42c8a6654518e50db",
+      "sha256": "3b3c249ab907940f7f5d25503589e28470854397ca38dfe42c8a6654518e50db",
+      "digest_matches": true,
+      "expires_at": "2027-01-16T22:48:26Z"
+    },
+    {
+      "id": 12165713072,
+      "name": "comparator-S8-39173822333-1",
+      "file": "artifacts/12165713072-comparator-S8-39173822333-1.zip",
+      "github_digest": "sha256:641737e2d00f60a29e91837ac101438827bc1ccafbbdfc75502e579542a4dc62",
+      "sha256": "641737e2d00f60a29e91837ac101438827bc1ccafbbdfc75502e579542a4dc62",
+      "digest_matches": true,
+      "expires_at": "2027-01-16T22:48:26Z"
+    },
+    {
+      "id": 12162911942,
+      "name": "build-stage-6-39173822333-1",
+      "file": "artifacts/12162911942-build-stage-6-39173822333-1.zip",
+      "github_digest": "sha256:e45710c1aa2dc639eca3b86ec40d04d15ea2c1fa03252b495243e9b0fafa83d0",
+      "sha256": "e45710c1aa2dc639eca3b86ec40d04d15ea2c1fa03252b495243e9b0fafa83d0",
+      "digest_matches": true,
+      "expires_at": "2027-01-16T22:48:26Z"
+    },
+    {
+      "id": 12160077369,
+      "name": "build-stage-5-39173822333-1",
+      "file": "artifacts/12160077369-build-stage-5-39173822333-1.zip",
+      "github_digest": "sha256:ff0d54c1aed0f74bfa032e90a4644f5b1634ce93cb959b9e397ce8a7ac9389e6",
+      "sha256": "ff0d54c1aed0f74bfa032e90a4644f5b1634ce93cb959b9e397ce8a7ac9389e6",
+      "digest_matches": true,
+      "expires_at": "2027-01-16T22:48:26Z"
+    },
+    {
+      "id": 12158304585,
+      "name": "build-stage-4-39173822333-1",
+      "file": "artifacts/12158304585-build-stage-4-39173822333-1.zip",
+      "github_digest": "sha256:d1f889191a6de5fe9b2a9b78b95eb975922662098d878f0e8e0f8d3de0e8bf1b",
+      "sha256": "d1f889191a6de5fe9b2a9b78b95eb975922662098d878f0e8e0f8d3de0e8bf1b",
+      "digest_matches": true,
+      "expires_at": "2027-01-16T22:48:26Z"
+    },
+    {
+      "id": 12157900767,
+      "name": "build-stage-3-39173822333-1",
+      "file": "artifacts/12157900767-build-stage-3-39173822333-1.zip",
+      "github_digest": "sha256:0015d6c73fa50d1d746fc8c208910150d21e77091ed5bdfa58b41c84ef815620",
+      "sha256": "0015d6c73fa50d1d746fc8c208910150d21e77091ed5bdfa58b41c84ef815620",
+      "digest_matches": true,
+      "expires_at": "2027-01-16T22:48:26Z"
+    },
+    {
+      "id": 12156127209,
+      "name": "build-stage-2-39173822333-1",
+      "file": "artifacts/12156127209-build-stage-2-39173822333-1.zip",
+      "github_digest": "sha256:b7e771706401b0a994cea977f8841744abcf12af9213d746ef61f3450f051e44",
+      "sha256": "b7e771706401b0a994cea977f8841744abcf12af9213d746ef61f3450f051e44",
+      "digest_matches": true,
+      "expires_at": "2027-01-16T22:48:26Z"
+    },
+    {
+      "id": 12155255283,
+      "name": "build-stage-1-39173822333-1",
+      "file": "artifacts/12155255283-build-stage-1-39173822333-1.zip",
+      "github_digest": "sha256:faf671625fca6922800fddd207978f3af2519cd9285daa7bebcfd143a6bebc4c",
+      "sha256": "faf671625fca6922800fddd207978f3af2519cd9285daa7bebcfd143a6bebc4c",
+      "digest_matches": true,
+      "expires_at": "2027-01-16T22:48:26Z"
+    },
+    {
+      "id": 12153796079,
+      "name": "fc-challenge-39173822333-1",
+      "file": "artifacts/12153796079-fc-challenge-39173822333-1.zip",
+      "github_digest": "sha256:fbabc842921724edd4e921d1166e61ac745b531e632673765ba63fa96965e54b",
+      "sha256": "fbabc842921724edd4e921d1166e61ac745b531e632673765ba63fa96965e54b",
+      "digest_matches": true,
+      "expires_at": "2027-01-16T22:48:26Z"
+    }
+  ],
+  "retrieved_at_utc": "2026-10-19T12:38:43.993362+00:00",
+  "note": "API metadata, original verification-receipt ZIPs, full job logs and extracted receipts preserved. Regenerable intermediate proof-product ZIPs are omitted; their GitHub metadata and digests are retained. SHA256SUMS are local file identities, not a signed GitHub attestation. Record the archive commit after committing.",
+  "target_scope": "Nine solved FC sphere energy and discrepancy targets"
+}

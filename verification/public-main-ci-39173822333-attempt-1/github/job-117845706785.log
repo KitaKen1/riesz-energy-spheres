@@ -1,0 +1,1560 @@
+﻿2026-10-19T01:22:55.0387834Z Current runner version: '2.337.0'
+2026-10-19T01:22:55.0423587Z ##[group]Runner Image Provisioner
+2026-10-19T01:22:55.0425096Z Hosted Compute Agent
+2026-10-19T01:22:55.0426014Z Version: 20261012.601
+2026-10-19T01:22:55.0427403Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-19T01:22:55.0428646Z Build Date: 2026-10-12T17:48:21Z
+2026-10-19T01:22:55.0429800Z Worker ID: {0c6c0479-6642-4666-b6a0-5a21cef28b4a}
+2026-10-19T01:22:55.0431055Z Region: eastus
+2026-10-19T01:22:55.0431965Z Cloud: Azure
+2026-10-19T01:22:55.0432897Z ##[endgroup]
+2026-10-19T01:22:55.0435254Z ##[group]Operating System
+2026-10-19T01:22:55.0436579Z Ubuntu
+2026-10-19T01:22:55.0437519Z 24.04.5
+2026-10-19T01:22:55.0438354Z LTS
+2026-10-19T01:22:55.0439314Z ##[endgroup]
+2026-10-19T01:22:55.0440183Z ##[group]Runner Image
+2026-10-19T01:22:55.0441225Z Image: ubuntu-24.04
+2026-10-19T01:22:55.0442255Z Version: 20261012.334.1
+2026-10-19T01:22:55.0444695Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-19T01:22:55.0447729Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-19T01:22:55.0449520Z ##[endgroup]
+2026-10-19T01:22:55.0451352Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T01:22:55.0454310Z Contents: read
+2026-10-19T01:22:55.0455294Z Metadata: read
+2026-10-19T01:22:55.0456699Z ##[endgroup]
+2026-10-19T01:22:55.0459825Z Secret source: Actions
+2026-10-19T01:22:55.0461375Z Cache mode: write
+2026-10-19T01:22:55.0462518Z Prepare workflow directory
+2026-10-19T01:22:55.1049490Z Prepare all required actions
+2026-10-19T01:22:55.1119933Z Getting action download info
+2026-10-19T01:22:55.2850243Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-19T01:22:55.3942147Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-10-19T01:22:55.5671399Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-19T01:22:55.7893962Z Uses: KitaKen1/riesz-energy-spheres/.github/workflows/proof-stage.yml@refs/heads/main (56b3016f2a3ce703ab7f0486dfbc0879742aeddf)
+2026-10-19T01:22:55.7898833Z ##[group] Inputs
+2026-10-19T01:22:55.7899828Z   stage: 4
+2026-10-19T01:22:55.7900284Z ##[endgroup]
+2026-10-19T01:22:55.7900770Z Complete job name: build_stage_4 / compile
+2026-10-19T01:22:55.8637463Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-19T01:22:55.8638568Z with:
+2026-10-19T01:22:55.8639021Z   persist-credentials: false
+2026-10-19T01:22:55.8639571Z   repository: KitaKen1/riesz-energy-spheres
+2026-10-19T01:22:55.8643345Z   token: ***
+2026-10-19T01:22:55.8643771Z   ssh-strict: true
+2026-10-19T01:22:55.8644210Z   ssh-user: git
+2026-10-19T01:22:55.8644645Z   clean: true
+2026-10-19T01:22:55.8645084Z   sparse-checkout-cone-mode: true
+2026-10-19T01:22:55.8645624Z   fetch-depth: 1
+2026-10-19T01:22:55.8646050Z   fetch-tags: false
+2026-10-19T01:22:55.8646688Z   show-progress: true
+2026-10-19T01:22:55.8647142Z   lfs: false
+2026-10-19T01:22:55.8647549Z   submodules: false
+2026-10-19T01:22:55.8647988Z   set-safe-directory: true
+2026-10-19T01:22:55.8648489Z   allow-unsafe-pr-checkout: false
+2026-10-19T01:22:55.8649267Z ##[endgroup]
+2026-10-19T01:22:55.9610594Z Syncing repository: KitaKen1/riesz-energy-spheres
+2026-10-19T01:22:55.9612477Z ##[group]Getting Git version info
+2026-10-19T01:22:55.9613363Z Working directory is '/home/runner/work/riesz-energy-spheres/riesz-energy-spheres'
+2026-10-19T01:22:55.9614501Z [command]/usr/bin/git version
+2026-10-19T01:22:55.9682978Z git version 2.55.0
+2026-10-19T01:22:55.9703427Z ##[endgroup]
+2026-10-19T01:22:55.9717628Z Temporarily overriding HOME='/home/runner/work/_temp/c1ec092c-2e10-4691-b970-a7114df69e2f' before making global git config changes
+2026-10-19T01:22:55.9719173Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T01:22:55.9722881Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/riesz-energy-spheres/riesz-energy-spheres
+2026-10-19T01:22:55.9770239Z Deleting the contents of '/home/runner/work/riesz-energy-spheres/riesz-energy-spheres'
+2026-10-19T01:22:55.9774442Z ##[group]Initializing the repository
+2026-10-19T01:22:55.9780056Z [command]/usr/bin/git init /home/runner/work/riesz-energy-spheres/riesz-energy-spheres
+2026-10-19T01:22:55.9883892Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T01:22:55.9885167Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T01:22:55.9886535Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T01:22:55.9887917Z hint: call:
+2026-10-19T01:22:55.9888481Z hint:
+2026-10-19T01:22:55.9889451Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T01:22:55.9890616Z hint:
+2026-10-19T01:22:55.9891744Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T01:22:55.9893761Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T01:22:55.9895225Z hint:
+2026-10-19T01:22:55.9895992Z hint: 	git branch -m <name>
+2026-10-19T01:22:55.9897135Z hint:
+2026-10-19T01:22:55.9898403Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T01:22:55.9900637Z Initialized empty Git repository in /home/runner/work/riesz-energy-spheres/riesz-energy-spheres/.git/
+2026-10-19T01:22:55.9903815Z [command]/usr/bin/git remote add origin https://github.com/KitaKen1/riesz-energy-spheres
+2026-10-19T01:22:55.9952616Z ##[endgroup]
+2026-10-19T01:22:55.9954213Z ##[group]Disabling automatic garbage collection
+2026-10-19T01:22:55.9964471Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T01:22:55.9994405Z ##[endgroup]
+2026-10-19T01:22:55.9995813Z ##[group]Setting up auth
+2026-10-19T01:22:56.0002395Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T01:22:56.0034557Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T01:22:56.0377562Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T01:22:56.0410713Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T01:22:56.0659910Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T01:22:56.0692576Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T01:22:56.0939138Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T01:22:56.0976781Z ##[endgroup]
+2026-10-19T01:22:56.0978096Z ##[group]Fetching the repository
+2026-10-19T01:22:56.0986514Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +56b3016f2a3ce703ab7f0486dfbc0879742aeddf:refs/remotes/origin/main
+2026-10-19T01:22:56.5315749Z From https://github.com/KitaKen1/riesz-energy-spheres
+2026-10-19T01:22:56.5317917Z  * [new ref]         56b3016f2a3ce703ab7f0486dfbc0879742aeddf -> origin/main
+2026-10-19T01:22:56.5321201Z ##[endgroup]
+2026-10-19T01:22:56.5322618Z ##[group]Determining the checkout info
+2026-10-19T01:22:56.5324144Z ##[endgroup]
+2026-10-19T01:22:56.5329737Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T01:22:56.5376367Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T01:22:56.5405462Z ##[group]Checking out the ref
+2026-10-19T01:22:56.5416753Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-19T01:22:56.8548206Z Switched to a new branch 'main'
+2026-10-19T01:22:56.8626888Z branch 'main' set up to track 'origin/main'.
+2026-10-19T01:22:56.8632240Z ##[endgroup]
+2026-10-19T01:22:56.8636541Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T01:22:56.8638593Z 56b3016f2a3ce703ab7f0486dfbc0879742aeddf
+2026-10-19T01:22:56.8646483Z ##[group]Removing auth
+2026-10-19T01:22:56.8650061Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T01:22:56.8679253Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T01:22:56.8896749Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T01:22:56.8919408Z http.https://github.com/.extraheader
+2026-10-19T01:22:56.8927575Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T01:22:56.8961817Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T01:22:56.9177094Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T01:22:56.9206585Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T01:22:56.9420301Z ##[endgroup]
+2026-10-19T01:22:56.9679464Z ##[group]Run python3 lean/comparator/check-inputs.py --receipt-dir build-stage-4-receipt
+2026-10-19T01:22:56.9682443Z [36;1mpython3 lean/comparator/check-inputs.py --receipt-dir build-stage-4-receipt[0m
+2026-10-19T01:22:56.9933599Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T01:22:56.9935340Z ##[endgroup]
+2026-10-19T01:22:58.5336506Z {"status": "PASS", "targets": ["RieszSphereFC.riesz_energy_lattice.variants.dimension_two", "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight", "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.log_energy_lattice.variants.dimension_two", "RieszSphereFC.log_energy_lattice.variants.dimension_eight", "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"], "reference_imports": ["Mathlib.MeasureTheory.Constructions.HaarToSphere", "Mathlib.Analysis.InnerProductSpace.PiL2", "Mathlib.NumberTheory.LSeries.RiemannZeta", "Mathlib.NumberTheory.LSeries.AbstractFuncEq", "Mathlib.LinearAlgebra.Matrix.Notation", "Mathlib.MeasureTheory.Integral.Prod"], "definition_holes": false, "mirror_files": 1359, "hashed_files": 2755, "fc_reference_correspondence": "EXACT_CHALLENGE_COPY; SOLUTION_CHECK_SEPARATE", "fc_exact_source_copy": true, "frozen_fc_sha256": "24c8bbfab4701aa7445ee2090e11f5b26e3a24bb1bb0ad278a3a03818ee95b57", "fc_statement_count": 18, "comparator_target_count": 9, "checkout_base_commit": "56b3016f2a3ce703ab7f0486dfbc0879742aeddf", "working_tree_dirty": false, "working_tree_changes": [], "tested_commit": "56b3016f2a3ce703ab7f0486dfbc0879742aeddf", "source_manifest_sha256": "80c0053e20c112b3460609737a09d33d19bb2b80e0e3c3fd7290ed19d0584e0d", "pins": {"publication_repository": "KitaKen1/riesz-energy-spheres", "private_repository": "KitaKen1/riesz-energy-spheres-private-ci", "lean_toolchain": "leanprover/lean4:v4.34.1", "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612", "comparator_commit": "d03acab154d269c06e60e4de7e4cc85deebff94b", "lean4export_commit": "076e8e57707e813375e8f9da8bf989799ace9680", "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4", "targets": ["RieszSphereFC.riesz_energy_lattice.variants.dimension_two", "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight", "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.log_energy_lattice.variants.dimension_two", "RieszSphereFC.log_energy_lattice.variants.dimension_eight", "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"], "reference_status": "Exact copy of the independent FClikelean draft; compare only its nine research-solved variants.", "toolchain_patches": {"comparator": {"upstream": "leanprover/lean4:v4.34.0", "build": "leanprover/lean4:v4.34.1", "changed_files": ["lean-toolchain"]}, "lean4export": {"upstream": "leanprover/lean4:v4.34.0", "build": "leanprover/lean4:v4.34.1", "changed_files": ["lean-toolchain"]}}, "formal_conjectures_commit": "c77fdd446d23539302aa73bcfae4a9fa962b8382", "ci_repository": "KitaKen1/ci-test-sandbox", "formal_conjectures_compatibility": "prepare-fc-utils.py: remove three unused extension-aggregate imports; retain Mathlib, FC attributes and linters"}, "proof_digest": "f75dfc28ca6b3dc45ef089ed1c7dfa995313b09625e7130a497566b1ed90ecdf"}
+2026-10-19T01:22:58.5454178Z ##[group]Run python3 lean/comparator/check-solution-targets.py --receipt-dir build-stage-4-receipt
+2026-10-19T01:22:58.5455034Z [36;1mpython3 lean/comparator/check-solution-targets.py --receipt-dir build-stage-4-receipt[0m
+2026-10-19T01:22:58.5519917Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T01:22:58.5520343Z ##[endgroup]
+2026-10-19T01:22:58.5890915Z {
+2026-10-19T01:22:58.5891453Z   "status": "PASS",
+2026-10-19T01:22:58.5891870Z   "selected_targets": [
+2026-10-19T01:22:58.5892358Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+2026-10-19T01:22:58.5893009Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+2026-10-19T01:22:58.5893686Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+2026-10-19T01:22:58.5894339Z     "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+2026-10-19T01:22:58.5894993Z     "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+2026-10-19T01:22:58.5895690Z     "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+2026-10-19T01:22:58.5896666Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+2026-10-19T01:22:58.5897419Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+2026-10-19T01:22:58.5898141Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+2026-10-19T01:22:58.5898701Z   ],
+2026-10-19T01:22:58.5899003Z   "missing_solution_targets": [],
+2026-10-19T01:22:58.5899402Z   "different_source_signatures": [],
+2026-10-19T01:22:58.5899807Z   "available_solution_targets": [
+2026-10-19T01:22:58.5900307Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+2026-10-19T01:22:58.5900945Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+2026-10-19T01:22:58.5901622Z     "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+2026-10-19T01:22:58.5902281Z     "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+2026-10-19T01:22:58.5902889Z     "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+2026-10-19T01:22:58.5903528Z     "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+2026-10-19T01:22:58.5904188Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+2026-10-19T01:22:58.5904841Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+2026-10-19T01:22:58.5905529Z     "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+2026-10-19T01:22:58.5906269Z   ],
+2026-10-19T01:22:58.5906664Z   "formal_type_comparison": "NOT_RUN: performed by Comparator only after proof build"
+2026-10-19T01:22:58.5907135Z }
+2026-10-19T01:22:58.5977642Z ##[group]Run python3 lean/comparator/build-stage.py
+2026-10-19T01:22:58.5978104Z [36;1mpython3 lean/comparator/build-stage.py[0m
+2026-10-19T01:22:58.6041331Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T01:22:58.6041906Z ##[endgroup]
+2026-10-19T01:22:59.1109966Z PASS: 1245 modules covered exactly once by six dependency-ordered batches.
+2026-10-19T01:22:59.1208750Z ##[group]Run bash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 8 4
+2026-10-19T01:22:59.1209431Z [36;1mbash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 8 4[0m
+2026-10-19T01:22:59.1270204Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T01:22:59.1270561Z ##[endgroup]
+2026-10-19T01:24:39.3273743Z info: downloading installer
+2026-10-19T01:24:39.5543373Z 4
+2026-10-19T01:24:39.5561448Z                total        used        free      shared  buff/cache   available
+2026-10-19T01:24:39.5562213Z Mem:            15Gi       1.1Gi        11Gi        44Mi       3.5Gi        14Gi
+2026-10-19T01:24:39.5562771Z Swap:          3.0Gi          0B       3.0Gi
+2026-10-19T01:24:39.5579896Z Filesystem      Size  Used Avail Use% Mounted on
+2026-10-19T01:24:39.5580469Z /dev/root       145G   23G  122G  16% /
+2026-10-19T01:24:39.5580957Z /dev/root       145G   23G  122G  16% /
+2026-10-19T01:24:39.6040548Z added 8 GB of swap on /
+2026-10-19T01:24:39.6058009Z                total        used        free      shared  buff/cache   available
+2026-10-19T01:24:39.6058630Z Mem:              15           1          11           0           3          14
+2026-10-19T01:24:39.6058979Z Swap:             10           0          10
+2026-10-19T01:24:39.6073149Z NAME              TYPE SIZE USED PRIO
+2026-10-19T01:24:39.6073810Z /swapfile         file   3G   0B   -2
+2026-10-19T01:24:39.6074296Z /swap-extra-22373 file   8G   0B   -3
+2026-10-19T01:24:39.6116927Z ##[group]Run lake exe cache get
+2026-10-19T01:24:39.6117256Z [36;1mlake exe cache get[0m
+2026-10-19T01:24:39.6177942Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T01:24:39.6178294Z ##[endgroup]
+2026-10-19T01:24:40.0045522Z info: downloading https://releases.lean-lang.org/lean4/v4.34.1/lean-4.34.1-linux.tar.zst
+2026-10-19T01:24:44.4326331Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1
+2026-10-19T01:24:51.2263308Z info: formal_conjectures: cloning https://github.com/google-deepmind/formal-conjectures.git
+2026-10-19T01:24:53.3800829Z info: formal_conjectures: checking out revision 'c77fdd446d23539302aa73bcfae4a9fa962b8382'
+2026-10-19T01:24:53.4835696Z info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git
+2026-10-19T01:25:23.8879361Z info: mathlib: checking out revision 'd13f23b723b8a846827a245b89c10fc7d3f11612'
+2026-10-19T01:25:26.2852691Z info: plausible: cloning https://github.com/leanprover-community/plausible
+2026-10-19T01:25:26.4269903Z info: plausible: checking out revision '118aa17ee84656b8bd727fef7c458ee8c833385c'
+2026-10-19T01:25:26.4400179Z info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+2026-10-19T01:25:26.5727550Z info: LeanSearchClient: checking out revision 'ddf04cf3949fa556442341e87d47f9f6e6074707'
+2026-10-19T01:25:26.5850343Z info: importGraph: cloning https://github.com/leanprover-community/import-graph
+2026-10-19T01:25:26.7455984Z info: importGraph: checking out revision 'e928b72544873815af278d38681b31c0293588e3'
+2026-10-19T01:25:26.7640894Z info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+2026-10-19T01:25:27.0729084Z info: proofwidgets: checking out revision '106ff4fafc74ef4ac99d81dbf3ab399118f497a5'
+2026-10-19T01:25:27.7212775Z info: aesop: cloning https://github.com/leanprover-community/aesop
+2026-10-19T01:25:28.1530784Z info: aesop: checking out revision '355695d523e41d0554926416cba2a2b3544fbbc9'
+2026-10-19T01:25:28.1724053Z info: Qq: cloning https://github.com/leanprover-community/quote4
+2026-10-19T01:25:28.3811266Z info: Qq: checking out revision '6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259'
+2026-10-19T01:25:28.3937043Z info: batteries: cloning https://github.com/leanprover-community/batteries
+2026-10-19T01:25:32.7345556Z info: batteries: checking out revision 'f2effa3d803fda822b1f97b806c47cf2adfbcbc2'
+2026-10-19T01:25:32.7709358Z info: Cli: cloning https://github.com/leanprover/lean4-cli
+2026-10-19T01:25:32.9522020Z info: Cli: checking out revision 'e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204'
+2026-10-19T01:25:33.3687956Z ✔ [2/42] Built Cache.Cli (337ms)
+2026-10-19T01:25:33.3696781Z ✔ [3/42] Built Cache.Lean (383ms)
+2026-10-19T01:25:33.5669390Z ✔ [6/42] Built Cache.Cli:c.o (208ms)
+2026-10-19T01:25:33.6673325Z ✔ [7/42] Built Cache.Lean:c.o (241ms)
+2026-10-19T01:25:33.7699122Z ✔ [8/42] Built Cache.Env (401ms)
+2026-10-19T01:25:34.0728518Z ✔ [9/42] Built Cache.Env:c.o (257ms)
+2026-10-19T01:25:34.2733091Z ✔ [10/42] Built Cache.Infra (494ms)
+2026-10-19T01:25:34.4736446Z ✔ [11/42] Built Batteries.Tactic.OpenPrivate (1.1s)
+2026-10-19T01:25:34.5731510Z ✔ [12/42] Built Cache.Infra:c.o (258ms)
+2026-10-19T01:25:35.8746542Z ✔ [13/42] Built Batteries.Tactic.OpenPrivate:c.o (1.4s)
+2026-10-19T01:25:35.9757671Z ✔ [14/42] Built Cache.IO (1.5s)
+2026-10-19T01:25:36.7777745Z ✔ [15/42] Built Cache.Hashing (812ms)
+2026-10-19T01:25:37.5801494Z ✔ [16/42] Built Cache.Hashing:c.o (725ms)
+2026-10-19T01:25:38.0808163Z ✔ [17/42] Built Cache.IO:c.o (2.0s)
+2026-10-19T01:25:38.7817257Z ✔ [18/42] Built Cache.Requests (1.0s)
+2026-10-19T01:25:39.3837633Z ✔ [19/42] Built Cache.Marker (551ms)
+2026-10-19T01:25:39.5833149Z ✔ [20/42] Built Cache.Marker:c.o (201ms)
+2026-10-19T01:25:40.1861577Z ✔ [21/42] Built Cache.Query (874ms)
+2026-10-19T01:25:40.2887488Z ✔ [22/42] Built Cache.Upload.Dest (936ms)
+2026-10-19T01:25:40.4869050Z ✔ [23/42] Built Cache.Upload.Dest:c.o (240ms)
+2026-10-19T01:25:40.6887212Z ✔ [24/42] Built Cache.Query:c.o (515ms)
+2026-10-19T01:25:41.2907204Z ✔ [25/42] Built Cache.Warning (1.1s)
+2026-10-19T01:25:41.4895064Z ✔ [26/42] Built Cache.Upload.Rclone (972ms)
+2026-10-19T01:25:41.6897441Z ✔ [27/42] Built Cache.Upload.Curl (983ms)
+2026-10-19T01:25:41.7907502Z ✔ [28/42] Built Cache.Upload.Rclone:c.o (309ms)
+2026-10-19T01:25:41.7967205Z ✔ [29/42] Built Cache.Warning:c.o (517ms)
+2026-10-19T01:25:41.9892470Z ✔ [30/42] Built Cache.Upload.Curl:c.o (313ms)
+2026-10-19T01:25:42.4900283Z ✔ [31/42] Built Cache.Upload.Azure (706ms)
+2026-10-19T01:25:42.6902015Z ✔ [32/42] Built Cache.Requests:c.o (3.9s)
+2026-10-19T01:25:42.6902582Z ✔ [33/42] Built Cache.Upload.Azure:c.o (222ms)
+2026-10-19T01:25:42.7903696Z ✔ [34/42] Built Cache.Upload.S3 (1.0s)
+2026-10-19T01:25:43.1908708Z ✔ [35/42] Built Cache.Upload.S3:c.o (345ms)
+2026-10-19T01:25:43.3911150Z ✔ [36/42] Built Cache.Upload.Defs (573ms)
+2026-10-19T01:25:43.4912342Z ✔ [37/42] Built Cache.Upload.Defs:c.o (155ms)
+2026-10-19T01:25:43.8917898Z ✔ [38/42] Built Cache.Upload (523ms)
+2026-10-19T01:25:43.9917947Z ✔ [39/42] Built Cache.Upload:c.o (121ms)
+2026-10-19T01:25:44.9929097Z ✔ [40/42] Built Cache.Main (1.1s)
+2026-10-19T01:25:45.9941487Z ✔ [41/42] Built Cache.Main:c.o (975ms)
+2026-10-19T01:25:46.6938862Z ✔ [42/42] Built cache:exe (729ms)
+2026-10-19T01:25:49.4965490Z Current branch: HEAD
+2026-10-19T01:25:49.4966327Z Using cache from origin: (some leanprover-community/mathlib4)
+2026-10-19T01:25:49.4967562Z Attempting to download 8908 file(s) from leanprover-community/mathlib4 cache at https://cache.mathlib.org/mathlib4-master
+2026-10-19T01:25:49.6051658Z 
+2026-10-19T01:25:49.7083480Z Downloaded: 24 file(s) [attempted 24/8908 = 0%, 1811 KB/s], Decompressed: 1
+2026-10-19T01:25:49.8125106Z Downloaded: 137 file(s) [attempted 137/8908 = 1%, 163 KB/s], Decompressed: 17
+2026-10-19T01:25:49.9229641Z Downloaded: 284 file(s) [attempted 284/8908 = 3%, 3963 KB/s], Decompressed: 17
+2026-10-19T01:25:50.0268550Z Downloaded: 431 file(s) [attempted 431/8908 = 4%, 2306 KB/s], Decompressed: 72
+2026-10-19T01:25:50.1327409Z Downloaded: 544 file(s) [attempted 544/8908 = 6%, 4898 KB/s], Decompressed: 72
+2026-10-19T01:25:50.2329763Z Downloaded: 659 file(s) [attempted 659/8908 = 7%, 241 KB/s], Decompressed: 72
+2026-10-19T01:25:50.3327294Z Downloaded: 774 file(s) [attempted 774/8908 = 8%, 412 KB/s], Decompressed: 72
+2026-10-19T01:25:50.4337439Z Downloaded: 882 file(s) [attempted 882/8908 = 9%, 933 KB/s], Decompressed: 72
+2026-10-19T01:25:50.5338131Z Downloaded: 986 file(s) [attempted 986/8908 = 11%, 280 KB/s], Decompressed: 72
+2026-10-19T01:25:50.6333045Z Downloaded: 1094 file(s) [attempted 1094/8908 = 12%, 1946 KB/s], Decompressed: 72
+2026-10-19T01:25:50.7366947Z Downloaded: 1207 file(s) [attempted 1207/8908 = 13%, 3979 KB/s], Decompressed: 72
+2026-10-19T01:25:50.8378590Z Downloaded: 1327 file(s) [attempted 1327/8908 = 14%, 692 KB/s], Decompressed: 334
+2026-10-19T01:25:50.9543055Z Downloaded: 1409 file(s) [attempted 1409/8908 = 15%, 710 KB/s], Decompressed: 334
+2026-10-19T01:25:51.0553738Z Downloaded: 1488 file(s) [attempted 1488/8908 = 16%, 833 KB/s], Decompressed: 334
+2026-10-19T01:25:51.1576694Z Downloaded: 1573 file(s) [attempted 1573/8908 = 17%, 108 KB/s], Decompressed: 334
+2026-10-19T01:25:51.2572030Z Downloaded: 1620 file(s) [attempted 1620/8908 = 18%, 551 KB/s], Decompressed: 334
+2026-10-19T01:25:51.3577609Z Downloaded: 1692 file(s) [attempted 1692/8908 = 18%, 1117 KB/s], Decompressed: 334
+2026-10-19T01:25:51.4651719Z Downloaded: 1758 file(s) [attempted 1758/8908 = 19%, 185 KB/s], Decompressed: 334
+2026-10-19T01:25:51.5748970Z Downloaded: 1865 file(s) [attempted 1865/8908 = 20%, 368 KB/s], Decompressed: 334
+2026-10-19T01:25:51.6776632Z Downloaded: 1969 file(s) [attempted 1969/8908 = 22%, 994 KB/s], Decompressed: 334
+2026-10-19T01:25:51.7887444Z Downloaded: 2067 file(s) [attempted 2067/8908 = 23%, 4486 KB/s], Decompressed: 334
+2026-10-19T01:25:51.8910580Z Downloaded: 2202 file(s) [attempted 2202/8908 = 24%, 3169 KB/s], Decompressed: 334
+2026-10-19T01:25:51.9934985Z Downloaded: 2305 file(s) [attempted 2305/8908 = 25%, 114 KB/s], Decompressed: 334
+2026-10-19T01:25:52.1022828Z Downloaded: 2391 file(s) [attempted 2391/8908 = 26%, 2997 KB/s], Decompressed: 334
+2026-10-19T01:25:52.2040236Z Downloaded: 2516 file(s) [attempted 2516/8908 = 28%, 784 KB/s], Decompressed: 334
+2026-10-19T01:25:52.3170469Z Downloaded: 2607 file(s) [attempted 2607/8908 = 29%, 1107 KB/s], Decompressed: 334
+2026-10-19T01:25:52.4227553Z Downloaded: 2718 file(s) [attempted 2718/8908 = 30%, 1255 KB/s], Decompressed: 334
+2026-10-19T01:25:52.5219168Z Downloaded: 2785 file(s) [attempted 2785/8908 = 31%, 412 KB/s], Decompressed: 334
+2026-10-19T01:25:52.6242368Z Downloaded: 2897 file(s) [attempted 2897/8908 = 32%, 5943 KB/s], Decompressed: 334
+2026-10-19T01:25:52.7243791Z Downloaded: 3001 file(s) [attempted 3001/8908 = 33%, 483 KB/s], Decompressed: 334
+2026-10-19T01:25:52.8278137Z Downloaded: 3100 file(s) [attempted 3100/8908 = 34%, 1566 KB/s], Decompressed: 334
+2026-10-19T01:25:52.9299187Z Downloaded: 3201 file(s) [attempted 3201/8908 = 35%, 468 KB/s], Decompressed: 334
+2026-10-19T01:25:53.0297797Z Downloaded: 3319 file(s) [attempted 3319/8908 = 37%, 528 KB/s], Decompressed: 334
+2026-10-19T01:25:53.1364927Z Downloaded: 3443 file(s) [attempted 3443/8908 = 38%, 288 KB/s], Decompressed: 334
+2026-10-19T01:25:53.2417572Z Downloaded: 3573 file(s) [attempted 3573/8908 = 40%, 2121 KB/s], Decompressed: 334
+2026-10-19T01:25:53.3404159Z Downloaded: 3688 file(s) [attempted 3688/8908 = 41%, 255 KB/s], Decompressed: 334
+2026-10-19T01:25:53.4447082Z Downloaded: 3779 file(s) [attempted 3779/8908 = 42%, 2217 KB/s], Decompressed: 334
+2026-10-19T01:25:53.5637982Z Downloaded: 3873 file(s) [attempted 3873/8908 = 43%, 652 KB/s], Decompressed: 334
+2026-10-19T01:25:53.6655911Z Downloaded: 3933 file(s) [attempted 3933/8908 = 44%, 377 KB/s], Decompressed: 334
+2026-10-19T01:25:53.7647690Z Downloaded: 4032 file(s) [attempted 4032/8908 = 45%, 2969 KB/s], Decompressed: 334
+2026-10-19T01:25:53.8697834Z Downloaded: 4155 file(s) [attempted 4155/8908 = 46%, 2079 KB/s], Decompressed: 334
+2026-10-19T01:25:53.9727573Z Downloaded: 4250 file(s) [attempted 4250/8908 = 47%, 2318 KB/s], Decompressed: 334
+2026-10-19T01:25:54.0787549Z Downloaded: 4358 file(s) [attempted 4358/8908 = 48%, 2877 KB/s], Decompressed: 334
+2026-10-19T01:25:54.1763035Z Downloaded: 4457 file(s) [attempted 4457/8908 = 50%, 732 KB/s], Decompressed: 334
+2026-10-19T01:25:54.2847759Z Downloaded: 4567 file(s) [attempted 4567/8908 = 51%, 1339 KB/s], Decompressed: 334
+2026-10-19T01:25:54.3947531Z Downloaded: 4644 file(s) [attempted 4644/8908 = 52%, 144 KB/s], Decompressed: 334
+2026-10-19T01:25:54.4947370Z Downloaded: 4752 file(s) [attempted 4752/8908 = 53%, 1998 KB/s], Decompressed: 334
+2026-10-19T01:25:54.5938496Z Downloaded: 4896 file(s) [attempted 4896/8908 = 54%, 1835 KB/s], Decompressed: 334
+2026-10-19T01:25:54.7217361Z Downloaded: 4982 file(s) [attempted 4982/8908 = 55%, 248 KB/s], Decompressed: 1272
+2026-10-19T01:25:54.8209812Z Downloaded: 5057 file(s) [attempted 5057/8908 = 56%, 345 KB/s], Decompressed: 1272
+2026-10-19T01:25:54.9444400Z Downloaded: 5141 file(s) [attempted 5141/8908 = 57%, 67 KB/s], Decompressed: 1272
+2026-10-19T01:25:55.0647050Z Downloaded: 5271 file(s) [attempted 5271/8908 = 59%, 284 KB/s], Decompressed: 1272
+2026-10-19T01:25:55.1837669Z Downloaded: 5377 file(s) [attempted 5377/8908 = 60%, 377 KB/s], Decompressed: 1272
+2026-10-19T01:25:55.2861176Z Downloaded: 5523 file(s) [attempted 5523/8908 = 62%, 344 KB/s], Decompressed: 1272
+2026-10-19T01:25:55.3910170Z Downloaded: 5629 file(s) [attempted 5629/8908 = 63%, 1317 KB/s], Decompressed: 1272
+2026-10-19T01:25:55.5139628Z Downloaded: 5715 file(s) [attempted 5715/8908 = 64%, 1926 KB/s], Decompressed: 1272
+2026-10-19T01:25:55.6140093Z Downloaded: 5807 file(s) [attempted 5807/8908 = 65%, 1141 KB/s], Decompressed: 1272
+2026-10-19T01:25:55.7151159Z Downloaded: 5905 file(s) [attempted 5905/8908 = 66%, 950 KB/s], Decompressed: 1272
+2026-10-19T01:25:55.8755894Z Downloaded: 5999 file(s) [attempted 5999/8908 = 67%, 137 KB/s], Decompressed: 1272
+2026-10-19T01:25:55.9758318Z Downloaded: 6008 file(s) [attempted 6008/8908 = 67%, 316 KB/s], Decompressed: 1272
+2026-10-19T01:25:56.0918868Z Downloaded: 6145 file(s) [attempted 6145/8908 = 68%, 916 KB/s], Decompressed: 1272
+2026-10-19T01:25:56.2047515Z Downloaded: 6287 file(s) [attempted 6287/8908 = 70%, 1078 KB/s], Decompressed: 1272
+2026-10-19T01:25:56.3007546Z Downloaded: 6392 file(s) [attempted 6392/8908 = 71%, 102 KB/s], Decompressed: 1272
+2026-10-19T01:25:56.4277678Z Downloaded: 6448 file(s) [attempted 6448/8908 = 72%, 2554 KB/s], Decompressed: 1272
+2026-10-19T01:25:56.5446962Z Downloaded: 6452 file(s) [attempted 6452/8908 = 72%, 612 KB/s], Decompressed: 1272
+2026-10-19T01:25:56.6484687Z Downloaded: 6572 file(s) [attempted 6572/8908 = 73%, 1012 KB/s], Decompressed: 1272
+2026-10-19T01:25:56.7537427Z Downloaded: 6671 file(s) [attempted 6671/8908 = 74%, 1921 KB/s], Decompressed: 1272
+2026-10-19T01:25:56.9001257Z Downloaded: 6765 file(s) [attempted 6765/8908 = 75%, 286 KB/s], Decompressed: 1272
+2026-10-19T01:25:57.0046964Z Downloaded: 6846 file(s) [attempted 6846/8908 = 76%, 1025 KB/s], Decompressed: 1272
+2026-10-19T01:25:57.1041940Z Downloaded: 6923 file(s) [attempted 6923/8908 = 77%, 177 KB/s], Decompressed: 1272
+2026-10-19T01:25:57.2037554Z Downloaded: 6984 file(s) [attempted 6984/8908 = 78%, 1374 KB/s], Decompressed: 1272
+2026-10-19T01:25:57.3027432Z Downloaded: 7053 file(s) [attempted 7053/8908 = 79%, 192 KB/s], Decompressed: 1272
+2026-10-19T01:25:57.4023286Z Downloaded: 7139 file(s) [attempted 7139/8908 = 80%, 3237 KB/s], Decompressed: 1272
+2026-10-19T01:25:57.5033035Z Downloaded: 7239 file(s) [attempted 7239/8908 = 81%, 548 KB/s], Decompressed: 1272
+2026-10-19T01:25:57.6066346Z Downloaded: 7331 file(s) [attempted 7331/8908 = 82%, 200 KB/s], Decompressed: 1272
+2026-10-19T01:25:57.7101340Z Downloaded: 7418 file(s) [attempted 7418/8908 = 83%, 250 KB/s], Decompressed: 1272
+2026-10-19T01:25:57.8158469Z Downloaded: 7512 file(s) [attempted 7512/8908 = 84%, 187 KB/s], Decompressed: 1272
+2026-10-19T01:25:57.9419165Z Downloaded: 7569 file(s) [attempted 7569/8908 = 84%, 427 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.0557492Z Downloaded: 7723 file(s) [attempted 7723/8908 = 86%, 217 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.1865847Z Downloaded: 7833 file(s) [attempted 7833/8908 = 87%, 650 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.3504373Z Downloaded: 7987 file(s) [attempted 7987/8908 = 89%, 1070 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.4495104Z Downloaded: 8062 file(s) [attempted 8062/8908 = 90%, 236 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.5494318Z Downloaded: 8160 file(s) [attempted 8160/8908 = 91%, 1169 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.6491632Z Downloaded: 8312 file(s) [attempted 8312/8908 = 93%, 4616 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.7581267Z Downloaded: 8445 file(s) [attempted 8445/8908 = 94%, 2435 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.8757500Z Downloaded: 8576 file(s) [attempted 8576/8908 = 96%, 2033 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.9728892Z Downloaded: 8732 file(s) [attempted 8732/8908 = 98%, 3854 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.9855749Z Downloaded: 8903 file(s) [attempted 8903/8908 = 99%, 2721 KB/s], Decompressed: 1272
+2026-10-19T01:25:58.9877135Z Downloaded: 8908 file(s) [attempted 8908/8908 = 100%, 2721 KB/s], Decompressed: 1272
+2026-10-19T01:26:19.4054920Z Decompressed 8908 file(s)
+2026-10-19T01:26:19.4056686Z Already decompressed 8908 file(s)
+2026-10-19T01:26:19.5435672Z ##[group]Run python3 lean/comparator/prepare-fc-utils.py --receipt-dir build-stage-4-receipt
+2026-10-19T01:26:19.5437235Z [36;1mpython3 lean/comparator/prepare-fc-utils.py --receipt-dir build-stage-4-receipt[0m
+2026-10-19T01:26:19.6395116Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T01:26:19.6395495Z ##[endgroup]
+2026-10-19T01:26:19.9885426Z {"status": "APPLIED", "upstream_commit": "c77fdd446d23539302aa73bcfae4a9fa962b8382", "upstream_sha256": "3a73749a2b247a1ad08820de102f0d32353bf6e519eb954de53e08553cdbc663", "adapted_sha256": "cd7916d640752ec4cff2a5e706d5a3da287ed164136fe0442cfc81d7bf7ffef8", "removed_imports": ["public import FormalConjecturesForMathlib", "public meta import FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Eccentricity", "public meta import FormalConjecturesForMathlib.Combinatorics.SimpleGraph.VertexDistance"], "retained": "Mathlib and all FC attribute and linter implementations", "scope": "Import-only adapter; Challenge and FC mathematical definitions are unmodified.", "reason": "The upstream FC extension aggregate targets an older Mathlib. The Challenge uses none of its extensions."}
+2026-10-19T01:26:20.0025056Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+2026-10-19T01:26:20.0025482Z with:
+2026-10-19T01:26:20.0025699Z   pattern: proof-products-*-39173822333-1
+2026-10-19T01:26:20.0025970Z   path: stage-products
+2026-10-19T01:26:20.0026482Z   merge-multiple: true
+2026-10-19T01:26:20.0026722Z   repository: KitaKen1/riesz-energy-spheres
+2026-10-19T01:26:20.0026990Z   run-id: 39173822333
+2026-10-19T01:26:20.0027188Z ##[endgroup]
+2026-10-19T01:26:20.1714024Z (node:3373) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T01:26:20.1714824Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T01:26:20.2517823Z Found 7 artifact(s)
+2026-10-19T01:26:20.2518616Z Filtering artifacts by pattern 'proof-products-*-39173822333-1'
+2026-10-19T01:26:20.2539277Z Preparing to download the following artifacts:
+2026-10-19T01:26:20.2540663Z - proof-products-3-39173822333-1 (ID: 12157073437, Size: 267998493, Expected Digest: sha256:3906c7d76fa5477a6ff16f96a770533844796c991dc4fed6b1c54563e67339cb)
+2026-10-19T01:26:20.2542617Z - proof-products-2-39173822333-1 (ID: 12156475560, Size: 187508442, Expected Digest: sha256:5e3b341be86c6a50566d3dd42882b9d1424762855792cc18ea3b00c1ab104d5b)
+2026-10-19T01:26:20.2544573Z - proof-products-1-39173822333-1 (ID: 12155046053, Size: 256615450, Expected Digest: sha256:efe6257ba6d1ebba4b52fee53051809cfb694a5a47cc619a4f13bb958c3e9698)
+2026-10-19T01:26:20.3780815Z Redirecting to blob download url: https://productionresultssa15.blob.core.windows.net/actions-results/5fa47660-bc51-8fee-8c6d-288afdb6db01/workflow-job-run-32ebfe17-be0f-5b6a-bd92-e3736dfa4ba8/artifacts/74b1dce1a8a7aa65553681d39febb163c3534a670281853844a338ec7354e52e.zip
+2026-10-19T01:26:20.3783316Z Starting download of artifact to: /home/runner/work/riesz-energy-spheres/riesz-energy-spheres/stage-products
+2026-10-19T01:26:20.4038019Z Redirecting to blob download url: https://productionresultssa15.blob.core.windows.net/actions-results/5fa47660-bc51-8fee-8c6d-288afdb6db01/workflow-job-run-dc84a32f-c929-5adf-afbd-99b3f55a0320/artifacts/39685e0b86cbd3ba260c304aaf73550dd40d85c9ee8d8a5960c77b4f5187bbca.zip
+2026-10-19T01:26:20.4041520Z Starting download of artifact to: /home/runner/work/riesz-energy-spheres/riesz-energy-spheres/stage-products
+2026-10-19T01:26:20.4118800Z Redirecting to blob download url: https://productionresultssa15.blob.core.windows.net/actions-results/5fa47660-bc51-8fee-8c6d-288afdb6db01/workflow-job-run-0fa0ed7b-e5a0-586b-953a-c7a56d425aa1/artifacts/ccc2b5c8a1e210435cf802ecb6612ad7b50dcae37bcb3bcab6944ef8e15f26bd.zip
+2026-10-19T01:26:20.4121551Z Starting download of artifact to: /home/runner/work/riesz-energy-spheres/riesz-energy-spheres/stage-products
+2026-10-19T01:26:20.4677801Z (node:3373) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-19T01:26:23.0526639Z SHA256 digest of downloaded artifact is 5e3b341be86c6a50566d3dd42882b9d1424762855792cc18ea3b00c1ab104d5b
+2026-10-19T01:26:23.0528088Z Artifact download completed successfully.
+2026-10-19T01:26:24.0693583Z SHA256 digest of downloaded artifact is efe6257ba6d1ebba4b52fee53051809cfb694a5a47cc619a4f13bb958c3e9698
+2026-10-19T01:26:24.0694327Z Artifact download completed successfully.
+2026-10-19T01:26:24.5420072Z SHA256 digest of downloaded artifact is 3906c7d76fa5477a6ff16f96a770533844796c991dc4fed6b1c54563e67339cb
+2026-10-19T01:26:24.5420825Z Artifact download completed successfully.
+2026-10-19T01:26:24.5421157Z Total of 3 artifact(s) downloaded
+2026-10-19T01:26:24.5426658Z Download artifact has finished successfully
+2026-10-19T01:26:24.5605518Z ##[group]Run python3 - <<'PY'
+2026-10-19T01:26:24.5605908Z [36;1mpython3 - <<'PY'[0m
+2026-10-19T01:26:24.5606537Z [36;1mimport os, shutil[0m
+2026-10-19T01:26:24.5606896Z [36;1massert os.environ.get('GITHUB_ACTIONS') == 'true'[0m
+2026-10-19T01:26:24.5607342Z [36;1massert os.environ.get('RUNNER_ENVIRONMENT') == 'github-hosted'[0m
+2026-10-19T01:26:24.5607800Z [36;1mshutil.rmtree('lean/.lake/build', ignore_errors=True)[0m
+2026-10-19T01:26:24.5608163Z [36;1mPY[0m
+2026-10-19T01:26:24.5608643Z [36;1mpython3 lean/comparator/build-products.py restore --directory stage-products --stage "$((RZ_STAGE - 1))"[0m
+2026-10-19T01:26:24.5609560Z [36;1mpython3 lean/comparator/build-products.py snapshot --directory stage-products --stage "$RZ_STAGE" --state "$RUNNER_TEMP/pre-build.json"[0m
+2026-10-19T01:26:24.5667881Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T01:26:24.5668228Z env:
+2026-10-19T01:26:24.5668421Z   RZ_STAGE: 4
+2026-10-19T01:26:24.5668663Z ##[endgroup]
+2026-10-19T01:26:58.3590312Z PASS: restored 3 build stages from this exact workflow run
+2026-10-19T01:27:05.1653169Z Saved pre-build file identities
+2026-10-19T01:27:05.1800044Z ##[group]Run bash comparator/build-stage.sh 4
+2026-10-19T01:27:05.1800474Z [36;1mbash comparator/build-stage.sh 4[0m
+2026-10-19T01:27:05.1880756Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T01:27:05.1881124Z ##[endgroup]
+2026-10-19T01:27:06.1369510Z warning: formal_conjectures: repository '/home/runner/work/riesz-energy-spheres/riesz-energy-spheres/lean/.lake/packages/formal_conjectures' has local changes
+2026-10-19T01:27:07.9991411Z ⚠ [1313/1346] Replayed E8Leech.KronPoly
+2026-10-19T01:27:07.9992656Z warning: third_party/E8Leech/lean/E8Leech/KronPoly.lean:6:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-19T01:27:07.9993510Z 
+2026-10-19T01:27:07.9993638Z import Mathlib.Basic.Real.Basic
+2026-10-19T01:27:07.9994218Z warning: third_party/E8Leech/lean/E8Leech/KronPoly.lean:438:15: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:07.9995282Z 
+2026-10-19T01:27:07.9995595Z Note: The updated constant has a different type:
+2026-10-19T01:27:07.9996924Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:07.9997493Z instead of
+2026-10-19T01:27:07.9998224Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:07.9999636Z warning: third_party/E8Leech/lean/E8Leech/KronPoly.lean:441:15: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:08.0000512Z 
+2026-10-19T01:27:08.0000752Z Note: The updated constant has a different type:
+2026-10-19T01:27:08.0001266Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:08.0001776Z instead of
+2026-10-19T01:27:08.0002094Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:08.0002706Z warning: third_party/E8Leech/lean/E8Leech/KronPoly.lean:464:17: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:08.0003184Z 
+2026-10-19T01:27:08.0003313Z Note: The updated constant has a different type:
+2026-10-19T01:27:08.0003959Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:08.0004285Z instead of
+2026-10-19T01:27:08.0004583Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:08.0005169Z warning: third_party/E8Leech/lean/E8Leech/KronPoly.lean:466:17: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:08.0005926Z 
+2026-10-19T01:27:08.0006420Z Note: The updated constant has a different type:
+2026-10-19T01:27:08.0007088Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:08.0007644Z instead of
+2026-10-19T01:27:08.0008193Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:08.0008618Z ⚠ [1314/1346] Replayed E8Leech.KronMul
+2026-10-19T01:27:08.0009169Z warning: third_party/E8Leech/lean/E8Leech/KronMul.lean:65:15: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:08.0010042Z 
+2026-10-19T01:27:08.0010285Z Note: The updated constant has a different type:
+2026-10-19T01:27:08.0010756Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:08.0011068Z instead of
+2026-10-19T01:27:08.0011551Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:08.0012630Z warning: third_party/E8Leech/lean/E8Leech/KronMul.lean:67:15: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:08.0013156Z 
+2026-10-19T01:27:08.0013287Z Note: The updated constant has a different type:
+2026-10-19T01:27:08.0013704Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:08.0014050Z instead of
+2026-10-19T01:27:08.0014571Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:08.0015271Z ⚠ [1325/1346] Replayed E8Leech.TaylorModel
+2026-10-19T01:27:08.0016537Z warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:1:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+2026-10-19T01:27:08.0017078Z 
+2026-10-19T01:27:08.0017188Z import Mathlib.Basic.Real.Basic
+2026-10-19T01:27:08.0018227Z warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:121:19: `if_true` has been deprecated: Use `ite_true` instead
+2026-10-19T01:27:08.0019688Z warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:123:25: `if_true` has been deprecated: Use `ite_true` instead
+2026-10-19T01:27:08.0021275Z warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:126:25: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:08.0022376Z warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:129:23: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:08.0023162Z warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:198:8: `if_true` has been deprecated: Use `ite_true` instead
+2026-10-19T01:27:08.0024214Z warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:199:37: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:08.0025149Z warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:202:8: `if_true` has been deprecated: Use `ite_true` instead
+2026-10-19T01:27:08.0026231Z warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:203:37: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:08.7003220Z ⚠ [2205/2353] Replayed E8Leech.TaylorModelFun
+2026-10-19T01:27:08.7005035Z warning: third_party/E8Leech/lean/E8Leech/TaylorModelFun.lean:206:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:08.7006339Z ⚠ [2206/2353] Replayed E8Leech.KronFun
+2026-10-19T01:27:08.7007398Z warning: third_party/E8Leech/lean/E8Leech/KronFun.lean:221:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:08.7008419Z ⚠ [2207/2353] Replayed E8Leech.TaylorModelLogDD
+2026-10-19T01:27:08.7009530Z warning: third_party/E8Leech/lean/E8Leech/TaylorModelLogDD.lean:43:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.4016359Z ⚠ [3261/3366] Replayed E8Leech.ThetaFunctions
+2026-10-19T01:27:09.4017647Z warning: third_party/E8Leech/lean/E8Leech/ThetaFunctions.lean:269:21: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:09.4019015Z warning: third_party/E8Leech/lean/E8Leech/ThetaFunctions.lean:294:21: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:09.4019984Z warning: third_party/E8Leech/lean/E8Leech/ThetaFunctions.lean:349:25: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:09.9025351Z ℹ [3994/4190] Replayed E8Leech.Deletion
+2026-10-19T01:27:09.9026394Z info: third_party/E8Leech/lean/E8Leech/Deletion.lean:72:0: 'E8Leech.badPoints_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-19T01:27:09.9027667Z info: third_party/E8Leech/lean/E8Leech/Deletion.lean:73:0: 'E8Leech.keptPoints_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-19T01:27:09.9029150Z info: third_party/E8Leech/lean/E8Leech/Deletion.lean:74:0: 'E8Leech.balance_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-19T01:27:09.9030333Z info: third_party/E8Leech/lean/E8Leech/Deletion.lean:75:0: 'E8Leech.deletion_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-19T01:27:09.9032121Z info: third_party/E8Leech/lean/E8Leech/Deletion.lean:76:0: 'E8Leech.exponent_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-19T01:27:09.9033941Z info: third_party/E8Leech/lean/E8Leech/Deletion.lean:77:0: 'E8Leech.general_exponent_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-10-19T01:27:09.9035205Z ℹ [3996/4190] Replayed E8Leech.BRRScales
+2026-10-19T01:27:09.9035690Z info: third_party/E8Leech/lean/E8Leech/BRRScales.lean:142:12: Try this:
+2026-10-19T01:27:09.9036352Z   [apply] ring_nf
+2026-10-19T01:27:09.9036705Z   
+2026-10-19T01:27:09.9037287Z   The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+2026-10-19T01:27:09.9037997Z     
+2026-10-19T01:27:09.9039431Z   Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+2026-10-19T01:27:09.9040923Z ⚠ [4008/4190] Replayed E8Leech.DeletionCost
+2026-10-19T01:27:09.9041740Z warning: third_party/E8Leech/lean/E8Leech/DeletionCost.lean:36:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9042546Z warning: third_party/E8Leech/lean/E8Leech/DeletionCost.lean:42:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9043545Z ⚠ [4022/4190] Replayed E8Leech.LocalSecondMoments
+2026-10-19T01:27:09.9044579Z warning: third_party/E8Leech/lean/E8Leech/LocalSecondMoments.lean:94:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9045429Z warning: third_party/E8Leech/lean/E8Leech/LocalSecondMoments.lean:98:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9046832Z warning: third_party/E8Leech/lean/E8Leech/LocalSecondMoments.lean:99:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9048312Z warning: third_party/E8Leech/lean/E8Leech/LocalSecondMoments.lean:100:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9049812Z ⚠ [4023/4190] Replayed E8Leech.LocalizedPairIntegrals
+2026-10-19T01:27:09.9050951Z warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:37:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9052579Z warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:38:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9054662Z warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:62:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9056739Z warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:66:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9058190Z warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:67:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9059434Z warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:68:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9060475Z warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:137:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9061356Z ⚠ [4025/4190] Replayed E8Leech.CountableCellPairs
+2026-10-19T01:27:09.9062134Z warning: third_party/E8Leech/lean/E8Leech/CountableCellPairs.lean:82:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9063395Z warning: third_party/E8Leech/lean/E8Leech/CountableCellPairs.lean:87:47: `if_true` has been deprecated: Use `ite_true` instead
+2026-10-19T01:27:09.9064407Z ⚠ [4032/4190] Replayed E8Leech.PolynomialCellDecay
+2026-10-19T01:27:09.9065164Z warning: third_party/E8Leech/lean/E8Leech/PolynomialCellDecay.lean:68:20: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:09.9065890Z ⚠ [4035/4190] Replayed E8Leech.FullSpacePairForms
+2026-10-19T01:27:09.9136510Z warning: third_party/E8Leech/lean/E8Leech/FullSpacePairForms.lean:39:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9138216Z warning: third_party/E8Leech/lean/E8Leech/FullSpacePairForms.lean:39:36: `if_true` has been deprecated: Use `ite_true` instead
+2026-10-19T01:27:09.9139496Z warning: third_party/E8Leech/lean/E8Leech/FullSpacePairForms.lean:43:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9140508Z warning: third_party/E8Leech/lean/E8Leech/FullSpacePairForms.lean:192:24: `Isometry.antilipschitz` has been deprecated: Use `Isometry.antilipschitzWith` instead
+2026-10-19T01:27:09.9141656Z ⚠ [4046/4190] Replayed E8Leech.PairAnchorMeasure
+2026-10-19T01:27:09.9142724Z warning: third_party/E8Leech/lean/E8Leech/PairAnchorMeasure.lean:37:46: `if_true` has been deprecated: Use `ite_true` instead
+2026-10-19T01:27:09.9143867Z ⚠ [4050/4190] Replayed E8Leech.BoxPairBoundary
+2026-10-19T01:27:09.9144931Z warning: third_party/E8Leech/lean/E8Leech/BoxPairBoundary.lean:73:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9147480Z warning: third_party/E8Leech/lean/E8Leech/BoxPairBoundary.lean:73:36: `if_true` has been deprecated: Use `ite_true` instead
+2026-10-19T01:27:09.9148412Z warning: third_party/E8Leech/lean/E8Leech/BoxPairBoundary.lean:76:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9149472Z warning: third_party/E8Leech/lean/E8Leech/BoxPairBoundary.lean:87:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9150539Z ⚠ [4051/4190] Replayed E8Leech.StationaryBoxPairLimits
+2026-10-19T01:27:09.9151186Z warning: third_party/E8Leech/lean/E8Leech/StationaryBoxPairLimits.lean:30:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9152276Z warning: third_party/E8Leech/lean/E8Leech/StationaryBoxPairLimits.lean:30:36: `if_true` has been deprecated: Use `ite_true` instead
+2026-10-19T01:27:09.9153300Z ⚠ [4140/4190] Replayed Riesz.PoissonSchwartzBasic
+2026-10-19T01:27:09.9153937Z warning: Riesz/PoissonSchwartzBasic.lean:89:2: Try this: 
+2026-10-19T01:27:09.9154816Z   haveI̵
+2026-10-19T01:27:09.9154929Z 
+2026-10-19T01:27:09.9155158Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:09.9155977Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:09.9157045Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:09.9157318Z 
+2026-10-19T01:27:09.9157546Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:09.9158351Z warning: Riesz/PoissonSchwartzBasic.lean:92:34: `AddSubgroup.isClosed_of_discrete` has been deprecated: Use `AddSubgroup.isClosed_of_discreteTopology` instead
+2026-10-19T01:27:09.9159648Z ⚠ [4141/4190] Replayed Riesz.PoissonSchwartz
+2026-10-19T01:27:09.9160262Z warning: Riesz/PoissonSchwartz.lean:72:2: Try this: 
+2026-10-19T01:27:09.9160837Z   haveI̵
+2026-10-19T01:27:09.9161024Z 
+2026-10-19T01:27:09.9161336Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:09.9162093Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:09.9162565Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:09.9162818Z 
+2026-10-19T01:27:09.9163036Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:09.9163571Z warning: Riesz/PoissonSchwartz.lean:258:12: Try this: 
+2026-10-19T01:27:09.9163935Z   haveI̵
+2026-10-19T01:27:09.9164036Z 
+2026-10-19T01:27:09.9164242Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:09.9164932Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:09.9165395Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:09.9165653Z 
+2026-10-19T01:27:09.9165911Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:09.9166981Z ⚠ [4143/4190] Replayed E8Leech.E8Duality
+2026-10-19T01:27:09.9167540Z warning: third_party/E8Leech/lean/E8Leech/E8Duality.lean:105:4: `if_true` has been deprecated: Use `ite_true` instead
+2026-10-19T01:27:09.9168142Z ⚠ [4145/4190] Replayed E8Leech.SpectralSlackGap
+2026-10-19T01:27:09.9169142Z warning: third_party/E8Leech/lean/E8Leech/SpectralSlackGap.lean:30:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9170214Z warning: third_party/E8Leech/lean/E8Leech/SpectralSlackGap.lean:50:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9171464Z warning: third_party/E8Leech/lean/E8Leech/SpectralSlackGap.lean:64:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9172147Z ⚠ [4148/4190] Replayed E8Leech.PotentialMixtures
+2026-10-19T01:27:09.9172730Z warning: third_party/E8Leech/lean/E8Leech/PotentialMixtures.lean:72:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9173842Z warning: third_party/E8Leech/lean/E8Leech/PotentialMixtures.lean:85:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9174846Z warning: third_party/E8Leech/lean/E8Leech/PotentialMixtures.lean:93:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9175884Z ⚠ [4154/4190] Replayed E8Leech.GaussianLatticeFiniteness
+2026-10-19T01:27:09.9177318Z warning: third_party/E8Leech/lean/E8Leech/GaussianLatticeFiniteness.lean:49:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9178100Z ⚠ [4155/4190] Replayed E8Leech.RieszGaussianIntegral
+2026-10-19T01:27:09.9178933Z warning: third_party/E8Leech/lean/E8Leech/RieszGaussianIntegral.lean:94:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9180164Z ⚠ [4156/4190] Replayed E8Leech.GaussianGapCertificates
+2026-10-19T01:27:09.9181048Z warning: third_party/E8Leech/lean/E8Leech/GaussianGapCertificates.lean:27:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9181714Z ⚠ [4161/4190] Replayed E8Leech.OriginSlack
+2026-10-19T01:27:09.9182555Z warning: third_party/E8Leech/lean/E8Leech/OriginSlack.lean:71:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9183199Z ⚠ [4163/4190] Replayed E8Leech.CompactGaussianSlack
+2026-10-19T01:27:09.9184079Z warning: third_party/E8Leech/lean/E8Leech/CompactGaussianSlack.lean:97:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9185182Z warning: third_party/E8Leech/lean/E8Leech/CompactGaussianSlack.lean:98:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:09.9185960Z ⚠ [4165/4190] Replayed E8Leech.LatticeCalibration
+2026-10-19T01:27:09.9187205Z warning: third_party/E8Leech/lean/E8Leech/LatticeCalibration.lean:42:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9188790Z warning: third_party/E8Leech/lean/E8Leech/LatticeCalibration.lean:44:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:09.9190360Z warning: third_party/E8Leech/lean/E8Leech/LatticeCalibration.lean:45:25: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:09.9191957Z warning: third_party/E8Leech/lean/E8Leech/LatticeCalibration.lean:70:23: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:09.9193282Z ⚠ [4182/4190] Replayed SpherePacking.ForMathlib.IteratedDeriv
+2026-10-19T01:27:09.9194716Z warning: third_party/E8Leech/lean/SpherePacking/ForMathlib/IteratedDeriv.lean:7:0: 'Mathlib.Data.Complex.Basic' has been deprecated: please replace this import by
+2026-10-19T01:27:09.9195842Z 
+2026-10-19T01:27:09.9196034Z import Mathlib.Basic.Complex.Basic
+2026-10-19T01:27:10.0022937Z ⚠ [4190/4382] Replayed E8Leech.PositiveMixtureMoments
+2026-10-19T01:27:10.0025737Z warning: third_party/E8Leech/lean/E8Leech/PositiveMixtureMoments.lean:87:19: `if_false` has been deprecated: Use `ite_false` instead
+2026-10-19T01:27:10.0027287Z ⚠ [4192/4382] Replayed E8Leech.PositiveMixtureCertificates
+2026-10-19T01:27:10.0028425Z warning: third_party/E8Leech/lean/E8Leech/PositiveMixtureCertificates.lean:105:57: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:10.0029998Z warning: third_party/E8Leech/lean/E8Leech/PositiveMixtureCertificates.lean:106:56: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:10.0031124Z ⚠ [4193/4382] Replayed E8Leech.E8UnitCost
+2026-10-19T01:27:10.0032007Z warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:217:20: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-19T01:27:10.0033334Z warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:226:20: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-19T01:27:10.0034634Z warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:243:22: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+2026-10-19T01:27:10.0035979Z warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:476:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:10.0037793Z warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:478:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:10.0039091Z warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:484:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:10.0040208Z ⚠ [4206/4382] Replayed SpherePacking.ForMathlib.AtImInfty
+2026-10-19T01:27:10.0041240Z warning: third_party/E8Leech/lean/SpherePacking/ForMathlib/AtImInfty.lean:12:32: `setOf` has been deprecated: Use `Set.ofPred` instead
+2026-10-19T01:27:10.0042373Z ⚠ [4207/4382] Replayed SpherePacking.ForMathlib.ComplexI
+2026-10-19T01:27:10.0043551Z warning: third_party/E8Leech/lean/SpherePacking/ForMathlib/ComplexI.lean:2:0: 'Mathlib.Data.Complex.Basic' has been deprecated: please replace this import by
+2026-10-19T01:27:10.0044511Z 
+2026-10-19T01:27:10.0044691Z import Mathlib.Basic.Complex.Basic
+2026-10-19T01:27:10.0045566Z ⚠ [4212/4382] Replayed SpherePacking.ModularForms.SlashActionAuxil
+2026-10-19T01:27:10.0046910Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SlashActionAuxil.lean:80:8: This simp argument is unused:
+2026-10-19T01:27:10.0048143Z   specialLinearGroup_apply
+2026-10-19T01:27:10.0048412Z 
+2026-10-19T01:27:10.0048599Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0049073Z   [apply] simp [negI]
+2026-10-19T01:27:10.0049298Z 
+2026-10-19T01:27:10.0049674Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0050670Z ⚠ [4221/4382] Replayed SpherePacking.ModularForms.SummableLemmas.Basic
+2026-10-19T01:27:10.0052150Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/Basic.lean:3:0: 'Mathlib.Data.Complex.Basic' has been deprecated: please replace this import by
+2026-10-19T01:27:10.0053295Z 
+2026-10-19T01:27:10.0053477Z import Mathlib.Basic.Complex.Basic
+2026-10-19T01:27:10.0054263Z ⚠ [4223/4382] Replayed SpherePacking.ModularForms.SummableLemmas.G2
+2026-10-19T01:27:10.0055757Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/G2.lean:27:9: `summable_of_finite_support` has been deprecated: Use `summable_of_hasFiniteSupport` instead
+2026-10-19T01:27:10.0057891Z ⚠ [4224/4382] Replayed SpherePacking.ModularForms.SummableLemmas.QExpansion
+2026-10-19T01:27:10.0059247Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:100:6: Unused tactic linter: `simp` does nothing
+2026-10-19T01:27:10.0060210Z 
+2026-10-19T01:27:10.0060573Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-10-19T01:27:10.0062036Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:193:26: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0063883Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:193:26: This simp argument is unused:
+2026-10-19T01:27:10.0064973Z   mem_setOf_eq
+2026-10-19T01:27:10.0065168Z 
+2026-10-19T01:27:10.0065370Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0065887Z   [apply] simp only [smul_eq_mul, neg_mul]
+2026-10-19T01:27:10.0066481Z 
+2026-10-19T01:27:10.0066865Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0068395Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:227:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0070233Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:227:13: This simp argument is unused:
+2026-10-19T01:27:10.0071268Z   mem_setOf_eq
+2026-10-19T01:27:10.0071467Z 
+2026-10-19T01:27:10.0071651Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0072548Z   [apply] simp only [one_div, norm_pow, norm_neg, one_mem, CStarRing.norm_of_mem_unitary, one_pow, RCLike.norm_natCast,
+2026-10-19T01:27:10.0073589Z     one_mul, norm_inv, norm_mul, norm_div, Real.norm_eq_abs, norm_zpow]
+2026-10-19T01:27:10.0074277Z 
+2026-10-19T01:27:10.0074662Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0076347Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:261:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0078203Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:261:13: This simp argument is unused:
+2026-10-19T01:27:10.0079237Z   mem_setOf_eq
+2026-10-19T01:27:10.0079437Z 
+2026-10-19T01:27:10.0079620Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0080510Z   [apply] simp only [one_div, norm_pow, norm_neg, one_mem, CStarRing.norm_of_mem_unitary, one_pow, RCLike.norm_natCast,
+2026-10-19T01:27:10.0081541Z     one_mul, norm_inv, norm_mul, norm_div, Real.norm_eq_abs, norm_zpow]
+2026-10-19T01:27:10.0082005Z 
+2026-10-19T01:27:10.0082377Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0083869Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:363:38: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0086290Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:458:39: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0088343Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:458:53: `Set.coe_setOf` has been deprecated: Use `Set.coe_ofPred` instead
+2026-10-19T01:27:10.0090372Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:462:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0092416Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:474:33: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0094320Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:458:53: This simp argument is unused:
+2026-10-19T01:27:10.0095371Z   coe_setOf
+2026-10-19T01:27:10.0095559Z 
+2026-10-19T01:27:10.0095744Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0096779Z   [apply] simp only [Nat.cast_le, one_div, mem_setOf_eq, image_univ, Subtype.forall, Int.cast_natCast] at *
+2026-10-19T01:27:10.0097474Z 
+2026-10-19T01:27:10.0097858Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0098832Z ⚠ [4231/4382] Replayed SpherePacking.ModularForms.E2.Transform
+2026-10-19T01:27:10.0099905Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/E2/Transform.lean:66:4: This simp argument is unused:
+2026-10-19T01:27:10.0100831Z   ge_iff_le
+2026-10-19T01:27:10.0101014Z 
+2026-10-19T01:27:10.0101187Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0101842Z   [apply] simp only [one_div, mul_inv_rev, Pi.add_apply, eventually_atTop]
+2026-10-19T01:27:10.0102332Z 
+2026-10-19T01:27:10.0102694Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0104131Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/E2/Transform.lean:116:5: `ModularGroup.coe` has been deprecated: use GL(2, ℝ)
+2026-10-19T01:27:10.0105962Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/E2/Transform.lean:116:31: `ModularGroup.coe` has been deprecated: use GL(2, ℝ)
+2026-10-19T01:27:10.0108055Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/E2/Transform.lean:117:8: `ModularGroup.coe` has been deprecated: use GL(2, ℝ)
+2026-10-19T01:27:10.0109646Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/E2/Transform.lean:253:23: This simp argument is unused:
+2026-10-19T01:27:10.0110593Z   inv_inj
+2026-10-19T01:27:10.0110778Z 
+2026-10-19T01:27:10.0110961Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0111449Z   [apply] simp [inv_pow]
+2026-10-19T01:27:10.0111703Z 
+2026-10-19T01:27:10.0112510Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0113442Z ⚠ [4232/4382] Replayed SpherePacking.ModularForms.CSqrt
+2026-10-19T01:27:10.0114444Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/CSqrt.lean:64:4: try 'simp' instead of 'simpa'
+2026-10-19T01:27:10.0115212Z 
+2026-10-19T01:27:10.0115601Z Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+2026-10-19T01:27:10.0116677Z ⚠ [4235/4382] Replayed SpherePacking.ModularForms.Eta
+2026-10-19T01:27:10.0117875Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:66:160: Unused tactic linter: `simp [etaSP, Function.comp_def]` does nothing
+2026-10-19T01:27:10.0118857Z 
+2026-10-19T01:27:10.0119216Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-10-19T01:27:10.0120387Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:66:194: Unused tactic linter: `ring` does nothing
+2026-10-19T01:27:10.0121224Z 
+2026-10-19T01:27:10.0121758Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-10-19T01:27:10.0122864Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:66:160: this tactic is never executed
+2026-10-19T01:27:10.0123623Z 
+2026-10-19T01:27:10.0124017Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-10-19T01:27:10.0125135Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:66:194: this tactic is never executed
+2026-10-19T01:27:10.0125840Z 
+2026-10-19T01:27:10.0126518Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-10-19T01:27:10.0127726Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:66:142: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+2026-10-19T01:27:10.0128581Z 
+2026-10-19T01:27:10.0128963Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+2026-10-19T01:27:10.0130369Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:300:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0132200Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:303:35: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0133953Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:306:33: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0135691Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:328:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0137483Z ⚠ [4236/4382] Replayed SpherePacking.ModularForms.Delta.Basic
+2026-10-19T01:27:10.0138681Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Delta/Basic.lean:128:54: `PNat.one_le` has been deprecated: use `one_le`
+2026-10-19T01:27:10.0140018Z ⚠ [4237/4382] Replayed SpherePacking.ModularForms.ResToImagAxis
+2026-10-19T01:27:10.0141639Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:60:6: `continuousOn_iff_continuous_restrict` has been deprecated: Use `continuousOn_iff_continuous_domRestrict` instead
+2026-10-19T01:27:10.0143817Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:70:8: `Set.restrict` has been deprecated: Use `Set.domRestrict` instead
+2026-10-19T01:27:10.0145467Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:70:8: This simp argument is unused:
+2026-10-19T01:27:10.0146596Z   Set.restrict
+2026-10-19T01:27:10.0146804Z 
+2026-10-19T01:27:10.0146987Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0147501Z   [apply] simp [ResToImagAxis, z, ht]
+2026-10-19T01:27:10.0147822Z 
+2026-10-19T01:27:10.0148195Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0150388Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:162:88: Unused tactic linter: `(funext s; simp)` does nothing
+2026-10-19T01:27:10.0151350Z 
+2026-10-19T01:27:10.0151682Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-10-19T01:27:10.0152835Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:162:88: this tactic is never executed
+2026-10-19T01:27:10.0153627Z 
+2026-10-19T01:27:10.0154014Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-10-19T01:27:10.0155305Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:162:70: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+2026-10-19T01:27:10.0156344Z 
+2026-10-19T01:27:10.0156720Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+2026-10-19T01:27:10.0157757Z ⚠ [4239/4382] Replayed SpherePacking.ModularForms.Delta.ImagAxis
+2026-10-19T01:27:10.0159127Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Delta/ImagAxis.lean:136:62: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0162069Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Delta/ImagAxis.lean:146:10: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0163963Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Delta/ImagAxis.lean:150:36: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0165563Z ⚠ [4240/4382] Replayed SpherePacking.ModularForms.QExpansionLemmas.LimitsAtInfinity
+2026-10-19T01:27:10.0167476Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/QExpansionLemmas/LimitsAtInfinity.lean:4:0: 'Mathlib.Data.Real.StarOrdered' has been deprecated: please replace this import by
+2026-10-19T01:27:10.0168761Z 
+2026-10-19T01:27:10.0168933Z import Mathlib.Analysis.Real.Sqrt
+2026-10-19T01:27:10.0169477Z import Mathlib.Tactic.ContinuousFunctionalCalculus
+2026-10-19T01:27:10.0170452Z ⚠ [4242/4382] Replayed SpherePacking.ModularForms.QExpansionLemmas.QExpansionAlgebra
+2026-10-19T01:27:10.0172206Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/QExpansionLemmas/QExpansionAlgebra.lean:6:0: 'Mathlib.Data.Real.StarOrdered' has been deprecated: please replace this import by
+2026-10-19T01:27:10.0173477Z 
+2026-10-19T01:27:10.0173648Z import Mathlib.Analysis.Real.Sqrt
+2026-10-19T01:27:10.0174166Z import Mathlib.Tactic.ContinuousFunctionalCalculus
+2026-10-19T01:27:10.0175014Z ⚠ [4243/4382] Replayed SpherePacking.ModularForms.CuspFormIsoModforms
+2026-10-19T01:27:10.0176562Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/CuspFormIsoModforms.lean:4:0: Use `Mathlib.NumberTheory.ModularForms.LevelOne.Basic` instead.
+2026-10-19T01:27:10.0178206Z 'Mathlib.NumberTheory.ModularForms.LevelOne' has been deprecated: please replace this import by
+2026-10-19T01:27:10.0178918Z 
+2026-10-19T01:27:10.0179195Z import Mathlib.NumberTheory.ModularForms.LevelOne.Basic
+2026-10-19T01:27:10.0179965Z ⚠ [4244/4382] Replayed SpherePacking.Tactic.NormNumI
+2026-10-19T01:27:10.0181190Z warning: third_party/E8Leech/lean/SpherePacking/Tactic/NormNumI.lean:8:0: 'Mathlib.Data.Complex.Basic' has been deprecated: please replace this import by
+2026-10-19T01:27:10.0182221Z 
+2026-10-19T01:27:10.0182405Z import Mathlib.Basic.Complex.Basic
+2026-10-19T01:27:10.0183093Z ⚠ [4245/4382] Replayed SpherePacking.ModularForms.JacobiTheta
+2026-10-19T01:27:10.0184458Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:3:0: 'Mathlib.Algebra.Field.Power' has been deprecated: please replace this import by
+2026-10-19T01:27:10.0185565Z 
+2026-10-19T01:27:10.0185757Z import Mathlib.Algebra.Ring.Int.Parity
+2026-10-19T01:27:10.0187198Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:5:0: 'Mathlib.Data.Real.StarOrdered' has been deprecated: please replace this import by
+2026-10-19T01:27:10.0188312Z 
+2026-10-19T01:27:10.0188488Z import Mathlib.Analysis.Real.Sqrt
+2026-10-19T01:27:10.0189731Z import Mathlib.Tactic.ContinuousFunctionalCalculus
+2026-10-19T01:27:10.0190995Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:7:0: Use `Mathlib.NumberTheory.ModularForms.LevelOne.Basic` instead.
+2026-10-19T01:27:10.0192533Z 'Mathlib.NumberTheory.ModularForms.LevelOne' has been deprecated: please replace this import by
+2026-10-19T01:27:10.0193223Z 
+2026-10-19T01:27:10.0193501Z import Mathlib.NumberTheory.ModularForms.LevelOne.Basic
+2026-10-19T01:27:10.0194796Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:713:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0196635Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:995:104: This simp argument is unused:
+2026-10-19T01:27:10.0197630Z   H₂
+2026-10-19T01:27:10.0197804Z 
+2026-10-19T01:27:10.0197987Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0198493Z   [apply] simp [Function.comp_def]
+2026-10-19T01:27:10.0198798Z 
+2026-10-19T01:27:10.0199163Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0200499Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:995:108: This simp argument is unused:
+2026-10-19T01:27:10.0201474Z   Function.comp_def
+2026-10-19T01:27:10.0201691Z 
+2026-10-19T01:27:10.0201880Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0202424Z   [apply] simp [H₂]
+2026-10-19T01:27:10.0202641Z 
+2026-10-19T01:27:10.0203013Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0204235Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:995:129: Unused tactic linter: `ring` does nothing
+2026-10-19T01:27:10.0205133Z 
+2026-10-19T01:27:10.0205484Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-10-19T01:27:10.0206836Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:995:129: this tactic is never executed
+2026-10-19T01:27:10.0207655Z 
+2026-10-19T01:27:10.0208043Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-10-19T01:27:10.0209230Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:999:104: This simp argument is unused:
+2026-10-19T01:27:10.0210186Z   H₃
+2026-10-19T01:27:10.0210353Z 
+2026-10-19T01:27:10.0210534Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0211032Z   [apply] simp [Function.comp_def]
+2026-10-19T01:27:10.0211336Z 
+2026-10-19T01:27:10.0211700Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0212865Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:999:108: This simp argument is unused:
+2026-10-19T01:27:10.0213818Z   Function.comp_def
+2026-10-19T01:27:10.0214040Z 
+2026-10-19T01:27:10.0214218Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0214742Z   [apply] simp [H₃]
+2026-10-19T01:27:10.0214950Z 
+2026-10-19T01:27:10.0215327Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0216761Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:999:129: Unused tactic linter: `ring` does nothing
+2026-10-19T01:27:10.0217644Z 
+2026-10-19T01:27:10.0218005Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-10-19T01:27:10.0219159Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:999:129: this tactic is never executed
+2026-10-19T01:27:10.0219974Z 
+2026-10-19T01:27:10.0220353Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-10-19T01:27:10.0221556Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:1003:104: This simp argument is unused:
+2026-10-19T01:27:10.0222520Z   H₄
+2026-10-19T01:27:10.0222686Z 
+2026-10-19T01:27:10.0222868Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0223367Z   [apply] simp [Function.comp_def]
+2026-10-19T01:27:10.0223872Z 
+2026-10-19T01:27:10.0224251Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0225438Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:1003:108: This simp argument is unused:
+2026-10-19T01:27:10.0226609Z   Function.comp_def
+2026-10-19T01:27:10.0226826Z 
+2026-10-19T01:27:10.0227005Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0227527Z   [apply] simp [H₄]
+2026-10-19T01:27:10.0227739Z 
+2026-10-19T01:27:10.0228103Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0229358Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:1003:129: Unused tactic linter: `ring` does nothing
+2026-10-19T01:27:10.0230260Z 
+2026-10-19T01:27:10.0230612Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-10-19T01:27:10.0231742Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:1003:129: this tactic is never executed
+2026-10-19T01:27:10.0232530Z 
+2026-10-19T01:27:10.0233173Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-10-19T01:27:10.0234220Z ⚠ [4247/4382] Replayed SpherePacking.ModularForms.Eisensteinqexpansions
+2026-10-19T01:27:10.0235393Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eisensteinqexpansions.lean:230:136: This simp argument is unused:
+2026-10-19T01:27:10.0236680Z   Function.comp_def
+2026-10-19T01:27:10.0236949Z 
+2026-10-19T01:27:10.0237143Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0237788Z   [apply] simp [Function.uncurry, mul_assoc, mul_left_comm, mul_comm]
+2026-10-19T01:27:10.0238266Z 
+2026-10-19T01:27:10.0238632Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0239877Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eisensteinqexpansions.lean:309:38: This simp argument is unused:
+2026-10-19T01:27:10.0240893Z   smul_eq_mul
+2026-10-19T01:27:10.0241091Z 
+2026-10-19T01:27:10.0241274Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0241842Z   [apply] simp only [one_div, PNat.val_ofNat, neg_mul]
+2026-10-19T01:27:10.0242228Z 
+2026-10-19T01:27:10.0242585Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0243529Z ⚠ [4248/4382] Replayed SpherePacking.ModularForms.EisensteinBase
+2026-10-19T01:27:10.0245004Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:145:9: `summable_of_finite_support` has been deprecated: Use `summable_of_hasFiniteSupport` instead
+2026-10-19T01:27:10.0247383Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:270:42: `ContinuousMultilinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+2026-10-19T01:27:10.0248562Z 
+2026-10-19T01:27:10.0249267Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+2026-10-19T01:27:10.0251070Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:287:33: `MultilinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+2026-10-19T01:27:10.0252175Z 
+2026-10-19T01:27:10.0252871Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+2026-10-19T01:27:10.0254376Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:270:42: This simp argument is unused:
+2026-10-19T01:27:10.0255379Z   ContinuousMultilinearMap.smul_apply
+2026-10-19T01:27:10.0255711Z 
+2026-10-19T01:27:10.0255894Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0256733Z   [apply] simp [qq, qExpansion2, smul_eq_mul, ContinuousMultilinearMap.mkPiAlgebraFin_apply]
+2026-10-19T01:27:10.0257259Z 
+2026-10-19T01:27:10.0257567Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0259842Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:607:11: `DifferentiableOn.finset_prod` has been deprecated: Use `DifferentiableOn.finsetProd` instead
+2026-10-19T01:27:10.0262088Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:633:12: `differentiableWithinAt_id'` has been deprecated: Use `differentiableWithinAt_fun_id` instead
+2026-10-19T01:27:10.0264010Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:658:31: This simp argument is unused:
+2026-10-19T01:27:10.0265069Z   Finset.Nat.antidiagonal_zero
+2026-10-19T01:27:10.0265374Z 
+2026-10-19T01:27:10.0265563Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0266495Z   [apply] simp [PowerSeries.coeff_mul, antidiagonal_one, E4_q_exp_zero, E4_q_exp_one]
+2026-10-19T01:27:10.0267107Z 
+2026-10-19T01:27:10.0267494Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0268858Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:869:83: `PNat.one_le` has been deprecated: use `one_le`
+2026-10-19T01:27:10.0270463Z ⚠ [4250/4382] Replayed SpherePacking.ModularForms.Lv1Lv2Identities
+2026-10-19T01:27:10.0271881Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:146: `ModularForm.sub_apply` has been deprecated: Use `sub_apply` instead
+2026-10-19T01:27:10.0272989Z 
+2026-10-19T01:27:10.0273699Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sub_apply` to `sub_apply x`).
+2026-10-19T01:27:10.0275311Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:128: This simp argument is unused:
+2026-10-19T01:27:10.0276496Z   diff
+2026-10-19T01:27:10.0276676Z 
+2026-10-19T01:27:10.0276865Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0277612Z   [apply] simp [thetaE4_MF, ModularForm.sub_apply, sub_eq_add_neg, Function.comp_def]
+2026-10-19T01:27:10.0278202Z 
+2026-10-19T01:27:10.0278592Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0279849Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:134: This simp argument is unused:
+2026-10-19T01:27:10.0280844Z   thetaE4_MF
+2026-10-19T01:27:10.0281041Z 
+2026-10-19T01:27:10.0281226Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0281928Z   [apply] simp [diff, ModularForm.sub_apply, sub_eq_add_neg, Function.comp_def]
+2026-10-19T01:27:10.0282473Z 
+2026-10-19T01:27:10.0282843Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0284077Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:146: This simp argument is unused:
+2026-10-19T01:27:10.0285093Z   ModularForm.sub_apply
+2026-10-19T01:27:10.0285345Z 
+2026-10-19T01:27:10.0285533Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0286363Z   [apply] simp [diff, thetaE4_MF, sub_eq_add_neg, Function.comp_def]
+2026-10-19T01:27:10.0286855Z 
+2026-10-19T01:27:10.0287231Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0288471Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:169: This simp argument is unused:
+2026-10-19T01:27:10.0289482Z   sub_eq_add_neg
+2026-10-19T01:27:10.0289690Z 
+2026-10-19T01:27:10.0289875Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0290546Z   [apply] simp [diff, thetaE4_MF, ModularForm.sub_apply, Function.comp_def]
+2026-10-19T01:27:10.0291068Z 
+2026-10-19T01:27:10.0291442Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0292671Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:185: This simp argument is unused:
+2026-10-19T01:27:10.0293684Z   Function.comp_def
+2026-10-19T01:27:10.0293907Z 
+2026-10-19T01:27:10.0294085Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0294930Z   [apply] simp [diff, thetaE4_MF, ModularForm.sub_apply, sub_eq_add_neg]
+2026-10-19T01:27:10.0295449Z 
+2026-10-19T01:27:10.0295822Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0297324Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:206: Unused tactic linter: `ring` does nothing
+2026-10-19T01:27:10.0298262Z 
+2026-10-19T01:27:10.0298620Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-10-19T01:27:10.0299809Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:206: this tactic is never executed
+2026-10-19T01:27:10.0300626Z 
+2026-10-19T01:27:10.0300993Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-10-19T01:27:10.0302466Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:146: `ModularForm.sub_apply` has been deprecated: Use `sub_apply` instead
+2026-10-19T01:27:10.0303559Z 
+2026-10-19T01:27:10.0304235Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sub_apply` to `sub_apply x`).
+2026-10-19T01:27:10.0305871Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:128: This simp argument is unused:
+2026-10-19T01:27:10.0306978Z   diff
+2026-10-19T01:27:10.0307176Z 
+2026-10-19T01:27:10.0307384Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0308235Z   [apply] simp [thetaE6_MF, ModularForm.sub_apply, sub_eq_add_neg, Function.comp_def]
+2026-10-19T01:27:10.0308865Z 
+2026-10-19T01:27:10.0309243Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0310516Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:134: This simp argument is unused:
+2026-10-19T01:27:10.0311544Z   thetaE6_MF
+2026-10-19T01:27:10.0311740Z 
+2026-10-19T01:27:10.0311925Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0312634Z   [apply] simp [diff, ModularForm.sub_apply, sub_eq_add_neg, Function.comp_def]
+2026-10-19T01:27:10.0313191Z 
+2026-10-19T01:27:10.0313564Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0314790Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:146: This simp argument is unused:
+2026-10-19T01:27:10.0315812Z   ModularForm.sub_apply
+2026-10-19T01:27:10.0316213Z 
+2026-10-19T01:27:10.0316396Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0317037Z   [apply] simp [diff, thetaE6_MF, sub_eq_add_neg, Function.comp_def]
+2026-10-19T01:27:10.0317515Z 
+2026-10-19T01:27:10.0317883Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0319117Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:169: This simp argument is unused:
+2026-10-19T01:27:10.0320125Z   sub_eq_add_neg
+2026-10-19T01:27:10.0320330Z 
+2026-10-19T01:27:10.0320523Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0321211Z   [apply] simp [diff, thetaE6_MF, ModularForm.sub_apply, Function.comp_def]
+2026-10-19T01:27:10.0321733Z 
+2026-10-19T01:27:10.0322115Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0323360Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:185: This simp argument is unused:
+2026-10-19T01:27:10.0324413Z   Function.comp_def
+2026-10-19T01:27:10.0324640Z 
+2026-10-19T01:27:10.0324827Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0325477Z   [apply] simp [diff, thetaE6_MF, ModularForm.sub_apply, sub_eq_add_neg]
+2026-10-19T01:27:10.0325979Z 
+2026-10-19T01:27:10.0326508Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0327830Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:206: Unused tactic linter: `ring` does nothing
+2026-10-19T01:27:10.0328771Z 
+2026-10-19T01:27:10.0329843Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-10-19T01:27:10.0331100Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:206: this tactic is never executed
+2026-10-19T01:27:10.0331970Z 
+2026-10-19T01:27:10.0332362Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-10-19T01:27:10.0333272Z ⚠ [4268/4382] Replayed E8Leech.KronJet3
+2026-10-19T01:27:10.0334200Z warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:344:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:10.0335593Z warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:344:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:10.0337174Z warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:350:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:10.0338578Z warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:350:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:10.0339971Z warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:350:41: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:10.0341524Z warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:350:60: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:10.0342568Z ⚠ [4269/4382] Replayed E8Leech.KronRedLog
+2026-10-19T01:27:10.0343508Z warning: third_party/E8Leech/lean/E8Leech/KronRedLog.lean:74:25: `if_pos` has been deprecated: Use `ite_eq_left` instead
+2026-10-19T01:27:10.0344924Z warning: third_party/E8Leech/lean/E8Leech/KronRedLog.lean:93:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:10.0345975Z ⚠ [4270/4382] Replayed E8Leech.KronRedLog3
+2026-10-19T01:27:10.0347111Z warning: third_party/E8Leech/lean/E8Leech/KronRedLog3.lean:72:74: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:10.0348186Z ⚠ [4271/4382] Replayed E8Leech.KronRedAtoms
+2026-10-19T01:27:10.0349171Z warning: third_party/E8Leech/lean/E8Leech/KronRedAtoms.lean:71:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+2026-10-19T01:27:10.0350385Z ⚠ [4274/4382] Replayed SpherePacking.ModularForms.Derivative
+2026-10-19T01:27:10.0351704Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:206:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+2026-10-19T01:27:10.0353504Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:265:46: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-19T01:27:10.0355249Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:272:48: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-19T01:27:10.0357142Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:275:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-19T01:27:10.0358749Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:430:126: This simp argument is unused:
+2026-10-19T01:27:10.0359721Z   Function.comp_def
+2026-10-19T01:27:10.0359946Z 
+2026-10-19T01:27:10.0360133Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0360682Z   [apply] simp [ofComplex_apply_of_im_pos hmob_im]
+2026-10-19T01:27:10.0361068Z 
+2026-10-19T01:27:10.0361442Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0362709Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:430:147: Unused tactic linter: `ring` does nothing
+2026-10-19T01:27:10.0363603Z 
+2026-10-19T01:27:10.0363967Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-10-19T01:27:10.0365138Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:430:147: this tactic is never executed
+2026-10-19T01:27:10.0365956Z 
+2026-10-19T01:27:10.0366506Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-10-19T01:27:10.0368543Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:430:67: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+2026-10-19T01:27:10.0369514Z 
+2026-10-19T01:27:10.0369917Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+2026-10-19T01:27:10.0371287Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:605:62: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-10-19T01:27:10.0372891Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:1156:18: try 'simp' instead of 'simpa'
+2026-10-19T01:27:10.0373709Z 
+2026-10-19T01:27:10.0374100Z Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+2026-10-19T01:27:10.0375159Z ⚠ [4277/4382] Replayed SpherePacking.ModularForms.DimGenCongLevels.Basic
+2026-10-19T01:27:10.0376461Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/Basic.lean:31:2: Try this: 
+2026-10-19T01:27:10.0377438Z   haveI̵
+2026-10-19T01:27:10.0377633Z 
+2026-10-19T01:27:10.0377923Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0378904Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0379732Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0380199Z 
+2026-10-19T01:27:10.0380583Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0381723Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/Basic.lean:32:2: Try this: 
+2026-10-19T01:27:10.0382656Z   haveI̵
+2026-10-19T01:27:10.0382945Z 
+2026-10-19T01:27:10.0383235Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0384037Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0384859Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0385325Z 
+2026-10-19T01:27:10.0385707Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0387024Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/Basic.lean:35:2: Try this: 
+2026-10-19T01:27:10.0387943Z   haveI̵
+2026-10-19T01:27:10.0388121Z 
+2026-10-19T01:27:10.0388406Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0389196Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0390013Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0390473Z 
+2026-10-19T01:27:10.0390849Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0391970Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/Basic.lean:44:2: Try this: 
+2026-10-19T01:27:10.0392877Z   haveI̵
+2026-10-19T01:27:10.0393053Z 
+2026-10-19T01:27:10.0393322Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0394125Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0394943Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0395406Z 
+2026-10-19T01:27:10.0395778Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0397068Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/Basic.lean:45:2: Try this: 
+2026-10-19T01:27:10.0397976Z   haveI̵
+2026-10-19T01:27:10.0398154Z 
+2026-10-19T01:27:10.0398430Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0399220Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0400040Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0400506Z 
+2026-10-19T01:27:10.0400874Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0402203Z ⚠ [4279/4382] Replayed SpherePacking.ModularForms.DimGenCongLevels.FiniteDimensional
+2026-10-19T01:27:10.0403534Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/FiniteDimensional.lean:69:2: Try this: 
+2026-10-19T01:27:10.0404549Z   haveI̵
+2026-10-19T01:27:10.0404730Z 
+2026-10-19T01:27:10.0405013Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0405809Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0406809Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0407273Z 
+2026-10-19T01:27:10.0407652Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0408748Z ⚠ [4280/4382] Replayed SpherePacking.ModularForms.DimGenCongLevels.NormReduction
+2026-10-19T01:27:10.0409984Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormReduction.lean:48:2: Try this: 
+2026-10-19T01:27:10.0410976Z   letI̵
+2026-10-19T01:27:10.0411154Z 
+2026-10-19T01:27:10.0411442Z The goal is a proposition, so `let` is preferred over `letI`.
+2026-10-19T01:27:10.0412399Z The difference between `let` and `letI` is that `letI` inlines the value.
+2026-10-19T01:27:10.0413283Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0413751Z 
+2026-10-19T01:27:10.0414127Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0415318Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormReduction.lean:69:2: Try this: 
+2026-10-19T01:27:10.0416467Z   haveI̵
+2026-10-19T01:27:10.0416649Z 
+2026-10-19T01:27:10.0416934Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0417738Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0418570Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0419055Z 
+2026-10-19T01:27:10.0419438Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0420642Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormReduction.lean:96:2: Try this: 
+2026-10-19T01:27:10.0421676Z   haveI̵
+2026-10-19T01:27:10.0421850Z 
+2026-10-19T01:27:10.0422126Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0422928Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0423791Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0424254Z 
+2026-10-19T01:27:10.0424628Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0425810Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormReduction.lean:97:2: Try this: 
+2026-10-19T01:27:10.0426950Z   letI̵
+2026-10-19T01:27:10.0427131Z 
+2026-10-19T01:27:10.0427402Z The goal is a proposition, so `let` is preferred over `letI`.
+2026-10-19T01:27:10.0428194Z The difference between `let` and `letI` is that `letI` inlines the value.
+2026-10-19T01:27:10.0429004Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0429468Z 
+2026-10-19T01:27:10.0429849Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0431044Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormReduction.lean:98:2: Try this: 
+2026-10-19T01:27:10.0432008Z   letI̵
+2026-10-19T01:27:10.0432182Z 
+2026-10-19T01:27:10.0432456Z The goal is a proposition, so `let` is preferred over `letI`.
+2026-10-19T01:27:10.0433232Z The difference between `let` and `letI` is that `letI` inlines the value.
+2026-10-19T01:27:10.0434038Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0434502Z 
+2026-10-19T01:27:10.0434871Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0436316Z ⚠ [4281/4382] Replayed SpherePacking.ModularForms.DimGenCongLevels.NormTransfer
+2026-10-19T01:27:10.0437566Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:42:2: Try this: 
+2026-10-19T01:27:10.0438565Z   letI̵
+2026-10-19T01:27:10.0438766Z 
+2026-10-19T01:27:10.0439045Z The goal is a proposition, so `let` is preferred over `letI`.
+2026-10-19T01:27:10.0439828Z The difference between `let` and `letI` is that `letI` inlines the value.
+2026-10-19T01:27:10.0440642Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0441102Z 
+2026-10-19T01:27:10.0441481Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0442656Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:43:2: Try this: 
+2026-10-19T01:27:10.0443638Z   letI̵
+2026-10-19T01:27:10.0443817Z 
+2026-10-19T01:27:10.0444151Z The goal is a proposition, so `let` is preferred over `letI`.
+2026-10-19T01:27:10.0444940Z The difference between `let` and `letI` is that `letI` inlines the value.
+2026-10-19T01:27:10.0445921Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0446582Z 
+2026-10-19T01:27:10.0446961Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0448143Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:103:2: Try this: 
+2026-10-19T01:27:10.0449128Z   haveI̵
+2026-10-19T01:27:10.0449302Z 
+2026-10-19T01:27:10.0449582Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0450385Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0451208Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0451671Z 
+2026-10-19T01:27:10.0452050Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0453230Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:104:2: Try this: 
+2026-10-19T01:27:10.0454211Z   haveI̵
+2026-10-19T01:27:10.0454387Z 
+2026-10-19T01:27:10.0454663Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0455458Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0456458Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0456918Z 
+2026-10-19T01:27:10.0457293Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0458470Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:146:2: Try this: 
+2026-10-19T01:27:10.0459446Z   haveI̵
+2026-10-19T01:27:10.0459625Z 
+2026-10-19T01:27:10.0459900Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0460688Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0461512Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0461975Z 
+2026-10-19T01:27:10.0462363Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0463533Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:147:2: Try this: 
+2026-10-19T01:27:10.0464496Z   haveI̵
+2026-10-19T01:27:10.0464667Z 
+2026-10-19T01:27:10.0464942Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0465740Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0466720Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0467181Z 
+2026-10-19T01:27:10.0467554Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0468727Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:148:2: Try this: 
+2026-10-19T01:27:10.0469697Z   letI̵
+2026-10-19T01:27:10.0469873Z 
+2026-10-19T01:27:10.0470324Z The goal is a proposition, so `let` is preferred over `letI`.
+2026-10-19T01:27:10.0471123Z The difference between `let` and `letI` is that `letI` inlines the value.
+2026-10-19T01:27:10.0471925Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0472381Z 
+2026-10-19T01:27:10.0472757Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0473937Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:149:2: Try this: 
+2026-10-19T01:27:10.0474904Z   letI̵
+2026-10-19T01:27:10.0475078Z 
+2026-10-19T01:27:10.0475351Z The goal is a proposition, so `let` is preferred over `letI`.
+2026-10-19T01:27:10.0476290Z The difference between `let` and `letI` is that `letI` inlines the value.
+2026-10-19T01:27:10.0477104Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0477561Z 
+2026-10-19T01:27:10.0477940Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0479034Z ⚠ [4283/4382] Replayed SpherePacking.ModularForms.Eisenstein
+2026-10-19T01:27:10.0480108Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eisenstein.lean:72:23: This simp argument is unused:
+2026-10-19T01:27:10.0481047Z   smul_eq_mul
+2026-10-19T01:27:10.0481241Z 
+2026-10-19T01:27:10.0481426Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0481989Z   [apply] simp [hcoeff, hqpow, mul_left_comm, mul_comm]
+2026-10-19T01:27:10.0482389Z 
+2026-10-19T01:27:10.0482764Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0483739Z ⚠ [4284/4382] Replayed SpherePacking.ModularForms.DimensionFormulas
+2026-10-19T01:27:10.0485315Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:6:0: Use `Mathlib.NumberTheory.ModularForms.LevelOne.Basic` instead.
+2026-10-19T01:27:10.0487106Z 'Mathlib.NumberTheory.ModularForms.LevelOne' has been deprecated: please replace this import by
+2026-10-19T01:27:10.0487822Z 
+2026-10-19T01:27:10.0488113Z import Mathlib.NumberTheory.ModularForms.LevelOne.Basic
+2026-10-19T01:27:10.0489563Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:60:47: `ModularForm.IsGLPos.smul_apply` has been deprecated: Use `smul_apply` instead
+2026-10-19T01:27:10.0490723Z 
+2026-10-19T01:27:10.0491433Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+2026-10-19T01:27:10.0493308Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:76:43: `ModularForm.IsGLPos.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+2026-10-19T01:27:10.0494500Z 
+2026-10-19T01:27:10.0495226Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+2026-10-19T01:27:10.0497221Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:76:73: `ModularForm.coe_sub` has been deprecated: Use `FunLike.coe_sub` instead
+2026-10-19T01:27:10.0498340Z 
+2026-10-19T01:27:10.0499059Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_sub` to `FunLike.coe_sub x`).
+2026-10-19T01:27:10.0500894Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:113:26: `CuspForm.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+2026-10-19T01:27:10.0501999Z 
+2026-10-19T01:27:10.0502723Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+2026-10-19T01:27:10.0504615Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:131:32: `ModularForm.IsGLPos.smul_apply` has been deprecated: Use `smul_apply` instead
+2026-10-19T01:27:10.0505787Z 
+2026-10-19T01:27:10.0506835Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+2026-10-19T01:27:10.0508759Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:139:43: `ModularForm.IsGLPos.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+2026-10-19T01:27:10.0509950Z 
+2026-10-19T01:27:10.0510677Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+2026-10-19T01:27:10.0512507Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:139:73: `ModularForm.coe_sub` has been deprecated: Use `FunLike.coe_sub` instead
+2026-10-19T01:27:10.0513626Z 
+2026-10-19T01:27:10.0514343Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_sub` to `FunLike.coe_sub x`).
+2026-10-19T01:27:10.0516852Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:244:37: `ModularForm.IsGLPos.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+2026-10-19T01:27:10.0518313Z 
+2026-10-19T01:27:10.0519060Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+2026-10-19T01:27:10.0521025Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:257:37: `ModularForm.IsGLPos.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+2026-10-19T01:27:10.0522248Z 
+2026-10-19T01:27:10.0522970Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+2026-10-19T01:27:10.0524861Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:294:17: `ModularForm.IsGLPos.smul_apply` has been deprecated: Use `smul_apply` instead
+2026-10-19T01:27:10.0526028Z 
+2026-10-19T01:27:10.0526915Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+2026-10-19T01:27:10.0528786Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:299:26: `ModularForm.IsGLPos.smul_apply` has been deprecated: Use `smul_apply` instead
+2026-10-19T01:27:10.0529945Z 
+2026-10-19T01:27:10.0530659Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+2026-10-19T01:27:10.0532530Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:304:30: `ModularForm.IsGLPos.smul_apply` has been deprecated: Use `smul_apply` instead
+2026-10-19T01:27:10.0533696Z 
+2026-10-19T01:27:10.0534396Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+2026-10-19T01:27:10.0535962Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:294:48: This simp argument is unused:
+2026-10-19T01:27:10.0537117Z   Int.reduceAdd
+2026-10-19T01:27:10.0537336Z 
+2026-10-19T01:27:10.0537529Z Hint: Omit it from the simp argument list.
+2026-10-19T01:27:10.0538147Z   [apply] simp only [IsGLPos.smul_apply, sub_apply, smul_eq_mul]
+2026-10-19T01:27:10.0538603Z 
+2026-10-19T01:27:10.0538994Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-10-19T01:27:10.0540492Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:339:15: `ModularForm.coe_sub` has been deprecated: Use `FunLike.coe_sub` instead
+2026-10-19T01:27:10.0541601Z 
+2026-10-19T01:27:10.0542322Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_sub` to `FunLike.coe_sub x`).
+2026-10-19T01:27:10.0544227Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:341:15: `ModularForm.IsGLPos.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+2026-10-19T01:27:10.0545404Z 
+2026-10-19T01:27:10.0546480Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+2026-10-19T01:27:10.0547981Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:437:2: Try this: 
+2026-10-19T01:27:10.0548899Z   haveI̵
+2026-10-19T01:27:10.0549081Z 
+2026-10-19T01:27:10.0549367Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0550177Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0551006Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0551472Z 
+2026-10-19T01:27:10.0551855Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0552956Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:492:10: Try this: 
+2026-10-19T01:27:10.0553852Z   haveI̵
+2026-10-19T01:27:10.0554034Z 
+2026-10-19T01:27:10.0554319Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0555121Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0556263Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0556735Z 
+2026-10-19T01:27:10.0557113Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0558216Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:495:10: Try this: 
+2026-10-19T01:27:10.0559117Z   haveI̵
+2026-10-19T01:27:10.0559294Z 
+2026-10-19T01:27:10.0559571Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0560361Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0561176Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0561632Z 
+2026-10-19T01:27:10.0562006Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0563119Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:499:8: Try this: 
+2026-10-19T01:27:10.0564006Z   haveI̵
+2026-10-19T01:27:10.0564183Z 
+2026-10-19T01:27:10.0564459Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0565250Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0566216Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0566687Z 
+2026-10-19T01:27:10.0567059Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0568148Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:531:6: Try this: 
+2026-10-19T01:27:10.0569036Z   haveI̵
+2026-10-19T01:27:10.0569207Z 
+2026-10-19T01:27:10.0569484Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0570272Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0571091Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0571564Z 
+2026-10-19T01:27:10.0571940Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0573028Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:541:6: Try this: 
+2026-10-19T01:27:10.0573910Z   haveI̵
+2026-10-19T01:27:10.0574098Z 
+2026-10-19T01:27:10.0589886Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0590797Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0591649Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0592119Z 
+2026-10-19T01:27:10.0592512Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0593636Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:543:6: Try this: 
+2026-10-19T01:27:10.0594581Z   haveI̵
+2026-10-19T01:27:10.0595008Z 
+2026-10-19T01:27:10.0595311Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0596353Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0597215Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0597685Z 
+2026-10-19T01:27:10.0598066Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0599174Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:547:6: Try this: 
+2026-10-19T01:27:10.0600081Z   haveI̵
+2026-10-19T01:27:10.0600260Z 
+2026-10-19T01:27:10.0600545Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0601346Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0602166Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0602631Z 
+2026-10-19T01:27:10.0603019Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0604760Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:590:17: `ModularForm.coe_eq_zero_iff` has been deprecated: Use `FunLike.coe_zero_iff` instead
+2026-10-19T01:27:10.0605940Z 
+2026-10-19T01:27:10.0606918Z Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_eq_zero_iff` to `FunLike.coe_zero_iff x`).
+2026-10-19T01:27:10.0608423Z warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:592:6: Try this: 
+2026-10-19T01:27:10.0609315Z   haveI̵
+2026-10-19T01:27:10.0609497Z 
+2026-10-19T01:27:10.0609777Z The goal is a proposition, so `have` is preferred over `haveI`.
+2026-10-19T01:27:10.0610576Z The difference between `have` and `haveI` is that `haveI` inlines the value.
+2026-10-19T01:27:10.0611394Z But this is not relevant for proofs because of proof irrelevance.
+2026-10-19T01:27:10.0611856Z 
+2026-10-19T01:27:10.0612231Z Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+2026-10-19T01:27:10.0613057Z ⚠ [4289/4382] Replayed E8Leech.KronPivot
+2026-10-19T01:27:10.0614056Z warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:49:38: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0614899Z 
+2026-10-19T01:27:10.0615114Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0615802Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0616505Z instead of
+2026-10-19T01:27:10.0617016Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0618074Z warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:52:38: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0618904Z 
+2026-10-19T01:27:10.0619116Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0619795Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0620304Z instead of
+2026-10-19T01:27:10.0620856Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:10.0621920Z warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:169:26: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0622760Z 
+2026-10-19T01:27:10.0622966Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0623674Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0624188Z instead of
+2026-10-19T01:27:10.0624686Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0625722Z warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:196:26: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0626792Z 
+2026-10-19T01:27:10.0627018Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0627679Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0628178Z instead of
+2026-10-19T01:27:10.0628867Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:10.0629931Z warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:276:15: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0630782Z 
+2026-10-19T01:27:10.0630984Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0631646Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0632149Z instead of
+2026-10-19T01:27:10.0632620Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0633644Z warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:282:15: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0634463Z 
+2026-10-19T01:27:10.0634674Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0635322Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0635808Z instead of
+2026-10-19T01:27:10.0636531Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:10.0637181Z ⚠ [4296/4382] Replayed E8Leech.KronVertex
+2026-10-19T01:27:10.0637963Z warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:180:27: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0638439Z 
+2026-10-19T01:27:10.0638560Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0638968Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0639261Z instead of
+2026-10-19T01:27:10.0639557Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0640147Z warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:192:27: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0640605Z 
+2026-10-19T01:27:10.0640730Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0641106Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0641391Z instead of
+2026-10-19T01:27:10.0641671Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:10.0642263Z warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:212:27: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0642741Z 
+2026-10-19T01:27:10.0642861Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0643229Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0643520Z instead of
+2026-10-19T01:27:10.0643791Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0644366Z warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:219:27: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0644830Z 
+2026-10-19T01:27:10.0644952Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0645322Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0645609Z instead of
+2026-10-19T01:27:10.0645881Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:10.0646839Z warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:342:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0647324Z 
+2026-10-19T01:27:10.0647442Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0647833Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0648120Z instead of
+2026-10-19T01:27:10.0648399Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0648974Z warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:345:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0649436Z 
+2026-10-19T01:27:10.0649556Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0649922Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0650204Z instead of
+2026-10-19T01:27:10.0650481Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:10.0651061Z warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:348:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0651670Z 
+2026-10-19T01:27:10.0651804Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0652175Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0652464Z instead of
+2026-10-19T01:27:10.0652733Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0653307Z warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:351:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0653776Z 
+2026-10-19T01:27:10.0653900Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0654279Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0654576Z instead of
+2026-10-19T01:27:10.0654868Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:10.0655469Z warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:354:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0655938Z 
+2026-10-19T01:27:10.0656226Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0656754Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0657044Z instead of
+2026-10-19T01:27:10.0657325Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0657909Z warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:357:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0658376Z 
+2026-10-19T01:27:10.0658499Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0658867Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0659157Z instead of
+2026-10-19T01:27:10.0659425Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:10.0659797Z ⚠ [4303/4382] Replayed E8Leech.KronLeechSignK
+2026-10-19T01:27:10.0660397Z warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:199:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0660889Z 
+2026-10-19T01:27:10.0661022Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0661414Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0661702Z instead of
+2026-10-19T01:27:10.0661985Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0662585Z warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:202:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0663072Z 
+2026-10-19T01:27:10.0663195Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0663564Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0663855Z instead of
+2026-10-19T01:27:10.0664126Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:10.0664727Z warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:205:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0665215Z 
+2026-10-19T01:27:10.0665343Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0665714Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0666018Z instead of
+2026-10-19T01:27:10.0666436Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0667030Z warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:208:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0667505Z 
+2026-10-19T01:27:10.0667626Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0667997Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0668279Z instead of
+2026-10-19T01:27:10.0668556Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:10.0669145Z warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:211:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+2026-10-19T01:27:10.0669628Z 
+2026-10-19T01:27:10.0669747Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0670251Z   ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+2026-10-19T01:27:10.0670555Z instead of
+2026-10-19T01:27:10.0670833Z   ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+2026-10-19T01:27:10.0671421Z warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:214:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+2026-10-19T01:27:10.0671898Z 
+2026-10-19T01:27:10.0672019Z Note: The updated constant has a different type:
+2026-10-19T01:27:10.0672384Z   ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+2026-10-19T01:27:10.0672669Z instead of
+2026-10-19T01:27:10.0672935Z   ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+2026-10-19T01:27:26.1189712Z ✔ [4364/4382] Built E8Leech.KronLeechH2K (16s)
+2026-10-19T01:29:33.5345035Z ✔ [4365/4382] Built E8Leech.KronLUCheck8 (143s)
+2026-10-19T01:30:10.0733712Z ✔ [4366/4382] Built E8Leech.KronLUCheck7 (163s)
+2026-10-19T01:32:36.3175061Z ✔ [4367/4382] Built E8Leech.KronLUCheck6 (182s)
+2026-10-19T01:32:54.2330834Z ✔ [4368/4384] Built E8Leech.KronLeechH2SignK (17s)
+2026-10-19T01:33:14.0512611Z ✔ [4369/4385] Built E8Leech.KronLWData (19s)
+2026-10-19T01:33:39.9737415Z ✔ [4370/4386] Built E8Leech.KronLUCheck5 (209s)
+2026-10-19T01:34:12.3001289Z ✔ [4371/4387] Built E8Leech.KronLWProg (32s)
+2026-10-19T01:34:14.8028791Z ✔ [4372/4388] Built E8Leech.KronLWRegs1 (60s)
+2026-10-19T01:34:35.5213001Z ✔ [4373/4389] Built E8Leech.KronLUModel (23s)
+2026-10-19T01:34:46.5334489Z ✔ [4374/4390] Built E8Leech.KronLUCover6 (11s)
+2026-10-19T01:35:01.8491411Z ✔ [4375/4390] Built E8Leech.KronLWRegs2 (47s)
+2026-10-19T01:35:14.7617757Z ✔ [4376/4390] Built E8Leech.KronLUCover5 (28s)
+2026-10-19T01:35:32.8796465Z ✔ [4377/4390] Built E8Leech.KronLUCover4 (30s)
+2026-10-19T01:35:47.7990770Z ✔ [4378/4390] Built E8Leech.KronLUCover3 (32s)
+2026-10-19T01:35:57.1076992Z ✔ [4379/4391] Built E8Leech.KronLUCover2 (24s)
+2026-10-19T01:36:15.7271106Z ✔ [4380/4392] Built E8Leech.KronLUCover1 (27s)
+2026-10-19T01:36:18.5301296Z ✔ [4381/4410] Built E8Leech.KronLU (2.8s)
+2026-10-19T01:36:22.9332747Z ✔ [4382/4411] Built E8Leech.KronTauSign (4.3s)
+2026-10-19T01:36:31.3398838Z ✔ [4383/4412] Built E8Leech.KronLBData (8.5s)
+2026-10-19T01:37:02.8723479Z ✔ [4384/4413] Built E8Leech.KronLBCheck (31s)
+2026-10-19T01:37:05.2741084Z ✔ [4385/4414] Built E8Leech.KronLWRegs3 (68s)
+2026-10-19T01:37:07.9742166Z ✔ [4386/4415] Built E8Leech.KronLBModel (5.1s)
+2026-10-19T01:37:28.2938344Z ✔ [4387/4415] Built E8Leech.KronLBCoverBI (20s)
+2026-10-19T01:37:31.4965799Z ✔ [4388/4416] Built E8Leech.KronLBCoverBD (3.2s)
+2026-10-19T01:37:35.5003775Z ✔ [4389/4417] Built E8Leech.KronLB (4.0s)
+2026-10-19T01:37:44.3074583Z ✔ [4391/4418] Built E8Leech.KronLHData (8.8s)
+2026-10-19T01:37:49.8117376Z ✔ [4392/4418] Built E8Leech.KronLWRegs4 (44s)
+2026-10-19T01:38:16.5387530Z ✔ [4393/4418] Built E8Leech.KronLHCheck (32s)
+2026-10-19T01:38:23.4444225Z ✔ [4394/4418] Built E8Leech.KronLHModel (6.9s)
+2026-10-19T01:38:43.3640850Z ✔ [4395/4418] Built E8Leech.KronLWRegs5 (53s)
+2026-10-19T01:39:36.2188905Z ✔ [4396/4418] Built E8Leech.KronLWRegs6 (52s)
+2026-10-19T01:40:34.6836832Z ✔ [4397/4418] Built E8Leech.KronLWRegs7 (58s)
+2026-10-19T01:41:37.2507870Z ✔ [4398/4418] Built E8Leech.KronLWRegs8 (62s)
+2026-10-19T01:42:45.8254241Z ✔ [4399/4418] Built E8Leech.KronLWRegs9 (68s)
+2026-10-19T01:43:46.8931042Z ✔ [4400/4418] Built E8Leech.KronLWRegs10 (60s)
+2026-10-19T01:44:41.7538885Z ✔ [4401/4418] Built E8Leech.KronLWRegs11 (54s)
+2026-10-19T01:45:26.7060895Z ✔ [4402/4418] Built E8Leech.KronLWRegs12 (45s)
+2026-10-19T01:45:40.2204942Z ✔ [4403/4418] Built E8Leech.KronLWRegs13 (13s)
+2026-10-19T01:45:50.4312892Z ✔ [4404/4418] Built E8Leech.KronLWRegs (10s)
+2026-10-19T01:47:40.7359008Z ✔ [4405/4418] Built E8Leech.KronLWCheck8 (110s)
+2026-10-19T01:48:48.7014897Z ✔ [4406/4418] Built E8Leech.KronLWCheck7 (178s)
+2026-10-19T01:50:42.3132535Z ✔ [4407/4418] Built E8Leech.KronLWCheck6 (181s)
+2026-10-19T01:52:16.9013187Z ✔ [4408/4418] Built E8Leech.KronLWCheck5 (208s)
+2026-10-19T01:54:02.1018500Z ✔ [4409/4418] Built E8Leech.KronLWCheck4 (199s)
+2026-10-19T01:55:46.6035474Z ✔ [4410/4418] Built E8Leech.KronLWCheck3 (209s)
+2026-10-19T01:57:28.5064622Z ✔ [4411/4418] Built E8Leech.KronLWCheck2 (206s)
+2026-10-19T01:58:28.9787326Z ✔ [4412/4418] Built E8Leech.KronLWCheck1 (162s)
+2026-10-19T01:59:01.6140227Z ✔ [4413/4418] Built E8Leech.KronLWModel (32s)
+2026-10-19T01:59:18.6303175Z ✔ [4414/4418] Built E8Leech.KronLWCover4 (17s)
+2026-10-19T01:59:31.1417913Z ✔ [4415/4418] Built E8Leech.KronLWCover3 (29s)
+2026-10-19T01:59:55.1649675Z ✔ [4416/4418] Built E8Leech.KronLWCover2 (36s)
+2026-10-19T01:59:59.2735676Z ✔ [4417/4418] Built E8Leech.KronLWCover1 (28s)
+2026-10-19T02:00:02.0767229Z ✔ [4418/4418] Built E8Leech.KronLW (2.8s)
+2026-10-19T02:00:02.0846123Z Build completed successfully (4418 jobs).
+2026-10-19T02:00:02.1224964Z 	Command being timed: "timeout --kill-after=120 240m lake build E8Leech.KronLUCheck5 E8Leech.KronLUCheck6 E8Leech.KronLUCheck7 E8Leech.KronLUCheck8 E8Leech.KronLUModel E8Leech.KronLUCover1 E8Leech.KronLUCover2 E8Leech.KronLUCover3 E8Leech.KronLUCover4 E8Leech.KronLUCover5 E8Leech.KronLUCover6 E8Leech.KronLU E8Leech.KronLeechH2K E8Leech.KronLeechH2SignK E8Leech.KronLWData E8Leech.KronLWProg E8Leech.KronLWRegs1 E8Leech.KronLWRegs2 E8Leech.KronLWRegs3 E8Leech.KronLWRegs4 E8Leech.KronLWRegs5 E8Leech.KronLWRegs6 E8Leech.KronLWRegs7 E8Leech.KronLWRegs8 E8Leech.KronLWRegs9 E8Leech.KronLWRegs10 E8Leech.KronLWRegs11 E8Leech.KronLWRegs12 E8Leech.KronLWRegs13 E8Leech.KronLWRegs E8Leech.KronLWCheck1 E8Leech.KronLWCheck2 E8Leech.KronLWCheck3 E8Leech.KronLWCheck4 E8Leech.KronLWCheck5 E8Leech.KronLWCheck6 E8Leech.KronLWCheck7 E8Leech.KronLWCheck8 E8Leech.KronLWModel E8Leech.KronLWCover1 E8Leech.KronLWCover2 E8Leech.KronLWCover3 E8Leech.KronLWCover4 E8Leech.KronLW E8Leech.KronTauSign E8Leech.KronLBData E8Leech.KronLBCheck E8Leech.KronLBModel E8Leech.KronLBCoverBD E8Leech.KronLBCoverBI E8Leech.KronLB E8Leech.KronLHData E8Leech.KronLHCheck E8Leech.KronLHModel"
+2026-10-19T02:00:02.1232878Z 	User time (seconds): 3324.94
+2026-10-19T02:00:02.1233156Z 	System time (seconds): 67.83
+2026-10-19T02:00:02.1233465Z 	Percent of CPU this job got: 171%
+2026-10-19T02:00:02.1233911Z 	Elapsed (wall clock) time (h:mm:ss or m:ss): 32:56.36
+2026-10-19T02:00:02.1234587Z 	Average shared text size (kbytes): 0
+2026-10-19T02:00:02.1235116Z 	Average unshared data size (kbytes): 0
+2026-10-19T02:00:02.1235611Z 	Average stack size (kbytes): 0
+2026-10-19T02:00:02.1236026Z 	Average total size (kbytes): 0
+2026-10-19T02:00:02.1236841Z 	Maximum resident set size (kbytes): 5920400
+2026-10-19T02:00:02.1237310Z 	Average resident set size (kbytes): 0
+2026-10-19T02:00:02.1237610Z 	Major (requiring I/O) page faults: 29833
+2026-10-19T02:00:02.1237941Z 	Minor (reclaiming a frame) page faults: 8109973
+2026-10-19T02:00:02.1238256Z 	Voluntary context switches: 180695
+2026-10-19T02:00:02.1238529Z 	Involuntary context switches: 23004
+2026-10-19T02:00:02.1238791Z 	Swaps: 0
+2026-10-19T02:00:02.1239003Z 	File system inputs: 4042688
+2026-10-19T02:00:02.1239263Z 	File system outputs: 1249544
+2026-10-19T02:00:02.1239513Z 	Socket messages sent: 0
+2026-10-19T02:00:02.1239767Z 	Socket messages received: 0
+2026-10-19T02:00:02.1240011Z 	Signals delivered: 0
+2026-10-19T02:00:02.1240242Z 	Page size (bytes): 4096
+2026-10-19T02:00:02.1240466Z 	Exit status: 0
+2026-10-19T02:00:02.1293629Z ##[group]Run python3 lean/comparator/build-products.py pack --directory stage-products --stage 4 --state "$RUNNER_TEMP/pre-build.json"
+2026-10-19T02:00:02.1294605Z [36;1mpython3 lean/comparator/build-products.py pack --directory stage-products --stage 4 --state "$RUNNER_TEMP/pre-build.json"[0m
+2026-10-19T02:00:02.1374861Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T02:00:02.1375245Z ##[endgroup]
+2026-10-19T02:00:18.6517411Z Packed stage 4 : 432 changed files, 97287917 bytes
+2026-10-19T02:00:18.6671890Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-19T02:00:18.6672316Z with:
+2026-10-19T02:00:18.6672543Z   name: proof-products-4-39173822333-1
+2026-10-19T02:00:18.6672979Z   path: stage-products/build-stage-4.tar.gz
+stage-products/build-stage-4.json
+
+2026-10-19T02:00:18.6673419Z   compression-level: 0
+2026-10-19T02:00:18.6673652Z   retention-days: 7
+2026-10-19T02:00:18.6673873Z   if-no-files-found: error
+2026-10-19T02:00:18.6674111Z   overwrite: false
+2026-10-19T02:00:18.6674334Z   include-hidden-files: false
+2026-10-19T02:00:18.6674590Z ##[endgroup]
+2026-10-19T02:00:18.9827003Z (node:4159) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T02:00:18.9828236Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T02:00:18.9891158Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-19T02:00:18.9894092Z The least common ancestor is /home/runner/work/riesz-energy-spheres/riesz-energy-spheres/stage-products. This will be the root directory of the artifact
+2026-10-19T02:00:18.9895804Z With the provided path, there will be 2 files uploaded
+2026-10-19T02:00:18.9897887Z Artifact name is valid!
+2026-10-19T02:00:18.9899060Z Root directory input is valid!
+2026-10-19T02:00:19.2079865Z Beginning upload of artifact content to blob storage
+2026-10-19T02:00:19.2692234Z (node:4159) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T02:00:19.4991265Z Uploaded bytes 8388608
+2026-10-19T02:00:19.5909349Z Uploaded bytes 16777216
+2026-10-19T02:00:19.6403739Z Uploaded bytes 25165824
+2026-10-19T02:00:19.6632406Z Uploaded bytes 33554432
+2026-10-19T02:00:19.7090025Z Uploaded bytes 41943040
+2026-10-19T02:00:19.7861361Z Uploaded bytes 50331648
+2026-10-19T02:00:19.8104464Z Uploaded bytes 58720256
+2026-10-19T02:00:19.8775593Z Uploaded bytes 67108864
+2026-10-19T02:00:19.9184458Z Uploaded bytes 75497472
+2026-10-19T02:00:19.9382861Z Uploaded bytes 83886080
+2026-10-19T02:00:20.0001248Z Uploaded bytes 92274688
+2026-10-19T02:00:20.1000030Z Uploaded bytes 97343595
+2026-10-19T02:00:20.1450442Z Finished uploading artifact content to blob storage!
+2026-10-19T02:00:20.1451387Z SHA256 digest of uploaded artifact zip is d8ca741a25446226c94068e0aada957cc4aab68628849160a5dfed3765e7a087
+2026-10-19T02:00:20.1453680Z Finalizing artifact upload
+2026-10-19T02:00:20.3724572Z Artifact proof-products-4-39173822333-1.zip successfully finalized. Artifact ID 12158817711
+2026-10-19T02:00:20.3726928Z Artifact proof-products-4-39173822333-1 has been successfully uploaded! Final size is 97343595 bytes. Artifact ID is 12158817711
+2026-10-19T02:00:20.3732637Z Artifact download URL: https://github.com/KitaKen1/riesz-energy-spheres/actions/runs/39173822333/artifacts/12158817711
+2026-10-19T02:00:20.3967432Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-19T02:00:20.3967879Z with:
+2026-10-19T02:00:20.3968253Z   name: build-stage-4-39173822333-1
+2026-10-19T02:00:20.3980108Z   path: build-stage-4-receipt/
+2026-10-19T02:00:20.3980411Z   retention-days: 90
+2026-10-19T02:00:20.3980666Z   if-no-files-found: error
+2026-10-19T02:00:20.3980945Z   compression-level: 6
+2026-10-19T02:00:20.3981187Z   overwrite: false
+2026-10-19T02:00:20.3981423Z   include-hidden-files: false
+2026-10-19T02:00:20.3981681Z ##[endgroup]
+2026-10-19T02:00:20.5681877Z (node:4171) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T02:00:20.5682620Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T02:00:20.5761350Z With the provided path, there will be 14 files uploaded
+2026-10-19T02:00:20.5766377Z Artifact name is valid!
+2026-10-19T02:00:20.5767311Z Root directory input is valid!
+2026-10-19T02:00:20.7443034Z Beginning upload of artifact content to blob storage
+2026-10-19T02:00:20.7973191Z (node:4171) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T02:00:20.8551985Z Uploaded bytes 155109
+2026-10-19T02:00:20.8728723Z Finished uploading artifact content to blob storage!
+2026-10-19T02:00:20.8729898Z SHA256 digest of uploaded artifact zip is d1f889191a6de5fe9b2a9b78b95eb975922662098d878f0e8e0f8d3de0e8bf1b
+2026-10-19T02:00:20.8731881Z Finalizing artifact upload
+2026-10-19T02:00:21.0780260Z Artifact build-stage-4-39173822333-1.zip successfully finalized. Artifact ID 12158304585
+2026-10-19T02:00:21.0781986Z Artifact build-stage-4-39173822333-1 has been successfully uploaded! Final size is 155109 bytes. Artifact ID is 12158304585
+2026-10-19T02:00:21.0788133Z Artifact download URL: https://github.com/KitaKen1/riesz-energy-spheres/actions/runs/39173822333/artifacts/12158304585
+2026-10-19T02:00:21.0984511Z Post job cleanup.
+2026-10-19T02:00:21.1822801Z [command]/usr/bin/git version
+2026-10-19T02:00:21.1862442Z git version 2.55.0
+2026-10-19T02:00:21.1898788Z Temporarily overriding HOME='/home/runner/work/_temp/47a41850-2040-474a-8736-ed3ec16ffc50' before making global git config changes
+2026-10-19T02:00:21.1900423Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T02:00:21.1904349Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/riesz-energy-spheres/riesz-energy-spheres
+2026-10-19T02:00:21.1940152Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T02:00:21.1972859Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T02:00:21.2224807Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T02:00:21.2257180Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T02:00:21.2480859Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T02:00:21.2510809Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T02:00:21.2865317Z Evaluate and set job outputs
+2026-10-19T02:00:21.2870748Z Set output 'ready'
+2026-10-19T02:00:21.2872529Z Set output 'proof_digest'
+2026-10-19T02:00:21.2873685Z Cleaning up orphan processes
+2026-10-19T02:00:21.3267519Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

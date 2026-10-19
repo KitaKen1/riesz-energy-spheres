@@ -1,0 +1,1078 @@
+warning: formal_conjectures: repository '/home/runner/work/riesz-energy-spheres/riesz-energy-spheres/lean/.lake/packages/formal_conjectures' has local changes
+⚠ [1313/1346] Replayed E8Leech.KronPoly
+warning: third_party/E8Leech/lean/E8Leech/KronPoly.lean:6:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Real.Basic
+warning: third_party/E8Leech/lean/E8Leech/KronPoly.lean:438:15: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronPoly.lean:441:15: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: third_party/E8Leech/lean/E8Leech/KronPoly.lean:464:17: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronPoly.lean:466:17: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+⚠ [1314/1346] Replayed E8Leech.KronMul
+warning: third_party/E8Leech/lean/E8Leech/KronMul.lean:65:15: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronMul.lean:67:15: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+⚠ [1325/1346] Replayed E8Leech.TaylorModel
+warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:1:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Real.Basic
+warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:121:19: `if_true` has been deprecated: Use `ite_true` instead
+warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:123:25: `if_true` has been deprecated: Use `ite_true` instead
+warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:126:25: `if_false` has been deprecated: Use `ite_false` instead
+warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:129:23: `if_false` has been deprecated: Use `ite_false` instead
+warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:198:8: `if_true` has been deprecated: Use `ite_true` instead
+warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:199:37: `if_false` has been deprecated: Use `ite_false` instead
+warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:202:8: `if_true` has been deprecated: Use `ite_true` instead
+warning: third_party/E8Leech/lean/E8Leech/TaylorModel.lean:203:37: `if_false` has been deprecated: Use `ite_false` instead
+⚠ [2205/2353] Replayed E8Leech.TaylorModelFun
+warning: third_party/E8Leech/lean/E8Leech/TaylorModelFun.lean:206:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2206/2353] Replayed E8Leech.KronFun
+warning: third_party/E8Leech/lean/E8Leech/KronFun.lean:221:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [2207/2353] Replayed E8Leech.TaylorModelLogDD
+warning: third_party/E8Leech/lean/E8Leech/TaylorModelLogDD.lean:43:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [3261/3366] Replayed E8Leech.ThetaFunctions
+warning: third_party/E8Leech/lean/E8Leech/ThetaFunctions.lean:269:21: `if_false` has been deprecated: Use `ite_false` instead
+warning: third_party/E8Leech/lean/E8Leech/ThetaFunctions.lean:294:21: `if_false` has been deprecated: Use `ite_false` instead
+warning: third_party/E8Leech/lean/E8Leech/ThetaFunctions.lean:349:25: `if_false` has been deprecated: Use `ite_false` instead
+ℹ [3994/4190] Replayed E8Leech.Deletion
+info: third_party/E8Leech/lean/E8Leech/Deletion.lean:72:0: 'E8Leech.badPoints_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: third_party/E8Leech/lean/E8Leech/Deletion.lean:73:0: 'E8Leech.keptPoints_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: third_party/E8Leech/lean/E8Leech/Deletion.lean:74:0: 'E8Leech.balance_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: third_party/E8Leech/lean/E8Leech/Deletion.lean:75:0: 'E8Leech.deletion_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: third_party/E8Leech/lean/E8Leech/Deletion.lean:76:0: 'E8Leech.exponent_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: third_party/E8Leech/lean/E8Leech/Deletion.lean:77:0: 'E8Leech.general_exponent_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3996/4190] Replayed E8Leech.BRRScales
+info: third_party/E8Leech/lean/E8Leech/BRRScales.lean:142:12: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [4008/4190] Replayed E8Leech.DeletionCost
+warning: third_party/E8Leech/lean/E8Leech/DeletionCost.lean:36:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/DeletionCost.lean:42:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4022/4190] Replayed E8Leech.LocalSecondMoments
+warning: third_party/E8Leech/lean/E8Leech/LocalSecondMoments.lean:94:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/LocalSecondMoments.lean:98:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/LocalSecondMoments.lean:99:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/LocalSecondMoments.lean:100:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4023/4190] Replayed E8Leech.LocalizedPairIntegrals
+warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:37:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:38:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:62:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:66:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:67:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:68:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/LocalizedPairIntegrals.lean:137:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [4025/4190] Replayed E8Leech.CountableCellPairs
+warning: third_party/E8Leech/lean/E8Leech/CountableCellPairs.lean:82:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/CountableCellPairs.lean:87:47: `if_true` has been deprecated: Use `ite_true` instead
+⚠ [4032/4190] Replayed E8Leech.PolynomialCellDecay
+warning: third_party/E8Leech/lean/E8Leech/PolynomialCellDecay.lean:68:20: `if_false` has been deprecated: Use `ite_false` instead
+⚠ [4035/4190] Replayed E8Leech.FullSpacePairForms
+warning: third_party/E8Leech/lean/E8Leech/FullSpacePairForms.lean:39:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/FullSpacePairForms.lean:39:36: `if_true` has been deprecated: Use `ite_true` instead
+warning: third_party/E8Leech/lean/E8Leech/FullSpacePairForms.lean:43:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/FullSpacePairForms.lean:192:24: `Isometry.antilipschitz` has been deprecated: Use `Isometry.antilipschitzWith` instead
+⚠ [4046/4190] Replayed E8Leech.PairAnchorMeasure
+warning: third_party/E8Leech/lean/E8Leech/PairAnchorMeasure.lean:37:46: `if_true` has been deprecated: Use `ite_true` instead
+⚠ [4050/4190] Replayed E8Leech.BoxPairBoundary
+warning: third_party/E8Leech/lean/E8Leech/BoxPairBoundary.lean:73:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/BoxPairBoundary.lean:73:36: `if_true` has been deprecated: Use `ite_true` instead
+warning: third_party/E8Leech/lean/E8Leech/BoxPairBoundary.lean:76:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/BoxPairBoundary.lean:87:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [4051/4190] Replayed E8Leech.StationaryBoxPairLimits
+warning: third_party/E8Leech/lean/E8Leech/StationaryBoxPairLimits.lean:30:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/StationaryBoxPairLimits.lean:30:36: `if_true` has been deprecated: Use `ite_true` instead
+⚠ [4140/4190] Replayed Riesz.PoissonSchwartzBasic
+warning: Riesz/PoissonSchwartzBasic.lean:89:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Riesz/PoissonSchwartzBasic.lean:92:34: `AddSubgroup.isClosed_of_discrete` has been deprecated: Use `AddSubgroup.isClosed_of_discreteTopology` instead
+⚠ [4141/4190] Replayed Riesz.PoissonSchwartz
+warning: Riesz/PoissonSchwartz.lean:72:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Riesz/PoissonSchwartz.lean:258:12: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4143/4190] Replayed E8Leech.E8Duality
+warning: third_party/E8Leech/lean/E8Leech/E8Duality.lean:105:4: `if_true` has been deprecated: Use `ite_true` instead
+⚠ [4145/4190] Replayed E8Leech.SpectralSlackGap
+warning: third_party/E8Leech/lean/E8Leech/SpectralSlackGap.lean:30:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/SpectralSlackGap.lean:50:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/SpectralSlackGap.lean:64:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [4148/4190] Replayed E8Leech.PotentialMixtures
+warning: third_party/E8Leech/lean/E8Leech/PotentialMixtures.lean:72:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/PotentialMixtures.lean:85:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/PotentialMixtures.lean:93:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4154/4190] Replayed E8Leech.GaussianLatticeFiniteness
+warning: third_party/E8Leech/lean/E8Leech/GaussianLatticeFiniteness.lean:49:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4155/4190] Replayed E8Leech.RieszGaussianIntegral
+warning: third_party/E8Leech/lean/E8Leech/RieszGaussianIntegral.lean:94:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4156/4190] Replayed E8Leech.GaussianGapCertificates
+warning: third_party/E8Leech/lean/E8Leech/GaussianGapCertificates.lean:27:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [4161/4190] Replayed E8Leech.OriginSlack
+warning: third_party/E8Leech/lean/E8Leech/OriginSlack.lean:71:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4163/4190] Replayed E8Leech.CompactGaussianSlack
+warning: third_party/E8Leech/lean/E8Leech/CompactGaussianSlack.lean:97:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/CompactGaussianSlack.lean:98:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4165/4190] Replayed E8Leech.LatticeCalibration
+warning: third_party/E8Leech/lean/E8Leech/LatticeCalibration.lean:42:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/LatticeCalibration.lean:44:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/LatticeCalibration.lean:45:25: `if_false` has been deprecated: Use `ite_false` instead
+warning: third_party/E8Leech/lean/E8Leech/LatticeCalibration.lean:70:23: `if_false` has been deprecated: Use `ite_false` instead
+⚠ [4182/4190] Replayed SpherePacking.ForMathlib.IteratedDeriv
+warning: third_party/E8Leech/lean/SpherePacking/ForMathlib/IteratedDeriv.lean:7:0: 'Mathlib.Data.Complex.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Complex.Basic
+⚠ [4190/4382] Replayed E8Leech.PositiveMixtureMoments
+warning: third_party/E8Leech/lean/E8Leech/PositiveMixtureMoments.lean:87:19: `if_false` has been deprecated: Use `ite_false` instead
+⚠ [4192/4382] Replayed E8Leech.PositiveMixtureCertificates
+warning: third_party/E8Leech/lean/E8Leech/PositiveMixtureCertificates.lean:105:57: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/PositiveMixtureCertificates.lean:106:56: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4193/4382] Replayed E8Leech.E8UnitCost
+warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:217:20: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:226:20: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:243:22: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:476:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:478:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/E8UnitCost.lean:484:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [4206/4382] Replayed SpherePacking.ForMathlib.AtImInfty
+warning: third_party/E8Leech/lean/SpherePacking/ForMathlib/AtImInfty.lean:12:32: `setOf` has been deprecated: Use `Set.ofPred` instead
+⚠ [4207/4382] Replayed SpherePacking.ForMathlib.ComplexI
+warning: third_party/E8Leech/lean/SpherePacking/ForMathlib/ComplexI.lean:2:0: 'Mathlib.Data.Complex.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Complex.Basic
+⚠ [4212/4382] Replayed SpherePacking.ModularForms.SlashActionAuxil
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SlashActionAuxil.lean:80:8: This simp argument is unused:
+  specialLinearGroup_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [negI]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4221/4382] Replayed SpherePacking.ModularForms.SummableLemmas.Basic
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/Basic.lean:3:0: 'Mathlib.Data.Complex.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Complex.Basic
+⚠ [4223/4382] Replayed SpherePacking.ModularForms.SummableLemmas.G2
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/G2.lean:27:9: `summable_of_finite_support` has been deprecated: Use `summable_of_hasFiniteSupport` instead
+⚠ [4224/4382] Replayed SpherePacking.ModularForms.SummableLemmas.QExpansion
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:100:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:193:26: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:193:26: This simp argument is unused:
+  mem_setOf_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [smul_eq_mul, neg_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:227:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:227:13: This simp argument is unused:
+  mem_setOf_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [one_div, norm_pow, norm_neg, one_mem, CStarRing.norm_of_mem_unitary, one_pow, RCLike.norm_natCast,
+    one_mul, norm_inv, norm_mul, norm_div, Real.norm_eq_abs, norm_zpow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:261:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:261:13: This simp argument is unused:
+  mem_setOf_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [one_div, norm_pow, norm_neg, one_mem, CStarRing.norm_of_mem_unitary, one_pow, RCLike.norm_natCast,
+    one_mul, norm_inv, norm_mul, norm_div, Real.norm_eq_abs, norm_zpow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:363:38: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:458:39: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:458:53: `Set.coe_setOf` has been deprecated: Use `Set.coe_ofPred` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:462:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:474:33: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/SummableLemmas/QExpansion.lean:458:53: This simp argument is unused:
+  coe_setOf
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.cast_le, one_div, mem_setOf_eq, image_univ, Subtype.forall, Int.cast_natCast] at *
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4231/4382] Replayed SpherePacking.ModularForms.E2.Transform
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/E2/Transform.lean:66:4: This simp argument is unused:
+  ge_iff_le
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [one_div, mul_inv_rev, Pi.add_apply, eventually_atTop]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/E2/Transform.lean:116:5: `ModularGroup.coe` has been deprecated: use GL(2, ℝ)
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/E2/Transform.lean:116:31: `ModularGroup.coe` has been deprecated: use GL(2, ℝ)
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/E2/Transform.lean:117:8: `ModularGroup.coe` has been deprecated: use GL(2, ℝ)
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/E2/Transform.lean:253:23: This simp argument is unused:
+  inv_inj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [inv_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4232/4382] Replayed SpherePacking.ModularForms.CSqrt
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/CSqrt.lean:64:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [4235/4382] Replayed SpherePacking.ModularForms.Eta
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:66:160: Unused tactic linter: `simp [etaSP, Function.comp_def]` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:66:194: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:66:160: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:66:194: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:66:142: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:300:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:303:35: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:306:33: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eta.lean:328:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [4236/4382] Replayed SpherePacking.ModularForms.Delta.Basic
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Delta/Basic.lean:128:54: `PNat.one_le` has been deprecated: use `one_le`
+⚠ [4237/4382] Replayed SpherePacking.ModularForms.ResToImagAxis
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:60:6: `continuousOn_iff_continuous_restrict` has been deprecated: Use `continuousOn_iff_continuous_domRestrict` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:70:8: `Set.restrict` has been deprecated: Use `Set.domRestrict` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:70:8: This simp argument is unused:
+  Set.restrict
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ResToImagAxis, z, ht]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:162:88: Unused tactic linter: `(funext s; simp)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:162:88: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/ResToImagAxis.lean:162:70: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [4239/4382] Replayed SpherePacking.ModularForms.Delta.ImagAxis
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Delta/ImagAxis.lean:136:62: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Delta/ImagAxis.lean:146:10: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Delta/ImagAxis.lean:150:36: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [4240/4382] Replayed SpherePacking.ModularForms.QExpansionLemmas.LimitsAtInfinity
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/QExpansionLemmas/LimitsAtInfinity.lean:4:0: 'Mathlib.Data.Real.StarOrdered' has been deprecated: please replace this import by
+
+import Mathlib.Analysis.Real.Sqrt
+import Mathlib.Tactic.ContinuousFunctionalCalculus
+⚠ [4242/4382] Replayed SpherePacking.ModularForms.QExpansionLemmas.QExpansionAlgebra
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/QExpansionLemmas/QExpansionAlgebra.lean:6:0: 'Mathlib.Data.Real.StarOrdered' has been deprecated: please replace this import by
+
+import Mathlib.Analysis.Real.Sqrt
+import Mathlib.Tactic.ContinuousFunctionalCalculus
+⚠ [4243/4382] Replayed SpherePacking.ModularForms.CuspFormIsoModforms
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/CuspFormIsoModforms.lean:4:0: Use `Mathlib.NumberTheory.ModularForms.LevelOne.Basic` instead.
+'Mathlib.NumberTheory.ModularForms.LevelOne' has been deprecated: please replace this import by
+
+import Mathlib.NumberTheory.ModularForms.LevelOne.Basic
+⚠ [4244/4382] Replayed SpherePacking.Tactic.NormNumI
+warning: third_party/E8Leech/lean/SpherePacking/Tactic/NormNumI.lean:8:0: 'Mathlib.Data.Complex.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Complex.Basic
+⚠ [4245/4382] Replayed SpherePacking.ModularForms.JacobiTheta
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:3:0: 'Mathlib.Algebra.Field.Power' has been deprecated: please replace this import by
+
+import Mathlib.Algebra.Ring.Int.Parity
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:5:0: 'Mathlib.Data.Real.StarOrdered' has been deprecated: please replace this import by
+
+import Mathlib.Analysis.Real.Sqrt
+import Mathlib.Tactic.ContinuousFunctionalCalculus
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:7:0: Use `Mathlib.NumberTheory.ModularForms.LevelOne.Basic` instead.
+'Mathlib.NumberTheory.ModularForms.LevelOne' has been deprecated: please replace this import by
+
+import Mathlib.NumberTheory.ModularForms.LevelOne.Basic
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:713:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:995:104: This simp argument is unused:
+  H₂
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:995:108: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [H₂]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:995:129: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:995:129: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:999:104: This simp argument is unused:
+  H₃
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:999:108: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [H₃]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:999:129: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:999:129: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:1003:104: This simp argument is unused:
+  H₄
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:1003:108: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [H₄]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:1003:129: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/JacobiTheta.lean:1003:129: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [4247/4382] Replayed SpherePacking.ModularForms.Eisensteinqexpansions
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eisensteinqexpansions.lean:230:136: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Function.uncurry, mul_assoc, mul_left_comm, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eisensteinqexpansions.lean:309:38: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [one_div, PNat.val_ofNat, neg_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4248/4382] Replayed SpherePacking.ModularForms.EisensteinBase
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:145:9: `summable_of_finite_support` has been deprecated: Use `summable_of_hasFiniteSupport` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:270:42: `ContinuousMultilinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:287:33: `MultilinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:270:42: This simp argument is unused:
+  ContinuousMultilinearMap.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [qq, qExpansion2, smul_eq_mul, ContinuousMultilinearMap.mkPiAlgebraFin_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:607:11: `DifferentiableOn.finset_prod` has been deprecated: Use `DifferentiableOn.finsetProd` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:633:12: `differentiableWithinAt_id'` has been deprecated: Use `differentiableWithinAt_fun_id` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:658:31: This simp argument is unused:
+  Finset.Nat.antidiagonal_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PowerSeries.coeff_mul, antidiagonal_one, E4_q_exp_zero, E4_q_exp_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/EisensteinBase.lean:869:83: `PNat.one_le` has been deprecated: use `one_le`
+⚠ [4250/4382] Replayed SpherePacking.ModularForms.Lv1Lv2Identities
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:146: `ModularForm.sub_apply` has been deprecated: Use `sub_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sub_apply` to `sub_apply x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:128: This simp argument is unused:
+  diff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [thetaE4_MF, ModularForm.sub_apply, sub_eq_add_neg, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:134: This simp argument is unused:
+  thetaE4_MF
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diff, ModularForm.sub_apply, sub_eq_add_neg, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:146: This simp argument is unused:
+  ModularForm.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diff, thetaE4_MF, sub_eq_add_neg, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:169: This simp argument is unused:
+  sub_eq_add_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diff, thetaE4_MF, ModularForm.sub_apply, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:185: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diff, thetaE4_MF, ModularForm.sub_apply, sub_eq_add_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:206: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:121:206: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:146: `ModularForm.sub_apply` has been deprecated: Use `sub_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sub_apply` to `sub_apply x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:128: This simp argument is unused:
+  diff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [thetaE6_MF, ModularForm.sub_apply, sub_eq_add_neg, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:134: This simp argument is unused:
+  thetaE6_MF
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diff, ModularForm.sub_apply, sub_eq_add_neg, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:146: This simp argument is unused:
+  ModularForm.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diff, thetaE6_MF, sub_eq_add_neg, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:169: This simp argument is unused:
+  sub_eq_add_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diff, thetaE6_MF, ModularForm.sub_apply, Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:185: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diff, thetaE6_MF, ModularForm.sub_apply, sub_eq_add_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:206: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Lv1Lv2Identities.lean:227:206: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [4268/4382] Replayed E8Leech.KronJet3
+warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:344:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:344:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:350:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:350:29: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:350:41: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: third_party/E8Leech/lean/E8Leech/KronJet3.lean:350:60: `if_pos` has been deprecated: Use `ite_eq_left` instead
+⚠ [4269/4382] Replayed E8Leech.KronRedLog
+warning: third_party/E8Leech/lean/E8Leech/KronRedLog.lean:74:25: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: third_party/E8Leech/lean/E8Leech/KronRedLog.lean:93:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4270/4382] Replayed E8Leech.KronRedLog3
+warning: third_party/E8Leech/lean/E8Leech/KronRedLog3.lean:72:74: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4271/4382] Replayed E8Leech.KronRedAtoms
+warning: third_party/E8Leech/lean/E8Leech/KronRedAtoms.lean:71:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [4274/4382] Replayed SpherePacking.ModularForms.Derivative
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:206:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:265:46: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:272:48: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:275:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:430:126: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ofComplex_apply_of_im_pos hmob_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:430:147: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:430:147: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:430:67: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:605:62: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Derivative.lean:1156:18: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [4277/4382] Replayed SpherePacking.ModularForms.DimGenCongLevels.Basic
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/Basic.lean:31:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/Basic.lean:32:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/Basic.lean:35:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/Basic.lean:44:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/Basic.lean:45:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4279/4382] Replayed SpherePacking.ModularForms.DimGenCongLevels.FiniteDimensional
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/FiniteDimensional.lean:69:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4280/4382] Replayed SpherePacking.ModularForms.DimGenCongLevels.NormReduction
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormReduction.lean:48:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormReduction.lean:69:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormReduction.lean:96:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormReduction.lean:97:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormReduction.lean:98:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4281/4382] Replayed SpherePacking.ModularForms.DimGenCongLevels.NormTransfer
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:42:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:43:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:103:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:104:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:146:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:147:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:148:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimGenCongLevels/NormTransfer.lean:149:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4283/4382] Replayed SpherePacking.ModularForms.Eisenstein
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/Eisenstein.lean:72:23: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hcoeff, hqpow, mul_left_comm, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4284/4382] Replayed SpherePacking.ModularForms.DimensionFormulas
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:6:0: Use `Mathlib.NumberTheory.ModularForms.LevelOne.Basic` instead.
+'Mathlib.NumberTheory.ModularForms.LevelOne' has been deprecated: please replace this import by
+
+import Mathlib.NumberTheory.ModularForms.LevelOne.Basic
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:60:47: `ModularForm.IsGLPos.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:76:43: `ModularForm.IsGLPos.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:76:73: `ModularForm.coe_sub` has been deprecated: Use `FunLike.coe_sub` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_sub` to `FunLike.coe_sub x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:113:26: `CuspForm.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:131:32: `ModularForm.IsGLPos.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:139:43: `ModularForm.IsGLPos.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:139:73: `ModularForm.coe_sub` has been deprecated: Use `FunLike.coe_sub` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_sub` to `FunLike.coe_sub x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:244:37: `ModularForm.IsGLPos.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:257:37: `ModularForm.IsGLPos.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:294:17: `ModularForm.IsGLPos.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:299:26: `ModularForm.IsGLPos.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:304:30: `ModularForm.IsGLPos.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:294:48: This simp argument is unused:
+  Int.reduceAdd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [IsGLPos.smul_apply, sub_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:339:15: `ModularForm.coe_sub` has been deprecated: Use `FunLike.coe_sub` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_sub` to `FunLike.coe_sub x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:341:15: `ModularForm.IsGLPos.coe_smul` has been deprecated: Use `FunLike.coe_smul` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_smul` to `FunLike.coe_smul x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:437:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:492:10: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:495:10: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:499:8: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:531:6: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:541:6: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:543:6: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:547:6: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:590:17: `ModularForm.coe_eq_zero_iff` has been deprecated: Use `FunLike.coe_zero_iff` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coe_eq_zero_iff` to `FunLike.coe_zero_iff x`).
+warning: third_party/E8Leech/lean/SpherePacking/ModularForms/DimensionFormulas.lean:592:6: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4289/4382] Replayed E8Leech.KronPivot
+warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:49:38: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:52:38: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:169:26: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:196:26: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:276:15: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronPivot.lean:282:15: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+⚠ [4296/4382] Replayed E8Leech.KronVertex
+warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:180:27: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:192:27: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:212:27: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:219:27: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:342:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:345:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:348:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:351:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:354:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronVertex.lean:357:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+⚠ [4303/4382] Replayed E8Leech.KronLeechSignK
+warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:199:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:202:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:205:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:208:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:211:21: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: third_party/E8Leech/lean/E8Leech/KronLeechSignK.lean:214:21: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+✔ [4364/4382] Built E8Leech.KronLeechH2K (16s)
+✔ [4365/4382] Built E8Leech.KronLUCheck8 (143s)
+✔ [4366/4382] Built E8Leech.KronLUCheck7 (163s)
+✔ [4367/4382] Built E8Leech.KronLUCheck6 (182s)
+✔ [4368/4384] Built E8Leech.KronLeechH2SignK (17s)
+✔ [4369/4385] Built E8Leech.KronLWData (19s)
+✔ [4370/4386] Built E8Leech.KronLUCheck5 (209s)
+✔ [4371/4387] Built E8Leech.KronLWProg (32s)
+✔ [4372/4388] Built E8Leech.KronLWRegs1 (60s)
+✔ [4373/4389] Built E8Leech.KronLUModel (23s)
+✔ [4374/4390] Built E8Leech.KronLUCover6 (11s)
+✔ [4375/4390] Built E8Leech.KronLWRegs2 (47s)
+✔ [4376/4390] Built E8Leech.KronLUCover5 (28s)
+✔ [4377/4390] Built E8Leech.KronLUCover4 (30s)
+✔ [4378/4390] Built E8Leech.KronLUCover3 (32s)
+✔ [4379/4391] Built E8Leech.KronLUCover2 (24s)
+✔ [4380/4392] Built E8Leech.KronLUCover1 (27s)
+✔ [4381/4410] Built E8Leech.KronLU (2.8s)
+✔ [4382/4411] Built E8Leech.KronTauSign (4.3s)
+✔ [4383/4412] Built E8Leech.KronLBData (8.5s)
+✔ [4384/4413] Built E8Leech.KronLBCheck (31s)
+✔ [4385/4414] Built E8Leech.KronLWRegs3 (68s)
+✔ [4386/4415] Built E8Leech.KronLBModel (5.1s)
+✔ [4387/4415] Built E8Leech.KronLBCoverBI (20s)
+✔ [4388/4416] Built E8Leech.KronLBCoverBD (3.2s)
+✔ [4389/4417] Built E8Leech.KronLB (4.0s)
+✔ [4391/4418] Built E8Leech.KronLHData (8.8s)
+✔ [4392/4418] Built E8Leech.KronLWRegs4 (44s)
+✔ [4393/4418] Built E8Leech.KronLHCheck (32s)
+✔ [4394/4418] Built E8Leech.KronLHModel (6.9s)
+✔ [4395/4418] Built E8Leech.KronLWRegs5 (53s)
+✔ [4396/4418] Built E8Leech.KronLWRegs6 (52s)
+✔ [4397/4418] Built E8Leech.KronLWRegs7 (58s)
+✔ [4398/4418] Built E8Leech.KronLWRegs8 (62s)
+✔ [4399/4418] Built E8Leech.KronLWRegs9 (68s)
+✔ [4400/4418] Built E8Leech.KronLWRegs10 (60s)
+✔ [4401/4418] Built E8Leech.KronLWRegs11 (54s)
+✔ [4402/4418] Built E8Leech.KronLWRegs12 (45s)
+✔ [4403/4418] Built E8Leech.KronLWRegs13 (13s)
+✔ [4404/4418] Built E8Leech.KronLWRegs (10s)
+✔ [4405/4418] Built E8Leech.KronLWCheck8 (110s)
+✔ [4406/4418] Built E8Leech.KronLWCheck7 (178s)
+✔ [4407/4418] Built E8Leech.KronLWCheck6 (181s)
+✔ [4408/4418] Built E8Leech.KronLWCheck5 (208s)
+✔ [4409/4418] Built E8Leech.KronLWCheck4 (199s)
+✔ [4410/4418] Built E8Leech.KronLWCheck3 (209s)
+✔ [4411/4418] Built E8Leech.KronLWCheck2 (206s)
+✔ [4412/4418] Built E8Leech.KronLWCheck1 (162s)
+✔ [4413/4418] Built E8Leech.KronLWModel (32s)
+✔ [4414/4418] Built E8Leech.KronLWCover4 (17s)
+✔ [4415/4418] Built E8Leech.KronLWCover3 (29s)
+✔ [4416/4418] Built E8Leech.KronLWCover2 (36s)
+✔ [4417/4418] Built E8Leech.KronLWCover1 (28s)
+✔ [4418/4418] Built E8Leech.KronLW (2.8s)
+Build completed successfully (4418 jobs).
+	Command being timed: "timeout --kill-after=120 240m lake build E8Leech.KronLUCheck5 E8Leech.KronLUCheck6 E8Leech.KronLUCheck7 E8Leech.KronLUCheck8 E8Leech.KronLUModel E8Leech.KronLUCover1 E8Leech.KronLUCover2 E8Leech.KronLUCover3 E8Leech.KronLUCover4 E8Leech.KronLUCover5 E8Leech.KronLUCover6 E8Leech.KronLU E8Leech.KronLeechH2K E8Leech.KronLeechH2SignK E8Leech.KronLWData E8Leech.KronLWProg E8Leech.KronLWRegs1 E8Leech.KronLWRegs2 E8Leech.KronLWRegs3 E8Leech.KronLWRegs4 E8Leech.KronLWRegs5 E8Leech.KronLWRegs6 E8Leech.KronLWRegs7 E8Leech.KronLWRegs8 E8Leech.KronLWRegs9 E8Leech.KronLWRegs10 E8Leech.KronLWRegs11 E8Leech.KronLWRegs12 E8Leech.KronLWRegs13 E8Leech.KronLWRegs E8Leech.KronLWCheck1 E8Leech.KronLWCheck2 E8Leech.KronLWCheck3 E8Leech.KronLWCheck4 E8Leech.KronLWCheck5 E8Leech.KronLWCheck6 E8Leech.KronLWCheck7 E8Leech.KronLWCheck8 E8Leech.KronLWModel E8Leech.KronLWCover1 E8Leech.KronLWCover2 E8Leech.KronLWCover3 E8Leech.KronLWCover4 E8Leech.KronLW E8Leech.KronTauSign E8Leech.KronLBData E8Leech.KronLBCheck E8Leech.KronLBModel E8Leech.KronLBCoverBD E8Leech.KronLBCoverBI E8Leech.KronLB E8Leech.KronLHData E8Leech.KronLHCheck E8Leech.KronLHModel"
+	User time (seconds): 3324.94
+	System time (seconds): 67.83
+	Percent of CPU this job got: 171%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 32:56.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5920400
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 29833
+	Minor (reclaiming a frame) page faults: 8109973
+	Voluntary context switches: 180695
+	Involuntary context switches: 23004
+	Swaps: 0
+	File system inputs: 4042688
+	File system outputs: 1249544
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

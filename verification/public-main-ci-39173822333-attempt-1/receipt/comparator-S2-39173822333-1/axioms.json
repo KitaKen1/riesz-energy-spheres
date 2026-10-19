@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "targets": {
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RieszSphereFC.log_energy_lattice.variants.dimension_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RieszSphereFC.log_energy_lattice.variants.dimension_eight": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+}

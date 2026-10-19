@@ -1,0 +1,1838 @@
+warning: formal_conjectures: repository '/home/runner/work/riesz-energy-spheres/riesz-energy-spheres/lean/.lake/packages/formal_conjectures' has local changes
+ℹ [8923/8930] Built Riesz.Definitions (2.4s)
+info: Riesz/Definitions.lean:38:0: 'SphericalRiesz.offDiagonal_dist_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/Definitions.lean:39:0: 'SphericalRiesz.energy4_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8924/8930] Built FCDefinitions (3.6s)
+✔ [8926/8931] Built Riesz.CharFun (3.1s)
+ℹ [8927/8932] Built Riesz.SphereMeasure8 (3.2s)
+info: Riesz/SphereMeasure8.lean:157:0: 'SphericalRiesz.sphereArea8_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:158:0: 'SphericalRiesz.sphereProbability8_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:159:0: 'SphericalRiesz.sphereRotation8_dist' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:160:0: 'SphericalRiesz.sphereRotation8_cone_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:161:0: 'SphericalRiesz.sphereArea8_rotation_preserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:162:0: 'SphericalRiesz.sphereProbability8_rotation_preserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:163:0: 'SphericalRiesz.sphereProbability8_integral_rotation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:164:0: 'SphericalRiesz.sphereRotation8_transitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:165:0: 'SphericalRiesz.spherePotential4_rotation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:166:0: 'SphericalRiesz.spherePotential4_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:167:0: 'SphericalRiesz.sphereKernel4_integrable_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:168:0: 'SphericalRiesz.spherePotential4_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasure8.lean:169:0: 'SphericalRiesz.spherePotential4_quadrature_cancel' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8928/8933] Built Riesz.GaussianPSD (2.8s)
+info: Riesz/GaussianPSD.lean:58:0: 'SphericalRiesz.gaussian_weighted_sum_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8929/8935] Built Riesz.SphereArea8 (2.7s)
+info: Riesz/SphereArea8.lean:57:0: 'SphericalRiesz.ambient9_unit_ball_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereArea8.lean:58:0: 'SphericalRiesz.sphereArea8_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereArea8.lean:59:0: 'SphericalRiesz.sphereArea8_mass_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereArea8.lean:60:0: 'SphericalRiesz.sphereProbability8_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereArea8.lean:61:0: 'SphericalRiesz.predictedCoefficient_area_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8930/8936] Built Riesz.GaussianMeasurePSD (3.6s)
+warning: Riesz/GaussianMeasurePSD.lean:20:0: automatically included section variable(s) unused in theorem `SphericalRiesz.gaussianKernel_le_one`:
+  [InnerProductSpace ℝ E]
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+  [SecondCountableTopology E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [InnerProductSpace ℝ
+  E] [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] [SecondCountableTopology E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Riesz/GaussianMeasurePSD.lean:61:0: automatically included section variable(s) unused in theorem `SphericalRiesz.inner_phase_mul_conj`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+  [SecondCountableTopology E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] [SecondCountableTopology E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8931/8936] Built Riesz.SphereBall8 (3.1s)
+warning: Riesz/SphereBall8.lean:67:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: Riesz/SphereBall8.lean:93:0: 'SphericalRiesz.sphereDirection8_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBall8.lean:94:0: 'SphericalRiesz.sphereDirection8_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBall8.lean:95:0: 'SphericalRiesz.unitBallNonzero9_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBall8.lean:96:0: 'SphericalRiesz.sphereBallMeasure8_direction_preserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBall8.lean:97:0: 'SphericalRiesz.sphereBallProbability8_direction_preserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBall8.lean:98:0: 'SphericalRiesz.sphereBallProbability8_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBall8.lean:99:0: 'SphericalRiesz.sphereKernel4_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBall8.lean:100:0: 'SphericalRiesz.sphereKernel4_ball_integrable_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBall8.lean:101:0: 'SphericalRiesz.spherePotential4_ball_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8932/8937] Built Riesz.DiffuseGaussianBackground (2.0s)
+⚠ [8933/8952] Built Riesz.SphereGaussianBackground8 (3.2s)
+warning: Riesz/SphereGaussianBackground8.lean:133:58: Variable name `ht` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ht
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [8934/8953] Built Riesz.SpherePoleAngle8 (2.6s)
+info: Riesz/SpherePoleAngle8.lean:88:0: 'SphericalRiesz.poleAngularPrimitive4_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePoleAngle8.lean:89:0: 'SphericalRiesz.poleAngular4_intervalIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePoleAngle8.lean:90:0: 'SphericalRiesz.poleAngular4_setIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePoleAngle8.lean:91:0: 'SphericalRiesz.poleRadialPower8_setIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePoleAngle8.lean:92:0: 'SphericalRiesz.poleAngular4_kernel_cancel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePoleAngle8.lean:93:0: 'SphericalRiesz.poleRectangle4_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8935/8954] Built Riesz.Boundary (10s)
+info: Riesz/Boundary.lean:168:0: 'SphericalRiesz.Boundary.node_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/Boundary.lean:169:0: 'SphericalRiesz.Boundary.node_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/Boundary.lean:170:0: 'SphericalRiesz.Boundary.node_close_to_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/Boundary.lean:171:0: 'SphericalRiesz.Boundary.normalizedPolynomial_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/Boundary.lean:172:0: 'SphericalRiesz.Boundary.node_power_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8936/8956] Built Riesz.SpherePolePolar8 (2.4s)
+info: Riesz/SpherePolePolar8.lean:101:0: 'SphericalRiesz.poleRadialKernel4_polar' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePolePolar8.lean:102:0: 'SphericalRiesz.poleHalfPlane4_polar' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePolePolar8.lean:103:0: 'SphericalRiesz.poleHalfPlane4_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePolePolar8.lean:104:0: 'SphericalRiesz.poleHalfPlane4_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePolePolar8.lean:105:0: 'SphericalRiesz.poleHalfPlane4_iterated_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePolePolar8.lean:106:0: 'SphericalRiesz.poleHalfPlane4_radial_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8937/8960] Built Riesz.GaussianMellin (3.6s)
+info: Riesz/GaussianMellin.lean:22:0: 'SphericalRiesz.inverse_fourth_gaussian_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8938/8961] Built Riesz.FiniteBackground (3.0s)
+info: Riesz/FiniteBackground.lean:100:0: 'SphericalRiesz.finiteGaussianDefect_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/FiniteBackground.lean:101:0: 'SphericalRiesz.gaussian_diagonal_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/FiniteBackground.lean:102:0: 'SphericalRiesz.background_subtracted_common_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8939/8962] Built Riesz.Quadrature (10s)
+info: Riesz/Quadrature.lean:221:0: 'SphericalRiesz.Boundary.quadrature_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/Quadrature.lean:222:0: 'SphericalRiesz.Boundary.quadrature_monomial_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/Quadrature.lean:223:0: 'SphericalRiesz.Boundary.ruleNode_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/Quadrature.lean:224:0: 'SphericalRiesz.Boundary.ruleNode_mem_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/Quadrature.lean:225:0: 'SphericalRiesz.Boundary.quadrature_degree_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8940/8964] Built Riesz.SphereGaussianCommonLower8 (2.7s)
+ℹ [8941/8965] Built Riesz.QuadratureError (2.6s)
+info: Riesz/QuadratureError.lean:69:0: 'SphericalRiesz.Boundary.quadrature_abs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/QuadratureError.lean:70:0: 'SphericalRiesz.Boundary.quadrature_residual_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8942/8967] Built Riesz.GaussianMellinGeneral (2.6s)
+info: Riesz/GaussianMellinGeneral.lean:60:0: 'SphericalRiesz.rpow_neg_gaussian_mellin_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/GaussianMellinGeneral.lean:61:0: 'SphericalRiesz.rpow_neg_eq_gaussian_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/GaussianMellinGeneral.lean:62:0: 'SphericalRiesz.rpow_neg_four_gaussian_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8943/8976] Built Riesz.ResidualFirstMoment (3.5s)
+ℹ [8944/8978] Built Riesz.PeanoKernel (6.6s)
+info: Riesz/PeanoKernel.lean:197:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: Riesz/PeanoKernel.lean:268:0: 'SphericalRiesz.Boundary.unscaledPeanoKernel_left_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoKernel.lean:269:0: 'SphericalRiesz.Boundary.unscaledPeanoKernel_left_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoKernel.lean:270:0: 'SphericalRiesz.Boundary.unitPeanoKernel_left_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoKernel.lean:271:0: 'SphericalRiesz.Boundary.unscaledPeanoKernel_right_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoKernel.lean:272:0: 'SphericalRiesz.Boundary.unscaledPeanoKernel_right_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoKernel.lean:273:0: 'SphericalRiesz.Boundary.unitPeanoKernel_right_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoKernel.lean:274:0: 'SphericalRiesz.Boundary.unitPeanoKernel_eq_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8945/8978] Built Riesz.PeanoInterior (6.5s)
+info: Riesz/PeanoInterior.lean:112:0: 'SphericalRiesz.Boundary.unscaledPeanoKernel_interior_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/PeanoInterior.lean:113:0: 'SphericalRiesz.Boundary.unscaledPeanoKernel_interior_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoInterior.lean:180:0: 'SphericalRiesz.Boundary.unscaledPeanoKernel_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoInterior.lean:181:0: 'SphericalRiesz.Boundary.unitPeanoKernel_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoInterior.lean:182:0: 'SphericalRiesz.Boundary.unitPeanoKernel_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoInterior.lean:183:0: 'SphericalRiesz.Boundary.unitPeanoKernel_weighted_integral_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [8946/8979] Built Riesz.GaussianCompositionSixth (10s)
+ℹ [8947/8980] Built Riesz.PeanoRemainder (3.0s)
+info: Riesz/PeanoRemainder.lean:103:0: 'SphericalRiesz.Boundary.peanoPrimitive_intervalIntegrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoRemainder.lean:104:0: 'SphericalRiesz.Boundary.peanoPrimitive_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoRemainder.lean:105:0: 'SphericalRiesz.Boundary.peanoPrimitive_quadrature_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoRemainder.lean:106:0: 'SphericalRiesz.Boundary.quadrature_peano_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8948/8981] Built Riesz.EqualAreaChart8 (4.9s)
+⚠ [8949/8983] Built Riesz.SmoothQuadrature (2.9s)
+warning: Riesz/SmoothQuadrature.lean:87:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Riesz/SmoothQuadrature.lean:119:0: 'SphericalRiesz.Boundary.sixth_order_representation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SmoothQuadrature.lean:120:0: 'SphericalRiesz.Boundary.quadrature_sixth_order_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8950/8983] Built Riesz.EqualAreaGram8 (4.5s)
+ℹ [8951/8984] Built Riesz.CellQuadrature (3.2s)
+info: Riesz/CellQuadrature.lean:44:0: 'SphericalRiesz.Boundary.iteratedDeriv_six_affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CellQuadrature.lean:45:0: 'SphericalRiesz.Boundary.quadrature_cell_sixth_order_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8952/8985] Built Riesz.LocalQuadrature (2.9s)
+info: Riesz/LocalQuadrature.lean:137:0: 'SphericalRiesz.Boundary.sixth_order_local_representation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LocalQuadrature.lean:138:0: 'SphericalRiesz.Boundary.quadrature_sixth_order_bound_on' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8953/8985] Built Riesz.EqualAreaCone8 (2.6s)
+ℹ [8954/8987] Built Riesz.TensorQuadrature (2.8s)
+info: Riesz/TensorQuadrature.lean:101:0: 'SphericalRiesz.Boundary.unitIntegral2_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/TensorQuadrature.lean:102:0: 'SphericalRiesz.Boundary.quadrature2_sixth_order_bound_on' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8955/8988] Built Riesz.LocalCellQuadrature (3.2s)
+info: Riesz/LocalCellQuadrature.lean:80:0: 'SphericalRiesz.Boundary.iteratedDerivWithin_affine_cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LocalCellQuadrature.lean:81:0: 'SphericalRiesz.Boundary.quadrature_cell_sixth_order_bound_on' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [8956/8988] Built Riesz.EqualAreaConeDerivative8 (3.0s)
+ℹ [8957/8988] Built Riesz.L1Quadrature (3.5s)
+info: Riesz/L1Quadrature.lean:129:0: 'SphericalRiesz.Boundary.quadrature_sixth_order_error_on' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/L1Quadrature.lean:130:0: 'SphericalRiesz.Boundary.quadrature_sixth_order_l1_bound_on' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/L1Quadrature.lean:131:0: 'SphericalRiesz.Boundary.quadrature_cell_sixth_order_l1_bound_on' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8958/8989] Built Riesz.CubeQuadrature (3.1s)
+info: Riesz/CubeQuadrature.lean:282:0: 'SphericalRiesz.Boundary.iteratedDerivWithin_quadrature_param' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/CubeQuadrature.lean:283:0: 'SphericalRiesz.Boundary.cubeQuadrature_sixth_order_bound_on' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8959/8989] Built Riesz.EqualAreaConeJacobian8 (3.2s)
+ℹ [8960/8989] Built Riesz.QuadraticKernel (12s)
+info: Riesz/QuadraticKernel.lean:170:0: 'SphericalRiesz.quadraticKernelDerivative_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/QuadraticKernel.lean:171:0: 'SphericalRiesz.iteratedDerivWithin_quadraticKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/QuadraticKernel.lean:172:0: 'SphericalRiesz.quadraticKernelDerivative_six_bound_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8961/8990] Built Riesz.CubeNodes (2.3s)
+info: Riesz/CubeNodes.lean:59:0: 'SphericalRiesz.Boundary.cubeNode_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CubeNodes.lean:60:0: 'SphericalRiesz.Boundary.cubeNode_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CubeNodes.lean:61:0: 'SphericalRiesz.Boundary.cubeQuadrature_as_node_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8962/8991] Built Riesz.CubeLebesgue (2.6s)
+info: Riesz/CubeLebesgue.lean:113:0: 'SphericalRiesz.Boundary.unitCube_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CubeLebesgue.lean:114:0: 'SphericalRiesz.Boundary.cubeConsEquiv_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CubeLebesgue.lean:115:0: 'SphericalRiesz.Boundary.unitCube_setIntegral_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CubeLebesgue.lean:116:0: 'SphericalRiesz.Boundary.cubeIntegral_eq_setIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CubeLebesgue.lean:117:0: 'SphericalRiesz.Boundary.cubeIntegral_eq_setIntegral_on' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8963/8992] Built Riesz.BoxQuadrature (2.9s)
+info: Riesz/BoxQuadrature.lean:167:0: 'SphericalRiesz.Boundary.boxIntegral_affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/BoxQuadrature.lean:168:0: 'SphericalRiesz.Boundary.boxQuadrature_sixth_order_bound_on' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/BoxQuadrature.lean:169:0: 'SphericalRiesz.Boundary.boxQuadrature_uniform_sixth_order_bound_on' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [8964/8992] Built Riesz.EqualAreaMeasure8 (2.8s)
+ℹ [8965/8992] Built Riesz.NodeCounting (6.9s)
+info: Riesz/NodeCounting.lean:178:0: 'SphericalRiesz.Boundary.midpointLabel_injective' depends on axioms: [propext, Quot.sound]
+info: Riesz/NodeCounting.lean:179:0: 'SphericalRiesz.Boundary.unscaledRuleNode_close_to_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/NodeCounting.lean:180:0: 'SphericalRiesz.Boundary.ruleNode_local_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/NodeCounting.lean:181:0: 'SphericalRiesz.Boundary.cubeNode_local_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/NodeCounting.lean:182:0: 'SphericalRiesz.Boundary.cubeQuadrature_local_abs_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8966/8992] Built Riesz.DyadicShell (2.9s)
+info: Riesz/DyadicShell.lean:52:0: 'SphericalRiesz.dyadic_eight_four_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/DyadicShell.lean:53:0: 'SphericalRiesz.dyadic_quarter_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/DyadicShell.lean:54:0: 'SphericalRiesz.dyadic_shell_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8967/8993] Built Riesz.SphereIntegrable8 (3.3s)
+info: Riesz/SphereIntegrable8.lean:203:0: 'SphericalRiesz.sphereKernel4_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:204:0: 'SphericalRiesz.transverse8_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:205:0: 'SphericalRiesz.sphereKernel4_transverse_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:206:0: 'SphericalRiesz.ambientCons9_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:207:0: 'SphericalRiesz.inverseFourth8_ball_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:208:0: 'SphericalRiesz.transverseKernel4_unitBall_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:209:0: 'SphericalRiesz.transverse8_ae_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:210:0: 'SphericalRiesz.transverseKernel4_ball_comap_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:211:0: 'SphericalRiesz.sphereKernel4_northPole_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:212:0: 'SphericalRiesz.sphereKernel4_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:213:0: 'SphericalRiesz.sphereKernel4_pair_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereIntegrable8.lean:214:0: 'SphericalRiesz.sphereKernel4_pair_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8968/8994] Built Riesz.FlatKernel (2.6s)
+✔ [8969/8994] Built Riesz.CubeEnvelopeQuadrature (3.5s)
+ℹ [8970/8994] Built Riesz.NodeSeparation (2.7s)
+info: Riesz/NodeSeparation.lean:59:0: 'SphericalRiesz.Boundary.unscaledRuleNode_sub_gt_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/NodeSeparation.lean:60:0: 'SphericalRiesz.Boundary.unscaledRuleNode_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/NodeSeparation.lean:61:0: 'SphericalRiesz.Boundary.ruleNode_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/NodeSeparation.lean:62:0: 'SphericalRiesz.Boundary.cubeNode_coordinate_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/NodeSeparation.lean:63:0: 'SphericalRiesz.Boundary.cubeNode_norm_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8971/8994] Built Riesz.LocalizedQuadrature (3.5s)
+info: Riesz/LocalizedQuadrature.lean:261:0: 'SphericalRiesz.Boundary.unitIntegral_local_abs_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LocalizedQuadrature.lean:262:0: 'SphericalRiesz.Boundary.cubeIntegral_local_abs_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LocalizedQuadrature.lean:263:0: 'SphericalRiesz.Boundary.quadrature_local_abs_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LocalizedQuadrature.lean:264:0: 'SphericalRiesz.Boundary.cubeQuadrature_local_sixth_order_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [8972/8994] Built Riesz.SphereAtomless8 (2.6s)
+ℹ [8973/8995] Built Riesz.SpherePole8 (2.0s)
+info: Riesz/SpherePole8.lean:101:0: 'SphericalRiesz.northPole8_dist_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePole8.lean:102:0: 'SphericalRiesz.northPole8_kernel_coordinate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePole8.lean:103:0: 'SphericalRiesz.northPole8_direction_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePole8.lean:104:0: 'SphericalRiesz.ambientPoleKernel4_unitBall_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePole8.lean:105:0: 'SphericalRiesz.spherePotential4_northPole_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePole8.lean:106:0: 'SphericalRiesz.ambientPoleBallKernel4_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SpherePole8.lean:107:0: 'SphericalRiesz.ambientPoleBallKernel4_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8974/8996] Built Riesz.AnnularCutoff (3.6s)
+info: Riesz/AnnularCutoff.lean:184:0: 'SphericalRiesz.unitAnnularRieszFour_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularCutoff.lean:185:0: 'SphericalRiesz.unitAnnularRieszFour_derivatives_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularCutoff.lean:186:0: 'SphericalRiesz.scaledAnnularRieszFour_eq_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularCutoff.lean:187:0: 'SphericalRiesz.scaledAnnularRieszFour_sixth_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularCutoff.lean:188:0: 'SphericalRiesz.scaledAnnularRieszFour_sixth_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularCutoff.lean:189:0: 'SphericalRiesz.scaledAnnularRieszFour_sixth_zero_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8975/8996] Built Riesz.GaussianOneDimBounds (4.5s)
+⚠ [8976/8996] Built Riesz.SphereResidual8 (3.2s)
+warning: Riesz/SphereResidual8.lean:160:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [8977/8997] Built Riesz.SphereValue8 (3.1s)
+info: Riesz/SphereValue8.lean:95:0: 'SphericalRiesz.ambientCons9_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereValue8.lean:96:0: 'SphericalRiesz.ambientCons9_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereValue8.lean:97:0: 'SphericalRiesz.ambientPoleBallKernel4_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereValue8.lean:98:0: 'SphericalRiesz.poleTransverse8_unit_ball_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereValue8.lean:99:0: 'SphericalRiesz.poleRadialKernel4_transverse_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereValue8.lean:100:0: 'SphericalRiesz.ambientPoleBallKernel4_integral_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereValue8.lean:101:0: 'SphericalRiesz.spherePotential4_northPole_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereValue8.lean:102:0: 'SphericalRiesz.spherePotential4_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereValue8.lean:103:0: 'SphericalRiesz.sphereKernel4_pair_integral_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8978/8997] Built Riesz.SphereGaussianBall8 (3.2s)
+ℹ [8979/8997] Built Riesz.AnnularQuadrature (3.3s)
+info: Riesz/AnnularQuadrature.lean:162:0: 'SphericalRiesz.sixth_coordinate_within_abs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularQuadrature.lean:163:0: 'SphericalRiesz.scaledAnnularRieszFour_quadrature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularQuadrature.lean:164:0: 'SphericalRiesz.scaledAnnularRieszFour_eight_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularQuadrature.lean:165:0: 'SphericalRiesz.scaledAnnularRieszFour_dyadic_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularQuadrature.lean:166:0: 'SphericalRiesz.scaledAnnularRieszFour_dyadic_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8980/8998] Built Riesz.E8Coordinates (3.5s)
+info: Riesz/E8Coordinates.lean:70:0: 'SphericalRiesz.e8Matrix_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Coordinates.lean:71:0: 'SphericalRiesz.e8Map_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Coordinates.lean:72:0: 'SphericalRiesz.e8Map_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8981/8999] Built Riesz.SphereBackgroundSplit8 (3.1s)
+⚠ [8982/8999] Built Riesz.SphereGaussianPolar8 (4.1s)
+warning: Riesz/SphereGaussianPolar8.lean:80:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Riesz/SphereGaussianPolar8.lean:85:41: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Riesz/SphereGaussianPolar8.lean:85:73: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Riesz/SphereGaussianPolar8.lean:87:39: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Riesz/SphereGaussianPolar8.lean:127:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Riesz/SphereGaussianPolar8.lean:130:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+ℹ [8983/9000] Built Riesz.AnnularPartition (4.1s)
+info: Riesz/AnnularPartition.lean:229:0: 'SphericalRiesz.annular_partition_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularPartition.lean:230:0: 'SphericalRiesz.farRieszFour_eq_annular_sum_on' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularPartition.lean:231:0: 'SphericalRiesz.farRieszFour_contDiffOn_cube' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularPartition.lean:232:0: 'SphericalRiesz.cubeIntegral_finset_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularPartition.lean:233:0: 'SphericalRiesz.farRieszFour_quadrature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/AnnularPartition.lean:234:0: 'SphericalRiesz.farRieszFour_error_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8984/9000] Built Riesz.E8Volume (2.5s)
+info: Riesz/E8Volume.lean:60:0: 'SphericalRiesz.e8Map_eq_matrixTranspose' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Volume.lean:61:0: 'SphericalRiesz.e8Map_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Volume.lean:62:0: 'SphericalRiesz.e8Map_map_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Volume.lean:63:0: 'SphericalRiesz.e8Map_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Volume.lean:64:0: 'SphericalRiesz.e8Map_volume_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Volume.lean:65:0: 'SphericalRiesz.e8Map_measurableEmbedding' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Volume.lean:66:0: 'SphericalRiesz.e8Map_integral_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8985/9001] Built Riesz.SphereResidualAssembly8 (2.7s)
+⚠ [8986/9002] Built Riesz.SphereGaussianPolynomial8 (2.0s)
+warning: Riesz/SphereGaussianPolynomial8.lean:22:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [8987/9002] Built Riesz.ObliqueAnnulus (3.7s)
+info: Riesz/ObliqueAnnulus.lean:244:0: 'SphericalRiesz.obliqueRieszFour_eq_dist' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/ObliqueAnnulus.lean:245:0: 'SphericalRiesz.scaledObliqueAnnularRieszFour_sixth_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/ObliqueAnnulus.lean:246:0: 'SphericalRiesz.e8AnnularRieszFour_quadrature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/ObliqueAnnulus.lean:247:0: 'SphericalRiesz.e8TensorNode_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8988/9003] Built Riesz.SphereBoundedKernelAssembly8 (3.7s)
+✔ [8989/9004] Built Riesz.SphereGaussianMajorant8 (3.1s)
+✔ [8990/9005] Built Riesz.SphereGaussianMellinBackground8 (3.1s)
+ℹ [8991/9005] Built Riesz.PeanoEndpoint (4.2s)
+info: Riesz/PeanoEndpoint.lean:126:0: 'SphericalRiesz.Boundary.node_gt_quarter' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoEndpoint.lean:127:0: 'SphericalRiesz.Boundary.unscaledPeanoKernel_left_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoEndpoint.lean:128:0: 'SphericalRiesz.Boundary.unscaledPeanoKernel_right_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoEndpoint.lean:129:0: 'SphericalRiesz.Boundary.unitPeanoKernel_left_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoEndpoint.lean:130:0: 'SphericalRiesz.Boundary.unitPeanoKernel_right_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoEndpoint.lean:131:0: 'SphericalRiesz.Boundary.unitPeanoKernel_left_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoEndpoint.lean:132:0: 'SphericalRiesz.Boundary.unitPeanoKernel_right_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoEndpoint.lean:133:0: 'SphericalRiesz.Boundary.unitPeanoKernel_endpoint_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8992/9006] Built Riesz.SphereGaussianMellinEnergy8 (2.7s)
+warning: Riesz/SphereGaussianMellinEnergy8.lean:37:50: This simp argument is unused:
+  Finset.sum_add_distrib
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sphereGaussianOffDiagonal8]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [8993/9006] Built Riesz.ObliquePartition (9.8s)
+info: Riesz/ObliquePartition.lean:220:0: 'SphericalRiesz.oblique_annular_partition_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/ObliquePartition.lean:221:0: 'SphericalRiesz.farObliqueRieszFour_quadrature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/ObliquePartition.lean:222:0: 'SphericalRiesz.e8FarRieszFour_error_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/ObliquePartition.lean:223:0: 'SphericalRiesz.e8FarRieszFour_node_error_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8994/9007] Built Riesz.PeanoSingularWeight (3.3s)
+info: Riesz/PeanoSingularWeight.lean:192:0: 'SphericalRiesz.Boundary.endpoint_inv_sq_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoSingularWeight.lean:193:0: 'SphericalRiesz.Boundary.peanoEndpointWeight_continuousOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoSingularWeight.lean:194:0: 'SphericalRiesz.Boundary.peanoEndpointWeight_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoSingularWeight.lean:195:0: 'SphericalRiesz.Boundary.peanoEndpointWeight_integral_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoSingularWeight.lean:196:0: 'SphericalRiesz.Boundary.unitPeanoKernel_singular_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoSingularWeight.lean:197:0: 'SphericalRiesz.Boundary.unitPeanoKernel_singular_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoSingularWeight.lean:198:0: 'SphericalRiesz.Boundary.unitPeanoKernel_singular_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PeanoSingularWeight.lean:199:0: 'SphericalRiesz.Boundary.unitPeanoKernel_singular_integral_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [8995/9008] Built Riesz.SphereGaussianMellinScale8 (3.5s)
+warning: Riesz/SphereGaussianMellinScale8.lean:37:74: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/SphereGaussianMellinScale8.lean:37:74: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SphereGaussianMellinScale8.lean:52:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/SphereGaussianMellinScale8.lean:52:26: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SphereGaussianMellinScale8.lean:79:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Riesz/SphereGaussianMellinScale8.lean:94:23: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/SphereGaussianMellinScale8.lean:94:23: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SphereGaussianMellinScale8.lean:114:59: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/SphereGaussianMellinScale8.lean:114:59: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [8996/9009] Built Riesz.E8FarPhysical (2.8s)
+info: Riesz/E8FarPhysical.lean:70:0: 'SphericalRiesz.e8PhysicalFar_eq_dist' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FarPhysical.lean:71:0: 'SphericalRiesz.e8Far_imageIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FarPhysical.lean:72:0: 'SphericalRiesz.e8Far_physical_node_error_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8997/9009] Built Riesz.SingularQuadrature (2.8s)
+info: Riesz/SingularQuadrature.lean:155:0: 'SphericalRiesz.Boundary.quadrature_singular_sixth_order_bound_on' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SingularQuadrature.lean:156:0: 'SphericalRiesz.Boundary.quadrature_quadrature_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SingularQuadrature.lean:157:0: 'SphericalRiesz.Boundary.cubeQuadrature_error_of_slice_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SingularQuadrature.lean:158:0: 'SphericalRiesz.Boundary.cubeQuadrature_error_of_slice_bound_on' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SingularQuadrature.lean:159:0: 'SphericalRiesz.Boundary.cubeQuadrature_singular_sixth_order_bound_on' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8998/9010] Built Riesz.SphereRieszMellinRpow8 (3.7s)
+info: Riesz/SphereRieszMellinRpow8.lean:284:0: 'SphericalRiesz.energyRpow_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:285:0: 'SphericalRiesz.gaussianPair_mellin_rpow_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:286:0: 'SphericalRiesz.gaussianPair_mellin_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:287:0: 'SphericalRiesz.sphereGaussianPair8_weighted_integrable_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:288:0: 'SphericalRiesz.sphereGaussianPair8_mellin_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:289:0: 'SphericalRiesz.sphereGaussianOffDiagonal8_weighted_integrable_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:290:0: 'SphericalRiesz.sphereGaussianOffDiagonal8_mellin_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:291:0: 'SphericalRiesz.sphereGaussianBackground8_continuousOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:292:0: 'SphericalRiesz.sphereGaussianBackground8_weighted_le_majorant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:293:0: 'SphericalRiesz.sphereGaussianBackground8_weighted_integrable_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:294:0: 'SphericalRiesz.sphereRieszConst8_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:295:0: 'SphericalRiesz.sphereGaussianRieszDefect8_weighted_integrable_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:296:0: 'SphericalRiesz.sphereGaussianRieszDefect8_mellin_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:297:0: 'SphericalRiesz.sphereGaussianRieszDefect8_scaled_mellin_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:298:0: 'SphericalRiesz.normalizedEnergyRpow_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:299:0: 'SphericalRiesz.sphereGaussianCenteredScaled8_weighted_integrable_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:300:0: 'SphericalRiesz.sphereGaussianDensityFactor8_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszMellinRpow8.lean:301:0: 'SphericalRiesz.normalizedEnergyRpow_gaussian_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8999/9011] Built Riesz.E8Separation (3.1s)
+info: Riesz/E8Separation.lean:63:0: 'SphericalRiesz.pi_norm_le_euclidean' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Separation.lean:64:0: 'SphericalRiesz.e8SeparationConstant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Separation.lean:65:0: 'SphericalRiesz.e8TensorNode_dist_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9000/9011] Built Riesz.E8Grid (2.6s)
+info: Riesz/E8Grid.lean:62:0: 'SphericalRiesz.interiorNodeIndex_injective' depends on axioms: [propext]
+info: Riesz/E8Grid.lean:63:0: 'SphericalRiesz.interiorRuleNode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Grid.lean:64:0: 'SphericalRiesz.interiorCubeNode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Grid.lean:65:0: 'SphericalRiesz.e8InteriorNode_eq_translate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Grid.lean:66:0: 'SphericalRiesz.e8IntegerPoint_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Grid.lean:67:0: 'SphericalRiesz.e8InteriorNode_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9001/9013] Built Riesz.E8NearNodes (2.8s)
+info: Riesz/E8NearNodes.lean:74:0: 'SphericalRiesz.e8TensorNode_kernel_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearNodes.lean:75:0: 'SphericalRiesz.e8NearNodeSum_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearNodes.lean:76:0: 'SphericalRiesz.e8NearNodeSum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9002/9013] Built Riesz.CenteredGrid (3.1s)
+warning: Riesz/CenteredGrid.lean:36:17: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/CenteredGrid.lean:36:17: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/CenteredGrid.lean:43:17: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/CenteredGrid.lean:43:17: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Riesz/CenteredGrid.lean:184:0: 'SphericalRiesz.Boundary.centeredRuleCoordinate_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CenteredGrid.lean:185:0: 'SphericalRiesz.Boundary.centeredRuleNode' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CenteredGrid.lean:186:0: 'SphericalRiesz.Boundary.centeredRuleCoordinate_interior' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CenteredGrid.lean:187:0: 'SphericalRiesz.Boundary.centeredCubeCoordinate_interior' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CenteredGrid.lean:188:0: 'SphericalRiesz.Boundary.centeredRuleCoordinate_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CenteredGrid.lean:189:0: 'SphericalRiesz.Boundary.centeredIntegerLabel_injective' depends on axioms: [propext, Quot.sound]
+info: Riesz/CenteredGrid.lean:190:0: 'SphericalRiesz.Boundary.centeredIntegerBox_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CenteredGrid.lean:191:0: 'SphericalRiesz.Boundary.centeredIntegerBox_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CenteredGrid.lean:192:0: 'SphericalRiesz.Boundary.centeredNodeSum_eq_integer_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CenteredGrid.lean:193:0: 'SphericalRiesz.Boundary.centeredInteger_sum_eq_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CenteredGrid.lean:194:0: 'SphericalRiesz.Boundary.centeredNodeSum_eq_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9003/9014] Built Riesz.E8NearIntegral (4.0s)
+info: Riesz/E8NearIntegral.lean:142:0: 'SphericalRiesz.e8Near_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearIntegral.lean:143:0: 'SphericalRiesz.e8Kernel_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearIntegral.lean:144:0: 'SphericalRiesz.e8UnitNear_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearIntegral.lean:145:0: 'SphericalRiesz.e8UnitNear_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearIntegral.lean:146:0: 'SphericalRiesz.e8UnitNear_zero_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearIntegral.lean:147:0: 'SphericalRiesz.e8UnitNear_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearIntegral.lean:148:0: 'SphericalRiesz.e8Near_scaled' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearIntegral.lean:149:0: 'SphericalRiesz.e8Near_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearIntegral.lean:150:0: 'SphericalRiesz.e8NearIntegralConstant_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearIntegral.lean:151:0: 'SphericalRiesz.e8Near_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearIntegral.lean:152:0: 'SphericalRiesz.e8Near_cubeIntegral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9004/9015] Built Riesz.E8Parity (8.9s)
+info: Riesz/E8Parity.lean:105:0: 'SphericalRiesz.e8Map_eq_vector' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Parity.lean:106:0: 'SphericalRiesz.e8Map_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Parity.lean:107:0: 'SphericalRiesz.e8IntegerPoint_mem_parity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Parity.lean:108:0: 'SphericalRiesz.e8ParityPoint_exists_integer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Parity.lean:109:0: 'SphericalRiesz.e8ParityPoint_iff_integer_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Parity.lean:110:0: 'SphericalRiesz.e8InteriorNode_difference_parity' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9005/9016] Built Riesz.InteriorGrid (2.9s)
+info: Riesz/InteriorGrid.lean:178:0: 'SphericalRiesz.Boundary.interiorRuleCoordinate_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/InteriorGrid.lean:179:0: 'SphericalRiesz.Boundary.interiorRuleCoordinate_interior' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/InteriorGrid.lean:180:0: 'SphericalRiesz.Boundary.interiorCubeCoordinate_interior' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/InteriorGrid.lean:181:0: 'SphericalRiesz.Boundary.interiorRuleCoordinate_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/InteriorGrid.lean:182:0: 'SphericalRiesz.Boundary.interiorIntegerLabel_injective' depends on axioms: [propext, Quot.sound]
+info: Riesz/InteriorGrid.lean:183:0: 'SphericalRiesz.Boundary.interiorIntegerBox_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/InteriorGrid.lean:184:0: 'SphericalRiesz.Boundary.interiorNodeSum_eq_integer_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/InteriorGrid.lean:185:0: 'SphericalRiesz.Boundary.interiorInteger_sum_eq_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/InteriorGrid.lean:186:0: 'SphericalRiesz.Boundary.interiorNodeSum_eq_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9006/9017] Built Riesz.E8NearQuadrature (2.0s)
+info: Riesz/E8NearQuadrature.lean:86:0: 'SphericalRiesz.e8Near_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearQuadrature.lean:87:0: 'SphericalRiesz.e8Near_le_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearQuadrature.lean:88:0: 'SphericalRiesz.e8Near_zero_outside_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearQuadrature.lean:89:0: 'SphericalRiesz.e8Near_quadrature_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearQuadrature.lean:90:0: 'SphericalRiesz.e8Near_quadrature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9007/9018] Built Riesz.E8Theta (2.0s)
+info: Riesz/E8Theta.lean:121:0: 'SphericalRiesz.e8EuclideanPoint_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Theta.lean:122:0: 'SphericalRiesz.e8HalfNorm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Theta.lean:123:0: 'SphericalRiesz.e8EuclideanPoint_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Theta.lean:124:0: 'SphericalRiesz.e8EuclideanPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Theta.lean:125:0: 'SphericalRiesz.e8EuclideanPoint_norm_sq_ge_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Theta.lean:126:0: 'SphericalRiesz.e8ParityPoint_norm_sq_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Theta.lean:127:0: 'SphericalRiesz.e8ParityPoint_norm_sq_ge_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Theta.lean:128:0: 'SphericalRiesz.e8EuclideanPoint_minimum_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Theta.lean:129:0: 'SphericalRiesz.e8Theta_term_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Theta.lean:130:0: 'SphericalRiesz.e8Theta_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9008/9018] Built Riesz.RadialCutoff (2.3s)
+ℹ [9009/9019] Built Riesz.E8FlatRow (3.1s)
+info: Riesz/E8FlatRow.lean:98:0: 'SphericalRiesz.e8Kernel_integrableOn_cube' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FlatRow.lean:99:0: 'SphericalRiesz.e8Kernel_integral_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FlatRow.lean:100:0: 'SphericalRiesz.e8Kernel_quadrature_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FlatRow.lean:101:0: 'SphericalRiesz.e8FlatRow_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9010/9019] Built Riesz.E8Lattice (3.1s)
+info: Riesz/E8Lattice.lean:87:0: 'SphericalRiesz.e8LatticeEquiv_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Lattice.lean:88:0: 'SphericalRiesz.e8Lattice_mem_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Lattice.lean:89:0: 'SphericalRiesz.e8Lattice_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Lattice.lean:90:0: 'SphericalRiesz.e8Lattice_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Lattice.lean:91:0: 'SphericalRiesz.e8Lattice_finite_norm_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Lattice.lean:92:0: 'SphericalRiesz.e8Lattice_summable_norm_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9011/9020] Built Riesz.RadialMultidimensional (2.5s)
+✔ [9012/9020] Built Riesz.BoundsOnIcc (1.6s)
+ℹ [9013/9021] Built Riesz.E8FlatPhysicalRow (2.7s)
+info: Riesz/E8FlatPhysicalRow.lean:74:0: 'SphericalRiesz.e8PhysicalKernel_pullback' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FlatPhysicalRow.lean:75:0: 'SphericalRiesz.e8PhysicalKernel_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FlatPhysicalRow.lean:76:0: 'SphericalRiesz.e8PhysicalKernel_integrableOn_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FlatPhysicalRow.lean:77:0: 'SphericalRiesz.e8Kernel_imageIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FlatPhysicalRow.lean:78:0: 'SphericalRiesz.e8FlatPhysicalRow_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9014/9022] Built Riesz.E8ThetaSummable (2.7s)
+info: Riesz/E8ThetaSummable.lean:86:0: 'SphericalRiesz.e8LatticeThetaTerm_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaSummable.lean:87:0: 'SphericalRiesz.e8LatticeThetaTerm_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaSummable.lean:88:0: 'SphericalRiesz.e8Theta_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaSummable.lean:89:0: 'SphericalRiesz.e8Theta_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaSummable.lean:90:0: 'SphericalRiesz.e8Theta_lattice_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9015/9023] Built Riesz.RadialSchwartz (3.2s)
+ℹ [9016/9023] Built Riesz.E8PotentialApprox (2.9s)
+info: Riesz/E8PotentialApprox.lean:61:0: 'SphericalRiesz.e8Potential_far_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialApprox.lean:62:0: 'SphericalRiesz.e8Potential_far_quadrature_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialApprox.lean:63:0: 'SphericalRiesz.e8Potential_far_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9017/9024] Built Riesz.E8ThetaFourier (3.1s)
+warning: Riesz/E8ThetaFourier.lean:52:4: Try `simp at hτ` instead of `simpa using hτ`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Riesz/E8ThetaFourier.lean:77:0: 'SphericalRiesz.e8ThetaKernel_lattice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaFourier.lean:78:0: 'SphericalRiesz.e8ThetaKernel_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaFourier.lean:79:0: 'SphericalRiesz.e8ThetaKernel_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaFourier.lean:80:0: 'SphericalRiesz.e8ThetaKernel_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaFourier.lean:81:0: 'SphericalRiesz.e8ThetaKernel_fourier_S' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9018/9024] Built Riesz.E8Covolume (2.7s)
+info: Riesz/E8Covolume.lean:41:0: 'SphericalRiesz.e8EuclideanFundamentalDomain_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Covolume.lean:42:0: 'SphericalRiesz.e8Lattice_covolume' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9019/9025] Built Riesz.E8PotentialRegularity (5.5s)
+info: Riesz/E8PotentialRegularity.lean:246:0: 'SphericalRiesz.e8FarProfile_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:247:0: 'SphericalRiesz.e8Far_translation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:248:0: 'SphericalRiesz.e8Far_joint_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:249:0: 'SphericalRiesz.e8FarPotential_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:250:0: 'SphericalRiesz.e8WindowedFarProfile_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:251:0: 'SphericalRiesz.e8WindowedFarProfile_hasCompactSupport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:252:0: 'SphericalRiesz.e8WindowedPotential_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:253:0: 'SphericalRiesz.e8WindowedPotential_eq_near_cube' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:254:0: 'SphericalRiesz.e8FarPotential_contDiffOn_cube' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:255:0: 'SphericalRiesz.e8Potential_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:256:0: 'SphericalRiesz.e8Potential_far_integral_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:257:0: 'SphericalRiesz.e8Potential_quadrature_error_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:258:0: 'SphericalRiesz.e8Potential_background_bound_of_far' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:259:0: 'SphericalRiesz.e8FarPotential_slice_contDiffOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialRegularity.lean:260:0: 'SphericalRiesz.e8Potential_background_bound_of_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9020/9025] Built Riesz.E8ThetaSchwartz (5.1s)
+info: Riesz/E8ThetaSchwartz.lean:172:0: 'SphericalRiesz.e8ThetaProfile_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaSchwartz.lean:173:0: 'SphericalRiesz.e8ThetaProfile_iteratedDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaSchwartz.lean:174:0: 'SphericalRiesz.e8ThetaProfile_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaSchwartz.lean:175:0: 'SphericalRiesz.e8ThetaSchwartzKernel_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaSchwartz.lean:176:0: 'SphericalRiesz.e8ThetaSchwartzKernel_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9021/9026] Built Riesz.PoissonTorus (2.0s)
+ℹ [9022/9026] Built Riesz.E8Dual (15s)
+info: Riesz/E8Dual.lean:95:0: 'SphericalRiesz.e8EuclideanBasis_gram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dual.lean:96:0: 'SphericalRiesz.e8Gram_mul_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dual.lean:97:0: 'SphericalRiesz.e8DualPoint_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dual.lean:98:0: 'SphericalRiesz.e8Inner_nondegenerate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dual.lean:99:0: 'SphericalRiesz.e8EuclideanBasis_dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dual.lean:100:0: 'SphericalRiesz.e8Lattice_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dual.lean:101:0: 'SphericalRiesz.e8Lattice_selfDual' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9023/9032] Built Riesz.E8PotentialAveraging (2.7s)
+info: Riesz/E8PotentialAveraging.lean:113:0: 'SphericalRiesz.e8Kernel_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialAveraging.lean:114:0: 'SphericalRiesz.e8Near_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialAveraging.lean:115:0: 'SphericalRiesz.e8Far_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialAveraging.lean:116:0: 'SphericalRiesz.cubeQuadrature_continuous_parameter' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialAveraging.lean:117:0: 'SphericalRiesz.cubeQuadrature_setIntegral_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialAveraging.lean:118:0: 'SphericalRiesz.e8FarPotential_quadrature_integral_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialAveraging.lean:119:0: 'SphericalRiesz.e8FarPotential_quadrature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8PotentialAveraging.lean:120:0: 'SphericalRiesz.e8FarPotential_scaled_quadrature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9024/9033] Built Riesz.FourierLinearEquiv (3.0s)
+⚠ [9025/9034] Built Riesz.E8ThetaAnalytic (2.6s)
+warning: Riesz/E8ThetaAnalytic.lean:70:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Riesz/E8ThetaAnalytic.lean:98:0: 'SphericalRiesz.e8LatticeThetaTerm_norm_le_of_im_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaAnalytic.lean:99:0: 'SphericalRiesz.e8LatticeTheta_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaAnalytic.lean:100:0: 'SphericalRiesz.e8LatticeTheta_locallyUniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaAnalytic.lean:101:0: 'SphericalRiesz.e8Theta_differentiableOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaAnalytic.lean:102:0: 'SphericalRiesz.e8Theta_continuousOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaAnalytic.lean:103:0: 'SphericalRiesz.e8LatticeThetaTerm_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaAnalytic.lean:104:0: 'SphericalRiesz.e8Theta_tendsto_atImInfty' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaAnalytic.lean:105:0: 'SphericalRiesz.e8Theta_bounded_atImInfty' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9026/9034] Built Riesz.WeightFour (2.6s)
+info: Riesz/WeightFour.lean:52:0: 'SphericalRiesz.weightFour_eq_constant_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/WeightFour.lean:53:0: 'SphericalRiesz.weightFour_eq_of_constant_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/WeightFour.lean:54:0: 'SphericalRiesz.weightFour_eq_E4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/WeightFour.lean:55:0: 'SphericalRiesz.weightFour_first_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/WeightFour.lean:56:0: 'SphericalRiesz.weightFour_positive_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9027/9035] Built Riesz.PoissonStandardLattice (5.4s)
+ℹ [9028/9039] Built Riesz.E8QExpansion (2.6s)
+info: Riesz/E8QExpansion.lean:53:0: 'SphericalRiesz.e8ThetaUpper_mdifferentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8QExpansion.lean:54:0: 'SphericalRiesz.e8ThetaUpper_periodic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8QExpansion.lean:55:0: 'SphericalRiesz.e8ThetaUpper_cusp_analytic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8QExpansion.lean:56:0: 'SphericalRiesz.e8ThetaUpper_valueAtInfty' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8QExpansion.lean:57:0: 'SphericalRiesz.e8ThetaUpper_cusp_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8QExpansion.lean:58:0: 'SphericalRiesz.e8ThetaUpper_qExpansion_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8QExpansion.lean:59:0: 'SphericalRiesz.e8ThetaUpper_qExpansion_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9029/9049] Built Riesz.ZetaValue (2.9s)
+info: Riesz/ZetaValue.lean:25:0: 'SphericalRiesz.riemannZeta_neg_one_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/ZetaValue.lean:26:0: 'SphericalRiesz.e8_zeta_product_at_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9030/9050] Built Riesz.PoissonSchwartzBasic (6.3s)
+warning: Riesz/PoissonSchwartzBasic.lean:89:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Riesz/PoissonSchwartzBasic.lean:92:34: `AddSubgroup.isClosed_of_discrete` has been deprecated: Use `AddSubgroup.isClosed_of_discreteTopology` instead
+ℹ [9031/9055] Built Riesz.SchwartzDilation (2.0s)
+info: Riesz/SchwartzDilation.lean:57:0: 'SphericalRiesz.schwartzDilation_derivative_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SchwartzDilation.lean:58:0: 'SphericalRiesz.schwartzDilationBound_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SchwartzDilation.lean:59:0: 'SphericalRiesz.schwartzDilation_derivatives_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9032/9081] Built Riesz.E8CompactCell (4.1s)
+warning: Riesz/E8CompactCell.lean:133:17: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/E8CompactCell.lean:133:17: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Riesz/E8CompactCell.lean:135:0: 'SphericalRiesz.e8CompactTerm_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:136:0: 'SphericalRiesz.e8CompactTerm_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:137:0: 'SphericalRiesz.e8CompactTerm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:138:0: 'SphericalRiesz.e8CompactTerm_zero_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:139:0: 'SphericalRiesz.e8CompactTerm_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:140:0: 'SphericalRiesz.e8CompactLatticeSum_eq_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:141:0: 'SphericalRiesz.e8CompactLatticeSum_eq_corrected' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:142:0: 'SphericalRiesz.e8Compact_background_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:143:0: 'SphericalRiesz.e8CompactDefect_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:144:0: 'SphericalRiesz.e8Near_centered_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:145:0: 'SphericalRiesz.e8Near_centered_cubeIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CompactCell.lean:146:0: 'SphericalRiesz.e8CompactDefect_eq_scaled_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9033/9082] Built Riesz.PoissonSchwartz (7.6s)
+warning: Riesz/PoissonSchwartz.lean:72:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Riesz/PoissonSchwartz.lean:258:12: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9034/9083] Built Riesz.EqualAreaInverse8 (4.7s)
+✔ [9035/9100] Built Riesz.EqualAreaCoordinateBuffers8 (3.5s)
+✔ [9036/9102] Built Riesz.PoissonLattice (8.3s)
+✔ [9037/9103] Built Riesz.SphereGaussianMonotone8 (5.3s)
+⚠ [9038/9104] Built Riesz.E8ThetaTransform (3.0s)
+warning: Riesz/E8ThetaTransform.lean:18:4: Try `simp at hτ` instead of `simpa using hτ`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Riesz/E8ThetaTransform.lean:38:0: 'SphericalRiesz.e8Theta_transform_S' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9039/9108] Built Riesz.AmbientBumpSquare9 (3.8s)
+⚠ [9040/9109] Built Riesz.E8ThetaModular (3.0s)
+warning: Riesz/E8ThetaModular.lean:28:23: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [zpow_neg, hτ0, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Riesz/E8ThetaModular.lean:74:0: 'SphericalRiesz.e8ThetaUpper_slash_S' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaModular.lean:75:0: 'SphericalRiesz.e8ThetaUpper_slash_T' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaModular.lean:76:0: 'SphericalRiesz.e8ThetaUpper_slash_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaModular.lean:77:0: 'SphericalRiesz.e8ThetaModularForm_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaModular.lean:78:0: 'SphericalRiesz.e8ThetaModularForm_qExpansion_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaModular.lean:79:0: 'SphericalRiesz.e8ThetaModularForm_eq_E4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaModular.lean:80:0: 'SphericalRiesz.e8ThetaUpper_positive_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ThetaModular.lean:81:0: 'SphericalRiesz.e8Theta_eq_E4' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9041/9110] Built Riesz.SphereFiniteFamilyAssembly4 (2.9s)
+ℹ [9042/9110] Built Riesz.E8Dirichlet (2.0s)
+info: Riesz/E8Dirichlet.lean:137:0: 'SphericalRiesz.lSeries_pow_term_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:138:0: 'SphericalRiesz.lSeries_pow_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:139:0: 'SphericalRiesz.lSeries_pow_summable_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:140:0: 'SphericalRiesz.sigma_three_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:141:0: 'SphericalRiesz.pow_three_le_sigma_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:142:0: 'SphericalRiesz.sigma_three_summable_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:143:0: 'SphericalRiesz.e8ThetaPositiveCoeff_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:144:0: 'SphericalRiesz.e8ThetaDirichlet_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:145:0: 'SphericalRiesz.e8ThetaDirichlet_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:146:0: 'SphericalRiesz.e8ThetaPositiveCoeff_summable_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:147:0: 'SphericalRiesz.e8ThetaDirichlet_not_summable_at_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:148:0: 'SphericalRiesz.e8EpsteinCandidate_eq_thetaDirichlet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Dirichlet.lean:149:0: 'SphericalRiesz.e8EpsteinCandidate_at_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9043/9112] Built Riesz.E8Shells (2.0s)
+warning: Riesz/E8Shells.lean:66:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: Riesz/E8Shells.lean:95:0: 'SphericalRiesz.e8ShellIndex_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Shells.lean:96:0: 'SphericalRiesz.e8ShellIndex_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Shells.lean:97:0: 'SphericalRiesz.e8ShellIndex_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Shells.lean:98:0: 'SphericalRiesz.e8Theta_term_eq_qpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Shells.lean:99:0: 'SphericalRiesz.e8Theta_shell_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Shells.lean:100:0: 'SphericalRiesz.e8ShellCount_eq_qcoeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Shells.lean:101:0: 'SphericalRiesz.e8ShellCount_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Shells.lean:102:0: 'SphericalRiesz.e8ShellCount_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Shells.lean:103:0: 'SphericalRiesz.e8ShellCount_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9044/9113] Built Riesz.E8Regularized (3.6s)
+info: Riesz/E8Regularized.lean:129:0: 'SphericalRiesz.e8ThetaImag_continuousOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:130:0: 'SphericalRiesz.e8ThetaTail_continuousOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:131:0: 'SphericalRiesz.e8ThetaRegularized_continuousOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:132:0: 'SphericalRiesz.e8ThetaImag_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:133:0: 'SphericalRiesz.e8ThetaRegularized_inversion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:134:0: 'SphericalRiesz.e8ThetaTail_exp_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:135:0: 'SphericalRiesz.e8ThetaTail_littleO_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:136:0: 'SphericalRiesz.e8ThetaTail_scaled_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:137:0: 'SphericalRiesz.e8ThetaRegularized_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:138:0: 'SphericalRiesz.e8ThetaRegularized_bigO_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:139:0: 'SphericalRiesz.e8ThetaRegularized_bigO_infty' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:140:0: 'SphericalRiesz.e8ThetaRegularized_mellinConvergent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:141:0: 'SphericalRiesz.e8ThetaRegularized_mellin_differentiableAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Regularized.lean:142:0: 'SphericalRiesz.e8ThetaRegularized_weighted_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9045/9125] Built Riesz.E8Epstein (3.2s)
+warning: Riesz/E8Epstein.lean:31:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Riesz/E8Epstein.lean:59:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Riesz/E8Epstein.lean:138:0: 'SphericalRiesz.e8EpsteinTerm_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Epstein.lean:139:0: 'SphericalRiesz.e8Epstein_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Epstein.lean:140:0: 'SphericalRiesz.e8EpsteinTerm_shell' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Epstein.lean:141:0: 'SphericalRiesz.e8Epstein_fiber_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Epstein.lean:142:0: 'SphericalRiesz.e8Epstein_eq_zeta_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Epstein.lean:143:0: 'SphericalRiesz.e8Epstein_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Epstein.lean:144:0: 'SphericalRiesz.e8Epstein_not_summable_at_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Epstein.lean:145:0: 'SphericalRiesz.e8EpsteinCandidate_differentiableAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Epstein.lean:146:0: 'SphericalRiesz.e8EpsteinCandidate_analyticOnNhd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Epstein.lean:147:0: 'SphericalRiesz.e8EpsteinCandidate_analyticAt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8Epstein.lean:148:0: 'SphericalRiesz.e8_inverse_fourth_shell_mass_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9046/9126] Built Riesz.E8RegularizedIntegral (3.6s)
+info: Riesz/E8RegularizedIntegral.lean:163:0: 'SphericalRiesz.e8ThetaRegularized_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8RegularizedIntegral.lean:164:0: 'SphericalRiesz.e8ThetaRegularized_weighted_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8RegularizedIntegral.lean:165:0: 'SphericalRiesz.e8ThetaRegularized_small_eq_large' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8RegularizedIntegral.lean:166:0: 'SphericalRiesz.e8ThetaRegularized_integral_double' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8RegularizedIntegral.lean:167:0: 'SphericalRiesz.e8ThetaRegularized_weighted_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8RegularizedIntegral.lean:168:0: 'SphericalRiesz.e8ThetaTail_weighted_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8RegularizedIntegral.lean:169:0: 'SphericalRiesz.e8Theta_background_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8RegularizedIntegral.lean:170:0: 'SphericalRiesz.e8SmoothEnergy_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8RegularizedIntegral.lean:171:0: 'SphericalRiesz.e8SmoothCutoffEnergy_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9047/9126] Built Riesz.FiniteCutoffSquarePartition (2.7s)
+✔ [9048/9127] Built Riesz.CompactKernelCorrelation (3.1s)
+⚠ [9049/9128] Built Riesz.E8MellinContinuation (3.5s)
+warning: Riesz/E8MellinContinuation.lean:79:25: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Riesz/E8MellinContinuation.lean:92:39: Try `simp at hs0` instead of `simpa using hs0`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Riesz/E8MellinContinuation.lean:123:4: Try `simp at hi` instead of `simpa using hi`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Riesz/E8MellinContinuation.lean:153:38: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Riesz/E8MellinContinuation.lean:158:0: 'SphericalRiesz.e8ThetaCompleted_differentiableAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8MellinContinuation.lean:159:0: 'SphericalRiesz.e8ThetaCompleted_eq_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8MellinContinuation.lean:160:0: 'SphericalRiesz.e8ThetaTail_gaussian_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8MellinContinuation.lean:161:0: 'SphericalRiesz.e8ThetaCompleted_eq_Epstein' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8MellinContinuation.lean:162:0: 'SphericalRiesz.e8CompletedCandidate_differentiableAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8MellinContinuation.lean:163:0: 'SphericalRiesz.e8ThetaCompleted_eq_candidate_at_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8MellinContinuation.lean:164:0: 'SphericalRiesz.e8ThetaCompleted_at_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9050/9129] Built Riesz.SpectralMeasurePSD (3.3s)
+⚠ [9051/9130] Built Riesz.E8SmoothValue (3.0s)
+warning: Riesz/E8SmoothValue.lean:102:57: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Riesz/E8SmoothValue.lean:111:0: 'SphericalRiesz.e8ThetaFEPair_modified_weighted_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8SmoothValue.lean:112:0: 'SphericalRiesz.e8ThetaCompleted_two_eq_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8SmoothValue.lean:113:0: 'SphericalRiesz.e8SmoothEnergy_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8SmoothValue.lean:114:0: 'SphericalRiesz.e8SmoothCutoffEnergy_limit_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8SmoothValue.lean:115:0: 'SphericalRiesz.e8SmoothEnergy_real_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8SmoothValue.lean:116:0: 'SphericalRiesz.predictedCoefficient_eq_smoothEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9052/9130] Built Riesz.SchwartzMeasurePSD (3.3s)
+warning: Riesz/SchwartzMeasurePSD.lean:35:0: automatically included section variable(s) unused in theorem `SphericalRiesz.schwartzSpectralMeasure_charFun`:
+  [SecondCountableTopology E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [SecondCountableTopology E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Riesz/SchwartzMeasurePSD.lean:61:0: automatically included section variable(s) unused in theorem `SphericalRiesz.schwartzKernel_product_integrable`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Riesz/SchwartzMeasurePSD.lean:93:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Riesz/SchwartzMeasurePSD.lean:109:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9053/9131] Built Riesz.GaussianTailMoment (2.0s)
+warning: Riesz/GaussianTailMoment.lean:20:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Riesz/GaussianTailMoment.lean:51:0: 'SphericalRiesz.gaussianTailPrimitive_deriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/GaussianTailMoment.lean:52:0: 'SphericalRiesz.gaussianTailPrimitive_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/GaussianTailMoment.lean:53:0: 'SphericalRiesz.gaussianTailMoment_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/GaussianTailMoment.lean:54:0: 'SphericalRiesz.gaussianTailMoment_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9054/9132] Built Riesz.LocalizedSchwartzPSD (3.3s)
+warning: Riesz/LocalizedSchwartzPSD.lean:32:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Riesz/LocalizedSchwartzPSD.lean:25:0: automatically included section variable(s) unused in theorem `SphericalRiesz.weightedChartMeasure_finite`:
+  [NormedAddCommGroup E]
+  [InnerProductSpace ℝ E]
+  [FiniteDimensional ℝ E]
+  [BorelSpace E]
+  [SecondCountableTopology E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedAddCommGroup
+  E] [InnerProductSpace ℝ E] [FiniteDimensional ℝ E] [BorelSpace E] [SecondCountableTopology E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Riesz/LocalizedSchwartzPSD.lean:36:0: automatically included section variable(s) unused in theorem `SphericalRiesz.weightedChartMeasure_integral`:
+  [NormedAddCommGroup E]
+  [InnerProductSpace ℝ E]
+  [FiniteDimensional ℝ E]
+  [BorelSpace E]
+  [SecondCountableTopology E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NormedAddCommGroup
+  E] [InnerProductSpace ℝ E] [FiniteDimensional ℝ E] [BorelSpace E] [SecondCountableTopology E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Riesz/LocalizedSchwartzPSD.lean:53:32: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.real_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Riesz/LocalizedSchwartzPSD.lean:65:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Riesz/LocalizedSchwartzPSD.lean:66:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Riesz/LocalizedSchwartzPSD.lean:110:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Riesz/LocalizedSchwartzPSD.lean:111:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9055/9133] Built Riesz.CompactSchwartzBackground (4.2s)
+⚠ [9056/9134] Built Riesz.E8HeatLattice (3.4s)
+warning: Riesz/E8HeatLattice.lean:34:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Riesz/E8HeatLattice.lean:34:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Riesz/E8HeatLattice.lean:59:27: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Riesz/E8HeatLattice.lean:60:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Riesz/E8HeatLattice.lean:61:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Riesz/E8HeatLattice.lean:71:16: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Riesz/E8HeatLattice.lean:80:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Riesz/E8HeatLattice.lean:87:54: Try `simp at hp` instead of `simpa using hp`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Riesz/E8HeatLattice.lean:138:0: 'SphericalRiesz.e8HeatTerm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatLattice.lean:139:0: 'SphericalRiesz.e8ThetaTail_real_gaussian_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatLattice.lean:140:0: 'SphericalRiesz.e8ThetaTail_eq_ofReal_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatLattice.lean:141:0: 'SphericalRiesz.e8HeatTerm_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatLattice.lean:142:0: 'SphericalRiesz.e8HeatTailTerm_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatLattice.lean:143:0: 'SphericalRiesz.e8HeatTailTerm_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatLattice.lean:144:0: 'SphericalRiesz.e8HeatEnergy_eq_tail_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatLattice.lean:145:0: 'SphericalRiesz.e8HeatEnergy_cast_eq_tail_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9057/9135] Built Riesz.SphereLocalizedSchwartzPSD8 (2.9s)
+⚠ [9058/9136] Built Riesz.E8HeatRegularized (3.2s)
+warning: Riesz/E8HeatRegularized.lean:52:6: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Riesz/E8HeatRegularized.lean:139:0: 'SphericalRiesz.e8HeatBackground_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatRegularized.lean:140:0: 'SphericalRiesz.e8HeatBackground_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatRegularized.lean:141:0: 'SphericalRiesz.e8HeatBackground_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatRegularized.lean:142:0: 'SphericalRiesz.e8ThetaRegularized_shifted_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatRegularized.lean:143:0: 'SphericalRiesz.e8ThetaTail_shifted_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatRegularized.lean:144:0: 'SphericalRiesz.e8SmoothCutoffEnergy_eq_tail_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatRegularized.lean:145:0: 'SphericalRiesz.e8SmoothCutoffEnergy_eq_heat' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatRegularized.lean:146:0: 'SphericalRiesz.e8HeatRegularizedEnergy_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatRegularized.lean:147:0: 'SphericalRiesz.e8HeatRegularizedEnergy_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatRegularized.lean:148:0: 'SphericalRiesz.e8HeatRegularizedEnergy_normalized_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9059/9137] Built Riesz.SupportedChartCutoff8 (3.3s)
+warning: Riesz/SupportedChartCutoff8.lean:72:2: Unused tactic linter: `change (coordinateCutoff ρ hρ (0 : EuclideanSpace ℝ (Fin d))) ^ 2 ≠ 0` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SupportedChartCutoff8.lean:118:26: `if_pos` has been deprecated: Use `ite_eq_left` instead
+ℹ [9060/9138] Built Riesz.E8HeatBackground (3.3s)
+info: Riesz/E8HeatBackground.lean:73:0: 'SphericalRiesz.gaussian_radial_cubic_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatBackground.lean:74:0: 'SphericalRiesz.e8Ambient_unit_ball_volume_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatBackground.lean:75:0: 'SphericalRiesz.e8HeatBackgroundKernel_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatBackground.lean:76:0: 'SphericalRiesz.e8HeatBackgroundKernel_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatBackground.lean:77:0: 'SphericalRiesz.e8HeatDefect_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatBackground.lean:78:0: 'SphericalRiesz.e8HeatDefect_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9061/9141] Built Riesz.CompactUniformApproximateIdentity (3.3s)
+⚠ [9062/9142] Built Riesz.E8CoordinateHeat (2.8s)
+warning: Riesz/E8CoordinateHeat.lean:66:27: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Riesz/E8CoordinateHeat.lean:72:0: 'SphericalRiesz.e8CoordinateGaussian_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CoordinateHeat.lean:73:0: 'SphericalRiesz.e8CoordinateGaussian_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CoordinateHeat.lean:74:0: 'SphericalRiesz.e8CoordinateGaussian_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CoordinateHeat.lean:75:0: 'SphericalRiesz.e8CoordinateHeatKernel_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CoordinateHeat.lean:76:0: 'SphericalRiesz.e8CoordinateHeatKernel_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CoordinateHeat.lean:77:0: 'SphericalRiesz.e8CoordinateHeatKernel_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CoordinateHeat.lean:78:0: 'SphericalRiesz.e8CoordinateHeatKernel_integer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CoordinateHeat.lean:79:0: 'SphericalRiesz.e8CoordinateHeatKernel_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9063/9142] Built Riesz.RealFatouTruncation (2.2s)
+⚠ [9064/9143] Built Riesz.E8GaussianRealProfile8 (2.7s)
+warning: Riesz/E8GaussianRealProfile8.lean:52:52: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e8GaussianRieszProfile8, e8GaussianThetaReal8, e8ThetaRegularized, e8ThetaTail,
+    ← Complex.ofReal_pow, ← Complex.ofReal_inv, Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im, Complex.sub_re,
+    Complex.one_re, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Riesz/E8GaussianRealProfile8.lean:52:61: This simp argument is unused:
+  sub_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e8GaussianRieszProfile8, e8GaussianThetaReal8, e8ThetaRegularized, e8ThetaTail,
+    ← Complex.ofReal_pow, ← Complex.ofReal_inv, Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im, Complex.sub_re,
+    Complex.one_re, mul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [9065/9144] Built Riesz.E8NearHeatRemoval (2.8s)
+info: Riesz/E8NearHeatRemoval.lean:104:0: 'SphericalRiesz.e8NearHeatRemovalKernel_aestronglyMeasurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearHeatRemoval.lean:105:0: 'SphericalRiesz.e8NearHeatRemovalKernel_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearHeatRemoval.lean:106:0: 'SphericalRiesz.e8NearHeatRemovalKernel_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearHeatRemoval.lean:107:0: 'SphericalRiesz.e8NearHeatRemovalTerm_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearHeatRemoval.lean:108:0: 'SphericalRiesz.e8NearHeatRemovalTerm_tsum_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearHeatRemoval.lean:109:0: 'SphericalRiesz.e8NearHeatRemovalTerm_tsum_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearHeatRemoval.lean:110:0: 'SphericalRiesz.e8NearHeatRemovalKernel_integral_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearHeatRemoval.lean:111:0: 'SphericalRiesz.e8NearHeatRemoval_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9066/9144] Built Riesz.E8GaussianSchwartz (3.2s)
+info: Riesz/E8GaussianSchwartz.lean:76:0: 'SphericalRiesz.e8CoordinateGaussian_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianSchwartz.lean:77:0: 'SphericalRiesz.e8CoordinateLinearEquiv_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianSchwartz.lean:78:0: 'SphericalRiesz.e8CoordinateGaussianSchwartz_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianSchwartz.lean:79:0: 'SphericalRiesz.e8CoordinateGaussian_dilation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianSchwartz.lean:80:0: 'SphericalRiesz.e8CoordinateGaussian_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianSchwartz.lean:81:0: 'SphericalRiesz.e8CoordinateGaussian_derivatives_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9067/9145] Built Riesz.SphereEnergySubconfiguration4 (3.9s)
+ℹ [9068/9145] Built Riesz.E8HeatCellComparison (3.4s)
+info: Riesz/E8HeatCellComparison.lean:117:0: 'SphericalRiesz.e8HeatCellTailTerm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatCellComparison.lean:118:0: 'SphericalRiesz.e8HeatCellTailTerm_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatCellComparison.lean:119:0: 'SphericalRiesz.e8HeatTailKernel_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatCellComparison.lean:120:0: 'SphericalRiesz.e8HeatTailKernel_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatCellComparison.lean:121:0: 'SphericalRiesz.e8HeatCell_kernel_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatCellComparison.lean:122:0: 'SphericalRiesz.e8HeatCell_term_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatCellComparison.lean:123:0: 'SphericalRiesz.e8HeatCell_tsum_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatCellComparison.lean:124:0: 'SphericalRiesz.e8HeatCell_integral_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatCellComparison.lean:125:0: 'SphericalRiesz.e8HeatCell_defect_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatCellComparison.lean:126:0: 'SphericalRiesz.e8HeatTailDefect_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatCellComparison.lean:127:0: 'SphericalRiesz.e8CompactDefect_bound_of_heatTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9069/9146] Built Riesz.RationalSizeCeiling8 (2.6s)
+ℹ [9070/9147] Built Riesz.E8DampedAnnulus (2.0s)
+info: Riesz/E8DampedAnnulus.lean:88:0: 'SphericalRiesz.unitAnnularCutoff_zero_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8DampedAnnulus.lean:89:0: 'SphericalRiesz.unitObliqueAnnularRieszFour_tsupport_away' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8DampedAnnulus.lean:90:0: 'SphericalRiesz.e8UnitDampedAnnulus_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8DampedAnnulus.lean:91:0: 'SphericalRiesz.e8UnitDampedAnnulus_hasCompactSupport' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8DampedAnnulus.lean:92:0: 'SphericalRiesz.e8UnitDampedAnnulus_tsupport_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8DampedAnnulus.lean:93:0: 'SphericalRiesz.e8UnitDampedAnnulus_derivatives_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9071/9156] Built Riesz.E8HeatTailLimit (2.7s)
+info: Riesz/E8HeatTailLimit.lean:81:0: 'SphericalRiesz.e8CoordinateHeatKernel_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailLimit.lean:82:0: 'SphericalRiesz.e8HeatTailKernel_zero_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailLimit.lean:83:0: 'SphericalRiesz.e8HeatTailKernel_integer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailLimit.lean:84:0: 'SphericalRiesz.e8HeatTailKernel_radius_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailLimit.lean:85:0: 'SphericalRiesz.e8HeatCellTailTerm_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailLimit.lean:86:0: 'SphericalRiesz.e8HeatCellTailTerm_tsum_radius_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailLimit.lean:87:0: 'SphericalRiesz.e8HeatTailKernel_integral_radius_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailLimit.lean:88:0: 'SphericalRiesz.e8HeatTailDefect_radius_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9072/9169] Built Riesz.E8ScaledDampedAnnulus (3.2s)
+info: Riesz/E8ScaledDampedAnnulus.lean:79:0: 'SphericalRiesz.e8ScaledDampedAnnulus_contDiff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ScaledDampedAnnulus.lean:80:0: 'SphericalRiesz.e8ScaledDampedAnnulus_eq_heat' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ScaledDampedAnnulus.lean:81:0: 'SphericalRiesz.e8ScaledDampedAnnulus_sixth_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ScaledDampedAnnulus.lean:82:0: 'SphericalRiesz.e8ScaledDampedAnnulus_sixth_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ScaledDampedAnnulus.lean:83:0: 'SphericalRiesz.e8ScaledDampedAnnulus_zero_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8ScaledDampedAnnulus.lean:84:0: 'SphericalRiesz.e8ScaledDampedAnnulus_sixth_zero_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9073/9169] Built Riesz.ResidualJointSelection (2.7s)
+✔ [9074/9179] Built Riesz.RationalSizeFloor8 (2.6s)
+ℹ [9075/9180] Built Riesz.E8DampedQuadrature (3.2s)
+info: Riesz/E8DampedQuadrature.lean:123:0: 'SphericalRiesz.e8ScaledDampedAnnulus_quadrature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8DampedQuadrature.lean:124:0: 'SphericalRiesz.e8ScaledDampedAnnulus_eight_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8DampedQuadrature.lean:125:0: 'SphericalRiesz.e8DampedAnnulus_heat_cube_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8DampedQuadrature.lean:126:0: 'SphericalRiesz.e8HeatAnnulus_error_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9076/9181] Built Riesz.E8WholeAnnulus (3.4s)
+warning: Riesz/E8WholeAnnulus.lean:71:32: This simp argument is unused:
+  Module.finrank_self
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Module.finrank_pi, Fintype.card_fin, Nat.mul_one, smul_eq_mul, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Riesz/E8WholeAnnulus.lean:71:71: This simp argument is unused:
+  Nat.mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Module.finrank_pi, Module.finrank_self, Fintype.card_fin, smul_eq_mul, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Riesz/E8WholeAnnulus.lean:117:17: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/E8WholeAnnulus.lean:117:17: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Riesz/E8WholeAnnulus.lean:140:0: 'SphericalRiesz.e8DampedAnnulus_integer_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8WholeAnnulus.lean:141:0: 'SphericalRiesz.e8DampedAnnulus_centered_node_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8WholeAnnulus.lean:142:0: 'SphericalRiesz.e8DampedAnnulus_centered_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8WholeAnnulus.lean:143:0: 'SphericalRiesz.e8DampedAnnulus_centered_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8WholeAnnulus.lean:144:0: 'SphericalRiesz.e8DampedAnnulus_centered_cube_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8WholeAnnulus.lean:145:0: 'SphericalRiesz.e8AnnularDefect_eq_scaled_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8WholeAnnulus.lean:146:0: 'SphericalRiesz.e8AnnularDefect_uniform_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9077/9188] Built Riesz.GammaNegStrip (6.0s)
+info: Riesz/GammaNegStrip.lean:209:0: 'SphericalRiesz.integrableOn_Ioi_of_rpow_min_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/GammaNegStrip.lean:210:0: 'SphericalRiesz.one_sub_exp_neg_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/GammaNegStrip.lean:211:0: 'SphericalRiesz.rpow_mul_exp_sub_one_integrableOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/GammaNegStrip.lean:212:0: 'SphericalRiesz.integral_rpow_mul_exp_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/GammaNegStrip.lean:213:0: 'SphericalRiesz.gaussianPair_mellin_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9078/9189] Built Riesz.E8HeatTailBound (3.5s)
+info: Riesz/E8HeatTailBound.lean:120:0: 'SphericalRiesz.e8HeatAnnulus_eq_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailBound.lean:121:0: 'SphericalRiesz.e8HeatAnnulus_eq_tail_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailBound.lean:122:0: 'SphericalRiesz.e8HeatAnnulus_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailBound.lean:123:0: 'SphericalRiesz.e8AnnularDefect_eq_tail_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailBound.lean:124:0: 'SphericalRiesz.e8AnnularDefect_partition_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailBound.lean:125:0: 'SphericalRiesz.e8AnnularDefect_partition_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8HeatTailBound.lean:126:0: 'SphericalRiesz.e8HeatTailDefect_uniform_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9079/9190] Built Riesz.Asymptotics (1.5s)
+info: Riesz/Asymptotics.lean:51:0: 'SphericalRiesz.twoSidedTarget_iff_infimumTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9080/9197] Built Riesz.OptimalValues (2.8s)
+ℹ [9081/9198] Built Riesz.E8CellLimit (3.2s)
+info: Riesz/E8CellLimit.lean:90:0: 'SphericalRiesz.e8CompactDefect_uniform_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CellLimit.lean:91:0: 'SphericalRiesz.e8CompactDefect_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CellLimit.lean:92:0: 'SphericalRiesz.e8CompactDefect_normalized_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CellLimit.lean:93:0: 'SphericalRiesz.e8CompactDefect_actual_norm_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CellLimit.lean:94:0: 'SphericalRiesz.e8CenteredRow_diagonal_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CellLimit.lean:95:0: 'SphericalRiesz.e8CenteredRow_sqrt_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9082/9199] Built Riesz.E8InteriorFullRow (4.7s)
+info: Riesz/E8InteriorFullRow.lean:219:0: 'SphericalRiesz.e8Near_interior_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8InteriorFullRow.lean:220:0: 'SphericalRiesz.e8CompactLatticeSum_eq_interior' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8InteriorFullRow.lean:221:0: 'SphericalRiesz.e8Near_interior_cubeIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8InteriorFullRow.lean:222:0: 'SphericalRiesz.e8CompactDefect_eq_interior_scaled_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8InteriorFullRow.lean:223:0: 'SphericalRiesz.e8InteriorIndex_node' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8InteriorFullRow.lean:224:0: 'SphericalRiesz.e8InteriorFullRow_eq_physical' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8InteriorFullRow.lean:225:0: 'SphericalRiesz.e8InteriorFullRow_radius_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8InteriorFullRow.lean:226:0: 'SphericalRiesz.e8InteriorFullRow_padding_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8InteriorFullRow.lean:227:0: 'SphericalRiesz.e8InteriorFullRow_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8InteriorFullRow.lean:228:0: 'SphericalRiesz.e8InteriorFullRow_normalized_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9083/9200] Built Riesz.E8FullRowMean (4.9s)
+info: Riesz/E8FullRowMean.lean:262:0: 'SphericalRiesz.paddedCubeIndex_injective' depends on axioms: [propext, Quot.sound]
+info: Riesz/E8FullRowMean.lean:263:0: 'SphericalRiesz.paddedCubeSet_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:264:0: 'SphericalRiesz.paddedInteriorIndex_padding' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:265:0: 'SphericalRiesz.paddedCubeFraction_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:266:0: 'SphericalRiesz.finite_mean_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:267:0: 'SphericalRiesz.e8FullRow_interior' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:268:0: 'SphericalRiesz.e8FullRow_uniform_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:269:0: 'SphericalRiesz.e8FullRowMean_padding_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:270:0: 'SphericalRiesz.e8FullRowMean_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:271:0: 'SphericalRiesz.e8FullRowMean_normalized_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:272:0: 'SphericalRiesz.e8FlatPairEnergy_eq_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:273:0: 'SphericalRiesz.e8FullRowMean_eq_pair_background' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:274:0: 'SphericalRiesz.e8FlatNeutralizedEnergy_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:275:0: 'SphericalRiesz.e8FlatNeutralizedEnergy_limit_of_background' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8FullRowMean.lean:276:0: 'SphericalRiesz.e8FlatBackgroundError_limit_of_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9084/9200] Built Riesz.ExactMassCut (5.9s)
+info: Riesz/ExactMassCut.lean:125:0: 'SphericalRiesz.cdf_continuous_of_null' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/ExactMassCut.lean:126:0: 'SphericalRiesz.exists_cut_measure_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/ExactMassCut.lean:127:0: 'SphericalRiesz.exists_cut_measure_eq_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9085/9201] Built Riesz.LeechLattice24 (16s)
+info: Riesz/LeechLattice24.lean:328:0: 'SphericalRiesz.leechMatrixInt_aboveDiag' depends on axioms: [propext]
+info: Riesz/LeechLattice24.lean:329:0: 'SphericalRiesz.leechMatrixInt_diag_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:330:0: 'SphericalRiesz.leechMatrix_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:331:0: 'SphericalRiesz.leechMap_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:332:0: 'SphericalRiesz.leechDot_mod8' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:333:0: 'SphericalRiesz.leechDot_diag_mod16' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:334:0: 'SphericalRiesz.leechCombInt_dot_divisible_by_16' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:335:0: 'SphericalRiesz.leechLattice_mem_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:336:0: 'SphericalRiesz.leechIntegerPoint_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:337:0: 'SphericalRiesz.leechLattice_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:338:0: 'SphericalRiesz.leechLattice_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:339:0: 'SphericalRiesz.leechLattice_finite_norm_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:401:0: 'SphericalRiesz.leechMap_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:402:0: 'SphericalRiesz.leechMap_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:403:0: 'SphericalRiesz.leechMap_measurableEmbedding' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:404:0: 'SphericalRiesz.leechEuclideanFundamentalDomain_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/LeechLattice24.lean:405:0: 'SphericalRiesz.leechLattice_covolume' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9086/9202] Built Riesz.E8NearPotentialMean (4.0s)
+info: Riesz/E8NearPotentialMean.lean:203:0: 'SphericalRiesz.cubeQuadrature_const_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:204:0: 'SphericalRiesz.unitCube_ae_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:205:0: 'SphericalRiesz.e8NearPotential_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:206:0: 'SphericalRiesz.e8NearPotential_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:207:0: 'SphericalRiesz.e8NearPotential_eq_of_box' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:208:0: 'SphericalRiesz.e8ScaledNearPotential_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:209:0: 'SphericalRiesz.e8ScaledNearPotential_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:210:0: 'SphericalRiesz.e8ScaledNearPotential_padded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:211:0: 'SphericalRiesz.e8ScaledNearPotential_pointwise_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:212:0: 'SphericalRiesz.e8ScaledNearPotential_quadrature_padding_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:213:0: 'SphericalRiesz.e8ScaledNearPotential_quadrature_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:214:0: 'SphericalRiesz.e8ScaledNearPotential_integral_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8NearPotentialMean.lean:215:0: 'SphericalRiesz.e8ScaledNearPotential_background_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9087/9206] Built Riesz.ExactMassSlices (5.7s)
+warning: Riesz/ExactMassSlices.lean:56:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Riesz/ExactMassSlices.lean:96:28: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Riesz/ExactMassSlices.lean:96:39: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Riesz/ExactMassSlices.lean:111:16: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Riesz/ExactMassSlices.lean:129:0: 'SphericalRiesz.exists_exact_mass_slices' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9088/9208] Built Riesz.CurvedNearComparison (3.8s)
+info: Riesz/CurvedNearComparison.lean:202:0: 'SphericalRiesz.inverseFourth_relative_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CurvedNearComparison.lean:203:0: 'SphericalRiesz.curvedRieszFour_relative_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CurvedNearComparison.lean:204:0: 'SphericalRiesz.curvedNearRieszFour_relative_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CurvedNearComparison.lean:205:0: 'SphericalRiesz.curvedNearPotential_relative_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CurvedNearComparison.lean:206:0: 'SphericalRiesz.curvedNearPotential_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CurvedNearComparison.lean:207:0: 'SphericalRiesz.curvedNearPotential_background_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CurvedNearComparison.lean:208:0: 'SphericalRiesz.curvedNearPotential_scaled_background_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9089/9208] Built Riesz.CellFirstMoment (6.4s)
+info: Riesz/CellFirstMoment.lean:205:0: 'SphericalRiesz.cellPairSum_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CellFirstMoment.lean:206:0: 'SphericalRiesz.exists_cell_selection' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CellFirstMoment.lean:207:0: 'SphericalRiesz.cellBoundK_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CellFirstMoment.lean:208:0: 'SphericalRiesz.cellBoundK_le_cross_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/CellFirstMoment.lean:209:0: 'SphericalRiesz.exists_stratified_selection' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9090/9209] Built Riesz.E8SphereGraph (7.0s)
+✔ [9091/9210] Built Riesz.BoundaryTwelveNodes (6.1s)
+✔ [9092/9210] Built Riesz.E8SphereGraphEnergy (3.3s)
+✔ [9093/9211] Built Riesz.GaussianCompositionTwelfth (13s)
+✔ [9094/9213] Built Riesz.EqualAreaRescaling8 (11s)
+✔ [9095/9214] Built Riesz.BoundaryTwelveMoments (11s)
+✔ [9096/9215] Built Riesz.EqualAreaRescalingLimit8 (3.9s)
+✔ [9097/9216] Built Riesz.EqualAreaEuclideanGeometry8 (5.8s)
+✔ [9098/9217] Built Riesz.EqualAreaRescalingGeometry8 (5.2s)
+✔ [9099/9218] Built Riesz.EqualAreaEuclideanTransport8 (2.0s)
+✔ [9100/9218] Built Riesz.EqualAreaNearBackground8 (2.9s)
+✔ [9101/9219] Built Riesz.EqualAreaMovingRescaling8 (10s)
+✔ [9102/9220] Built Riesz.BoundaryTwelveQuadrature (35s)
+ℹ [9103/9221] Built Riesz.StratifiedResidualEnergy (6.7s)
+info: Riesz/StratifiedResidualEnergy.lean:144:0: 'SphericalRiesz.exists_stratified_residualNeutralizedEnergy_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/StratifiedResidualEnergy.lean:145:0: 'SphericalRiesz.exists_stratified_residualNeutralizedEnergy_nonpos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [9104/9221] Built Riesz.EqualAreaMovingBounds8 (4.6s)
+✔ [9105/9221] Built OAI.Analysis.Triangular.Basic (7.3s)
+ℹ [9106/9222] Built Riesz.BoundaryTwelvePeano (16s)
+info: Riesz/BoundaryTwelvePeano.lean:317:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [9107/9222] Built Riesz.StratifiedJointSelection (5.6s)
+✔ [9108/9222] Built Riesz.EqualAreaPatchClass8 (4.8s)
+✔ [9109/9224] Built Riesz.BoundaryTwelveLocalError (4.9s)
+✔ [9110/9224] Built Riesz.EqualAreaPatchNear8 (5.0s)
+✔ [9111/9224] Built Riesz.EqualAreaAffine8 (4.4s)
+✔ [9112/9224] Built Riesz.CurvedAnnularRegularization8 (4.2s)
+✔ [9113/9224] Built Riesz.BoundaryTwelveTensor (3.6s)
+✔ [9114/9225] Built Riesz.BoundaryTwelveL1Error (2.8s)
+✔ [9115/9226] Built Riesz.EqualAreaPatchMeasure8 (2.8s)
+✔ [9116/9226] Built Riesz.CurvedAnnularComposition8 (4.2s)
+✔ [9117/9226] Built Riesz.BoundaryTwelveNodeGeometry (6.6s)
+✔ [9118/9226] Built Riesz.BoundaryTwelveEnvelope (3.3s)
+✔ [9119/9227] Built Riesz.GaussianOneDimTwelve (3.9s)
+✔ [9120/9227] Built Riesz.EqualAreaFinitePatchMass8 (2.7s)
+✔ [9121/9227] Built Riesz.EqualAreaPatchTransport8 (2.8s)
+✔ [9122/9228] Built Riesz.CurvedAnnularQuadrature8 (3.7s)
+✔ [9123/9229] Built Riesz.EqualAreaFinitePatchGeometry8 (2.8s)
+✔ [9124/9229] Built Riesz.EqualAreaPatchAnnular8 (3.8s)
+✔ [9125/9230] Built OAI.Analysis.Triangular.Certificate.WaveIntervals (74s)
+⚠ [9126/9230] Built Riesz.NormalizedBumpError (11s)
+warning: Riesz/NormalizedBumpError.lean:49:5: Variable name `hκ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hκ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9127/9230] Built Riesz.SphereFiniteCompactCores8 (2.0s)
+✔ [9128/9231] Built Riesz.CompactGrid8 (2.9s)
+✔ [9129/9231] Built Riesz.EqualAreaPatchFar8 (4.5s)
+✔ [9130/9231] Built OAI.Analysis.Triangular.Schwartz.Gaussian (5.9s)
+✔ [9131/9232] Built OAI.Analysis.Triangular.Schwartz.TailSpectral (5.7s)
+✔ [9132/9232] Built Riesz.SphereSmallChartCores8 (4.3s)
+✔ [9133/9232] Built OAI.Analysis.Triangular.Signs.SineBarrierBase (7.0s)
+✔ [9134/9233] Built Riesz.GridShrink8 (3.1s)
+✔ [9135/9233] Built Riesz.CurvedFarPotential8 (3.2s)
+✔ [9136/9234] Built OAI.Analysis.Triangular.Schwartz.Regularity (5.2s)
+✔ [9137/9234] Built OAI.Analysis.Triangular.Schwartz.SpectralCLM (6.9s)
+✔ [9138/9234] Built Riesz.SphereGrid8 (3.5s)
+✔ [9139/9235] Built Riesz.SphereCutoffPartition8 (3.2s)
+✔ [9140/9235] Built OAI.Analysis.Triangular.Signs.SineGridDefs (4.6s)
+✔ [9141/9236] Built Riesz.CurvedBackground8 (3.2s)
+✔ [9142/9236] Built OAI.Analysis.Triangular.Schwartz.Realness (5.1s)
+✔ [9143/9236] Built OAI.Analysis.Triangular.Schwartz.FourierCLM (6.2s)
+✔ [9144/9236] Built Riesz.SphereGridMass8 (3.2s)
+✔ [9145/9236] Built OAI.Analysis.Triangular.Schwartz.InputCLM (6.1s)
+✔ [9146/9237] Built Riesz.SpherePartitionCoordinateProfiles8 (3.0s)
+✔ [9147/9237] Built OAI.Analysis.Triangular.Signs.SineGrid2 (239s)
+✔ [9148/9237] Built OAI.Analysis.Triangular.Signs.SineGrid1 (241s)
+✔ [9149/9237] Built OAI.Analysis.Triangular.Signs.SineGridAnalytic (5.0s)
+✔ [9150/9238] Built Riesz.EqualAreaPatchBackground8 (3.6s)
+✔ [9151/9238] Built Riesz.SphereShrunkGrid8 (3.8s)
+✔ [9152/9238] Built OAI.Analysis.Triangular.Schwartz.FourierPair (5.2s)
+✔ [9153/9238] Built Riesz.SpherePartitionUniformRows8 (6.5s)
+✔ [9154/9239] Built OAI.Analysis.Triangular.Signs.SineGridCover (6.6s)
+✔ [9155/9239] Built Riesz.CurvedNearQuadrature8 (3.0s)
+✔ [9156/9240] Built Riesz.CappedSphereGrid8 (2.8s)
+✔ [9157/9240] Built Riesz.SpherePartitionDensityRows8 (2.9s)
+✔ [9158/9240] Built OAI.Analysis.Triangular.Envelope.Basic (4.4s)
+✔ [9159/9240] Built Riesz.CurvedFullRow8 (3.7s)
+⚠ [9160/9241] Built Riesz.AffineGridCube8 (3.9s)
+warning: Riesz/AffineGridCube8.lean:62:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [9161/9242] Built Riesz.SpherePartitionSchwartzPSD8 (3.3s)
+✔ [9162/9242] Built OAI.Analysis.Triangular.Envelope.Analytic (5.1s)
+✔ [9163/9242] Built Riesz.EqualAreaPatchRow8 (3.1s)
+✔ [9164/9243] Built Riesz.RationalScale8 (2.9s)
+✔ [9165/9244] Built OAI.Analysis.Triangular.Envelope.EnvelopeBoxes (4.7s)
+✔ [9166/9244] Built Riesz.EqualAreaPatchNeutralized8 (2.9s)
+✔ [9167/9244] Built Riesz.RationalNodeBudget8 (2.7s)
+✔ [9168/9245] Built OAI.Analysis.Triangular.Construction.PeriodicJets (7.6s)
+✔ [9169/9245] Built OAI.Analysis.Triangular.Envelope.JetEnvelopeAnalytic (4.4s)
+✔ [9170/9246] Built Riesz.EqualAreaPatchEnergy8 (2.8s)
+✔ [9171/9246] Built Riesz.RationalCubeFamily8 (3.9s)
+✔ [9172/9246] Built OAI.Analysis.Triangular.Construction.TailEnumeration (6.6s)
+✔ [9173/9246] Built OAI.Analysis.Triangular.Envelope.EnvelopeSumsBase (4.4s)
+✔ [9174/9247] Built Riesz.EqualAreaPatchRieszTransport8 (2.7s)
+✔ [9175/9248] Built Riesz.RationalResidualBudget8 (2.8s)
+✔ [9176/9248] Built OAI.Analysis.Triangular.Envelope.TailEnvelopeSeries (4.7s)
+✔ [9177/9249] Built OAI.Analysis.Triangular.Signs.SineGrid0 (237s)
+✔ [9178/9250] Built Riesz.CrossPatchKernel8 (2.0s)
+✔ [9179/9250] Built OAI.Analysis.Triangular.Signs.SineGridChecks (4.3s)
+✔ [9180/9250] Built OAI.Analysis.Triangular.Taylor.Taylor (3.9s)
+✔ [9181/9251] Built Riesz.CrossPatchQuadrature8 (3.1s)
+✔ [9182/9252] Built OAI.Analysis.Triangular.Signs.SineGlobal (5.6s)
+✔ [9183/9252] Built OAI.Analysis.Triangular.Taylor.TaylorPhase (5.6s)
+✔ [9184/9253] Built Riesz.CrossPatchBlock8 (3.1s)
+✔ [9185/9253] Built OAI.Analysis.Triangular.Construction.AtomicCurvature (5.2s)
+✔ [9186/9254] Built Riesz.CrossPatchPhysical8 (2.8s)
+✔ [9187/9254] Built Riesz.SmallPatchBumpError8 (3.5s)
+✔ [9188/9255] Built Riesz.CrossPatchFamily8 (2.8s)
+✔ [9189/9255] Built OAI.Analysis.Triangular.Auxiliary.IntegralBounds (5.2s)
+⚠ [9190/9256] Built Riesz.RationalResidualPoints8 (2.0s)
+warning: Riesz/RationalResidualPoints8.lean:53:2: Try `simp at hp` instead of `simpa using hp`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [9191/9256] Built OAI.Analysis.Triangular.Schwartz.SpectralEnvelope (5.8s)
+⚠ [9192/9256] Built Riesz.PatchGaussianDefect8 (4.1s)
+warning: Riesz/PatchGaussianDefect8.lean:220:34: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9193/9257] Built Riesz.RationalResidualEnergy8 (2.9s)
+✔ [9194/9257] Built OAI.Analysis.Triangular.Construction.TailJetVector (4.6s)
+✔ [9195/9257] Built Riesz.SphereLongRangeKernel8 (2.8s)
+✔ [9196/9258] Built OAI.Analysis.Triangular.Certificate.WaveExpData (194s)
+⚠ [9197/9259] Built Riesz.SmallE8PhysicalAssembly4 (9.8s)
+warning: Riesz/SmallE8PhysicalAssembly4.lean:102:27: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SmallE8PhysicalAssembly4.lean:102:27: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/SmallE8PhysicalAssembly4.lean:143:27: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SmallE8PhysicalAssembly4.lean:143:27: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/SmallE8PhysicalAssembly4.lean:152:23: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SmallE8PhysicalAssembly4.lean:152:23: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/SmallE8PhysicalAssembly4.lean:213:28: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SmallE8PhysicalAssembly4.lean:213:28: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9198/9259] Built Riesz.SphereLongRangeBlock8 (4.1s)
+warning: Riesz/SphereLongRangeBlock8.lean:183:46: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Function.uncurry_def, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9199/9260] Built OAI.Analysis.Triangular.Envelope.EnvelopeWaves (8.6s)
+⚠ [9200/9260] Built Riesz.SphereSharpUpperSubsequence8 (4.9s)
+warning: Riesz/SphereSharpUpperSubsequence8.lean:54:27: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SphereSharpUpperSubsequence8.lean:82:29: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SphereSharpUpperSubsequence8.lean:85:2: Unused tactic linter: `change _ < _` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SphereSharpUpperSubsequence8.lean:54:27: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/SphereSharpUpperSubsequence8.lean:82:29: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+✔ [9201/9261] Built OAI.Analysis.Triangular.Construction.CurvatureBoxes (4.5s)
+✔ [9202/9262] Built Riesz.SphereSharpUpperAllN8 (2.7s)
+✔ [9203/9263] Built OAI.Analysis.Triangular.Construction.CurvatureAnalytic (5.6s)
+⚠ [9204/9264] Built Riesz.SphereGaussianProfileLowerBridge8 (2.0s)
+warning: Riesz/SphereGaussianProfileLowerBridge8.lean:104:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [9205/9264] Built OAI.Analysis.Triangular.Certificate.WaveJetsData (31s)
+⚠ [9206/9265] Built Riesz.SpherePartitionGaussianComparison8 (3.4s)
+warning: Riesz/SpherePartitionGaussianComparison8.lean:16:53: Variable name `hL` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hL
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Riesz/SpherePartitionGaussianComparison8.lean:24:59: This simp argument is unused:
+  sphereGaussianKernel8
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [norm_smul, Real.norm_eq_abs, mul_pow, sq_abs] at *
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Riesz/SpherePartitionGaussianComparison8.lean:109:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [9207/9265] Built OAI.Analysis.Triangular.Envelope.EnvelopePsiB (84s)
+✔ [9208/9266] Built OAI.Analysis.Triangular.Envelope.EnvelopePsiC (129s)
+✔ [9209/9266] Built Riesz.SphereGaussianSchwartzProfile8 (3.3s)
+✔ [9210/9267] Built OAI.Analysis.Triangular.Certificate.JetMatrix (82s)
+ℹ [9211/9268] Built Riesz.E8GaussianContact8 (4.3s)
+info: Riesz/E8GaussianContact8.lean:263:0: 'SphericalRiesz.E8GaussianContactCertificate8.apply_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:264:0: 'SphericalRiesz.e8LatticeGaussian_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:265:0: 'SphericalRiesz.E8GaussianContactCertificate8.value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:266:0: 'SphericalRiesz.e8GaussianSchwartz8_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:267:0: 'SphericalRiesz.e8GaussianSchwartz8_fourier' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:268:0: 'SphericalRiesz.e8Schwartz_fourier_fourier' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:269:0: 'SphericalRiesz.e8ReciprocalCertificate8_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:270:0: 'SphericalRiesz.e8ReciprocalCertificate8_fourier' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:271:0: 'SphericalRiesz.e8_real_sub_mul_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:272:0: 'SphericalRiesz.e8_real_mul_sub_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:273:0: 'SphericalRiesz.E8GaussianContactCertificate8.reciprocal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:274:0: 'SphericalRiesz.e8GaussianContact_all_of_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:275:0: 'SphericalRiesz.e8GaussianContact_all_of_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:276:0: 'SphericalRiesz.e8SharpGaussianSchwartzInput8_of_contact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:277:0: 'SphericalRiesz.S8s4Target_of_contact_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8GaussianContact8.lean:278:0: 'SphericalRiesz.S8s4Target_of_contact_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9212/9268] Built OAI.Analysis.Triangular.Envelope.EnvelopeNorm2 (5.8s)
+✔ [9213/9268] Built OAI.Analysis.Triangular.Envelope.EnvelopeNorm1 (5.9s)
+✔ [9214/9269] Built OAI.Analysis.Triangular.Envelope.EnvelopeNorm0 (5.7s)
+✔ [9215/9269] Built Riesz.HexLattice2 (10s)
+ℹ [9216/9269] Built Riesz.E8CKMRVContract8 (3.4s)
+info: Riesz/E8CKMRVContract8.lean:141:0: 'SphericalRiesz.e8Lattice_sin_half_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CKMRVContract8.lean:142:0: 'SphericalRiesz.e8LaplaceSine8_lattice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CKMRVContract8.lean:143:0: 'SphericalRiesz.e8LaplaceSine8_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CKMRVContract8.lean:144:0: 'SphericalRiesz.e8LaplaceSine8_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CKMRVContract8.lean:145:0: 'SphericalRiesz.e8_mem_of_isClosed_of_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CKMRVContract8.lean:146:0: 'SphericalRiesz.E8LaplaceSineData8.certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8CKMRVContract8.lean:147:0: 'SphericalRiesz.S8s4Target_of_laplaceSineData' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9217/9269] Built OAI.Analysis.Triangular.Construction.L1Kernel (6.3s)
+✔ [9218/9270] Built OAI.Analysis.Triangular.Envelope.EnvelopeNorms (5.3s)
+✔ [9219/9271] Built OAI.Analysis.Triangular.Auxiliary.MatrixNorm (5.1s)
+⚠ [9220/9272] Built Riesz.SphereRieszLowerRpow8 (3.3s)
+warning: Riesz/SphereRieszLowerRpow8.lean:150:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Riesz/SphereRieszLowerRpow8.lean:182:0: 'SphericalRiesz.e8GaussianRieszProfileRpow8_eq_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszLowerRpow8.lean:183:0: 'SphericalRiesz.e8GaussianRieszProfileRpow8_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszLowerRpow8.lean:184:0: 'SphericalRiesz.e8GaussianRieszProfileRpow8_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszLowerRpow8.lean:185:0: 'SphericalRiesz.sphereRieszCoefficient8_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszLowerRpow8.lean:186:0: 'SphericalRiesz.sphereGaussianCenteredScaled8_weighted_lower_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszLowerRpow8.lean:187:0: 'SphericalRiesz.sphereGaussianCenteredScaled8_weighted_profile_eventually_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszLowerRpow8.lean:188:0: 'SphericalRiesz.sphereGaussianSequence_integral_lower_of_profile_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszLowerRpow8.lean:189:0: 'SphericalRiesz.sphereGaussianSequence_energy_bound_of_profile_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszLowerRpow8.lean:190:0: 'SphericalRiesz.sphere8_riesz_sharp_lower_of_gaussian_profile_rpow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszLowerRpow8.lean:191:0: 'SphericalRiesz.sphere8_riesz_sharp_lower_of_schwartz_input' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszLowerRpow8.lean:192:0: 'SphericalRiesz.sphere8_riesz_sharp_lower_of_laplaceSineData' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9221/9272] Built OAI.Analysis.Triangular.Construction.L1Matrix (5.0s)
+✔ [9222/9272] Built OAI.Analysis.Triangular.Certificate.MatrixInterval (4.2s)
+ℹ [9223/9273] Built Riesz.SphereRieszNegMellin8 (6.1s)
+info: Riesz/SphereRieszNegMellin8.lean:242:0: 'SphericalRiesz.sphere8_dist_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegMellin8.lean:243:0: 'SphericalRiesz.real_Gamma_neg_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegMellin8.lean:244:0: 'SphericalRiesz.sphereGaussianPair8_mellin_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegMellin8.lean:245:0: 'SphericalRiesz.energyRpow_eq_full_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegMellin8.lean:246:0: 'SphericalRiesz.sphereGaussianBackground8_ge_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegMellin8.lean:247:0: 'SphericalRiesz.sphereGaussianBackground8_neg_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegMellin8.lean:248:0: 'SphericalRiesz.sphereGaussianFullDefect8_mellin_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegMellin8.lean:249:0: 'SphericalRiesz.weighted_mellin_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegMellin8.lean:250:0: 'SphericalRiesz.sphereGaussianFullDefect8_scaled' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegMellin8.lean:251:0: 'SphericalRiesz.sphereGaussianCenteredScaled8_neg_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegMellin8.lean:252:0: 'SphericalRiesz.normalizedEnergyNeg8_gaussian_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9224/9273] Built Riesz.E8EpsteinStrip8 (3.7s)
+info: Riesz/E8EpsteinStrip8.lean:209:0: 'SphericalRiesz.sphere8_riesz_sharp_lower_epstein_of_laplaceSineData' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/E8EpsteinStrip8.lean:210:0: 'SphericalRiesz.e8ThetaFEPair_modified_weighted_ae_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinStrip8.lean:211:0: 'SphericalRiesz.e8ThetaCompleted_eq_integral_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinStrip8.lean:212:0: 'SphericalRiesz.e8ThetaCompleted_eq_candidate_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinStrip8.lean:213:0: 'SphericalRiesz.e8GaussianRieszProfileRpow8_integral_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinStrip8.lean:214:0: 'SphericalRiesz.sphereRieszCoefficient8_eq_epstein' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9225/9274] Built Riesz.SphereRieszUpperRpow8 (7.1s)
+✔ [9226/9274] Built OAI.Analysis.Triangular.Envelope.EnvelopePsiD (136s)
+ℹ [9227/9275] Built Riesz.E8EpsteinNeg8 (5.8s)
+info: Riesz/E8EpsteinNeg8.lean:227:0: 'SphericalRiesz.e8GaussianRieszProfileNeg8_eq_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinNeg8.lean:228:0: 'SphericalRiesz.e8ThetaFEPair_modified_weighted_ae_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinNeg8.lean:229:0: 'SphericalRiesz.e8ThetaCompleted_eq_integral_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinNeg8.lean:230:0: 'SphericalRiesz.e8CompletedCandidate_differentiableAt_of_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinNeg8.lean:231:0: 'SphericalRiesz.e8ThetaCompleted_eq_candidate_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinNeg8.lean:232:0: 'SphericalRiesz.e8GaussianRieszProfileNeg8_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinNeg8.lean:233:0: 'SphericalRiesz.e8GaussianRieszProfileNeg8_integral_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinNeg8.lean:234:0: 'SphericalRiesz.sphereRieszCoefficientNeg8_eq_epstein' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9228/9275] Built Riesz.E8EpsteinTwo8 (3.3s)
+info: Riesz/E8EpsteinTwo8.lean:119:0: 'SphericalRiesz.riemannZeta_slope_neg_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinTwo8.lean:120:0: 'SphericalRiesz.e8CompletedCandidate_tendsto_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinTwo8.lean:121:0: 'SphericalRiesz.e8ThetaCompleted_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/E8EpsteinTwo8.lean:122:0: 'SphericalRiesz.sphereRieszCoefficient8_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9229/9275] Built Riesz.SphereRieszConstPair8 (3.1s)
+info: Riesz/SphereRieszConstPair8.lean:142:0: 'SphericalRiesz.sphere8_riesz_sharp_lower_conjecture_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszConstPair8.lean:143:0: 'SphericalRiesz.sphereProbability8_prod_diagonal_null' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszConstPair8.lean:144:0: 'SphericalRiesz.sphereRieszPair8_ofReal_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszConstPair8.lean:145:0: 'SphericalRiesz.sphereRieszPair8_lintegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszConstPair8.lean:146:0: 'SphericalRiesz.sphereRieszPair8_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszConstPair8.lean:147:0: 'SphericalRiesz.sphereRieszConst8_eq_pair_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9230/9276] Built Riesz.SphereRieszTransfer8 (10s)
+✔ [9231/9276] Built OAI.Analysis.Triangular.Certificate.Inverse (70s)
+✔ [9232/9276] Built OAI.Analysis.Triangular.Envelope.EnvelopeSums (25s)
+✔ [9233/9277] Built Riesz.SphereRieszShortRange8 (5.0s)
+ℹ [9234/9278] Built Riesz.SphereRieszNegUpper8 (6.7s)
+info: Riesz/SphereRieszNegUpper8.lean:249:0: 'SphericalRiesz.sphereGaussianCenteredScaled8_neg_profile_eventually' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszNegUpper8.lean:250:0: 'SphericalRiesz.sphereGaussianSequence_integral_lower_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegUpper8.lean:251:0: 'SphericalRiesz.sphereRieszNegPrefactor8_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegUpper8.lean:252:0: 'SphericalRiesz.sphereGaussianSequence_energy_upper_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegUpper8.lean:253:0: 'SphericalRiesz.sphere8_riesz_neg_upper_of_gaussian_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegUpper8.lean:254:0: 'SphericalRiesz.sphere8_riesz_neg_upper_of_schwartz_input' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegUpper8.lean:255:0: 'SphericalRiesz.sphere8_riesz_neg_upper_of_laplaceSineData' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegUpper8.lean:256:0: 'SphericalRiesz.sphereRieszConstNeg8_eq_pair_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegUpper8.lean:257:0: 'SphericalRiesz.sphere8_riesz_neg_upper_conjecture_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegUpper8.lean:258:0: 'SphericalRiesz.sphere8_riesz_neg_signed_lower_conjecture_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [9235/9278] Built Riesz.SphereShortRangeKernel8 (4.1s)
+✔ [9236/9279] Built OAI.Analysis.Triangular.Envelope.KernelBounds (5.3s)
+✔ [9237/9280] Built Riesz.SphereShortRangeResidual8 (3.8s)
+✔ [9238/9280] Built OAI.Analysis.Triangular.Construction.Schur (5.1s)
+✔ [9239/9281] Built OAI.Analysis.Triangular.Construction.Repetition (4.9s)
+✔ [9240/9281] Built Riesz.SphereShortRangeTail8 (3.0s)
+✔ [9241/9282] Built OAI.Analysis.Triangular.Construction.BlockOperators (7.3s)
+✔ [9242/9282] Built OAI.Analysis.Triangular.Construction.RepetitionBound (4.4s)
+✔ [9243/9283] Built OAI.Analysis.Triangular.Auxiliary.Bernstein (4.6s)
+⚠ [9244/9284] Built Riesz.SphereShortRangeSeparated8 (3.8s)
+warning: Riesz/SphereShortRangeSeparated8.lean:36:55: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9245/9285] Built OAI.Analysis.Triangular.Construction.RepetitionOperators (5.5s)
+⚠ [9246/9285] Built Riesz.RationalPatchSeparation8 (3.8s)
+warning: Riesz/RationalPatchSeparation8.lean:50:13: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9247/9285] Built OAI.Analysis.Triangular.Envelope.TargetEnvelope (5.4s)
+✔ [9248/9286] Built OAI.Analysis.Triangular.Certificate.Param (4.0s)
+✔ [9249/9286] Built Riesz.GaussianBlockBounds8 (2.7s)
+✔ [9250/9286] Built OAI.Analysis.Triangular.Construction.ConcreteSchur (7.1s)
+✔ [9251/9286] Built Riesz.RationalJointResidual8 (6.4s)
+✔ [9252/9287] Built OAI.Analysis.Triangular.Certificate.Polytope (6.6s)
+✔ [9253/9287] Built OAI.Analysis.Triangular.Certificate.TargetInterval (10s)
+✔ [9254/9288] Built OAI.Analysis.Triangular.Certificate.ParamInterval (7.2s)
+✔ [9255/9288] Built Riesz.RationalLongRangeResidual8 (6.3s)
+⚠ [9256/9288] Built Riesz.PatchLongRangeBound8 (20s)
+warning: Riesz/PatchLongRangeBound8.lean:53:34: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Riesz/PatchLongRangeBound8.lean:168:34: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9257/9289] Built OAI.Analysis.Triangular.Certificate.PolytopeInterval (4.2s)
+⚠ [9258/9289] Built Riesz.SphereJointUpperSubsequence8 (14s)
+warning: Riesz/SphereJointUpperSubsequence8.lean:73:27: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SphereJointUpperSubsequence8.lean:122:31: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SphereJointUpperSubsequence8.lean:73:27: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/SphereJointUpperSubsequence8.lean:122:31: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9259/9290] Built Riesz.SphereMassSplitAssembly8 (3.8s)
+warning: Riesz/SphereMassSplitAssembly8.lean:76:63: This simp argument is unused:
+  Finset.sum_add_distrib
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9260/9290] Built OAI.Analysis.Triangular.Certificate.ParamRHS (6.7s)
+✔ [9261/9291] Built OAI.Analysis.Triangular.Certificate.ParamActual (7.0s)
+✔ [9262/9291] Built Riesz.SphereRieszUpperFourLt8 (3.2s)
+⚠ [9263/9291] Built Riesz.LongRangeRescale8 (3.9s)
+warning: Riesz/LongRangeRescale8.lean:56:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Riesz/LongRangeRescale8.lean:60:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [9264/9291] Built OAI.Analysis.Triangular.Certificate.ParamNormBase (4.5s)
+⚠ [9265/9292] Built Riesz.SphereLongRangeSubsequence8 (34s)
+warning: Riesz/SphereLongRangeSubsequence8.lean:71:27: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SphereLongRangeSubsequence8.lean:125:31: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Riesz/SphereLongRangeSubsequence8.lean:71:27: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Riesz/SphereLongRangeSubsequence8.lean:125:31: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+✔ [9266/9293] Built OAI.Analysis.Triangular.Certificate.ParamU (17s)
+✔ [9267/9294] Built Riesz.SphereRieszUpperFourLtAllN8 (15s)
+✔ [9268/9294] Built Riesz.SphereLongRangeAllN8 (18s)
+✔ [9269/9295] Built OAI.Analysis.Triangular.Certificate.ParamA (6.6s)
+✔ [9270/9295] Built Riesz.SphereRieszSharpFourLt8 (2.8s)
+✔ [9271/9296] Built OAI.Analysis.Triangular.Taylor.FiniteTaylorIdentity (5.0s)
+✔ [9272/9296] Built OAI.Analysis.Triangular.Certificate.ParamNorm (5.8s)
+✔ [9273/9297] Built Riesz.SphereRieszUpperLtFour8 (5.1s)
+✔ [9274/9297] Built OAI.Analysis.Triangular.Taylor.WaveFunction (7.4s)
+✔ [9275/9297] Built OAI.Analysis.Triangular.Taylor.VariationBound (5.7s)
+✔ [9276/9298] Built OAI.Analysis.Triangular.Construction.ActualCorrection (7.2s)
+ℹ [9277/9299] Built Riesz.SphereRieszNegTransfer8 (8.8s)
+info: Riesz/SphereRieszNegTransfer8.lean:244:0: 'SphericalRiesz.weighted_profile_window_bound_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegTransfer8.lean:245:0: 'SphericalRiesz.normalizedEnergyNeg8_eventually_ge_of_L1_tails' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Riesz/SphereRieszNegTransfer8.lean:246:0: 'SphericalRiesz.neg_large_tail_of_energy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereRieszNegTransfer8.lean:247:0: 'SphericalRiesz.sphere8_riesz_neg_lower_of_sharp_sequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9278/9299] Built OAI.Analysis.Triangular.Construction.ActualInput (7.3s)
+⚠ [9279/9300] Built Riesz.SphereLogEnergy8 (6.8s)
+warning: Riesz/SphereLogEnergy8.lean:21:37: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Riesz/SphereLogEnergy8.lean:376:0: 'SphericalRiesz.exp_sub_exp_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:377:0: 'SphericalRiesz.frullani_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:378:0: 'SphericalRiesz.gaussianPair_frullani' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:379:0: 'SphericalRiesz.sphereGaussianPair8_frullani' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:380:0: 'SphericalRiesz.sphereGaussianOffDiagonal8_frullani' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:381:0: 'SphericalRiesz.sphereGaussianBackground8_log_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:382:0: 'SphericalRiesz.sphereGaussianFullDefect8_log_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:383:0: 'SphericalRiesz.inv_mellin_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:384:0: 'SphericalRiesz.logGaussian_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:385:0: 'SphericalRiesz.logGaussian_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:386:0: 'SphericalRiesz.sphereGaussianCenteredScaled8_log_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereLogEnergy8.lean:387:0: 'SphericalRiesz.normalizedEnergyLog8_gaussian_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9280/9300] Built OAI.Analysis.Triangular.Taylor.CurvatureData00 (39s)
+✔ [9281/9301] Built OAI.Analysis.Triangular.Taylor.CoefficientSpectral (6.6s)
+ℹ [9282/9301] Built Riesz.SphereMeasureD (5.4s)
+info: Riesz/SphereMeasureD.lean:142:0: 'SphericalRiesz.sphereAreaD_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:143:0: 'SphericalRiesz.sphereAreaD_univ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:144:0: 'SphericalRiesz.sphereAreaD_univ_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:145:0: 'SphericalRiesz.sphereAreaD_univ_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:146:0: 'SphericalRiesz.sphereArea24_univ_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:147:0: 'SphericalRiesz.sphereAreaD_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:148:0: 'SphericalRiesz.sphereProbabilityD_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:149:0: 'SphericalRiesz.sphereRotationD_dist' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:150:0: 'SphericalRiesz.sphereRotationD_cone_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:151:0: 'SphericalRiesz.sphereAreaD_rotation_preserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:152:0: 'SphericalRiesz.sphereProbabilityD_rotation_preserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:153:0: 'SphericalRiesz.energyRpowD_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:154:0: 'SphericalRiesz.energyLogD_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereMeasureD.lean:155:0: 'SphericalRiesz.offDiagonal_dist_posD' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9283/9302] Built OAI.Analysis.Triangular.Taylor.CurvatureData01 (43s)
+✔ [9284/9302] Built OAI.Analysis.Triangular.Taylor.CurvatureData10 (37s)
+⚠ [9285/9303] Built Riesz.SphereBallD (4.9s)
+warning: Riesz/SphereBallD.lean:69:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: Riesz/SphereBallD.lean:78:0: 'SphericalRiesz.sphereDirectionD_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBallD.lean:79:0: 'SphericalRiesz.sphereDirectionD_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBallD.lean:80:0: 'SphericalRiesz.unitBallNonzeroD_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBallD.lean:81:0: 'SphericalRiesz.sphereBallMeasureD_direction_preserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBallD.lean:82:0: 'SphericalRiesz.sphereBallProbabilityD_direction_preserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/SphereBallD.lean:83:0: 'SphericalRiesz.sphereBallProbabilityD_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9286/9303] Built OAI.Analysis.Triangular.Taylor.CurvatureData11 (42s)
+⚠ [9287/9304] Built Riesz.EqualAreaChartD (7.8s)
+warning: Riesz/EqualAreaChartD.lean:154:57: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+warning: Riesz/EqualAreaChartD.lean:155:4: `ContinuousLinearMap.neg_apply` has been deprecated: Use `neg_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.neg_apply` to `neg_apply x`).
+info: Riesz/EqualAreaChartD.lean:205:0: 'SphericalRiesz.equalAreaPhiD_seven' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:206:0: 'SphericalRiesz.equalAreaChartDomainD_seven' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:207:0: 'SphericalRiesz.equalAreaPhiD_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:208:0: 'SphericalRiesz.equalAreaPhiD_mem_sphere' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:209:0: 'SphericalRiesz.equalAreaPhiD_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:210:0: 'SphericalRiesz.equalAreaPhiD_contDiffOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:211:0: 'SphericalRiesz.equalAreaPhiD_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:212:0: 'SphericalRiesz.equalAreaNormGradientD_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:213:0: 'SphericalRiesz.equalAreaSquaredNormD_hasFDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:214:0: 'SphericalRiesz.equalAreaHeightD_hasFDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:215:0: 'SphericalRiesz.equalAreaPhiD_hasFDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:216:0: 'SphericalRiesz.equalAreaPhiD_fderiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:217:0: 'SphericalRiesz.equalAreaChartDomainD_isOpen' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/EqualAreaChartD.lean:218:0: 'SphericalRiesz.equalAreaChartDomainD_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9288/9305] Built FCAreaBridge (5.4s)
+warning: FCAreaBridge.lean:23:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FCAreaBridge.lean:23:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9290/9305] Built Riesz.EqualAreaGramD (7.0s)
+✔ [9291/9305] Built Riesz.EqualAreaInverseD (6.0s)
+✔ [9292/9306] Built OAI.Analysis.Triangular.Construction.FiniteSystem (4.8s)
+✔ [9293/9306] Built OAI.Analysis.Triangular.Construction.NormalizedJets (5.1s)
+✔ [9294/9307] Built OAI.Analysis.Triangular.Construction.CurvatureSums (31s)
+✔ [9295/9308] Built Riesz.EqualAreaConeD (6.1s)
+ℹ [9296/9308] Built Riesz.PatchSupportD (4.9s)
+info: Riesz/PatchSupportD.lean:59:0: 'SphericalRiesz.ambientConsD_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PatchSupportD.lean:60:0: 'SphericalRiesz.ambientConsD_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PatchSupportD.lean:61:0: 'SphericalRiesz.ambientConsD_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PatchSupportD.lean:62:0: 'SphericalRiesz.ambientConsD_dist_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PatchSupportD.lean:63:0: 'SphericalRiesz.pi_norm_le_euclideanD' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PatchSupportD.lean:64:0: 'SphericalRiesz.leechInverseMap_leechMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Riesz/PatchSupportD.lean:65:0: 'SphericalRiesz.leechMap_leechInverseMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [9297/9309] Built OAI.Analysis.Triangular.Construction.SpectralJetBridge (5.9s)
+✔ [9298/9309] Built OAI.Analysis.Triangular.Construction.CurvatureEnvelope (7.2s)
+✔ [9299/9310] Built Riesz.EqualAreaConeDerivativeD (7.2s)
+✔ [9300/9310] Built OAI.Analysis.Triangular.Construction.NodeJets (5.1s)
+✔ [9301/9311] Built OAI.Analysis.Triangular.Construction.SpectralProduct (6.5s)
+✔ [9302/9312] Built OAI.Analysis.Triangular.Construction.FiniteJets (6.3s)
+✔ [9303/9313] Built Riesz.EqualAreaConeJacobianD (5.8s)
+✔ [9304/9314] Built OAI.Analysis.Triangular.Construction.DirectWaveJets (5.8s)
+✔ [9305/9315] Built Riesz.EqualAreaMeasureD (5.5s)
+✔ [9306/9316] Built OAI.Analysis.Triangular.Construction.DirectCoordinates (5.5s)
+✔ [9307/9317] Built OAI.Analysis.Triangular.Construction.FiniteCoordinates (8.7s)
+✔ [9308/9318] Built OAI.Analysis.Triangular.Construction.FiniteTargetBridge (12s)
+✔ [9309/9318] Built Riesz.EqualAreaHex2 (28s)
+✔ [9310/9319] Built OAI.Analysis.Triangular.Construction.TailCoordinates (5.1s)
+✔ [9311/9319] Built OAI.Analysis.Triangular.Construction.ActualTail (11s)
+✔ [9312/9320] Built Riesz.HexProfileLower2 (14s)
+✔ [9313/9320] Built OAI.Analysis.Triangular.Construction.FiniteProjection (6.1s)
+✔ [9314/9321] Built OAI.Analysis.Triangular.Construction.TailInterpolation (5.3s)
+✔ [9315/9322] Built OAI.Analysis.Triangular.Construction.FiniteAssembly (7.3s)
+✔ [9316/9323] Built Riesz.SphereRieszLower2 (12s)
+✔ [9317/9323] Built OAI.Analysis.Triangular.Construction.FiniteInterpolation (4.0s)
+✔ [9318/9324] Built Riesz.HexGaussianEnds2 (17s)
+✔ [9319/9324] Built OAI.Analysis.Triangular.Taylor.TaylorSpectrum (77s)
+✔ [9320/9325] Built OAI.Analysis.Triangular.Construction.ActualInterpolation (4.0s)
+✔ [9321/9325] Built OAI.Analysis.Triangular.Taylor.TaylorExp00 (67s)
+✔ [9322/9326] Built OAI.Analysis.Triangular.Construction.FarCurvature (5.9s)
+✔ [9323/9327] Built OAI.Analysis.Triangular.Taylor.TaylorExp01 (69s)
+✔ [9325/9357] Built OAI.Analysis.Triangular.Taylor.TaylorExp10 (67s)
+✔ [9326/9357] Built OAI.Analysis.Triangular.Taylor.TaylorExp11 (65s)
+✔ [9327/9357] Built OAI.Analysis.Triangular.Taylor.TaylorExp (4.3s)
+✔ [9328/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave (3.9s)
+✔ [9329/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave114 (46s)
+✔ [9330/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave113 (47s)
+✔ [9331/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave111 (46s)
+✔ [9332/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave112 (47s)
+✔ [9333/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave106 (46s)
+✔ [9334/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave110 (47s)
+✔ [9335/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave104 (44s)
+✔ [9336/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave105 (45s)
+✔ [9337/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave103 (46s)
+✔ [9338/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave102 (47s)
+✔ [9339/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave101 (47s)
+✔ [9340/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave100 (47s)
+✔ [9341/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave016 (48s)
+✔ [9342/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave015 (48s)
+✔ [9343/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave014 (46s)
+✔ [9344/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave013 (46s)
+✔ [9345/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave012 (46s)
+✔ [9346/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave011 (47s)
+✔ [9347/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave006 (43s)
+✔ [9348/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave010 (46s)
+✔ [9349/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave005 (43s)
+✔ [9350/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave004 (42s)
+✔ [9351/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave003 (43s)
+✔ [9352/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave002 (43s)
+✔ [9353/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave001 (43s)
+✔ [9354/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave000 (43s)
+✔ [9355/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave10 (4.2s)
+✔ [9356/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave01 (4.3s)
+✔ [9357/9357] Built OAI.Analysis.Triangular.Taylor.TaylorWave00 (4.2s)
+Build completed successfully (9357 jobs).
+	Command being timed: "timeout --kill-after=120 240m lake build FCDefinitions Riesz.Definitions Riesz.SphereMeasure8 Riesz.SphereArea8 Riesz.CharFun Riesz.GaussianPSD Riesz.GaussianMeasurePSD Riesz.DiffuseGaussianBackground Riesz.SphereGaussianBackground8 Riesz.SphereBall8 Riesz.Boundary Riesz.Quadrature Riesz.QuadratureError Riesz.PeanoKernel Riesz.PeanoInterior Riesz.PeanoRemainder Riesz.SmoothQuadrature Riesz.LocalQuadrature Riesz.CellQuadrature Riesz.LocalCellQuadrature Riesz.TensorQuadrature Riesz.CubeQuadrature Riesz.CubeLebesgue Riesz.SphereIntegrable8 Riesz.SpherePole8 Riesz.SphereGaussianBall8 Riesz.SpherePoleAngle8 Riesz.SpherePolePolar8 Riesz.SphereValue8 Riesz.SphereGaussianPolar8 Riesz.GaussianMellin Riesz.SphereGaussianPolynomial8 Riesz.SphereGaussianMellinBackground8 Riesz.SphereGaussianMellinEnergy8 Riesz.FiniteBackground Riesz.SphereGaussianCommonLower8 Riesz.SphereGaussianMajorant8 Riesz.SphereGaussianMellinScale8 Riesz.GaussianMellinGeneral Riesz.SphereRieszMellinRpow8 Riesz.SphereAtomless8 Riesz.ResidualFirstMoment Riesz.SphereResidual8 Riesz.SphereBackgroundSplit8 Riesz.SphereResidualAssembly8 Riesz.SphereBoundedKernelAssembly8 Riesz.L1Quadrature Riesz.CubeNodes Riesz.BoxQuadrature Riesz.CubeEnvelopeQuadrature Riesz.GaussianCompositionSixth Riesz.GaussianOneDimBounds Riesz.EqualAreaChart8 Riesz.EqualAreaGram8 Riesz.EqualAreaCone8 Riesz.EqualAreaConeDerivative8 Riesz.EqualAreaConeJacobian8 Riesz.EqualAreaMeasure8 Riesz.NodeCounting Riesz.NodeSeparation Riesz.QuadraticKernel Riesz.FlatKernel Riesz.AnnularCutoff Riesz.E8Coordinates Riesz.E8Volume Riesz.LocalizedQuadrature Riesz.DyadicShell Riesz.AnnularQuadrature Riesz.AnnularPartition Riesz.ObliqueAnnulus Riesz.ObliquePartition Riesz.E8FarPhysical Riesz.E8Separation Riesz.E8NearNodes Riesz.E8NearIntegral Riesz.E8NearQuadrature Riesz.E8FlatRow Riesz.E8FlatPhysicalRow Riesz.E8PotentialApprox Riesz.PeanoEndpoint Riesz.PeanoSingularWeight Riesz.SingularQuadrature Riesz.E8PotentialRegularity Riesz.E8PotentialAveraging Riesz.E8Grid Riesz.CenteredGrid Riesz.InteriorGrid Riesz.E8Parity Riesz.E8Theta Riesz.E8Lattice Riesz.E8ThetaSummable Riesz.E8ThetaFourier Riesz.RadialCutoff Riesz.RadialMultidimensional Riesz.BoundsOnIcc Riesz.RadialSchwartz Riesz.E8ThetaSchwartz Riesz.E8Covolume Riesz.E8Dual Riesz.PoissonTorus Riesz.FourierLinearEquiv Riesz.PoissonStandardLattice Riesz.PoissonSchwartzBasic Riesz.PoissonSchwartz Riesz.PoissonLattice Riesz.E8ThetaTransform Riesz.E8ThetaAnalytic Riesz.E8QExpansion Riesz.WeightFour Riesz.E8ThetaModular Riesz.E8Regularized Riesz.E8RegularizedIntegral Riesz.E8Shells Riesz.ZetaValue Riesz.E8Dirichlet Riesz.E8Epstein Riesz.E8MellinContinuation Riesz.E8SmoothValue Riesz.GaussianTailMoment Riesz.E8HeatLattice Riesz.E8HeatRegularized Riesz.E8HeatBackground Riesz.E8CoordinateHeat Riesz.SchwartzDilation Riesz.E8GaussianSchwartz Riesz.E8DampedAnnulus Riesz.E8ScaledDampedAnnulus Riesz.E8DampedQuadrature Riesz.E8WholeAnnulus Riesz.E8CompactCell Riesz.E8NearHeatRemoval Riesz.E8HeatCellComparison Riesz.E8HeatTailLimit Riesz.E8HeatTailBound Riesz.E8CellLimit Riesz.E8InteriorFullRow Riesz.E8FullRowMean Riesz.E8NearPotentialMean Riesz.CurvedNearComparison Riesz.E8SphereGraph Riesz.EqualAreaRescaling8 Riesz.EqualAreaRescalingLimit8 Riesz.EqualAreaRescalingGeometry8 Riesz.EqualAreaMovingRescaling8 Riesz.EqualAreaMovingBounds8 Riesz.EqualAreaPatchClass8 Riesz.CurvedAnnularRegularization8 Riesz.CurvedAnnularComposition8 Riesz.CurvedAnnularQuadrature8 Riesz.NormalizedBumpError Riesz.EqualAreaAffine8 Riesz.EqualAreaPatchMeasure8 Riesz.EqualAreaPatchTransport8 Riesz.EqualAreaFinitePatchGeometry8 Riesz.CompactGrid8 Riesz.EqualAreaInverse8 Riesz.EqualAreaCoordinateBuffers8 Riesz.SphereFiniteCompactCores8 Riesz.SphereSmallChartCores8 Riesz.SphereGrid8 Riesz.GridShrink8 Riesz.EqualAreaFinitePatchMass8 Riesz.SphereGridMass8 Riesz.SphereShrunkGrid8 Riesz.CappedSphereGrid8 Riesz.AffineGridCube8 Riesz.RationalScale8 Riesz.RationalNodeBudget8 Riesz.RationalCubeFamily8 Riesz.RationalResidualBudget8 Riesz.CrossPatchKernel8 Riesz.CrossPatchQuadrature8 Riesz.CrossPatchBlock8 Riesz.CrossPatchPhysical8 Riesz.SphereGaussianMonotone8 Riesz.AmbientBumpSquare9 Riesz.SmallPatchBumpError8 Riesz.CrossPatchFamily8 Riesz.RationalResidualPoints8 Riesz.PatchGaussianDefect8 Riesz.SphereLongRangeKernel8 Riesz.SphereLongRangeBlock8 Riesz.SphereFiniteFamilyAssembly4 Riesz.RationalResidualEnergy8 Riesz.E8SphereGraphEnergy Riesz.EqualAreaNearBackground8 Riesz.EqualAreaPatchNear8 Riesz.EqualAreaPatchAnnular8 Riesz.EqualAreaPatchFar8 Riesz.CurvedFarPotential8 Riesz.CurvedBackground8 Riesz.EqualAreaPatchBackground8 Riesz.CurvedNearQuadrature8 Riesz.CurvedFullRow8 Riesz.EqualAreaPatchRow8 Riesz.EqualAreaPatchNeutralized8 Riesz.EqualAreaPatchEnergy8 Riesz.EqualAreaPatchRieszTransport8 Riesz.SmallE8PhysicalAssembly4 Riesz.FiniteCutoffSquarePartition Riesz.CompactKernelCorrelation Riesz.SpectralMeasurePSD Riesz.SchwartzMeasurePSD Riesz.CompactSchwartzBackground Riesz.LocalizedSchwartzPSD Riesz.SphereLocalizedSchwartzPSD8 Riesz.SupportedChartCutoff8 Riesz.EqualAreaEuclideanGeometry8 Riesz.SphereCutoffPartition8 Riesz.EqualAreaEuclideanTransport8 Riesz.SpherePartitionCoordinateProfiles8 Riesz.CompactUniformApproximateIdentity Riesz.SpherePartitionUniformRows8 Riesz.SpherePartitionDensityRows8 Riesz.SpherePartitionSchwartzPSD8 Riesz.RealFatouTruncation Riesz.E8GaussianRealProfile8 Riesz.SphereSharpUpperSubsequence8 Riesz.SphereEnergySubconfiguration4 Riesz.RationalSizeCeiling8 Riesz.SphereSharpUpperAllN8 Riesz.SphereGaussianProfileLowerBridge8 Riesz.SpherePartitionGaussianComparison8 Riesz.SphereGaussianSchwartzProfile8 Riesz.E8GaussianContact8 Riesz.E8CKMRVContract8 Riesz.SphereRieszLowerRpow8 Riesz.SphereRieszUpperRpow8 Riesz.SphereRieszTransfer8 Riesz.SphereRieszShortRange8 Riesz.ResidualJointSelection Riesz.SphereShortRangeKernel8 Riesz.SphereShortRangeResidual8 Riesz.SphereShortRangeTail8 Riesz.SphereShortRangeSeparated8 Riesz.RationalPatchSeparation8 Riesz.RationalJointResidual8 Riesz.RationalLongRangeResidual8 Riesz.GaussianBlockBounds8 Riesz.PatchLongRangeBound8 Riesz.SphereLongRangeSubsequence8 Riesz.SphereMassSplitAssembly8 Riesz.LongRangeRescale8 Riesz.RationalSizeFloor8 Riesz.SphereLongRangeAllN8 Riesz.SphereJointUpperSubsequence8 Riesz.SphereRieszUpperFourLt8 Riesz.SphereRieszUpperFourLtAllN8 Riesz.E8EpsteinStrip8 Riesz.SphereRieszConstPair8 Riesz.SphereRieszSharpFourLt8 Riesz.E8EpsteinTwo8 Riesz.SphereRieszUpperLtFour8 Riesz.GammaNegStrip Riesz.SphereRieszNegMellin8 Riesz.E8EpsteinNeg8 Riesz.SphereRieszNegUpper8 Riesz.SphereRieszNegTransfer8 Riesz.SphereLogEnergy8 Riesz.SphereMeasureD FCAreaBridge Riesz.Asymptotics Riesz.OptimalValues Riesz.EqualAreaChartD Riesz.EqualAreaInverseD Riesz.EqualAreaGramD Riesz.EqualAreaConeD Riesz.EqualAreaConeDerivativeD Riesz.EqualAreaConeJacobianD Riesz.EqualAreaMeasureD Riesz.LeechLattice24 Riesz.PatchSupportD Riesz.HexLattice2 Riesz.ExactMassCut Riesz.ExactMassSlices Riesz.EqualAreaHex2 Riesz.HexProfileLower2 Riesz.SphereBallD Riesz.SphereRieszLower2 Riesz.CellFirstMoment Riesz.HexGaussianEnds2 Riesz.GaussianCompositionTwelfth Riesz.BoundaryTwelveNodes Riesz.BoundaryTwelveMoments Riesz.BoundaryTwelveQuadrature Riesz.BoundaryTwelvePeano Riesz.BoundaryTwelveLocalError Riesz.BoundaryTwelveL1Error Riesz.BoundaryTwelveTensor Riesz.GaussianOneDimTwelve Riesz.BoundaryTwelveEnvelope Riesz.BoundaryTwelveNodeGeometry Riesz.StratifiedResidualEnergy Riesz.StratifiedJointSelection OAI.Analysis.Triangular.Basic OAI.Analysis.Triangular.Certificate.WaveIntervals OAI.Analysis.Triangular.Schwartz.TailSpectral OAI.Analysis.Triangular.Schwartz.SpectralCLM OAI.Analysis.Triangular.Schwartz.InputCLM OAI.Analysis.Triangular.Schwartz.FourierCLM OAI.Analysis.Triangular.Schwartz.Gaussian OAI.Analysis.Triangular.Schwartz.Regularity OAI.Analysis.Triangular.Schwartz.Realness OAI.Analysis.Triangular.Schwartz.FourierPair OAI.Analysis.Triangular.Signs.SineBarrierBase OAI.Analysis.Triangular.Signs.SineGridDefs OAI.Analysis.Triangular.Signs.SineGridAnalytic OAI.Analysis.Triangular.Signs.SineGrid0 OAI.Analysis.Triangular.Signs.SineGrid1 OAI.Analysis.Triangular.Signs.SineGrid2 OAI.Analysis.Triangular.Signs.SineGridChecks OAI.Analysis.Triangular.Signs.SineGridCover OAI.Analysis.Triangular.Signs.SineGlobal OAI.Analysis.Triangular.Envelope.Basic OAI.Analysis.Triangular.Envelope.Analytic OAI.Analysis.Triangular.Envelope.EnvelopeBoxes OAI.Analysis.Triangular.Envelope.JetEnvelopeAnalytic OAI.Analysis.Triangular.Construction.PeriodicJets OAI.Analysis.Triangular.Construction.TailEnumeration OAI.Analysis.Triangular.Envelope.EnvelopeSumsBase OAI.Analysis.Triangular.Envelope.TailEnvelopeSeries OAI.Analysis.Triangular.Certificate.WaveExpData OAI.Analysis.Triangular.Envelope.EnvelopeWaves OAI.Analysis.Triangular.Taylor.Taylor OAI.Analysis.Triangular.Taylor.TaylorPhase OAI.Analysis.Triangular.Construction.CurvatureBoxes OAI.Analysis.Triangular.Construction.AtomicCurvature OAI.Analysis.Triangular.Construction.CurvatureAnalytic OAI.Analysis.Triangular.Auxiliary.IntegralBounds OAI.Analysis.Triangular.Schwartz.SpectralEnvelope OAI.Analysis.Triangular.Construction.TailJetVector OAI.Analysis.Triangular.Certificate.WaveJetsData OAI.Analysis.Triangular.Certificate.JetMatrix OAI.Analysis.Triangular.Envelope.EnvelopeNorm0 OAI.Analysis.Triangular.Envelope.EnvelopeNorm1 OAI.Analysis.Triangular.Envelope.EnvelopeNorm2 OAI.Analysis.Triangular.Envelope.EnvelopeNorms OAI.Analysis.Triangular.Envelope.EnvelopePsiB OAI.Analysis.Triangular.Envelope.EnvelopePsiC OAI.Analysis.Triangular.Envelope.EnvelopePsiD OAI.Analysis.Triangular.Envelope.EnvelopeSums OAI.Analysis.Triangular.Envelope.KernelBounds OAI.Analysis.Triangular.Construction.L1Kernel OAI.Analysis.Triangular.Auxiliary.MatrixNorm OAI.Analysis.Triangular.Construction.L1Matrix OAI.Analysis.Triangular.Certificate.MatrixInterval OAI.Analysis.Triangular.Certificate.Inverse OAI.Analysis.Triangular.Construction.BlockOperators OAI.Analysis.Triangular.Construction.Repetition OAI.Analysis.Triangular.Construction.RepetitionBound OAI.Analysis.Triangular.Construction.RepetitionOperators OAI.Analysis.Triangular.Construction.Schur OAI.Analysis.Triangular.Construction.ConcreteSchur OAI.Analysis.Triangular.Certificate.Param OAI.Analysis.Triangular.Certificate.Polytope OAI.Analysis.Triangular.Auxiliary.Bernstein OAI.Analysis.Triangular.Certificate.PolytopeInterval OAI.Analysis.Triangular.Certificate.ParamActual OAI.Analysis.Triangular.Envelope.TargetEnvelope OAI.Analysis.Triangular.Certificate.TargetInterval OAI.Analysis.Triangular.Certificate.ParamInterval OAI.Analysis.Triangular.Certificate.ParamRHS OAI.Analysis.Triangular.Certificate.ParamU OAI.Analysis.Triangular.Certificate.ParamA OAI.Analysis.Triangular.Certificate.ParamNormBase OAI.Analysis.Triangular.Certificate.ParamNorm OAI.Analysis.Triangular.Construction.ActualCorrection OAI.Analysis.Triangular.Construction.ActualInput OAI.Analysis.Triangular.Taylor.FiniteTaylorIdentity OAI.Analysis.Triangular.Taylor.WaveFunction OAI.Analysis.Triangular.Taylor.VariationBound OAI.Analysis.Triangular.Taylor.CoefficientSpectral OAI.Analysis.Triangular.Taylor.CurvatureData00 OAI.Analysis.Triangular.Taylor.CurvatureData01 OAI.Analysis.Triangular.Taylor.CurvatureData10 OAI.Analysis.Triangular.Taylor.CurvatureData11 OAI.Analysis.Triangular.Construction.CurvatureSums OAI.Analysis.Triangular.Construction.CurvatureEnvelope OAI.Analysis.Triangular.Construction.FiniteSystem OAI.Analysis.Triangular.Construction.NormalizedJets OAI.Analysis.Triangular.Construction.SpectralJetBridge OAI.Analysis.Triangular.Construction.SpectralProduct OAI.Analysis.Triangular.Construction.NodeJets OAI.Analysis.Triangular.Construction.FiniteJets OAI.Analysis.Triangular.Construction.DirectWaveJets OAI.Analysis.Triangular.Construction.DirectCoordinates OAI.Analysis.Triangular.Construction.FiniteCoordinates OAI.Analysis.Triangular.Construction.TailCoordinates OAI.Analysis.Triangular.Construction.FiniteProjection OAI.Analysis.Triangular.Construction.FiniteAssembly OAI.Analysis.Triangular.Construction.FiniteTargetBridge OAI.Analysis.Triangular.Construction.ActualTail OAI.Analysis.Triangular.Construction.TailInterpolation OAI.Analysis.Triangular.Construction.FiniteInterpolation OAI.Analysis.Triangular.Construction.ActualInterpolation OAI.Analysis.Triangular.Construction.FarCurvature OAI.Analysis.Triangular.Taylor.TaylorSpectrum OAI.Analysis.Triangular.Taylor.TaylorExp00 OAI.Analysis.Triangular.Taylor.TaylorExp01 OAI.Analysis.Triangular.Taylor.TaylorExp10 OAI.Analysis.Triangular.Taylor.TaylorExp11 OAI.Analysis.Triangular.Taylor.TaylorExp OAI.Analysis.Triangular.Taylor.TaylorWave OAI.Analysis.Triangular.Taylor.TaylorWave000 OAI.Analysis.Triangular.Taylor.TaylorWave001 OAI.Analysis.Triangular.Taylor.TaylorWave002 OAI.Analysis.Triangular.Taylor.TaylorWave003 OAI.Analysis.Triangular.Taylor.TaylorWave004 OAI.Analysis.Triangular.Taylor.TaylorWave005 OAI.Analysis.Triangular.Taylor.TaylorWave006 OAI.Analysis.Triangular.Taylor.TaylorWave00 OAI.Analysis.Triangular.Taylor.TaylorWave010 OAI.Analysis.Triangular.Taylor.TaylorWave011 OAI.Analysis.Triangular.Taylor.TaylorWave012 OAI.Analysis.Triangular.Taylor.TaylorWave013 OAI.Analysis.Triangular.Taylor.TaylorWave014 OAI.Analysis.Triangular.Taylor.TaylorWave015 OAI.Analysis.Triangular.Taylor.TaylorWave016 OAI.Analysis.Triangular.Taylor.TaylorWave01 OAI.Analysis.Triangular.Taylor.TaylorWave100 OAI.Analysis.Triangular.Taylor.TaylorWave101 OAI.Analysis.Triangular.Taylor.TaylorWave102 OAI.Analysis.Triangular.Taylor.TaylorWave103 OAI.Analysis.Triangular.Taylor.TaylorWave104 OAI.Analysis.Triangular.Taylor.TaylorWave105 OAI.Analysis.Triangular.Taylor.TaylorWave106 OAI.Analysis.Triangular.Taylor.TaylorWave10 OAI.Analysis.Triangular.Taylor.TaylorWave110 OAI.Analysis.Triangular.Taylor.TaylorWave111 OAI.Analysis.Triangular.Taylor.TaylorWave112 OAI.Analysis.Triangular.Taylor.TaylorWave113 OAI.Analysis.Triangular.Taylor.TaylorWave114"
+	User time (seconds): 5531.66
+	System time (seconds): 484.71
+	Percent of CPU this job got: 226%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 44:12.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9554100
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 17514
+	Minor (reclaiming a frame) page faults: 68852193
+	Voluntary context switches: 2679021
+	Involuntary context switches: 779806
+	Swaps: 0
+	File system inputs: 511664
+	File system outputs: 5609768
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,400 @@
+﻿2026-10-18T22:48:29.6692146Z Current runner version: '2.337.0'
+2026-10-18T22:48:29.6717851Z ##[group]Runner Image Provisioner
+2026-10-18T22:48:29.6718729Z Hosted Compute Agent
+2026-10-18T22:48:29.6719451Z Version: 20261012.601
+2026-10-18T22:48:29.6720102Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-18T22:48:29.6720826Z Build Date: 2026-10-12T17:48:21Z
+2026-10-18T22:48:29.6721627Z Worker ID: {12e71ef8-15f7-4a07-9b44-cd956770ef11}
+2026-10-18T22:48:29.6722603Z Region: centralus
+2026-10-18T22:48:29.6723464Z Cloud: Azure
+2026-10-18T22:48:29.6724540Z ##[endgroup]
+2026-10-18T22:48:29.6727129Z ##[group]Operating System
+2026-10-18T22:48:29.6728417Z Ubuntu
+2026-10-18T22:48:29.6729324Z 24.04.5
+2026-10-18T22:48:29.6730256Z LTS
+2026-10-18T22:48:29.6731403Z ##[endgroup]
+2026-10-18T22:48:29.6732475Z ##[group]Runner Image
+2026-10-18T22:48:29.6734267Z Image: ubuntu-24.04
+2026-10-18T22:48:29.6735472Z Version: 20261012.334.1
+2026-10-18T22:48:29.6737367Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-18T22:48:29.6739017Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-18T22:48:29.6740411Z ##[endgroup]
+2026-10-18T22:48:29.6741797Z ##[group]GITHUB_TOKEN Permissions
+2026-10-18T22:48:29.6744086Z Contents: read
+2026-10-18T22:48:29.6744723Z Metadata: read
+2026-10-18T22:48:29.6745711Z ##[endgroup]
+2026-10-18T22:48:29.6748002Z Secret source: Actions
+2026-10-18T22:48:29.6748967Z Cache mode: write
+2026-10-18T22:48:29.6749772Z Prepare workflow directory
+2026-10-18T22:48:29.7164775Z Prepare all required actions
+2026-10-18T22:48:29.7215368Z Getting action download info
+2026-10-18T22:48:29.9842334Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-18T22:48:30.1214852Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-18T22:48:30.3318647Z Complete job name: Compile exact FClikelean Challenge
+2026-10-18T22:48:30.4122678Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-18T22:48:30.4123745Z with:
+2026-10-18T22:48:30.4124262Z   persist-credentials: false
+2026-10-18T22:48:30.4124892Z   repository: KitaKen1/riesz-energy-spheres
+2026-10-18T22:48:30.4129137Z   token: ***
+2026-10-18T22:48:30.4129632Z   ssh-strict: true
+2026-10-18T22:48:30.4130141Z   ssh-user: git
+2026-10-18T22:48:30.4130571Z   clean: true
+2026-10-18T22:48:30.4131018Z   sparse-checkout-cone-mode: true
+2026-10-18T22:48:30.4131544Z   fetch-depth: 1
+2026-10-18T22:48:30.4131982Z   fetch-tags: false
+2026-10-18T22:48:30.4132430Z   show-progress: true
+2026-10-18T22:48:30.4132888Z   lfs: false
+2026-10-18T22:48:30.4133300Z   submodules: false
+2026-10-18T22:48:30.4133743Z   set-safe-directory: true
+2026-10-18T22:48:30.4134244Z   allow-unsafe-pr-checkout: false
+2026-10-18T22:48:30.4135034Z ##[endgroup]
+2026-10-18T22:48:30.5173132Z Syncing repository: KitaKen1/riesz-energy-spheres
+2026-10-18T22:48:30.5175340Z ##[group]Getting Git version info
+2026-10-18T22:48:30.5176232Z Working directory is '/home/runner/work/riesz-energy-spheres/riesz-energy-spheres'
+2026-10-18T22:48:30.5177380Z [command]/usr/bin/git version
+2026-10-18T22:48:30.5260152Z git version 2.55.0
+2026-10-18T22:48:30.5282608Z ##[endgroup]
+2026-10-18T22:48:30.5297204Z Temporarily overriding HOME='/home/runner/work/_temp/f754460f-f799-4de8-98cf-e3686382bc98' before making global git config changes
+2026-10-18T22:48:30.5299501Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-18T22:48:30.5303170Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/riesz-energy-spheres/riesz-energy-spheres
+2026-10-18T22:48:30.5356472Z Deleting the contents of '/home/runner/work/riesz-energy-spheres/riesz-energy-spheres'
+2026-10-18T22:48:30.5360576Z ##[group]Initializing the repository
+2026-10-18T22:48:30.5365044Z [command]/usr/bin/git init /home/runner/work/riesz-energy-spheres/riesz-energy-spheres
+2026-10-18T22:48:30.5487069Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-18T22:48:30.5488507Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-18T22:48:30.5490183Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-18T22:48:30.5491485Z hint: call:
+2026-10-18T22:48:30.5492414Z hint:
+2026-10-18T22:48:30.5493317Z hint: 	git config --global init.defaultBranch <name>
+2026-10-18T22:48:30.5494246Z hint:
+2026-10-18T22:48:30.5494844Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-18T22:48:30.5496095Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-18T22:48:30.5496837Z hint:
+2026-10-18T22:48:30.5497263Z hint: 	git branch -m <name>
+2026-10-18T22:48:30.5497758Z hint:
+2026-10-18T22:48:30.5498404Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-18T22:48:30.5499783Z Initialized empty Git repository in /home/runner/work/riesz-energy-spheres/riesz-energy-spheres/.git/
+2026-10-18T22:48:30.5502620Z [command]/usr/bin/git remote add origin https://github.com/KitaKen1/riesz-energy-spheres
+2026-10-18T22:48:30.5552610Z ##[endgroup]
+2026-10-18T22:48:30.5553838Z ##[group]Disabling automatic garbage collection
+2026-10-18T22:48:30.5556057Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-18T22:48:30.5588565Z ##[endgroup]
+2026-10-18T22:48:30.5589720Z ##[group]Setting up auth
+2026-10-18T22:48:30.5594864Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-18T22:48:30.5624652Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-18T22:48:30.5981957Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-18T22:48:30.6016440Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-18T22:48:30.6237355Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-18T22:48:30.6268391Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-18T22:48:30.6497006Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-18T22:48:30.6533312Z ##[endgroup]
+2026-10-18T22:48:30.6542117Z ##[group]Fetching the repository
+2026-10-18T22:48:30.6543496Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +56b3016f2a3ce703ab7f0486dfbc0879742aeddf:refs/remotes/origin/main
+2026-10-18T22:48:31.5264515Z From https://github.com/KitaKen1/riesz-energy-spheres
+2026-10-18T22:48:31.5267450Z  * [new ref]         56b3016f2a3ce703ab7f0486dfbc0879742aeddf -> origin/main
+2026-10-18T22:48:31.5285040Z ##[endgroup]
+2026-10-18T22:48:31.5287399Z ##[group]Determining the checkout info
+2026-10-18T22:48:31.5288851Z ##[endgroup]
+2026-10-18T22:48:31.5289694Z [command]/usr/bin/git sparse-checkout disable
+2026-10-18T22:48:31.5331505Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-18T22:48:31.5362470Z ##[group]Checking out the ref
+2026-10-18T22:48:31.5366870Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-18T22:48:31.8622907Z Switched to a new branch 'main'
+2026-10-18T22:48:31.8627150Z branch 'main' set up to track 'origin/main'.
+2026-10-18T22:48:31.8642784Z ##[endgroup]
+2026-10-18T22:48:31.8686582Z [command]/usr/bin/git log -1 --format=%H
+2026-10-18T22:48:31.8711263Z 56b3016f2a3ce703ab7f0486dfbc0879742aeddf
+2026-10-18T22:48:31.8721010Z ##[group]Removing auth
+2026-10-18T22:48:31.8724904Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-18T22:48:31.8755968Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-18T22:48:31.8977666Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-18T22:48:31.9004299Z http.https://github.com/.extraheader
+2026-10-18T22:48:31.9012601Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-18T22:48:31.9043877Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-18T22:48:31.9262446Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-18T22:48:31.9290960Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-18T22:48:31.9507560Z ##[endgroup]
+2026-10-18T22:48:31.9704346Z ##[group]Run python3 lean/comparator/check-inputs.py --receipt-dir fc-challenge-receipt
+2026-10-18T22:48:31.9705429Z [36;1mpython3 lean/comparator/check-inputs.py --receipt-dir fc-challenge-receipt[0m
+2026-10-18T22:48:31.9990342Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-18T22:48:31.9990839Z ##[endgroup]
+2026-10-18T22:48:33.5195665Z {"status": "PASS", "targets": ["RieszSphereFC.riesz_energy_lattice.variants.dimension_two", "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight", "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.log_energy_lattice.variants.dimension_two", "RieszSphereFC.log_energy_lattice.variants.dimension_eight", "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"], "reference_imports": ["Mathlib.MeasureTheory.Constructions.HaarToSphere", "Mathlib.Analysis.InnerProductSpace.PiL2", "Mathlib.NumberTheory.LSeries.RiemannZeta", "Mathlib.NumberTheory.LSeries.AbstractFuncEq", "Mathlib.LinearAlgebra.Matrix.Notation", "Mathlib.MeasureTheory.Integral.Prod"], "definition_holes": false, "mirror_files": 1359, "hashed_files": 2755, "fc_reference_correspondence": "EXACT_CHALLENGE_COPY; SOLUTION_CHECK_SEPARATE", "fc_exact_source_copy": true, "frozen_fc_sha256": "24c8bbfab4701aa7445ee2090e11f5b26e3a24bb1bb0ad278a3a03818ee95b57", "fc_statement_count": 18, "comparator_target_count": 9, "checkout_base_commit": "56b3016f2a3ce703ab7f0486dfbc0879742aeddf", "working_tree_dirty": false, "working_tree_changes": [], "tested_commit": "56b3016f2a3ce703ab7f0486dfbc0879742aeddf", "source_manifest_sha256": "80c0053e20c112b3460609737a09d33d19bb2b80e0e3c3fd7290ed19d0584e0d", "pins": {"publication_repository": "KitaKen1/riesz-energy-spheres", "private_repository": "KitaKen1/riesz-energy-spheres-private-ci", "lean_toolchain": "leanprover/lean4:v4.34.1", "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612", "comparator_commit": "d03acab154d269c06e60e4de7e4cc85deebff94b", "lean4export_commit": "076e8e57707e813375e8f9da8bf989799ace9680", "landrun_commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4", "targets": ["RieszSphereFC.riesz_energy_lattice.variants.dimension_two", "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight", "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.log_energy_lattice.variants.dimension_two", "RieszSphereFC.log_energy_lattice.variants.dimension_eight", "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight", "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"], "reference_status": "Exact copy of the independent FClikelean draft; compare only its nine research-solved variants.", "toolchain_patches": {"comparator": {"upstream": "leanprover/lean4:v4.34.0", "build": "leanprover/lean4:v4.34.1", "changed_files": ["lean-toolchain"]}, "lean4export": {"upstream": "leanprover/lean4:v4.34.0", "build": "leanprover/lean4:v4.34.1", "changed_files": ["lean-toolchain"]}}, "formal_conjectures_commit": "c77fdd446d23539302aa73bcfae4a9fa962b8382", "ci_repository": "KitaKen1/ci-test-sandbox", "formal_conjectures_compatibility": "prepare-fc-utils.py: remove three unused extension-aggregate imports; retain Mathlib, FC attributes and linters"}, "proof_digest": "f75dfc28ca6b3dc45ef089ed1c7dfa995313b09625e7130a497566b1ed90ecdf"}
+2026-10-18T22:48:33.5292009Z ##[group]Run bash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 8 4
+2026-10-18T22:48:33.5292743Z [36;1mbash lean/comparator/prepare-runner.sh && bash lean/comparator/add-swap.sh 8 4[0m
+2026-10-18T22:48:33.5357801Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-18T22:48:33.5358214Z ##[endgroup]
+2026-10-18T22:51:00.8169884Z info: downloading installer
+2026-10-18T22:51:01.2441709Z 4
+2026-10-18T22:51:01.2458398Z                total        used        free      shared  buff/cache   available
+2026-10-18T22:51:01.2459162Z Mem:            15Gi       1.0Gi        11Gi        43Mi       3.5Gi        14Gi
+2026-10-18T22:51:01.2459765Z Swap:          3.0Gi          0B       3.0Gi
+2026-10-18T22:51:01.2605802Z Filesystem      Size  Used Avail Use% Mounted on
+2026-10-18T22:51:01.2606292Z /dev/root       145G   23G  122G  16% /
+2026-10-18T22:51:01.2606606Z /dev/root       145G   23G  122G  16% /
+2026-10-18T22:51:01.3072607Z added 8 GB of swap on /
+2026-10-18T22:51:01.3090335Z                total        used        free      shared  buff/cache   available
+2026-10-18T22:51:01.3091079Z Mem:              15           1          11           0           3          14
+2026-10-18T22:51:01.3091638Z Swap:             10           0          10
+2026-10-18T22:51:01.3105072Z NAME              TYPE SIZE USED PRIO
+2026-10-18T22:51:01.3106374Z /swapfile         file   3G   0B   -2
+2026-10-18T22:51:01.3106838Z /swap-extra-18649 file   8G   0B   -3
+2026-10-18T22:51:01.3148629Z ##[group]Run lake exe cache get
+2026-10-18T22:51:01.3148950Z [36;1mlake exe cache get[0m
+2026-10-18T22:51:01.3209593Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-18T22:51:01.3209953Z ##[endgroup]
+2026-10-18T22:51:02.2771278Z info: downloading https://releases.lean-lang.org/lean4/v4.34.1/lean-4.34.1-linux.tar.zst
+2026-10-18T22:51:06.9445878Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1
+2026-10-18T22:51:14.3882545Z info: formal_conjectures: cloning https://github.com/google-deepmind/formal-conjectures.git
+2026-10-18T22:51:16.2533213Z info: formal_conjectures: checking out revision 'c77fdd446d23539302aa73bcfae4a9fa962b8382'
+2026-10-18T22:51:16.3596627Z info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git
+2026-10-18T22:51:47.9223511Z info: mathlib: checking out revision 'd13f23b723b8a846827a245b89c10fc7d3f11612'
+2026-10-18T22:51:50.2628169Z info: plausible: cloning https://github.com/leanprover-community/plausible
+2026-10-18T22:51:50.6872113Z info: plausible: checking out revision '118aa17ee84656b8bd727fef7c458ee8c833385c'
+2026-10-18T22:51:50.7011094Z info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+2026-10-18T22:51:51.0657907Z info: LeanSearchClient: checking out revision 'ddf04cf3949fa556442341e87d47f9f6e6074707'
+2026-10-18T22:51:51.0790308Z info: importGraph: cloning https://github.com/leanprover-community/import-graph
+2026-10-18T22:51:51.6051229Z info: importGraph: checking out revision 'e928b72544873815af278d38681b31c0293588e3'
+2026-10-18T22:51:51.6238580Z info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+2026-10-18T22:51:52.4927167Z info: proofwidgets: checking out revision '106ff4fafc74ef4ac99d81dbf3ab399118f497a5'
+2026-10-18T22:51:53.1541321Z info: aesop: cloning https://github.com/leanprover-community/aesop
+2026-10-18T22:51:54.2416653Z info: aesop: checking out revision '355695d523e41d0554926416cba2a2b3544fbbc9'
+2026-10-18T22:51:54.2614801Z info: Qq: cloning https://github.com/leanprover-community/quote4
+2026-10-18T22:51:54.7065605Z info: Qq: checking out revision '6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259'
+2026-10-18T22:51:54.7213871Z info: batteries: cloning https://github.com/leanprover-community/batteries
+2026-10-18T22:51:59.1347197Z info: batteries: checking out revision 'f2effa3d803fda822b1f97b806c47cf2adfbcbc2'
+2026-10-18T22:51:59.1727953Z info: Cli: cloning https://github.com/leanprover/lean4-cli
+2026-10-18T22:51:59.5067137Z info: Cli: checking out revision 'e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204'
+2026-10-18T22:51:59.9219345Z ✔ [1/12] Built Cache.Cli (339ms)
+2026-10-18T22:52:00.0236464Z ✔ [5/42] Built Cache.Lean (393ms)
+2026-10-18T22:52:00.2214816Z ✔ [6/42] Built Cache.Cli:c.o (210ms)
+2026-10-18T22:52:00.2215946Z ✔ [7/42] Built Cache.Lean:c.o (240ms)
+2026-10-18T22:52:00.3254172Z ✔ [8/42] Built Cache.Env (407ms)
+2026-10-18T22:52:00.6276383Z ✔ [9/42] Built Cache.Env:c.o (250ms)
+2026-10-18T22:52:00.9274950Z ✔ [10/42] Built Cache.Infra (523ms)
+2026-10-18T22:52:01.0277844Z ✔ [11/42] Built Batteries.Tactic.OpenPrivate (1.1s)
+2026-10-18T22:52:01.2271362Z ✔ [12/42] Built Cache.Infra:c.o (302ms)
+2026-10-18T22:52:02.5290319Z ✔ [13/42] Built Batteries.Tactic.OpenPrivate:c.o (1.5s)
+2026-10-18T22:52:02.6291547Z ✔ [14/42] Built Cache.IO (1.6s)
+2026-10-18T22:52:03.5303315Z ✔ [15/42] Built Cache.Hashing (828ms)
+2026-10-18T22:52:03.9309665Z ✔ [16/42] Built Cache.Hashing:c.o (475ms)
+2026-10-18T22:52:04.5317892Z ✔ [17/42] Built Cache.IO:c.o (1.9s)
+2026-10-18T22:52:05.6331510Z ✔ [18/42] Built Cache.Requests (2.1s)
+2026-10-18T22:52:06.1392389Z ✔ [19/42] Built Cache.Marker (573ms)
+2026-10-18T22:52:06.3385929Z ✔ [20/42] Built Cache.Marker:c.o (165ms)
+2026-10-18T22:52:06.8406664Z ✔ [21/42] Built Cache.Upload.Dest (686ms)
+2026-10-18T22:52:07.0391869Z ✔ [22/42] Built Cache.Upload.Dest:c.o (181ms)
+2026-10-18T22:52:07.3399781Z ✔ [23/42] Built Cache.Query (1.2s)
+2026-10-18T22:52:07.8412683Z ✔ [24/42] Built Cache.Query:c.o (475ms)
+2026-10-18T22:52:07.9437135Z ✔ [25/42] Built Cache.Upload.Rclone (1.1s)
+2026-10-18T22:52:08.0427718Z ✔ [26/42] Built Cache.Upload.Curl (981ms)
+2026-10-18T22:52:08.2476696Z ✔ [27/42] Built Cache.Upload.Rclone:c.o (320ms)
+2026-10-18T22:52:08.3466675Z ✔ [28/42] Built Cache.Upload.Curl:c.o (341ms)
+2026-10-18T22:52:08.9476828Z ✔ [29/42] Built Cache.Warning (1.1s)
+2026-10-18T22:52:09.1470589Z ✔ [30/42] Built Cache.Upload.Azure (919ms)
+2026-10-18T22:52:09.3496700Z ✔ [31/42] Built Cache.Warning:c.o (455ms)
+2026-10-18T22:52:09.4478625Z ✔ [32/42] Built Cache.Upload.Azure:c.o (226ms)
+2026-10-18T22:52:09.5480313Z ✔ [33/42] Built Cache.Upload.S3 (1.1s)
+2026-10-18T22:52:09.6482344Z ✔ [34/42] Built Cache.Requests:c.o (4.0s)
+2026-10-18T22:52:09.8483850Z ✔ [35/42] Built Cache.Upload.S3:c.o (389ms)
+2026-10-18T22:52:10.1487891Z ✔ [36/42] Built Cache.Upload.Defs (649ms)
+2026-10-18T22:52:10.3490382Z ✔ [37/42] Built Cache.Upload.Defs:c.o (157ms)
+2026-10-18T22:52:10.6504105Z ✔ [38/42] Built Cache.Upload (541ms)
+2026-10-18T22:52:10.8499181Z ✔ [39/42] Built Cache.Upload:c.o (128ms)
+2026-10-18T22:52:11.8510114Z ✔ [40/42] Built Cache.Main (1.2s)
+2026-10-18T22:52:12.8523431Z ✔ [41/42] Built Cache.Main:c.o (1.0s)
+2026-10-18T22:52:13.5581407Z ✔ [42/42] Built cache:exe (744ms)
+2026-10-18T22:52:16.3922064Z Current branch: HEAD
+2026-10-18T22:52:16.3924329Z Using cache from origin: (some leanprover-community/mathlib4)
+2026-10-18T22:52:16.3926057Z Attempting to download 8908 file(s) from leanprover-community/mathlib4 cache at https://cache.mathlib.org/mathlib4-master
+2026-10-18T22:52:16.7247522Z 
+2026-10-18T22:52:16.8284547Z Downloaded: 1 file(s) [attempted 1/8908 = 0%, 209 KB/s], Decompressed: 0
+2026-10-18T22:52:16.9308862Z Downloaded: 68 file(s) [attempted 68/8908 = 0%, 776 KB/s], Decompressed: 24
+2026-10-18T22:52:17.0377041Z Downloaded: 166 file(s) [attempted 166/8908 = 1%, 343 KB/s], Decompressed: 53
+2026-10-18T22:52:17.1369403Z Downloaded: 238 file(s) [attempted 238/8908 = 2%, 428 KB/s], Decompressed: 53
+2026-10-18T22:52:17.2373451Z Downloaded: 332 file(s) [attempted 332/8908 = 3%, 2238 KB/s], Decompressed: 53
+2026-10-18T22:52:17.3441332Z Downloaded: 431 file(s) [attempted 431/8908 = 4%, 706 KB/s], Decompressed: 133
+2026-10-18T22:52:17.4409842Z Downloaded: 505 file(s) [attempted 505/8908 = 5%, 1010 KB/s], Decompressed: 133
+2026-10-18T22:52:17.5410478Z Downloaded: 576 file(s) [attempted 576/8908 = 6%, 101 KB/s], Decompressed: 133
+2026-10-18T22:52:17.6424896Z Downloaded: 653 file(s) [attempted 653/8908 = 7%, 979 KB/s], Decompressed: 133
+2026-10-18T22:52:17.7616522Z Downloaded: 755 file(s) [attempted 755/8908 = 8%, 1060 KB/s], Decompressed: 133
+2026-10-18T22:52:17.8629160Z Downloaded: 815 file(s) [attempted 815/8908 = 9%, 1370 KB/s], Decompressed: 133
+2026-10-18T22:52:17.9605545Z Downloaded: 909 file(s) [attempted 909/8908 = 10%, 484 KB/s], Decompressed: 133
+2026-10-18T22:52:18.0601706Z Downloaded: 1003 file(s) [attempted 1003/8908 = 11%, 268 KB/s], Decompressed: 133
+2026-10-18T22:52:18.1685992Z Downloaded: 1107 file(s) [attempted 1107/8908 = 12%, 1780 KB/s], Decompressed: 133
+2026-10-18T22:52:18.2795662Z Downloaded: 1202 file(s) [attempted 1202/8908 = 13%, 903 KB/s], Decompressed: 375
+2026-10-18T22:52:18.3811747Z Downloaded: 1298 file(s) [attempted 1298/8908 = 14%, 718 KB/s], Decompressed: 375
+2026-10-18T22:52:18.4798728Z Downloaded: 1414 file(s) [attempted 1414/8908 = 15%, 84 KB/s], Decompressed: 375
+2026-10-18T22:52:18.5806469Z Downloaded: 1507 file(s) [attempted 1507/8908 = 16%, 85 KB/s], Decompressed: 375
+2026-10-18T22:52:18.6806768Z Downloaded: 1601 file(s) [attempted 1601/8908 = 17%, 1391 KB/s], Decompressed: 375
+2026-10-18T22:52:18.7826129Z Downloaded: 1706 file(s) [attempted 1706/8908 = 19%, 2135 KB/s], Decompressed: 375
+2026-10-18T22:52:18.8843996Z Downloaded: 1807 file(s) [attempted 1807/8908 = 20%, 1386 KB/s], Decompressed: 375
+2026-10-18T22:52:18.9935766Z Downloaded: 1899 file(s) [attempted 1899/8908 = 21%, 173 KB/s], Decompressed: 375
+2026-10-18T22:52:19.1246688Z Downloaded: 1978 file(s) [attempted 1978/8908 = 22%, 543 KB/s], Decompressed: 375
+2026-10-18T22:52:19.2247721Z Downloaded: 2050 file(s) [attempted 2050/8908 = 23%, 1782 KB/s], Decompressed: 375
+2026-10-18T22:52:19.3260259Z Downloaded: 2129 file(s) [attempted 2129/8908 = 23%, 1604 KB/s], Decompressed: 375
+2026-10-18T22:52:19.4280059Z Downloaded: 2228 file(s) [attempted 2228/8908 = 25%, 416 KB/s], Decompressed: 375
+2026-10-18T22:52:19.5339953Z Downloaded: 2319 file(s) [attempted 2319/8908 = 26%, 595 KB/s], Decompressed: 375
+2026-10-18T22:52:19.6407102Z Downloaded: 2425 file(s) [attempted 2425/8908 = 27%, 431 KB/s], Decompressed: 375
+2026-10-18T22:52:19.7424859Z Downloaded: 2516 file(s) [attempted 2516/8908 = 28%, 276 KB/s], Decompressed: 375
+2026-10-18T22:52:19.8437705Z Downloaded: 2599 file(s) [attempted 2599/8908 = 29%, 4740 KB/s], Decompressed: 375
+2026-10-18T22:52:19.9446749Z Downloaded: 2696 file(s) [attempted 2696/8908 = 30%, 2821 KB/s], Decompressed: 375
+2026-10-18T22:52:20.0521752Z Downloaded: 2780 file(s) [attempted 2780/8908 = 31%, 106 KB/s], Decompressed: 375
+2026-10-18T22:52:20.1517742Z Downloaded: 2884 file(s) [attempted 2884/8908 = 32%, 378 KB/s], Decompressed: 375
+2026-10-18T22:52:20.2518848Z Downloaded: 2990 file(s) [attempted 2990/8908 = 33%, 442 KB/s], Decompressed: 375
+2026-10-18T22:52:20.3586757Z Downloaded: 3090 file(s) [attempted 3090/8908 = 34%, 545 KB/s], Decompressed: 375
+2026-10-18T22:52:20.4606966Z Downloaded: 3186 file(s) [attempted 3186/8908 = 35%, 469 KB/s], Decompressed: 375
+2026-10-18T22:52:20.5704688Z Downloaded: 3273 file(s) [attempted 3273/8908 = 36%, 420 KB/s], Decompressed: 375
+2026-10-18T22:52:20.6768495Z Downloaded: 3345 file(s) [attempted 3345/8908 = 37%, 396 KB/s], Decompressed: 375
+2026-10-18T22:52:20.7857713Z Downloaded: 3427 file(s) [attempted 3427/8908 = 38%, 2173 KB/s], Decompressed: 375
+2026-10-18T22:52:20.8856712Z Downloaded: 3523 file(s) [attempted 3523/8908 = 39%, 150 KB/s], Decompressed: 375
+2026-10-18T22:52:20.9857750Z Downloaded: 3621 file(s) [attempted 3621/8908 = 40%, 225 KB/s], Decompressed: 375
+2026-10-18T22:52:21.0885658Z Downloaded: 3700 file(s) [attempted 3700/8908 = 41%, 586 KB/s], Decompressed: 375
+2026-10-18T22:52:21.1906716Z Downloaded: 3775 file(s) [attempted 3775/8908 = 42%, 610 KB/s], Decompressed: 375
+2026-10-18T22:52:21.2936202Z Downloaded: 3866 file(s) [attempted 3866/8908 = 43%, 1008 KB/s], Decompressed: 375
+2026-10-18T22:52:21.3989063Z Downloaded: 3967 file(s) [attempted 3967/8908 = 44%, 3728 KB/s], Decompressed: 375
+2026-10-18T22:52:21.4996091Z Downloaded: 4068 file(s) [attempted 4068/8908 = 45%, 437 KB/s], Decompressed: 375
+2026-10-18T22:52:21.6011175Z Downloaded: 4157 file(s) [attempted 4157/8908 = 46%, 3860 KB/s], Decompressed: 375
+2026-10-18T22:52:21.7096314Z Downloaded: 4229 file(s) [attempted 4229/8908 = 47%, 6818 KB/s], Decompressed: 375
+2026-10-18T22:52:21.8108723Z Downloaded: 4332 file(s) [attempted 4332/8908 = 48%, 1016 KB/s], Decompressed: 1188
+2026-10-18T22:52:21.9171192Z Downloaded: 4445 file(s) [attempted 4445/8908 = 49%, 1804 KB/s], Decompressed: 1188
+2026-10-18T22:52:22.0180987Z Downloaded: 4527 file(s) [attempted 4527/8908 = 50%, 518 KB/s], Decompressed: 1188
+2026-10-18T22:52:22.1223851Z Downloaded: 4599 file(s) [attempted 4599/8908 = 51%, 1591 KB/s], Decompressed: 1188
+2026-10-18T22:52:22.2273800Z Downloaded: 4659 file(s) [attempted 4659/8908 = 52%, 330 KB/s], Decompressed: 1188
+2026-10-18T22:52:22.3279440Z Downloaded: 4760 file(s) [attempted 4760/8908 = 53%, 1532 KB/s], Decompressed: 1188
+2026-10-18T22:52:22.4314886Z Downloaded: 4861 file(s) [attempted 4861/8908 = 54%, 2816 KB/s], Decompressed: 1188
+2026-10-18T22:52:22.5315741Z Downloaded: 4918 file(s) [attempted 4918/8908 = 55%, 912 KB/s], Decompressed: 1188
+2026-10-18T22:52:22.6397757Z Downloaded: 5026 file(s) [attempted 5026/8908 = 56%, 191 KB/s], Decompressed: 1188
+2026-10-18T22:52:22.7369108Z Downloaded: 5132 file(s) [attempted 5132/8908 = 57%, 414 KB/s], Decompressed: 1188
+2026-10-18T22:52:22.8456576Z Downloaded: 5240 file(s) [attempted 5240/8908 = 58%, 295 KB/s], Decompressed: 1188
+2026-10-18T22:52:22.9422405Z Downloaded: 5339 file(s) [attempted 5339/8908 = 59%, 344 KB/s], Decompressed: 1188
+2026-10-18T22:52:23.0502819Z Downloaded: 5437 file(s) [attempted 5437/8908 = 61%, 890 KB/s], Decompressed: 1188
+2026-10-18T22:52:23.1586716Z Downloaded: 5540 file(s) [attempted 5540/8908 = 62%, 627 KB/s], Decompressed: 1188
+2026-10-18T22:52:23.2656721Z Downloaded: 5646 file(s) [attempted 5646/8908 = 63%, 518 KB/s], Decompressed: 1188
+2026-10-18T22:52:23.3761663Z Downloaded: 5754 file(s) [attempted 5754/8908 = 64%, 1514 KB/s], Decompressed: 1188
+2026-10-18T22:52:23.4741928Z Downloaded: 5857 file(s) [attempted 5857/8908 = 65%, 599 KB/s], Decompressed: 1188
+2026-10-18T22:52:23.5810112Z Downloaded: 5913 file(s) [attempted 5913/8908 = 66%, 419 KB/s], Decompressed: 1188
+2026-10-18T22:52:23.7086407Z Downloaded: 5987 file(s) [attempted 5987/8908 = 67%, 847 KB/s], Decompressed: 1188
+2026-10-18T22:52:23.8081605Z Downloaded: 6095 file(s) [attempted 6095/8908 = 68%, 319 KB/s], Decompressed: 1188
+2026-10-18T22:52:23.9166729Z Downloaded: 6196 file(s) [attempted 6196/8908 = 69%, 12130 KB/s], Decompressed: 1188
+2026-10-18T22:52:24.0142948Z Downloaded: 6304 file(s) [attempted 6304/8908 = 70%, 452 KB/s], Decompressed: 1188
+2026-10-18T22:52:24.1154782Z Downloaded: 6395 file(s) [attempted 6395/8908 = 71%, 597 KB/s], Decompressed: 1188
+2026-10-18T22:52:24.2608866Z Downloaded: 6481 file(s) [attempted 6481/8908 = 72%, 2577 KB/s], Decompressed: 1188
+2026-10-18T22:52:24.3608483Z Downloaded: 6561 file(s) [attempted 6561/8908 = 73%, 945 KB/s], Decompressed: 1188
+2026-10-18T22:52:24.4628963Z Downloaded: 6680 file(s) [attempted 6680/8908 = 74%, 1014 KB/s], Decompressed: 1188
+2026-10-18T22:52:24.5711023Z Downloaded: 6768 file(s) [attempted 6768/8908 = 75%, 883 KB/s], Decompressed: 1188
+2026-10-18T22:52:24.6746642Z Downloaded: 6881 file(s) [attempted 6881/8908 = 77%, 276 KB/s], Decompressed: 1188
+2026-10-18T22:52:24.7739774Z Downloaded: 6974 file(s) [attempted 6974/8908 = 78%, 126 KB/s], Decompressed: 1188
+2026-10-18T22:52:24.8752500Z Downloaded: 7073 file(s) [attempted 7073/8908 = 79%, 150 KB/s], Decompressed: 1188
+2026-10-18T22:52:24.9983165Z Downloaded: 7150 file(s) [attempted 7150/8908 = 80%, 1216 KB/s], Decompressed: 1188
+2026-10-18T22:52:25.0990111Z Downloaded: 7219 file(s) [attempted 7219/8908 = 81%, 1265 KB/s], Decompressed: 1188
+2026-10-18T22:52:25.2006185Z Downloaded: 7303 file(s) [attempted 7303/8908 = 81%, 284 KB/s], Decompressed: 1188
+2026-10-18T22:52:25.3068959Z Downloaded: 7361 file(s) [attempted 7361/8908 = 82%, 931 KB/s], Decompressed: 1188
+2026-10-18T22:52:25.4142665Z Downloaded: 7421 file(s) [attempted 7421/8908 = 83%, 2275 KB/s], Decompressed: 1188
+2026-10-18T22:52:25.5233471Z Downloaded: 7457 file(s) [attempted 7457/8908 = 83%, 591 KB/s], Decompressed: 1188
+2026-10-18T22:52:25.6293571Z Downloaded: 7498 file(s) [attempted 7498/8908 = 84%, 205 KB/s], Decompressed: 1188
+2026-10-18T22:52:25.7449204Z Downloaded: 7527 file(s) [attempted 7527/8908 = 84%, 253 KB/s], Decompressed: 1188
+2026-10-18T22:52:25.8536667Z Downloaded: 7587 file(s) [attempted 7587/8908 = 85%, 61 KB/s], Decompressed: 1188
+2026-10-18T22:52:25.9574044Z Downloaded: 7637 file(s) [attempted 7637/8908 = 85%, 650 KB/s], Decompressed: 1188
+2026-10-18T22:52:26.0580917Z Downloaded: 7730 file(s) [attempted 7730/8908 = 86%, 783 KB/s], Decompressed: 1188
+2026-10-18T22:52:26.1587345Z Downloaded: 7786 file(s) [attempted 7786/8908 = 87%, 510 KB/s], Decompressed: 1188
+2026-10-18T22:52:26.2626234Z Downloaded: 7894 file(s) [attempted 7894/8908 = 88%, 1041 KB/s], Decompressed: 1188
+2026-10-18T22:52:26.3716553Z Downloaded: 8012 file(s) [attempted 8012/8908 = 89%, 323 KB/s], Decompressed: 1188
+2026-10-18T22:52:26.4726611Z Downloaded: 8110 file(s) [attempted 8110/8908 = 91%, 994 KB/s], Decompressed: 1188
+2026-10-18T22:52:26.5776476Z Downloaded: 8221 file(s) [attempted 8221/8908 = 92%, 274 KB/s], Decompressed: 1188
+2026-10-18T22:52:26.6843682Z Downloaded: 8315 file(s) [attempted 8315/8908 = 93%, 2688 KB/s], Decompressed: 1188
+2026-10-18T22:52:26.9356412Z Downloaded: 8413 file(s) [attempted 8413/8908 = 94%, 4901 KB/s], Decompressed: 1188
+2026-10-18T22:52:27.0520062Z Downloaded: 8464 file(s) [attempted 8464/8908 = 95%, 257 KB/s], Decompressed: 1188
+2026-10-18T22:52:27.1523849Z Downloaded: 8514 file(s) [attempted 8514/8908 = 95%, 596 KB/s], Decompressed: 1188
+2026-10-18T22:52:27.2589331Z Downloaded: 8622 file(s) [attempted 8622/8908 = 96%, 137 KB/s], Decompressed: 1188
+2026-10-18T22:52:27.3609863Z Downloaded: 8716 file(s) [attempted 8716/8908 = 97%, 1653 KB/s], Decompressed: 1188
+2026-10-18T22:52:27.4677461Z Downloaded: 8795 file(s) [attempted 8795/8908 = 98%, 2239 KB/s], Decompressed: 1188
+2026-10-18T22:52:27.5459649Z Downloaded: 8869 file(s) [attempted 8869/8908 = 99%, 866 KB/s], Decompressed: 1188
+2026-10-18T22:52:27.5460819Z Downloaded: 8908 file(s) [attempted 8908/8908 = 100%, 866 KB/s], Decompressed: 1188
+2026-10-18T22:52:47.2413083Z Decompressed 8908 file(s)
+2026-10-18T22:52:47.2413433Z Already decompressed 8908 file(s)
+2026-10-18T22:52:47.3492073Z ##[group]Run python3 lean/comparator/prepare-fc-utils.py --receipt-dir fc-challenge-receipt
+2026-10-18T22:52:47.3493314Z [36;1mpython3 lean/comparator/prepare-fc-utils.py --receipt-dir fc-challenge-receipt[0m
+2026-10-18T22:52:47.3623225Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-18T22:52:47.3623618Z ##[endgroup]
+2026-10-18T22:52:47.5404744Z {"status": "APPLIED", "upstream_commit": "c77fdd446d23539302aa73bcfae4a9fa962b8382", "upstream_sha256": "3a73749a2b247a1ad08820de102f0d32353bf6e519eb954de53e08553cdbc663", "adapted_sha256": "cd7916d640752ec4cff2a5e706d5a3da287ed164136fe0442cfc81d7bf7ffef8", "removed_imports": ["public import FormalConjecturesForMathlib", "public meta import FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Eccentricity", "public meta import FormalConjecturesForMathlib.Combinatorics.SimpleGraph.VertexDistance"], "retained": "Mathlib and all FC attribute and linter implementations", "scope": "Import-only adapter; Challenge and FC mathematical definitions are unmodified.", "reason": "The upstream FC extension aggregate targets an older Mathlib. The Challenge uses none of its extensions."}
+2026-10-18T22:52:47.6031700Z ##[group]Run bash comparator/build-fc-challenge.sh
+2026-10-18T22:52:47.6032210Z [36;1mbash comparator/build-fc-challenge.sh[0m
+2026-10-18T22:52:47.6092955Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-18T22:52:47.6093320Z ##[endgroup]
+2026-10-18T22:52:47.9021823Z warning: formal_conjectures: repository '/home/runner/work/riesz-energy-spheres/riesz-energy-spheres/lean/.lake/packages/formal_conjectures' has local changes
+2026-10-18T22:52:48.5844995Z Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+2026-10-18T22:52:48.7631227Z warning: formal_conjectures: repository '/home/runner/work/riesz-energy-spheres/riesz-energy-spheres/lean/.lake/packages/formal_conjectures' has local changes
+2026-10-18T22:52:53.5815768Z ✔ [8924/8937] Built FormalConjecturesForMathlib.Lean.Elab.InfoTree.Util (519ms)
+2026-10-18T22:52:53.7837266Z ✔ [8925/8938] Built FormalConjecturesUtil.Linters.CopyrightLinter (746ms)
+2026-10-18T22:52:54.6856538Z ✔ [8926/8938] Built FormalConjecturesForMathlib.Tactic.Linter.Term (945ms)
+2026-10-18T22:52:54.8956598Z ✔ [8928/8942] Built FormalConjecturesUtil.Linters.ImportLinter (1.4s)
+2026-10-18T22:52:54.8986204Z ✔ [8929/8942] Built FormalConjecturesUtil.Linters.LatexDocstringLinter (1.3s)
+2026-10-18T22:52:55.0935706Z ✔ [8930/8942] Built FormalConjecturesUtil.Attributes.AMS (2.1s)
+2026-10-18T22:52:55.5996708Z ✔ [8931/8942] Built FormalConjecturesUtil.Linters.NamespaceLinter (727ms)
+2026-10-18T22:52:55.7972971Z ✔ [8932/8942] Built FormalConjecturesUtil.Linters.ExistsImplicationLinter (843ms)
+2026-10-18T22:52:55.8977309Z ✔ [8933/8942] Built FormalConjecturesUtil.Linters.ModuleDocstringLinter (1.2s)
+2026-10-18T22:52:55.8977987Z ✔ [8934/8942] Built FormalConjecturesUtil.Linters.StubLinter (824ms)
+2026-10-18T22:52:58.1016764Z ✔ [8935/8942] Built FormalConjecturesUtil.Attributes.Basic (2.5s)
+2026-10-18T22:52:59.7041863Z ✔ [8936/8942] Built FormalConjecturesUtil.Linters.CategoryDocstringLinter (1.6s)
+2026-10-18T22:53:00.2051149Z ✔ [8937/8942] Built FormalConjecturesUtil.Linters.CategoryLinter (2.1s)
+2026-10-18T22:53:00.2052279Z ✔ [8938/8942] Built FormalConjecturesUtil.Linters.FormalProofLinter (2.1s)
+2026-10-18T22:53:00.3052826Z ✔ [8939/8942] Built FormalConjecturesUtil.Linters.AMSLinter (2.2s)
+2026-10-18T22:53:03.7082988Z ✔ [8940/8942] Built FormalConjecturesUtil (3.4s)
+2026-10-18T22:53:08.5142323Z ⚠ [8941/8942] Built Challenge (4.6s)
+2026-10-18T22:53:08.5144741Z warning: Challenge.lean:129:8: declaration uses `sorry`
+2026-10-18T22:53:08.5145692Z warning: Challenge.lean:141:8: declaration uses `sorry`
+2026-10-18T22:53:08.5146269Z warning: Challenge.lean:155:8: declaration uses `sorry`
+2026-10-18T22:53:08.5146774Z warning: Challenge.lean:166:8: declaration uses `sorry`
+2026-10-18T22:53:08.5147264Z warning: Challenge.lean:179:8: declaration uses `sorry`
+2026-10-18T22:53:08.5147841Z warning: Challenge.lean:192:8: declaration uses `sorry`
+2026-10-18T22:53:08.5148392Z warning: Challenge.lean:204:8: declaration uses `sorry`
+2026-10-18T22:53:08.5148944Z warning: Challenge.lean:218:8: declaration uses `sorry`
+2026-10-18T22:53:08.5149437Z warning: Challenge.lean:233:8: declaration uses `sorry`
+2026-10-18T22:53:08.5149903Z warning: Challenge.lean:245:8: declaration uses `sorry`
+2026-10-18T22:53:08.5150359Z warning: Challenge.lean:259:8: declaration uses `sorry`
+2026-10-18T22:53:08.5150856Z warning: Challenge.lean:273:8: declaration uses `sorry`
+2026-10-18T22:53:08.5151319Z warning: Challenge.lean:286:8: declaration uses `sorry`
+2026-10-18T22:53:08.5151781Z warning: Challenge.lean:297:8: declaration uses `sorry`
+2026-10-18T22:53:08.5152250Z warning: Challenge.lean:312:8: declaration uses `sorry`
+2026-10-18T22:53:08.5152798Z warning: Challenge.lean:323:8: declaration uses `sorry`
+2026-10-18T22:53:08.5153387Z warning: Challenge.lean:336:8: declaration uses `sorry`
+2026-10-18T22:53:08.5154174Z warning: Challenge.lean:349:8: declaration uses `sorry`
+2026-10-18T22:53:08.5257035Z Build completed successfully (8942 jobs).
+2026-10-18T22:53:08.5773303Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-18T22:53:08.5773744Z with:
+2026-10-18T22:53:08.5773952Z   name: fc-challenge-39173822333-1
+2026-10-18T22:53:08.5774227Z   path: fc-challenge-receipt/
+2026-10-18T22:53:08.5774467Z   retention-days: 90
+2026-10-18T22:53:08.5774679Z   if-no-files-found: warn
+2026-10-18T22:53:08.5774904Z   compression-level: 6
+2026-10-18T22:53:08.5775382Z   overwrite: false
+2026-10-18T22:53:08.5775712Z   include-hidden-files: false
+2026-10-18T22:53:08.5775951Z ##[endgroup]
+2026-10-18T22:53:08.7568332Z (node:3678) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-18T22:53:08.7569526Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-18T22:53:08.7639513Z With the provided path, there will be 12 files uploaded
+2026-10-18T22:53:08.7645475Z Artifact name is valid!
+2026-10-18T22:53:08.7646353Z Root directory input is valid!
+2026-10-18T22:53:09.0189984Z Beginning upload of artifact content to blob storage
+2026-10-18T22:53:09.0683734Z (node:3678) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-18T22:53:09.3228623Z Uploaded bytes 148240
+2026-10-18T22:53:09.3686543Z Finished uploading artifact content to blob storage!
+2026-10-18T22:53:09.3687848Z SHA256 digest of uploaded artifact zip is fbabc842921724edd4e921d1166e61ac745b531e632673765ba63fa96965e54b
+2026-10-18T22:53:09.3689453Z Finalizing artifact upload
+2026-10-18T22:53:09.6489968Z Artifact fc-challenge-39173822333-1.zip successfully finalized. Artifact ID 12153796079
+2026-10-18T22:53:09.6491185Z Artifact fc-challenge-39173822333-1 has been successfully uploaded! Final size is 148240 bytes. Artifact ID is 12153796079
+2026-10-18T22:53:09.6496885Z Artifact download URL: https://github.com/KitaKen1/riesz-energy-spheres/actions/runs/39173822333/artifacts/12153796079
+2026-10-18T22:53:09.6726593Z Post job cleanup.
+2026-10-18T22:53:09.7644659Z [command]/usr/bin/git version
+2026-10-18T22:53:09.7683374Z git version 2.55.0
+2026-10-18T22:53:09.7723098Z Temporarily overriding HOME='/home/runner/work/_temp/b171fa5e-84cd-4496-9f0d-41eadfce8546' before making global git config changes
+2026-10-18T22:53:09.7724460Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-18T22:53:09.7729799Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/riesz-energy-spheres/riesz-energy-spheres
+2026-10-18T22:53:09.7768587Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-18T22:53:09.7802622Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-18T22:53:09.8053874Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-18T22:53:09.8088733Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-18T22:53:09.8318363Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-18T22:53:09.8354436Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-18T22:53:09.8763188Z Cleaning up orphan processes
+2026-10-18T22:53:09.9086574Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

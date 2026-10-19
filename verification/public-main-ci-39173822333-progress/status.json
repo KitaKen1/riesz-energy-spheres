@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "run_id": 39173822333,
+  "run_url": "https://github.com/KitaKen1/riesz-energy-spheres/actions/runs/39173822333",
+  "tested_commit": "56b3016f2a3ce703ab7f0486dfbc0879742aeddf",
+  "branch": "main",
+  "result_verified": true,
+  "previous_identical_public_commit_run": 39128755705,
+  "previous_public_run_result": "PASS_ALL_REQUIRED_CHECKS",
+  "frozen_fc_sha256": "24c8bbfab4701aa7445ee2090e11f5b26e3a24bb1bb0ad278a3a03818ee95b57",
+  "completed_at_utc": "2026-10-19T08:21:13Z",
+  "required_jobs": "ALL_PASS",
+  "full_archive": "../public-main-ci-39173822333-attempt-1"
+}

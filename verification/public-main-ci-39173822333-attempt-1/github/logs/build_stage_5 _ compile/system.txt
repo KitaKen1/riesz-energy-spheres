@@ -1,0 +1,14 @@
+2026-10-19T02:00:23.6610000Z Evaluating build_stage_5.if
+2026-10-19T02:00:23.6610000Z Evaluating: success()
+2026-10-19T02:00:23.6610000Z Result: true
+2026-10-19T02:00:23.6610000Z Evaluating build_stage_5.compile.if
+2026-10-19T02:00:23.6610000Z Evaluating: success()
+2026-10-19T02:00:23.6610000Z Result: true
+2026-10-19T02:00:23.6650000Z Requested labels: ubuntu-24.04
+2026-10-19T02:00:23.6650000Z Job defined at: KitaKen1/riesz-energy-spheres/.github/workflows/proof-stage.yml@refs/heads/main
+2026-10-19T02:00:23.6650000Z Reusable workflow chain:
+2026-10-19T02:00:23.6650000Z KitaKen1/riesz-energy-spheres/.github/workflows/comparator.yml@refs/heads/main (56b3016f2a3ce703ab7f0486dfbc0879742aeddf)
+2026-10-19T02:00:23.6650000Z -> KitaKen1/riesz-energy-spheres/.github/workflows/proof-stage.yml@refs/heads/main (56b3016f2a3ce703ab7f0486dfbc0879742aeddf)
+2026-10-19T02:00:23.6650000Z Waiting for a runner to pick up this job...
+2026-10-19T02:00:24.1620000Z Job is about to start running on the hosted runner: GitHub Actions 1000000841
+2026-10-19T02:00:24.1620000Z Job is waiting for a hosted runner to come online.

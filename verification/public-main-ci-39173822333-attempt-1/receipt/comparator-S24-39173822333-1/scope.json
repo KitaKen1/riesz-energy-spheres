@@ -1,0 +1,22 @@
+{
+  "dimension": 24,
+  "selected_targets": [
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+  ],
+  "all_targets": [
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.riesz_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_two",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_eight",
+    "RieszSphereFC.log_energy_lattice.variants.dimension_twenty_four",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_two",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_eight",
+    "RieszSphereFC.cap_discrepancy_lattice.variants.dimension_twenty_four"
+  ],
+  "complete_config_sha256": "2846d927782a0f8278947bead75dd6e1c5119de133bdd4db21a2a2ea751aa925",
+  "target_sha256": "24c8bbfab4701aa7445ee2090e11f5b26e3a24bb1bb0ad278a3a03818ee95b57",
+  "verification": "Unmodified pinned Comparator, including its builtin kernel replay"
+}

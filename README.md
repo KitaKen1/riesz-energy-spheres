@@ -185,14 +185,16 @@ sources of the canonical and supplementary proof projects.
 
 The proof project pins Lean 4.34.1 and a fixed Mathlib commit.
 [FCAudit.lean](lean/FCAudit.lean) lists the nine solved FC targets for an axiom audit.
-The exact eighteen-statement FC Challenge and all nine solution targets compiled
-successfully on GitHub CI, using a recorded import-only compatibility patch for
-FC utilities. The [three dimension-specific Comparator jobs](https://github.com/KitaKen1/ci-test-sandbox/actions/runs/39109164457)
-also passed, including builtin-kernel replay and the permitted-axiom audit.
-That sandbox verification reused completed build products from an earlier run.
-Logs and receipts are recorded in [verification/](verification/).
+The [public main CI](https://github.com/KitaKen1/riesz-energy-spheres/actions/runs/39173822333)
+passed on commit `56b3016f2a3ce703ab7f0486dfbc0879742aeddf`. It compiled the exact
+eighteen-statement FC Challenge and all nine solution targets, using the recorded
+import-only compatibility patch for FC utilities. All three dimension-specific
+Comparator jobs passed, including builtin-kernel replay and the permitted-axiom
+audit. All nine targets use only `propext`, `Classical.choice` and `Quot.sound`.
+The [original logs and receipts](verification/public-main-ci-39173822333-attempt-1/)
+are archived in the repository.
 
-The owner's statement review and public cold-start CI remain pending.
+The owner's statement review remains pending.
 
 ### Lean Comparator check
 
@@ -206,8 +208,8 @@ fresh builtin-kernel replay in all three dimension jobs.
 The proof build is divided into six jobs, with a four-hour compile budget per
 job. Artifacts pass completed products along the same workflow, so a first run
 needs no previous project proof cache. Comparator then runs separately for
-$d=2,8,24$, with three unchanged FC targets in each job. Public verification of
-this complete workflow is pending.
+$d=2,8,24$, with three unchanged FC targets in each job. This complete workflow
+passed on public main without any previous-run project proof cache.
 
 ## Appendix: timeline (AI generated)
 
@@ -232,16 +234,20 @@ An optional manual audit additionally replays every imported declaration with
 ### Certification Within 90 days: CI results
 
 The workflow retains logs and artifacts for 90 days.
-The [private sandbox run](https://github.com/KitaKen1/ci-test-sandbox/actions/runs/39109164457)
-passed all three dimension-specific Comparator jobs, covering the nine solved
-FC variants. Public cold-start CI remains pending.
+The [public main run](https://github.com/KitaKen1/riesz-energy-spheres/actions/runs/39173822333)
+passed all six build batches and all three Comparator jobs, covering the nine
+solved FC variants. Each Comparator accepted the proofs in Lean's builtin kernel.
+The [axiom-audit output](verification/public-main-ci-39173822333-attempt-1/receipt/comparator-S24-39173822333-1/axioms.log)
+lists only `propext`, `Classical.choice` and `Quot.sound` for every target.
 
 ### Certification After 90 days: archive
 
 An archived run records the tested commit, run and attempt, and includes the original
 artifact ZIPs, full job logs, run metadata, receipts and SHA-256 checksums.
-The sandbox evidence is archived in [verification/](verification/), including
-the original successful Comparator artifacts, job logs and checked target scope.
+The [public main archive](verification/public-main-ci-39173822333-attempt-1/)
+contains the original successful artifacts, full job logs, checked target scope
+and SHA-256 checksums. It records the tested proof commit separately from the
+later documentation and archive commit.
 
 ### Reproduce the verification
 
